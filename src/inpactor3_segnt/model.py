@@ -115,8 +115,8 @@ def token_loss(
     if C >= 2:
         weight[1:] = pos_weight  # cualquier clase != fondo pesa más
     loss = F.cross_entropy(
-        logits.view(-1, C),
-        labels.view(-1),
+        logits.reshape(-1, C),
+        labels.reshape(-1),
         weight=weight,
         ignore_index=-100,
         reduction="mean",
