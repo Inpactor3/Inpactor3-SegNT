@@ -13,13 +13,18 @@ env/
 models/*.pt
 models/*.safetensors
 models/*.bin
-data/raw/
 data/processed/*.parquet
 data/processed/*.arrow
-*.fasta
-*.fa
-*.fa.gz
-*.fasta.gz
+data/raw/*.fa.gz
+data/raw/*.fasta.gz
+data/raw/TAIR10_chr1.fasta         # el original de 20 MB (regenerable)
+data/raw/TAIR10.fasta              # completo cuando lo bajemos (~120 MB)
+
+# El pseudo-FASTA (20 MB) y el .tab (1 KB) SÍ los versionamos para
+# que Colab clone y arranque directo, sin descargas adicionales.
+!data/raw/TAIR10_pseudo.fasta
+!data/raw/Inpactor2_predictions_pseudo.tab
+!data/raw/Inpactor2_predictions.tab
 
 # Resultados grandes (mantenemos reportes .md y .tab pequeños)
 results/**/*.fasta

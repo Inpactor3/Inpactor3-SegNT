@@ -1,0 +1,36 @@
+# Configuración para el piloto con Chr1 pseudo-particionado.
+# Usar este config mientras no tengamos Inpactor2 sobre TAIR10 completo.
+
+model:
+  base_model: InstaDeepAI/nucleotide-transformer-v2-50m-multi-species
+  freeze_encoder: false
+  head_channels: [256, 128]
+  num_classes: 2               # 0 = fondo, 1 = LTR-RT
+  dropout: 0.1
+
+data:
+  genome: data/raw/TAIR10_pseudo.fasta
+  annotations: data/raw/Inpactor2_predictions_pseudo.tab
+  train_chromosomes: ["Chr1_train"]
+  val_chromosomes:   ["Chr1_val"]
+  test_chromosomes:  ["Chr1_test"]
+  window_size: 6000
+  window_stride: 3000
+  cell_size: 100
+  min_positive_frac: 0.0
+
+train:
+  epochs: 10
+  batch_size: 4
+  gradient_accumulation: 2
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  warmup_steps: 100
+  pos_weight: 20.0
+  early_stopping_patience: 3
+  seed: 42
+
+output:
+  checkpoint_dir: models/
+  log_dir: logs/
+  best_metric: val_f1_window
