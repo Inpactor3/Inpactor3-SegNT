@@ -1,5 +1,5 @@
 torch>=2.1
-transformers>=4.40
+transformers>=4.40,<4.55
 tokenizers>=0.15
 numpy>=1.26
 pandas>=2.0

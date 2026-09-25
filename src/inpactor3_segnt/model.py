@@ -11,7 +11,7 @@ from __future__ import annotations
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from transformers import AutoModel, AutoTokenizer
+from transformers import AutoConfig, AutoModel, AutoTokenizer
 
 
 class SegmentationHead(nn.Module):
@@ -48,7 +48,15 @@ class NTSegmentation(nn.Module):
     ):
         super().__init__()
         self.base_model_name = base_model_name
-        self.encoder = AutoModel.from_pretrained(base_model_name, trust_remote_code=True)
+        # Nucleotide Transformer usa ESM bajo el capó. Versiones nuevas de
+        # transformers exigen `rope_theta` en el config; el config oficial
+        # del NT no lo trae → lo añadimos con el valor por defecto de ESM.
+        config = AutoConfig.from_pretrained(base_model_name, trust_remote_code=True)
+        if not hasattr(config, "rope_theta") or config.rope_theta is None:
+            config.rope_theta = 10000.0
+        self.encoder = AutoModel.from_pretrained(
+            base_model_name, config=config, trust_remote_code=True
+        )
         embed_dim = self.encoder.config.hidden_size
         self.head = SegmentationHead(
             in_dim=embed_dim,
