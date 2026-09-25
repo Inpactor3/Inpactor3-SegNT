@@ -48,12 +48,26 @@ class NTSegmentation(nn.Module):
     ):
         super().__init__()
         self.base_model_name = base_model_name
-        # Nucleotide Transformer usa ESM bajo el capó. Versiones nuevas de
-        # transformers exigen `rope_theta` en el config; el config oficial
-        # del NT no lo trae → lo añadimos con el valor por defecto de ESM.
+        # Nucleotide Transformer usa ESM. Las versiones nuevas de transformers
+        # (>=4.50) piden atributos en el config que el NT original no incluye.
+        # Los añadimos con valores por defecto ESM antes de instanciar.
         config = AutoConfig.from_pretrained(base_model_name, trust_remote_code=True)
-        if not hasattr(config, "rope_theta") or config.rope_theta is None:
-            config.rope_theta = 10000.0
+        _defaults = {
+            "rope_theta": 10000.0,
+            "is_decoder": False,
+            "add_cross_attention": False,
+            "use_cache": False,
+            "output_attentions": False,
+            "output_hidden_states": False,
+            "tie_word_embeddings": False,
+            "position_embedding_type": getattr(config, "position_embedding_type", "rotary"),
+            "layer_norm_eps": getattr(config, "layer_norm_eps", 1e-12),
+            "attention_probs_dropout_prob": getattr(config, "attention_probs_dropout_prob", 0.0),
+            "hidden_dropout_prob": getattr(config, "hidden_dropout_prob", 0.0),
+        }
+        for k, v in _defaults.items():
+            if not hasattr(config, k) or getattr(config, k) is None:
+                setattr(config, k, v)
         self.encoder = AutoModel.from_pretrained(
             base_model_name, config=config, trust_remote_code=True
         )
