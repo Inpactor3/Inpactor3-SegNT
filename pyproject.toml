@@ -9,8 +9,8 @@ description = "Genome Language Model + segmentation head for LTR-RTs"
 requires-python = ">=3.9"
 dependencies = [
     "torch>=2.1",
-    "transformers>=4.40",
-    "tokenizers>=0.15",
+    "transformers==4.44.2",
+    "tokenizers==0.19.1",
     "numpy>=1.26",
     "biopython>=1.83",
     "PyYAML>=6.0",
