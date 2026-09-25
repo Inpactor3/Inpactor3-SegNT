@@ -130,30 +130,47 @@ class NucleotideSegDataset(Dataset):
         scaf, w_start, w_end = self.windows[idx]
         seq = self.sequences[scaf][w_start:w_end]
 
-        # tokenizar (BPE agrupa k-meros de longitud variable)
+        # tokenizar (Nucleotide Transformer no soporta return_offsets_mapping;
+        # calculamos las posiciones bp manualmente a partir de los strings)
         enc = self.tokenizer(
             seq,
             return_tensors="pt",
             truncation=True,
             max_length=self.max_tokens,
             padding="max_length",
-            return_offsets_mapping=True,
         )
         input_ids = enc["input_ids"].squeeze(0)
         attention_mask = enc["attention_mask"].squeeze(0)
-        offsets = enc["offset_mapping"].squeeze(0).tolist()  # [(start_bp, end_bp)] por token
+
+        # Reconstruir offsets manualmente
+        tokens = self.tokenizer.convert_ids_to_tokens(input_ids.tolist())
+        offsets: list[tuple[int, int]] = []
+        cursor = 0
+        specials = set(self.tokenizer.all_special_tokens)
+        for tok in tokens:
+            if tok in specials or tok is None:
+                offsets.append((cursor, cursor))  # sin span en la secuencia
+            else:
+                # k-mer típico del NT: alfabéticos ACGT
+                tlen = sum(1 for c in tok if c.upper() in "ACGTN")
+                if tlen == 0:
+                    offsets.append((cursor, cursor))
+                else:
+                    offsets.append((cursor, cursor + tlen))
+                    cursor += tlen
 
         # etiquetas por bp → etiqueta por token (mayoría dentro del span)
         bp_labels = self._labels_per_bp(scaf, w_start, w_end)
         T = len(offsets)
         token_labels = np.full(T, -100, dtype=np.int64)  # -100 = ignorar
         for t, (bp_s, bp_e) in enumerate(offsets):
-            if bp_s == bp_e:  # token especial (CLS/PAD/SEP)
+            if bp_s == bp_e:  # token especial
                 continue
-            span = bp_labels[bp_s:bp_e]
+            if bp_s >= len(bp_labels):
+                continue
+            span = bp_labels[bp_s : min(bp_e, len(bp_labels))]
             if len(span) == 0:
                 continue
-            # mayoría (mode)
             vals, counts = np.unique(span, return_counts=True)
             token_labels[t] = int(vals[counts.argmax()])
 
