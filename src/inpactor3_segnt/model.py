@@ -68,8 +68,12 @@ class NTSegmentation(nn.Module):
         for k, v in _defaults.items():
             if not hasattr(config, k) or getattr(config, k) is None:
                 setattr(config, k, v)
+        # ignore_mismatched_sizes: NT-v2 usa SwiGLU (intermediate 4096) mientras
+        # que ESM moderno espera 2048; lo que no encaje se reinicializa.
+        # La atención pretrained sigue cargada (que es lo que más valor tiene).
         self.encoder = AutoModel.from_pretrained(
-            base_model_name, config=config, trust_remote_code=True
+            base_model_name, config=config, trust_remote_code=True,
+            ignore_mismatched_sizes=True,
         )
         embed_dim = self.encoder.config.hidden_size
         self.head = SegmentationHead(
