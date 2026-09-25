@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Modelos y datos pesados
+models/*.pt
+models/*.safetensors
+models/*.bin
+data/raw/
+data/processed/*.parquet
+data/processed/*.arrow
+*.fasta
+*.fa
+*.fa.gz
+*.fasta.gz
+
+# Resultados grandes (mantenemos reportes .md y .tab pequeños)
+results/**/*.fasta
+results/**/*.h5
+
+# HuggingFace cache
+.cache/
+hf_cache/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
