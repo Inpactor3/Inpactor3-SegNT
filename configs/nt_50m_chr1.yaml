@@ -15,19 +15,19 @@ data:
   val_chromosomes:   ["Chr1_val"]
   test_chromosomes:  ["Chr1_test"]
   window_size: 6000
-  window_stride: 3000
+  window_stride: 6000       # sin solape → mitad de ventanas → 2x más rápido
   cell_size: 100
   min_positive_frac: 0.0
 
 train:
-  epochs: 10
-  batch_size: 4
-  gradient_accumulation: 2
+  epochs: 15
+  batch_size: 8             # mejor uso de la T4
+  gradient_accumulation: 1
   learning_rate: 5.0e-5
   weight_decay: 0.01
-  warmup_steps: 100
-  pos_weight: 20.0
-  early_stopping_patience: 3
+  warmup_steps: 50
+  pos_weight: 200.0         # 10x más peso a positivos: fuerza a predecir "sí"
+  early_stopping_patience: 5
   seed: 42
 
 output:
