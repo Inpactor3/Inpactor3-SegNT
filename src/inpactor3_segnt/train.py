@@ -14,7 +14,7 @@ from pathlib import Path
 import numpy as np
 import torch
 import yaml
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, WeightedRandomSampler
 from transformers import AutoTokenizer, get_linear_schedule_with_warmup
 
 from .dataset import (
@@ -93,9 +93,27 @@ def main():
     )
     train_ds, val_ds = make_ds(tr_seq, tr_ann), make_ds(va_seq, va_ann)
     print(f"[data] train ventanas: {len(train_ds)} · val: {len(val_ds)}")
+    print(f"[data] train positivas: {len(train_ds.positive_indices)} · "
+          f"negativas: {len(train_ds.negative_indices)}")
+
+    # WeightedRandomSampler: cada ventana positiva pesa mucho más para que
+    # cada batch tenga ~50% positivos aunque solo sean 1% del dataset.
+    n_total = len(train_ds)
+    n_pos = max(len(train_ds.positive_indices), 1)
+    n_neg = max(len(train_ds.negative_indices), 1)
+    weights = [0.0] * n_total
+    for i in train_ds.positive_indices:
+        weights[i] = 0.5 / n_pos
+    for i in train_ds.negative_indices:
+        weights[i] = 0.5 / n_neg
+    # Muestreamos N samples por época (usamos min de 4x positivos, o total)
+    n_samples_per_epoch = min(n_total, max(200, 20 * n_pos))
+    sampler = WeightedRandomSampler(weights, num_samples=n_samples_per_epoch,
+                                    replacement=True)
+    print(f"[data] muestras por época: {n_samples_per_epoch}")
 
     train_dl = DataLoader(train_ds, batch_size=cfg["train"]["batch_size"],
-                          shuffle=True, collate_fn=collate, num_workers=2)
+                          sampler=sampler, collate_fn=collate, num_workers=2)
     val_dl = DataLoader(val_ds, batch_size=cfg["train"]["batch_size"],
                         shuffle=False, collate_fn=collate, num_workers=2)
 

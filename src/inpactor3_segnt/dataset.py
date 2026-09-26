@@ -70,6 +70,7 @@ def parse_inpactor2_tab(
 
 
 class NucleotideSegDataset(Dataset):
+    """Ver docstring abajo. Añade `positive_indices` para muestreo balanceado."""
     """
     Ventanas de secuencia + etiquetas por token.
 
@@ -111,6 +112,21 @@ class NucleotideSegDataset(Dataset):
                 self.windows.append((scaf, w_start, w_end))
         self.sequences = sequences
         self.annotations = annotations
+
+        # Índices de ventanas positivas (solapan al menos una anotación).
+        # Sirven para muestreo balanceado en el DataLoader.
+        self.positive_indices: list[int] = []
+        self.negative_indices: list[int] = []
+        for i, (scaf, ws, we) in enumerate(self.windows):
+            has_pos = False
+            for ann in self.annotations.get(scaf, []):
+                if ann.start < we and ann.end > ws:
+                    has_pos = True
+                    break
+            if has_pos:
+                self.positive_indices.append(i)
+            else:
+                self.negative_indices.append(i)
 
     def __len__(self) -> int:
         return len(self.windows)
