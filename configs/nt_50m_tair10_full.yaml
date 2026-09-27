@@ -1,0 +1,40 @@
+# Configuración para el pipeline COMPLETO sobre TAIR10 (5 cromosomas).
+# Split del informe: Chr1-3 entrena, Chr4 valida, Chr5 examen.
+
+model:
+  base_model: InstaDeepAI/nucleotide-transformer-v2-50m-multi-species
+  freeze_encoder: false
+  head_channels: [256, 128]
+  # 14 clases: 0 = fondo, 1..13 = linajes InpactorDB
+  # (ALE/RETROFIT, ANGELA, BIANCA, IKEROS, IVANA/ORYCO, TAR/TORK, SIRE,
+  #  CRM, GALADRIEL, REINA, TEKAY/DEL, ATHILA, TAT)
+  num_classes: 14
+  dropout: 0.1
+
+data:
+  genome: data/tair10_full/TAIR10.fasta
+  annotations: data/tair10_full/inpactor2_out/Inpactor2_predictions.tab
+  train_chromosomes: ["Chr1", "Chr2", "Chr3"]
+  val_chromosomes:   ["Chr4"]
+  test_chromosomes:  ["Chr5"]
+  window_size: 6000
+  window_stride: 6000
+  cell_size: 100
+  min_positive_frac: 0.0
+  annotation_mode: "lineage"    # 14 clases (no binario)
+
+train:
+  epochs: 15
+  batch_size: 8
+  gradient_accumulation: 1
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  warmup_steps: 100
+  pos_weight: 100.0             # más suave que en piloto (más datos)
+  early_stopping_patience: 5
+  seed: 42
+
+output:
+  checkpoint_dir: models/
+  log_dir: logs/
+  best_metric: val_f1_window

@@ -70,7 +70,9 @@ def main():
     print(f"[data] genome:      {cfg['data']['genome']}")
     print(f"[data] annotations: {cfg['data']['annotations']}")
     sequences = parse_fasta(Path(cfg["data"]["genome"]))
-    annotations = parse_inpactor2_tab(Path(cfg["data"]["annotations"]))
+    ann_mode = cfg["data"].get("annotation_mode", "binary")
+    annotations = parse_inpactor2_tab(Path(cfg["data"]["annotations"]), mode=ann_mode)
+    print(f"[data] modo anotación: {ann_mode}")
     print(f"[data] {len(sequences)} scaffolds · "
           f"{sum(len(v) for v in annotations.values())} anotaciones")
 

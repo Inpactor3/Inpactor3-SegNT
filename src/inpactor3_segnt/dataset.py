@@ -27,6 +27,31 @@ class Annotation:
     cls: int  # 1..K (0 reservado a fondo)
 
 
+# Mapa canónico de linajes Inpactor2 (InpactorDB) → id de clase.
+# 0 = fondo (no LTR-RT). 1..13 = linajes.
+INPACTOR2_LINEAGES = {
+    "RLC/ALE/RETROFIT": 1,
+    "RLC/ANGELA": 2,
+    "RLC/BIANCA": 3,
+    "RLC/IKEROS": 4,
+    "RLC/IVANA/ORYCO": 5,
+    "RLC/TAR/TORK": 6,
+    "RLC/TORK/TAR": 6,   # sinónimo
+    "RLC/SIRE": 7,
+    "RLG/CRM": 8,
+    "RLG/GALADRIEL": 9,
+    "RLG/REINA": 10,
+    "RLG/TEKAY/DEL": 11,
+    "RLG/DEL/TEKAY": 11,  # sinónimo
+    "RLG/ATHILA": 12,
+    "RLG/TAT": 13,
+}
+LINEAGE_ID_TO_NAME = {v: k for k, v in INPACTOR2_LINEAGES.items() if v not in
+                       set([6, 11]) or k in ("RLC/TAR/TORK", "RLG/TEKAY/DEL")}
+LINEAGE_ID_TO_NAME[0] = "background"
+NUM_LINEAGES = 14  # 0..13
+
+
 def parse_fasta(path: Path) -> dict[str, str]:
     """Devuelve {scaffold_id: secuencia mayúsculas}."""
     seqs: dict[str, str] = {}
@@ -49,14 +74,21 @@ def parse_fasta(path: Path) -> dict[str, str]:
 def parse_inpactor2_tab(
     path: Path,
     class_map: dict[str, int] | None = None,
+    mode: str = "binary",
 ) -> dict[str, list[Annotation]]:
     """
     Lee Inpactor2_predictions.tab (formato:
         seqid  start  end  length  lineage  det  filt  cls
     ).
 
-    class_map: {"RLC/ALE/RETROFIT": 1, ...} — si None, todo es clase 1 (binario).
+    mode:
+        "binary"      → cualquier linaje = clase 1 (LTR-RT).
+        "lineage"     → usa INPACTOR2_LINEAGES (14 clases).
+        "custom"      → usa class_map explícito.
     """
+    if mode == "lineage" and class_map is None:
+        class_map = INPACTOR2_LINEAGES
+
     ann: dict[str, list[Annotation]] = {}
     with open(path) as f:
         for line in f:
@@ -64,7 +96,12 @@ def parse_inpactor2_tab(
             if len(cols) < 5:
                 continue
             scaf, s, e, _, lin = cols[0], int(cols[1]), int(cols[2]), cols[3], cols[4]
-            cls = 1 if class_map is None else class_map.get(lin, 1)
+            if mode == "binary":
+                cls = 1
+            elif class_map is not None:
+                cls = class_map.get(lin, 1)  # linaje desconocido → clase 1 genérica
+            else:
+                cls = 1
             ann.setdefault(scaf, []).append(Annotation(s, e, cls))
     return ann
 
