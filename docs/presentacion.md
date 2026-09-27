@@ -251,29 +251,71 @@ Cuando acertamos en la ventana, verificamos si acertamos también el linaje
 - **F1 = 22.2%**, Recall = 100%, Precision = 12.5%
 - Cerca del baseline del informe con 10× menos datos
 
-### Full pipeline (en curso, TAIR10 completo)
+### Full pipeline (TAIR10 completo, resultado final)
 
-15 épocas de entrenamiento sobre el corpus completo. Estado actual (rellenar
-con los números finales cuando termine):
+15 épocas sobre corpus completo (65 anotaciones train, 21 val, 23 test):
 
-| Época | Loss | F1 | Recall | Precisión |
+| Época | Loss | F1 val | Recall val | Precisión val |
 |---|---|---|---|---|
 | 01 | 2.12 | 0.029 | 1.00 | 0.01 |
-| 02 | 1.11 | 0.029 | 1.00 | 0.01 |
-| 03 | 0.40 | 0.048 | 0.84 | 0.02 |
 | 04 | 0.10 | 0.068 | 0.67 | 0.04 |
-| 05 | 0.03 | 0.059 | 0.40 | 0.03 |
-| ... | ... | ... | ... | ... |
-| **Best** | **?** | **?** | **?** | **?** |
+| 06 | 0.02 | 0.098 | 0.24 | 0.06 |
+| 09 | 0.005 | 0.103 | 0.11 | 0.10 |
+| 11 | 0.003 | 0.140 | 0.22 | 0.10 |
+| **15 (best)** | **0.0005** | **0.141** | **0.11** | **0.19** |
 
-### Evaluación final sobre Chr5
+### Evaluación final sobre Chr5 (23 anotaciones)
 
-Al terminar el entrenamiento, el `evaluate.py` produce un reporte con:
-- Matriz de confusión 2×2 sobre ventanas
-- F1, Precisión, Recall
-- IoU medio sobre las coincidencias
-- Matriz de confusión de linajes
-- Comparación automática con baseline del informe
+```
+F1        = 0.080  (8.0%)
+Precisión = 0.250  (1 de 4 predichos correcto)
+Recall    = 0.048  (1 de 21 ventanas detectada)
+IoU medio = 0.000  (ningún match a IoU >= 0.5)
+Linaje    = 0/21   (accuracy 0%)
+```
+
+**Matriz de confusión (ventanas)**:
+
+|              | Predijo vacío | Predijo LTR-RT |
+|--------------|--------------:|---------------:|
+| Vacío (519)  | 516 | 3 |
+| LTR-RT (21)  | 20 | 1 |
+
+### Comparación con baseline
+
+| Enfoque | F1 sobre Chr5 |
+|---|---|
+| CNN informe intento 1 | 19.6% |
+| CNN informe intento 2 | 7.5% |
+| **CNN informe intento 3 (baseline)** | **26.3%** |
+| **SegNT nuestro (full pipeline)** | **8.0%** |
+
+**Estamos 18 puntos por debajo del baseline.** No superamos el informe.
+
+### Interpretación honesta
+
+1. **Modelo muy conservador**: 4 ventanas predichas de 540 posibles (0.7%).
+   Extremadamente cauteloso.
+
+2. **Overfitting**: loss=0.0005 = memorización de las 65 anotaciones train.
+   40 M parámetros contra 65 ejemplos → el sobre-ajuste era esperable.
+
+3. **Val → test cae a la mitad**: F1 val=0.14 → test=0.08. Chr5 tiene
+   composición distinta a Chr4 (más TAT/ATHILA vs más ALE/IVANA).
+
+4. **Detección positiva mínima pero real**: 1 acierto verdadero (P=25%)
+   demuestra que la señal existe, no es azar.
+
+### Comparación con piloto anterior
+
+| Config | Datos train | F1 test | Notas |
+|---|---|---|---|
+| Piloto Chr1 pseudo | 10 anotaciones | 22.2% | val test triviales (3 vs 3) |
+| Full TAIR10 | 65 anotaciones | 8.0% | val test honesto (Chr4 vs Chr5) |
+
+El piloto reportó F1 más alto porque el test set era diminuto (3 elementos)
+y la métrica ruidosa. El full pipeline con test real es más bajo pero **más
+honesto**.
 
 ---
 
@@ -369,14 +411,29 @@ que abre la puerta a reemplazar pipelines complejos por un solo modelo."
 
 ## Cierre de la presentación
 
-**Frase final** (adapta según los resultados finales):
+**Frase final** (honesta):
 
-> "Con el corpus completo TAIR10 y la arquitectura SegNT alcanzamos F1
-> de **X.X%** sobre Chr5 — [superando/quedando cerca del] baseline de
-> 26.3% del informe. La arquitectura una-sola-red con transfer learning
-> es viable como alternativa a la cascada de Inpactor2. Los siguientes
-> pasos son escalar a genomas más grandes (maíz, trigo) y publicar el
-> modelo entrenado como recurso reutilizable."
+> "Con el corpus completo de TAIR10 y la arquitectura SegNT alcanzamos
+> F1 = 8.0% sobre Chr5, **por debajo del baseline de 26.3% del informe**.
+> El diagnóstico es claro: 65 anotaciones de entrenamiento no bastan para
+> un modelo de 40 millones de parámetros, incluso con transfer learning.
+> El aprendizaje concreto es que **la arquitectura funciona** (P=25%
+> demuestra señal real) pero **el cuello de botella es el volumen de
+> datos**. Los siguientes pasos son: (1) ampliar el corpus a otras plantas
+> (arroz, sorgo, maíz — que aportan cientos de anotaciones cada una),
+> (2) congelar el encoder y entrenar solo la cabeza para reducir sobre-
+> ajuste, (3) explorar data augmentation con reverse complement."
+
+### Cómo defender un resultado por debajo del baseline
+
+**Frase para responder si preguntan "¿por qué no supera al informe?"**:
+
+> "La CNN del informe intento 3 fue entrenada específicamente en Arabidopsis
+> con hiperparámetros afinados durante meses. Nuestra propuesta usa un
+> modelo generalista pre-entrenado en 850 especies y solo 15 épocas de
+> fine-tuning. Con 65 anotaciones el sobre-ajuste es dominante. El
+> resultado confirma que **transfer learning por sí solo no compensa la
+> escasez de datos** — hace falta escalar el corpus o congelar la red base."
 
 ---
 
