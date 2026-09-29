@@ -1,0 +1,29 @@
+model:
+  base_model: InstaDeepAI/nucleotide-transformer-v2-50m-multi-species
+  freeze_encoder: true          # solo entrena cabeza para reducir sobreajuste
+  head_channels: [256, 128]
+  num_classes: 7                # 0 fondo + 6 superfamilias LTR
+  dropout: 0.1
+
+data:
+  manifest: data/common_dataset/manifest.jsonl
+  genomes_dir: data/common_dataset/genomes
+  panteon_subset: data/common_dataset/panteon_ltr_subset.fasta
+  window_size: 6000
+  max_tokens: 1000
+  cell_size: 100
+
+train:
+  epochs: 20
+  batch_size: 8
+  learning_rate: 1.0e-4         # más alto porque encoder congelado
+  weight_decay: 0.01
+  warmup_steps: 100
+  pos_weight: 50.0
+  early_stopping_patience: 5
+  seed: 42
+
+output:
+  checkpoint_dir: models/
+  log_dir: logs/
+  best_metric: val_f1_window
