@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 550" font-family="'Segoe UI', Arial, sans-serif">
+  <rect width="1200" height="550" fill="#f8fafc"/>
+  <text x="600" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">
+    Evolución del entrenamiento — 15 épocas
+  </text>
+  <text x="600" y="66" text-anchor="middle" font-size="13" fill="#475569">
+    F1 en Chr4 (validación) sube con altibajos hasta 0.141
+  </text>
+
+  <!-- Eje -->
+  <line x1="90" y1="120" x2="90" y2="450" stroke="#334155" stroke-width="2"/>
+  <line x1="90" y1="450" x2="1150" y2="450" stroke="#334155" stroke-width="2"/>
+
+  <!-- Etiquetas eje Y (F1) -->
+  <text x="80" y="125" text-anchor="end" font-size="11" fill="#64748b">0.20</text>
+  <text x="80" y="192" text-anchor="end" font-size="11" fill="#64748b">0.15</text>
+  <text x="80" y="258" text-anchor="end" font-size="11" fill="#64748b">0.10</text>
+  <text x="80" y="325" text-anchor="end" font-size="11" fill="#64748b">0.05</text>
+  <text x="80" y="454" text-anchor="end" font-size="11" fill="#64748b">0.00</text>
+  <text x="45" y="290" text-anchor="middle" font-size="12" font-weight="700" fill="#334155" transform="rotate(-90 45 290)">F1 en validación</text>
+
+  <!-- Líneas guía horizontales -->
+  <line x1="90" y1="120" x2="1150" y2="120" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+  <line x1="90" y1="192" x2="1150" y2="192" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+  <line x1="90" y1="258" x2="1150" y2="258" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+  <line x1="90" y1="325" x2="1150" y2="325" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+
+  <!-- Línea del informe (baseline 26.3%) -->
+  <line x1="90" y1="103" x2="1150" y2="103" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="1145" y="97" text-anchor="end" font-size="12" font-weight="700" fill="#dc2626">baseline informe = 26.3%</text>
+
+  <!-- Etiquetas eje X (épocas) -->
+  <g font-size="10" fill="#64748b" text-anchor="middle">
+    <text x="160" y="470">1</text>
+    <text x="230" y="470">2</text>
+    <text x="300" y="470">3</text>
+    <text x="370" y="470">4</text>
+    <text x="440" y="470">5</text>
+    <text x="510" y="470">6</text>
+    <text x="580" y="470">7</text>
+    <text x="650" y="470">8</text>
+    <text x="720" y="470">9</text>
+    <text x="790" y="470">10</text>
+    <text x="860" y="470">11</text>
+    <text x="930" y="470">12</text>
+    <text x="1000" y="470">13</text>
+    <text x="1070" y="470">14</text>
+    <text x="1140" y="470">15</text>
+  </g>
+  <text x="620" y="495" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">época</text>
+
+  <!-- Datos: F1 por época
+       ep1=0.029, ep2=0.029, ep3=0.048, ep4=0.068, ep5=0.059, ep6=0.098,
+       ep7=0.095, ep8=0.090, ep9=0.103, ep10=0.110, ep11=0.140, ep12=0.118,
+       ep13=0.125, ep14=0.139, ep15=0.141
+       y = 450 - (F1 / 0.20 * 330)   -> F1=0.05 → 450-82.5 = 368
+  -->
+  <polyline fill="none" stroke="#4c1d95" stroke-width="3"
+    points="160,412 230,412 300,371 370,338 440,353 510,289 580,294 650,301 720,281 790,269 860,219 930,255 1000,244 1070,221 1140,218" />
+
+  <!-- Puntos de datos con etiquetas -->
+  <g font-size="10" fill="#4c1d95">
+    <circle cx="160" cy="412" r="5" fill="#4c1d95"/>
+    <text x="160" y="405" text-anchor="middle" fill="#475569">.03</text>
+    <circle cx="510" cy="289" r="5" fill="#4c1d95"/>
+    <text x="510" y="282" text-anchor="middle" fill="#475569">.10</text>
+    <circle cx="860" cy="219" r="7" fill="#4c1d95" stroke="#000" stroke-width="1"/>
+    <text x="860" y="212" text-anchor="middle" font-weight="700" fill="#4c1d95">.14</text>
+    <circle cx="1140" cy="218" r="7" fill="#4c1d95" stroke="#000" stroke-width="1"/>
+    <text x="1140" y="212" text-anchor="middle" font-weight="700" fill="#4c1d95">.141★</text>
+  </g>
+
+  <!-- Anotaciones -->
+  <text x="230" y="435" font-size="10" fill="#64748b" text-anchor="middle">"digo sí a todo"</text>
+  <text x="510" y="270" font-size="10" fill="#64748b" text-anchor="middle">balance</text>
+
+  <!-- Leyenda -->
+  <rect x="850" y="120" width="20" height="3" fill="#4c1d95"/>
+  <text x="878" y="126" font-size="11" fill="#334155">nuestro SegNT</text>
+  <line x1="850" y1="140" x2="870" y2="140" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="878" y="145" font-size="11" fill="#334155">baseline informe (Chr5)</text>
+</svg>

@@ -7,10 +7,11 @@ cd "$(dirname "$0")/.."
 mkdir -p data/common_dataset/genomes
 cd data/common_dataset/genomes
 
-# ---- Plantae: Zea mays (~2.5 GB descomprimido) ----
-echo "=== Descargando Zea mays (maíz) ==="
+# ---- Plantae: Zea mays completo (~640 MB comprimido, ~2.5 GB descomprimido) ----
+echo "=== Descargando Zea mays (maíz completo) ==="
 if [ ! -f Zea_mays.fasta ]; then
-    curl -Lk -o Zea_mays.fa.gz \
+    # -C - permite resumir descarga si se corta
+    curl -Lk -C - -o Zea_mays.fa.gz \
         "https://ftp.ensemblgenomes.org/pub/plants/release-58/fasta/zea_mays/dna/Zea_mays.Zm-B73-REFERENCE-NAM-5.0.dna_sm.toplevel.fa.gz"
     gunzip Zea_mays.fa.gz
     mv Zea_mays.fa Zea_mays.fasta

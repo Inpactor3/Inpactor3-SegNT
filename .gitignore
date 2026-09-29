@@ -13,12 +13,26 @@ env/
 models/*.pt
 models/*.safetensors
 models/*.bin
+models/*.hdf5
+models/*.npy
 data/processed/*.parquet
 data/processed/*.arrow
 data/raw/*.fa.gz
 data/raw/*.fasta.gz
 data/raw/TAIR10_chr1.fasta         # el original de 20 MB (regenerable)
 data/raw/TAIR10.fasta              # completo cuando lo bajemos (~120 MB)
+data/raw/PanTEon_Database_v1.6.2.fasta   # 992 MB — se descarga de Zenodo
+
+# TAIR10 completo — regenerable con scripts/download_backgrounds.sh
+data/tair10_full/*.fasta
+data/tair10_full/*.fa
+data/tair10_full/inpactor2_out/Inpactor2_library.fasta
+
+# Dataset común
+data/common_dataset/genomes/*.fasta        # 2.2 GB, se regenera con download_backgrounds.sh
+data/common_dataset/inpactor2_format/*.fasta   # 460 MB, se regenera con export_inpactor2_format.py
+!data/common_dataset/manifest.jsonl        # SÍ versionar (3 MB, útil)
+!data/common_dataset/panteon_ltr_subset.fasta  # SÍ versionar (30 MB, subset usado)
 
 # El pseudo-FASTA (20 MB) y el .tab (1 KB) SÍ los versionamos para
 # que Colab clone y arranque directo, sin descargas adicionales.

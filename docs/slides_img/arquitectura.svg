@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="500" fill="#f8fafc"/>
+
+  <text x="600" y="35" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">
+    SegNT — una sola red con transferencia de aprendizaje
+  </text>
+
+  <!-- Entrada -->
+  <rect x="30" y="110" width="200" height="240" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="130" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">ENTRADA</text>
+  <text x="130" y="170" text-anchor="middle" font-size="12" fill="#334155">Ventana de 6 000 bp</text>
+  <text x="130" y="200" text-anchor="middle" font-size="11" font-family="monospace" fill="#0f172a">ATCG...GCAT</text>
+  <text x="130" y="230" text-anchor="middle" font-size="11" fill="#334155">tokenizada en</text>
+  <text x="130" y="250" text-anchor="middle" font-size="16" font-weight="700" fill="#78350f">1 000 tokens</text>
+  <text x="130" y="278" text-anchor="middle" font-size="10" fill="#64748b">cada token ≈ 6 bases</text>
+  <text x="130" y="310" text-anchor="middle" font-size="10" fill="#64748b">tokenizer BPE</text>
+
+  <!-- Nucleotide Transformer -->
+  <rect x="290" y="110" width="380" height="240" rx="10" fill="#ddd6fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="480" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">NUCLEOTIDE TRANSFORMER</text>
+  <text x="480" y="160" text-anchor="middle" font-size="11" font-style="italic" fill="#5b21b6">pre-entrenado en 850 especies</text>
+  <text x="480" y="188" text-anchor="middle" font-size="12" fill="#334155">12 capas de atención</text>
+  <text x="480" y="205" text-anchor="middle" font-size="12" fill="#334155">40 millones de parámetros</text>
+  <text x="480" y="240" text-anchor="middle" font-size="10" fill="#64748b">"lee" ADN sabiendo qué patrones existen</text>
+  <text x="480" y="256" text-anchor="middle" font-size="10" fill="#64748b">en plantas, hongos y animales</text>
+  <text x="480" y="290" text-anchor="middle" font-size="12" fill="#334155">salida:</text>
+  <text x="480" y="312" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">embedding de 512 números por token</text>
+
+  <!-- Cabeza -->
+  <rect x="730" y="110" width="200" height="240" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="830" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">CABEZA</text>
+  <text x="830" y="160" text-anchor="middle" font-size="11" font-style="italic" fill="#166534">lo que entrenamos</text>
+  <text x="830" y="188" text-anchor="middle" font-size="12" fill="#334155">CNN 1D pequeña</text>
+  <text x="830" y="220" text-anchor="middle" font-size="11" font-family="monospace" fill="#0f172a">Conv 256</text>
+  <text x="830" y="240" text-anchor="middle" font-size="11" font-family="monospace" fill="#0f172a">Conv 128</text>
+  <text x="830" y="260" text-anchor="middle" font-size="11" font-family="monospace" fill="#0f172a">Conv 14</text>
+  <text x="830" y="292" text-anchor="middle" font-size="10" fill="#64748b">14 clases:</text>
+  <text x="830" y="308" text-anchor="middle" font-size="10" fill="#64748b">fondo + 13 linajes</text>
+
+  <!-- Salida -->
+  <rect x="990" y="110" width="180" height="240" rx="10" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="1080" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">SALIDA</text>
+  <text x="1080" y="160" text-anchor="middle" font-size="11" font-style="italic" fill="#1e40af">etiqueta por token</text>
+  <text x="1080" y="192" text-anchor="middle" font-size="11" fill="#334155">token 1 → fondo</text>
+  <text x="1080" y="210" text-anchor="middle" font-size="11" fill="#334155">token 2 → fondo</text>
+  <text x="1080" y="228" text-anchor="middle" font-size="11" fill="#334155">token 3 → ALE</text>
+  <text x="1080" y="246" text-anchor="middle" font-size="11" fill="#334155">token 4 → ALE</text>
+  <text x="1080" y="264" text-anchor="middle" font-size="11" fill="#334155">token 5 → ALE</text>
+  <text x="1080" y="282" text-anchor="middle" font-size="11" fill="#334155">token 6 → fondo</text>
+  <text x="1080" y="308" text-anchor="middle" font-size="10" fill="#64748b">grupos contiguos</text>
+  <text x="1080" y="322" text-anchor="middle" font-size="10" fill="#64748b">→ cajas de LTR-RT</text>
+
+  <!-- flechas -->
+  <line x1="230" y1="230" x2="288" y2="230" stroke="#334155" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="670" y1="230" x2="728" y2="230" stroke="#334155" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="930" y1="230" x2="988" y2="230" stroke="#334155" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Nota final -->
+  <text x="600" y="410" text-anchor="middle" font-size="13" fill="#475569">
+    Una sola red. Un solo forward. Predice presencia + posición + linaje al mismo tiempo.
+  </text>
+  <text x="600" y="435" text-anchor="middle" font-size="12" font-style="italic" fill="#64748b">
+    Idea prestada de SegmentNT (InstaDeep 2024): Genome Language Model + cabeza de segmentación.
+  </text>
+</svg>
