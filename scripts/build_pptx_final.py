@@ -115,6 +115,7 @@ SLIDES = [
             "Class aprendió a distinguir 6 superfamilias con 81% de acierto.",
             "Detect quedó modesto pero funcional con solo 5 épocas piloto.",
         ],
+        "image": "curve_inpactor2",
     },
     {
         "title": "9 · SegNT · qué entrenamos",
@@ -137,19 +138,19 @@ SLIDES = [
             "Recall 1.00 constante. Precisión 0.80.",
             "F1 val = 0.886 sobre 4 133 ventanas cross-kingdom.",
         ],
+        "image": "curve_segnt",
     },
     {
-        "title": "11 · Comparación SegNT antes/después",
+        "title": "11 · Comparación · F1 val por época",
         "bullets": [
-            "Antes (InpactorDB solo plantas):    F1 val = 0.14",
-            "Ahora (PanTEon cross-kingdom):      F1 val = 0.886",
+            "SegNT llegó a F1=0.886",
+            "Inpactor 2 Class llegó a F1=0.81",
+            "Inpactor 2 Detect llegó a F1=0.39",
             "",
-            "Mejora: × 6.3",
-            "",
-            "El salto no fue por cambiar la red — fue por:",
-            "  1) Más datos cross-kingdom",
-            "  2) Congelar el encoder",
+            "SegNT (versión anterior sobre InpactorDB): F1=0.14",
+            "Mejora × 6.3 con PanTEon + encoder congelado.",
         ],
+        "image": "curve_comparativa",
     },
     {
         "title": "12 · Resultado Inpactor 2 · Arabidopsis",
@@ -305,9 +306,11 @@ def build():
         r.font.bold = True
         r.font.color.rgb = COLOR_TITLE
 
-        # Bullets
-        bb = slide.shapes.add_textbox(Inches(0.7), Inches(1.5),
-                                       Inches(12), Inches(5.5))
+        # Bullets (columna izquierda si hay imagen; ancho completo si no)
+        has_image = bool(s.get("image"))
+        bb_width = 5.2 if has_image else 12.0
+        bb = slide.shapes.add_textbox(Inches(0.5), Inches(1.5),
+                                       Inches(bb_width), Inches(5.5))
         btf = bb.text_frame
         btf.word_wrap = True
         for j, b in enumerate(s["bullets"]):
@@ -316,11 +319,18 @@ def build():
             para.space_before = Pt(8)
             if b:
                 r = para.runs[0]
-                r.font.size = Pt(20)
+                r.font.size = Pt(16) if has_image else Pt(20)
                 r.font.color.rgb = COLOR_TEXT
-                # Resaltar líneas de score o comparación
                 if "F1" in b or "×" in b or "→" in b:
                     r.font.bold = True
+
+        # Imagen (columna derecha)
+        if has_image:
+            img_path = ROOT / "docs" / "slides_png" / f"{s['image']}.png"
+            if img_path.exists():
+                slide.shapes.add_picture(str(img_path),
+                                          Inches(5.9), Inches(1.4),
+                                          width=Inches(7.2))
 
     out = ROOT / "docs" / "presentacion_final.pptx"
     prs.save(out)
