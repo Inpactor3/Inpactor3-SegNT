@@ -1,0 +1,31 @@
+# Config para entrenamiento binario sobre inpactor2_detect_panteon_v1
+# 100 épocas · ventanas 50 kb · encoder NT congelado · pooling MIL
+
+model:
+  base_model: InstaDeepAI/nucleotide-transformer-v2-50m-multi-species
+  freeze_encoder: true          # cabeza entrenable (más estable con mucho dato)
+  head_hidden: 256
+  dropout: 0.1
+  pool: max                     # MIL: si algún chunk tiene TE → positivo
+
+data:
+  npy_dir: data/panteon_dataset/processed
+  chunk_size: 5000              # 10 chunks de 5kb cubren los 50kb
+  n_chunks: 10
+  max_tokens: 1000              # cabe un chunk de 5kb en ~800 tokens
+
+train:
+  epochs: 100
+  batch_size: 4                 # ojo: cada muestra tiene 10 chunks → 40 forwards por batch
+  learning_rate: 1.0e-4
+  weight_decay: 0.01
+  warmup_steps: 500
+  pos_weight: 1.0               # dataset ya está balanceado 50/50
+  early_stopping_patience: 15
+  num_workers: 2
+  seed: 42
+
+output:
+  checkpoint_dir: models/binary_teon
+  log_dir: logs
+  best_metric: dev_f1
