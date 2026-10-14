@@ -1,0 +1,18 @@
+{
+  "species": "scerevisiae",
+  "out_file": "/home/cami/Desktop/ProyectoIntegrador/Inpactor3_segnt/results/rm_pilots/scerevisiae/scerevisiae.fasta.out",
+  "kept_elements": 541,
+  "excluded_elements": 3550,
+  "total_bp_kept": 131881,
+  "by_order": {
+    "LTR": 541
+  },
+  "by_superfamily_top10": {
+    "COPIA": 480,
+    "GYPSY": 61
+  },
+  "by_excluded_reason": {
+    "Simple_repeat": 3004,
+    "Low_complexity": 546
+  }
+}

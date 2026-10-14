@@ -55,3 +55,104 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+
+# ============================================================
+# Agregados · pipeline nuevo con RepeatMasker + PanTEon
+# ============================================================
+
+# Entorno Python local temporal
+.venv_slide/
+
+# Genomas descargados (regenerables con scripts)
+data/pilot_genomes/*.fasta
+data/pilot_genomes/*.fa.gz
+data/validation_genomes/*.fasta
+data/validation_genomes/*.fa.gz
+
+# Bibliotecas PanTEon filtradas (regenerables con filter_panteon_*.py)
+data/panteon_libraries/*.fasta
+
+# Anotaciones externas (bajar con download_curated_te.sh)
+data/curated_te/*.gff3
+data/curated_te/*.gff
+data/curated_te/*.gff.gz
+data/curated_te/*.txt
+data/curated_te/*.bed
+data/curated_te/*.gz
+data/curated_te/*.h5
+
+# Anotaciones de referencia Ensembl (regenerables)
+data/reference_annotations/*.gff3
+data/reference_annotations/*.gff
+data/reference_annotations/*.gff.gz
+
+# Outputs grandes de RepeatMasker (regenerables)
+results/rm_pilots/*/*.out
+results/rm_pilots/*/*.out.gff
+results/rm_pilots/*/*.masked
+results/rm_pilots/*/*.cat.gz
+results/rm_pilots/*/*.tbl
+# Pero SÍ versionamos los BEDs limpios ya procesados:
+!annotations/*.bed
+!annotations/*.summary.json
+
+# Material personal · presentaciones, guiones, diagramas
+docs/presentacion_simple.pptx
+docs/estrategia_cristian.pptx
+docs/segnt_resultados.pptx
+docs/guion_exposicion.md
+docs/agenda_miercoles.md
+docs/pipeline_cristian.png
+docs/comparativa_estrategias.png
+docs/segnt_curvas.png
+docs/pipeline_dataset.png
+
+# Scripts que generan material personal
+scripts/build_simple_presentation.py
+scripts/build_cristian_presentation.py
+scripts/build_cristian_pipeline.py
+scripts/build_comparativa_estrategias.py
+scripts/build_slide_segnt_results.py
+scripts/build_pipeline_diagram.py
+scripts/build_pptx*.py
+
+# Logs operacionales de RM
+logs/rm_pilots/
+logs/rm_extra/
+logs/downloads_bg.log
+logs/curated_dl.log
+logs/*.log
+
+# Resultados privados del servidor
+resultadosGPU/
+logsGPU/
+
+# Carpetas temporales de RepeatMasker (interrumpidas)
+RM_*.*/
+
+# Modelos entrenados (grandes, regenerables)
+models/
+
+# Datasets procesados grandes
+data/panteon_dataset/
+data/common_dataset/genomes/
+data/common_dataset/inpactor2_format/
+
+# Outputs de inferencia (regenerables)
+results/inpactor2_teon/
+results/segnt/
+
+# Ventanas generadas (regenerables con generate_windows.py)
+data/windows_pilot/
+
+# Dataset splits (opcional versionar sólo el manifest final)
+data/splits/*.jsonl
+# Pero SÍ el manifest JSON si se acuerda
+!data/splits/split_manifest.json
+
+# Reglas específicas (sin comentarios inline)
+data/raw/PanTEon_Database_v1.6.2.fasta
+data/raw/TAIR10_chr1.fasta
+data/raw/TAIR10_pseudo.fasta
+data/raw/*.fasta
+data/raw/*.csv

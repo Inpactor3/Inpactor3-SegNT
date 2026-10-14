@@ -1,0 +1,11 @@
+{
+  "species": "drosophila",
+  "ignore_elements": 99047,
+  "ignore_bp": 17142611,
+  "source_counts": {
+    "buffer_pos": 7117,
+    "excluded_rm": 103698,
+    "n_runs": 504
+  },
+  "buffer_bp": 1000
+}

@@ -1,0 +1,11 @@
+{
+  "species": "brachypodium",
+  "ignore_elements": 64979,
+  "ignore_bp": 150666857,
+  "source_counts": {
+    "buffer_pos": 97742,
+    "excluded_rm": 61405,
+    "n_runs": 25
+  },
+  "buffer_bp": 1000
+}

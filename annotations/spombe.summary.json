@@ -1,0 +1,31 @@
+{
+  "species": "spombe",
+  "out_file": "/home/cami/Desktop/ProyectoIntegrador/Inpactor3_segnt/results/rm_pilots/spombe/spombe.fasta.out",
+  "kept_elements": 677,
+  "excluded_elements": 2993,
+  "total_bp_kept": 172516,
+  "by_order": {
+    "LTR": 446,
+    "LINE": 98,
+    "SINE": 58,
+    "TIR": 40,
+    "HELITRON": 29,
+    "DIRS": 6
+  },
+  "by_superfamily_top10": {
+    "GYPSY": 345,
+    "TRNA": 44,
+    "COPIA": 37,
+    "LARD": 37,
+    "HELITRON": 29,
+    "LINE": 28,
+    "TAD1": 28,
+    "CR1": 22,
+    "TC1MARINER": 15,
+    "L1": 13
+  },
+  "by_excluded_reason": {
+    "Simple_repeat": 2325,
+    "Low_complexity": 668
+  }
+}

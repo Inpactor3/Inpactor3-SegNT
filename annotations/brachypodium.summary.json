@@ -1,0 +1,31 @@
+{
+  "species": "brachypodium",
+  "out_file": "/home/cami/Desktop/ProyectoIntegrador/Inpactor3_segnt/results/rm_pilots/brachypodium/brachypodium.fasta.out",
+  "kept_elements": 97742,
+  "excluded_elements": 61405,
+  "total_bp_kept": 59068075,
+  "by_order": {
+    "LTR": 37930,
+    "TIR": 24429,
+    "MITE": 21188,
+    "LINE": 12432,
+    "SINE": 1674,
+    "HELITRON": 89
+  },
+  "by_superfamily_top10": {
+    "GYPSY": 24716,
+    "MITE": 21188,
+    "TIR": 18014,
+    "L1": 12270,
+    "COPIA": 9873,
+    "CMC": 3815,
+    "LARD": 2463,
+    "SINE": 1674,
+    "PIFHARBINGER": 1392,
+    "MULE": 903
+  },
+  "by_excluded_reason": {
+    "Simple_repeat": 53296,
+    "Low_complexity": 8109
+  }
+}

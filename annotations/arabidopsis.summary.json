@@ -1,0 +1,30 @@
+{
+  "species": "arabidopsis",
+  "out_file": "/home/cami/Desktop/ProyectoIntegrador/Inpactor3_segnt/results/rm_pilots/arabidopsis/TAIR10.fasta.out",
+  "kept_elements": 21409,
+  "excluded_elements": 46118,
+  "total_bp_kept": 11935264,
+  "by_order": {
+    "LTR": 9484,
+    "TIR": 5883,
+    "HELITRON": 4347,
+    "LINE": 1473,
+    "SINE": 222
+  },
+  "by_superfamily_top10": {
+    "GYPSY": 7905,
+    "HELITRON": 4347,
+    "TIR": 3125,
+    "COPIA": 1579,
+    "L1": 1473,
+    "MULE": 1261,
+    "CMC": 650,
+    "TC1MARINER": 472,
+    "HAT": 246,
+    "SINE": 222
+  },
+  "by_excluded_reason": {
+    "Simple_repeat": 36663,
+    "Low_complexity": 9455
+  }
+}

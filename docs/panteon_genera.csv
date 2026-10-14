@@ -1,0 +1,1666 @@
+genus,kingdom,n_species,total_consensos,species_list
+Drosophila,Animalia,4,17,Drosophila mauritiana; Drosophila melanogaster; Drosophila sechellia; Drosophila simulans
+Mus,Animalia,4,122,Mus caroli; Mus musculus; Mus pahari; Mus spretus
+Myotis,Animalia,4,852,Myotis brandtii; Myotis davidii; Myotis lucifugus; Myotis myotis
+Spodoptera,Animalia,4,4,Spodoptera exigua; Spodoptera frugiperda; Spodoptera littoralis; Spodoptera litura
+Acropora,Animalia,3,5,Acropora acuminata; Acropora millepora; Acropora nasuta
+Apteryx,Animalia,3,48,Apteryx haastii; Apteryx owenii; Apteryx rowi
+Bos,Animalia,3,1288,Bos indicus; Bos mutus; Bos taurus
+Camelus,Animalia,3,46,Camelus bactrianus; Camelus dromedarius; Camelus ferus
+Cavia,Animalia,3,707,Cavia aperea; Cavia porcellus; Cavia tschudii
+Crassostrea,Animalia,3,124,Crassostrea ariakensis; Crassostrea gigas; Crassostrea virginica
+Equus,Animalia,3,679,Equus asinus; Equus caballus; Equus przewalskii
+Heliconius,Animalia,3,66,Heliconius; Heliconius erato demophoon; Heliconius melpomene melpomene
+Macaca,Animalia,3,168,Macaca fascicularis; Macaca mulatta; Macaca nemestrina
+Mytilus,Animalia,3,163,Mytilus coruscus; Mytilus edulis; Mytilus galloprovincialis
+Nothoprocta,Animalia,3,90,Nothoprocta ornata; Nothoprocta pentlandii; Nothoprocta perdicaria
+Panthera,Animalia,3,86,Panthera onca; Panthera pardus; Panthera tigris
+Papilio,Animalia,3,3,Papilio glaucus; Papilio machaon; Papilio zelicaon
+Acridotheres,Animalia,2,157,Acridotheres javanicus; Acridotheres tristis
+Alligator,Animalia,2,830,Alligator mississippiensis; Alligator sinensis
+Alosa,Animalia,2,611,Alosa alosa; Alosa sapidissima
+Anadara,Animalia,2,83,Anadara broughtonii; Anadara kagoshimensis
+Andrena,Animalia,2,226,Andrena dorsata; Andrena haemorrhoa
+Argopecten,Animalia,2,29,Argopecten irradians concentricus; Argopecten purpuratus
+Balaenoptera,Animalia,2,674,Balaenoptera acutorostrata; Balaenoptera bonaerensis
+Brachionus,Animalia,2,365,Brachionus asplanchnoidis; Brachionus paranguensis
+Branchiostoma,Animalia,2,470,Branchiostoma floridae x branchiostoma belcheri; Branchiostoma lanceolatum
+Burhinus,Animalia,2,161,Burhinus bistriatus; Burhinus oedicnemus
+Canis,Animalia,2,1218,Canis lupus; Canis lupus familiaris
+Capra,Animalia,2,629,Capra aegagrus; Capra hircus
+Cebus,Animalia,2,28,Cebus albifrons; Cebus capucinus
+Ceratotherium,Animalia,2,661,Ceratotherium simum; Ceratotherium simum cottoni
+Charadrius,Animalia,2,114,Charadrius alexandrinus; Charadrius vociferus
+Chironomus,Animalia,2,112,Chironomus riparius; Chironomus tepperi
+Chloropsis,Animalia,2,222,Chloropsis cyanopogon; Chloropsis hardwickii
+Choloepus,Animalia,2,96,Choloepus didactylus; Choloepus hoffmanni
+Chrysemys,Animalia,2,57,Chrysemys; Chrysemys picta bellii
+Coelopa,Animalia,2,414,Coelopa frigida; Coelopa pilipes
+Danio,Animalia,2,1378,Danio; Danio rerio
+Dipodomys,Animalia,2,56,Dipodomys ordii; Dipodomys stephensi
+Ellobius,Animalia,2,91,Ellobius lutescens; Ellobius talpinus
+Eulemur,Animalia,2,43,Eulemur flavifrons; Eulemur fulvus
+Felis,Animalia,2,65,Felis catus; Felis nigripes
+Heligmosomoides,Animalia,2,1329,Heligmosomoides bakeri; Heligmosomoides polygyrus polygyrus
+Hipposideros,Animalia,2,89,Hipposideros armiger; Hipposideros galeritus
+Indicator,Animalia,2,183,Indicator indicator; Indicator maculatus
+Lethenteron,Animalia,2,568,Lethenteron camtschaticum; Lethenteron reissneri
+Manis,Animalia,2,61,Manis javanica; Manis pentadactyla
+Miniopterus,Animalia,2,108,Miniopterus natalensis; Miniopterus schreibersii
+Octopus,Animalia,2,3,Octopus bimaculoides; Octopus vulgaris
+Orycteropus,Animalia,2,767,Orycteropus afer; Orycteropus afer afer
+Ovis,Animalia,2,92,Ovis aries; Ovis canadensis
+Pan,Animalia,2,118,Pan paniscus; Pan troglodytes
+Peromyscus,Animalia,2,88,Peromyscus maniculatus; Peromyscus maniculatus bairdii
+Pinctada,Animalia,2,12,Pinctada fucata; Pinctada imbricata
+Pipistrellus,Animalia,2,55,Pipistrellus kuhlii; Pipistrellus pipistrellus
+Pristionchus,Animalia,2,2,Pristionchus arcanus; Pristionchus pacificus
+Pteropus,Animalia,2,67,Pteropus alecto; Pteropus vampyrus
+Rattus,Animalia,2,66,Rattus; Rattus norvegicus
+Rhea,Animalia,2,18,Rhea americana; Rhea pennata
+Rhinolophus,Animalia,2,90,Rhinolophus ferrumequinum; Rhinolophus sinicus
+Rhinopithecus,Animalia,2,40,Rhinopithecus bieti; Rhinopithecus roxellana
+Sarcophaga,Animalia,2,765,Sarcophaga rosellei; Sarcophaga variegata
+Stegodyphus,Animalia,2,2,Stegodyphus dumicola; Stegodyphus mimosarum
+Takifugu,Animalia,2,119,Takifugu flavidus; Takifugu rubripes
+Tapirus,Animalia,2,33,Tapirus indicus; Tapirus terrestris
+Trichechus,Animalia,2,312,Trichechus manatus; Trichechus manatus latirostris
+Trichogramma,Animalia,2,124,Trichogramma brassicae; Trichogramma pretiosum
+Tupaia,Animalia,2,55,Tupaia chinensis; Tupaia tana
+Yponomeuta,Animalia,2,1021,Yponomeuta plumbellus; Yponomeuta sedellus
+Ypsolopha,Animalia,2,1340,Ypsolopha scabrella; Ypsolopha sequella
+Acanthaster,Animalia,1,71,Acanthaster planci
+Acanthoscelides,Animalia,1,595,Acanthoscelides obtectus
+Achlya,Animalia,1,413,Achlya flavicornis
+Acinonyx,Animalia,1,18,Acinonyx jubatus
+Acipenser,Animalia,1,151,Acipenser ruthenus
+Acomys,Animalia,1,39,Acomys cahirinus
+Acrocera,Animalia,1,135,Acrocera orbiculus
+Acromyrmex,Animalia,1,154,Acromyrmex echinatior
+Acrossocheilus,Animalia,1,595,Acrossocheilus wenchowensis
+Actinia,Animalia,1,34,Actinia tenebrosa
+Adineta,Animalia,1,20,Adineta ricciae
+Aegithalos,Animalia,1,62,Aegithalos caudatus
+Aegotheles,Animalia,1,62,Aegotheles bennettii
+Aethina,Animalia,1,35,Aethina tumida
+Afrotheria,Animalia,1,46,Afrotheria
+Agelaius,Animalia,1,165,Agelaius phoeniceus
+Agelas,Animalia,1,100,Agelas oroides
+Agonum,Animalia,1,218,Agonum fuliginosum
+Agrilus,Animalia,1,131,Agrilus cyanescens
+Agrypnia,Animalia,1,283,Agrypnia vestita
+Ahaetulla,Animalia,1,313,Ahaetulla prasina
+Ailuropoda,Animalia,1,23,Ailuropoda melanoleuca
+Ailurus,Animalia,1,18,Ailurus fulgens
+Alauda,Animalia,1,67,Alauda arvensis
+Albula,Animalia,1,118,Albula goreensis
+Alca,Animalia,1,182,Alca torda
+Aldabrachelys,Animalia,1,687,Aldabrachelys gigantea
+Aldrovandia,Animalia,1,434,Aldrovandia affinis
+Aleadryas,Animalia,1,60,Aleadryas rufinucha
+Alectoris,Animalia,1,145,Alectoris rufa
+Allacma,Animalia,1,168,Allacma fusca
+Alloplasta,Animalia,1,101,Alloplasta piceator
+Alouatta,Animalia,1,8,Alouatta palliata
+Alviniconcha,Animalia,1,131,Alviniconcha marisindica
+Amblyornis,Animalia,1,122,Amblyornis subalaris
+Amblyraja,Animalia,1,412,Amblyraja radiata
+Ammodramus,Animalia,1,129,Ammodramus caudacutus
+Ammodytes,Animalia,1,290,Ammodytes dubius
+Ammotragus,Animalia,1,23,Ammotragus lervia
+Amniota,Animalia,1,58,Amniota
+Amphibalanus,Animalia,1,236,Amphibalanus amphitrite
+Amphiduros,Animalia,1,152,Amphiduros pacificus
+Ampullaceana,Animalia,1,211,Ampullaceana balthica
+Anabarilius,Animalia,1,522,Anabarilius grahami
+Anabas,Animalia,1,86,Anabas testudineus
+Anableps,Animalia,1,181,Anableps anableps
+Anarrhichthys,Animalia,1,53,Anarrhichthys ocellatus
+Anarsia,Animalia,1,144,Anarsia innoxiella
+Anas,Animalia,1,88,Anas platyrhynchos
+Anaspis,Animalia,1,446,Anaspis maculata
+Anastrepha,Animalia,1,985,Anastrepha obliqua
+Ancistrocerus,Animalia,1,140,Ancistrocerus nigricornis
+Angiostrongylus,Animalia,1,46,Angiostrongylus vasorum
+Anguilla,Animalia,1,399,Anguilla anguilla
+Anhinga,Animalia,1,59,Anhinga anhinga
+Anisus,Animalia,1,274,Anisus vortex
+Anniella,Animalia,1,303,Anniella stebbinsi
+Anolis,Animalia,1,658,Anolis carolinensis
+Anopheles,Animalia,1,223,Anopheles coluzzii
+Anoplius,Animalia,1,127,Anoplius nigerrimus
+Anoplopoma,Animalia,1,117,Anoplopoma fimbria
+Anoura,Animalia,1,37,Anoura caudifer
+Anseranas,Animalia,1,46,Anseranas semipalmata
+Antechinus,Animalia,1,119,Antechinus flavipes
+Antennarius,Animalia,1,268,Antennarius maculatus
+Anthocharis,Animalia,1,418,Anthocharis cardamines
+Anthoscopus,Animalia,1,65,Anthoscopus minutus
+Antilocapra,Animalia,1,29,Antilocapra americana peninsularis
+Aotus,Animalia,1,15,Aotus nancymaae
+Apeltes,Animalia,1,100,Apeltes quadracus
+Aphanius,Animalia,1,337,Aphanius iberus
+Aphelenchoides,Animalia,1,10,Aphelenchoides fujianensis
+Aphelinus,Animalia,1,205,Aphelinus atriplicis
+Aphelocoma,Animalia,1,115,Aphelocoma californica
+Aphidius,Animalia,1,55,Aphidius gifuensis
+Aphis,Animalia,1,53,Aphis gossypii
+Aphyosemion,Animalia,1,422,Aphyosemion australe
+Aplectana,Animalia,1,617,Aplectana chamaeleonis
+Aplochiton,Animalia,1,91,Aplochiton taeniatus
+Aplodontia,Animalia,1,40,Aplodontia rufa
+Apocrypta,Animalia,1,18,Apocrypta bakeri
+Apoda,Animalia,1,427,Apoda limacodes
+Apoderus,Animalia,1,635,Apoderus coryli
+Apolygus,Animalia,1,603,Apolygus lucorum
+Aporrectodea,Animalia,1,538,Aporrectodea caliginosa
+Apostichopus,Animalia,1,2,Apostichopus japonicus
+Aptenodytes,Animalia,1,30,Aptenodytes forsteri
+Ara,Animalia,1,58,Ara ararauna
+Archegozetes,Animalia,1,61,Archegozetes longisetosus
+Archilochus,Animalia,1,167,Archilochus colubris
+Architeuthis,Animalia,1,1,Architeuthis dux
+Archivesica,Animalia,1,188,Archivesica marissinica
+Archocentrus,Animalia,1,352,Archocentrus centrarchus
+Arctia,Animalia,1,340,Arctia plantaginis
+Arctopsyche,Animalia,1,121,Arctopsyche grandis
+Ardeotis,Animalia,1,48,Ardeotis kori
+Arenaria,Animalia,1,66,Arenaria interpres
+Argiope,Animalia,1,218,Argiope bruennichi
+Argyrosomus,Animalia,1,201,Argyrosomus regius
+Artibeus,Animalia,1,50,Artibeus jamaicensis
+Artiodactyla,Animalia,1,46,Artiodactyla
+Ascaris,Animalia,1,1,Ascaris suum
+Ascidia,Animalia,1,110,Ascidia mentula
+Astatotilapia,Animalia,1,397,Astatotilapia calliptera
+Ateles,Animalia,1,13,Ateles geoffroyi
+Athripsodes,Animalia,1,480,Athripsodes cinereus
+Atlantisia,Animalia,1,93,Atlantisia rogersi
+Augochlora,Animalia,1,79,Augochlora pura
+Azumapecten,Animalia,1,23,Azumapecten farreri
+Balaeniceps,Animalia,1,73,Balaeniceps rex
+Beatragus,Animalia,1,28,Beatragus hunteri
+Bemisia,Animalia,1,187,Bemisia tabaci
+Beris,Animalia,1,526,Beris chalybata
+Beroe,Animalia,1,1,Beroe forskalii
+Betta,Animalia,1,74,Betta splendens
+Bibio,Animalia,1,70,Bibio marci
+Big-eye,Animalia,1,195,Big-eye mandarin fish
+Bison,Animalia,1,45,Bison bison
+Blastobasis,Animalia,1,519,Blastobasis adustella
+Blastomussa,Animalia,1,334,Blastomussa wellsi
+Blera,Animalia,1,648,Blera fallax
+Blomia,Animalia,1,2,Blomia tropicalis
+Bombycilla,Animalia,1,76,Bombycilla garrulus
+Boreoeutheria,Animalia,1,46,Boreoeutheria
+Brachyistius,Animalia,1,106,Brachyistius frenatus
+Brachypodius,Animalia,1,69,Brachypodius atriceps
+Brachypteracias,Animalia,1,72,Brachypteracias leptosomus
+Bradypus,Animalia,1,27,Bradypus variegatus
+Bradysia,Animalia,1,207,Bradysia coprophila
+Branchinecta,Animalia,1,340,Branchinecta lindahli
+Brotula,Animalia,1,19,Brotula barbata
+Brueelia,Animalia,1,7,Brueelia nebulosa
+Bubalus,Animalia,1,19,Bubalus bubalis
+Bubo,Animalia,1,76,Bubo bubo
+Bucco,Animalia,1,87,Bucco capensis
+Bucorvus,Animalia,1,74,Bucorvus abyssinicus
+Caenorhabditis,Animalia,1,139,Caenorhabditis elegans
+Calcarius,Animalia,1,84,Calcarius ornatus
+Caligus,Animalia,1,1,Caligus rogercresseyi
+Callionymus,Animalia,1,138,Callionymus lyra
+Callitettix,Animalia,1,180,Callitettix versicolor
+Callithrix,Animalia,1,1294,Callithrix jacchus
+Callorhinchus,Animalia,1,124,Callorhinchus milii
+Calyptomena,Animalia,1,70,Calyptomena viridis
+Capromys,Animalia,1,37,Capromys pilorides
+Caranx,Animalia,1,80,Caranx melampygus
+Carcharodon,Animalia,1,267,Carcharodon carcharias
+Cariama,Animalia,1,30,Cariama cristata
+Carlito,Animalia,1,373,Carlito syrichta
+Carnivora,Animalia,1,46,Carnivora
+Carollia,Animalia,1,612,Carollia perspicillata
+Castor,Animalia,1,29,Castor canadensis
+Casuarius,Animalia,1,22,Casuarius casuarius
+Catagonus,Animalia,1,22,Catagonus wagneri
+Catarrhini,Animalia,1,56,Catarrhini
+Cathartes,Animalia,1,40,Cathartes aura
+Catharus,Animalia,1,84,Catharus fuscescens
+Centroberyx,Animalia,1,167,Centroberyx gerrardi
+Centropus,Animalia,1,56,Centropus unirufus
+Cephalopterus,Animalia,1,77,Cephalopterus ornatus
+Cerastoderma,Animalia,1,149,Cerastoderma edule
+Ceratosolen,Animalia,1,4,Ceratosolen fusciceps
+Cercocebus,Animalia,1,9,Cercocebus atys
+Cercopithecus,Animalia,1,7,Cercopithecus neglectus
+Certhia,Animalia,1,78,Certhia brachydactyla
+Cetonia,Animalia,1,710,Cetonia aurata
+Chaetophractus,Animalia,1,65,Chaetophractus vellerosus
+Chaetops,Animalia,1,65,Chaetops frenatus
+Chaetorhynchus,Animalia,1,78,Chaetorhynchus papuensis
+Chanos,Animalia,1,307,Chanos chanos
+Chatrabus,Animalia,1,1,Chatrabus melanurus
+Chauna,Animalia,1,72,Chauna torquata
+Cheirogaleus,Animalia,1,35,Cheirogaleus medius
+Chelidonichthys,Animalia,1,194,Chelidonichthys spinosus
+Chelmon,Animalia,1,244,Chelmon rostratus
+Chilo,Animalia,1,2,Chilo suppressalis
+Chiloscyllium,Animalia,1,181,Chiloscyllium punctatum
+Chinchilla,Animalia,1,30,Chinchilla lanigera
+Chiroptera,Animalia,1,46,Chiroptera
+Chlorocebus,Animalia,1,1129,Chlorocebus sabaeus
+Chondrosia,Animalia,1,64,Chondrosia reniformis
+Choreutis,Animalia,1,133,Choreutis nemorana
+Choristoneura,Animalia,1,1,Choristoneura fumiferana
+Chroicocephalus,Animalia,1,76,Chroicocephalus maculipennis
+Chrysaora,Animalia,1,251,Chrysaora quinquecirrha
+Chrysochloris,Animalia,1,62,Chrysochloris asiatica
+Chrysopa,Animalia,1,85,Chrysopa pallens
+Ciconia,Animalia,1,124,Ciconia maguari
+Cimex,Animalia,1,415,Cimex lectularius
+Cinclus,Animalia,1,86,Cinclus mexicanus
+Ciona,Animalia,1,37,Ciona intestinalis
+Cisticola,Animalia,1,64,Cisticola juncidis
+Clarias,Animalia,1,261,Clarias batrachus
+Clavelina,Animalia,1,93,Clavelina lepadiformis
+Clytia,Animalia,1,4,Clytia hemisphaerica
+Cochlearius,Animalia,1,64,Cochlearius cochlearius
+Coelioxys,Animalia,1,85,Coelioxys conoideus
+Coilia,Animalia,1,184,Coilia nasus
+Colaptes,Animalia,1,141,Colaptes auratus
+Colius,Animalia,1,30,Colius striatus
+Colobus,Animalia,1,1148,Colobus angolensis
+Columba,Animalia,1,35,Columba livia
+Condylura,Animalia,1,22,Condylura cristata
+Conomelus,Animalia,1,398,Conomelus anceps
+Coptotermes,Animalia,1,147,Coptotermes formosanus
+Coregonus,Animalia,1,897,Coregonus clupeaformis
+Coryphaenoides,Animalia,1,61,Coryphaenoides rupestris
+Craseonycteris,Animalia,1,101,Craseonycteris thonglongyai
+Crataerina,Animalia,1,125,Crataerina pallida
+Cricetomys,Animalia,1,47,Cricetomys gambianus
+Cricetulus,Animalia,1,58,Cricetulus griseus
+Crocidura,Animalia,1,88,Crocidura indochinensis
+Crocodylus,Animalia,1,333,Crocodylus porosus
+Crocuta,Animalia,1,223,Crocuta crocuta
+Crotophaga,Animalia,1,71,Crotophaga sulcirostris
+Cryptoprocta,Animalia,1,15,Cryptoprocta ferox
+Crypturellus,Animalia,1,24,Crypturellus undulatus
+Ctenodactylus,Animalia,1,17,Ctenodactylus gundi
+Ctenomys,Animalia,1,33,Ctenomys sociabilis
+Cuculus,Animalia,1,27,Cuculus canorus
+Culicoides,Animalia,1,86,Culicoides sonorensis
+Cuniculus,Animalia,1,43,Cuniculus paca
+Cuora,Animalia,1,776,Cuora amboinensis
+Cyclina,Animalia,1,44,Cyclina sinensis
+Cylas,Animalia,1,366,Cylas formicarius
+Cynoglossus,Animalia,1,60,Cynoglossus semilaevis
+Cyprinodon,Animalia,1,89,Cyprinodon variegatus
+Dallia,Animalia,1,284,Dallia pectoralis
+Danionidae,Animalia,1,4,Danionidae
+Darwinula,Animalia,1,4,Darwinula stevensoni
+Dasyornis,Animalia,1,43,Dasyornis broadbenti
+Dasyprocta,Animalia,1,48,Dasyprocta punctata
+Dasypus,Animalia,1,84,Dasypus novemcinctus
+Datnioides,Animalia,1,69,Datnioides undecimradiatus
+Daubentonia,Animalia,1,29,Daubentonia madagascariensis
+Delphinapterus,Animalia,1,21,Delphinapterus leucas
+Desmodus,Animalia,1,40,Desmodus rotundus
+Desmophyllum,Animalia,1,183,Desmophyllum pertusum
+Desoria,Animalia,1,54,Desoria tigrina
+Diaphorina,Animalia,1,51,Diaphorina citri
+Dicerorhinus,Animalia,1,46,Dicerorhinus sumatrensis
+Diceros,Animalia,1,27,Diceros bicornis michaeli
+Didymodactylos,Animalia,1,1,Didymodactylos carnosus
+Dinomys,Animalia,1,34,Dinomys branickii
+Dolichotis,Animalia,1,35,Dolichotis patagonum
+Donacobius,Animalia,1,77,Donacobius atricapilla
+Dracunculus,Animalia,1,48,Dracunculus medinensis
+Dreissena,Animalia,1,47,Dreissena rostriformis
+Dromaius,Animalia,1,25,Dromaius novaehollandiae
+Dromas,Animalia,1,49,Dromas ardeola
+Dromiciops,Animalia,1,89,Dromiciops gliroides
+Drusus,Animalia,1,185,Drusus annulatus
+Drymodes,Animalia,1,63,Drymodes brunneopygia
+Dryoscopus,Animalia,1,67,Dryoscopus gambensis
+Dunckerocampus,Animalia,1,282,Dunckerocampus dactyliophorus
+Durocryptodira,Animalia,1,90,Durocryptodira
+Dyaphorophyia,Animalia,1,62,Dyaphorophyia castanea
+Echinops,Animalia,1,61,Echinops telfairi
+Eidolon,Animalia,1,17,Eidolon helvum
+Elaphurus,Animalia,1,34,Elaphurus davidianus
+Electrophorus,Animalia,1,66,Electrophorus electricus
+Elephantulus,Animalia,1,56,Elephantulus edwardii
+Eleutheronema,Animalia,1,64,Eleutheronema tetradactylum
+Elmis,Animalia,1,291,Elmis aenea
+Empidonax,Animalia,1,86,Empidonax traillii
+Emydocephalus,Animalia,1,192,Emydocephalus ijimae
+Emydura,Animalia,1,499,Emydura subglobosa
+Enhydra,Animalia,1,626,Enhydra lutris
+Eonycteris,Animalia,1,165,Eonycteris spelaea
+Eptatretus,Animalia,1,1,Eptatretus burgeri
+Eptesicus,Animalia,1,46,Eptesicus fuscus
+Erethizon,Animalia,1,177,Erethizon dorsatum
+Ericerus,Animalia,1,288,Ericerus pela
+Erinaceus,Animalia,1,62,Erinaceus europaeus
+Eriocheir,Animalia,1,267,Eriocheir sinensis
+Erpetoichthys,Animalia,1,442,Erpetoichthys calabaricus
+Erynnis,Animalia,1,1,Erynnis propertius
+Erythrocebus,Animalia,1,13,Erythrocebus patas
+Eschrichtius,Animalia,1,32,Eschrichtius robustus
+Esox,Animalia,1,255,Esox lucius
+Esperia,Animalia,1,258,Esperia sulphurella
+Etheostoma,Animalia,1,204,Etheostoma cragini
+Euarchontoglires,Animalia,1,46,Euarchontoglires
+Eubalaena,Animalia,1,35,Eubalaena japonica
+Eubucco,Animalia,1,54,Eubucco bourcierii
+Eudromia,Animalia,1,14,Eudromia elegans
+Eulacestoma,Animalia,1,64,Eulacestoma nigropectus
+Eulimnadia,Animalia,1,1,Eulimnadia texana
+Eumeta,Animalia,1,235,Eumeta japonica
+Euprymna,Animalia,1,1,Euprymna scolopes
+Eurypyga,Animalia,1,21,Eurypyga helias
+Eurystomus,Animalia,1,70,Eurystomus gularis
+Euteleostomi,Animalia,1,2,Euteleostomi
+Eutheria,Animalia,1,46,Eutheria
+Falco,Animalia,1,36,Falco peregrinus
+Ficedula,Animalia,1,73,Ficedula albicollis
+Forficula,Animalia,1,387,Forficula auricularia
+Formicarius,Animalia,1,70,Formicarius rufipectus
+Fregata,Animalia,1,68,Fregata magnificens
+Fukomys,Animalia,1,27,Fukomys damarensis
+Furnarius,Animalia,1,71,Furnarius figulus
+Galaxea,Animalia,1,377,Galaxea fascicularis
+Galendromus,Animalia,1,46,Galendromus occidentalis
+Galeopterus,Animalia,1,79,Galeopterus variegatus
+Gambusia,Animalia,1,85,Gambusia affinis
+Gari,Animalia,1,267,Gari tellinella
+Gavia,Animalia,1,30,Gavia stellata
+Gekko,Animalia,1,154,Gekko japonicus
+Geococcyx,Animalia,1,58,Geococcyx californianus
+Geotrypetes,Animalia,1,1115,Geotrypetes seraphini
+Gigantidas,Animalia,1,101,Gigantidas platifrons
+Giraffa,Animalia,1,38,Giraffa tippelskirchi
+Glareola,Animalia,1,76,Glareola pratincola
+Glires,Animalia,1,46,Glires
+Glis,Animalia,1,48,Glis glis
+Globodera,Animalia,1,25,Globodera pallida
+Gnatocerus,Animalia,1,55,Gnatocerus cornutus
+Gonatopus,Animalia,1,170,Gonatopus flavifemur
+Gorilla,Animalia,1,59,Gorilla gorilla
+Graphiurus,Animalia,1,39,Graphiurus murinus
+Grus,Animalia,1,52,Grus americana
+Gymnarchus,Animalia,1,169,Gymnarchus niloticus
+Gymnobelideus,Animalia,1,91,Gymnobelideus leadbeateri
+Gymnothorax,Animalia,1,472,Gymnothorax reevesii
+Haemonchus,Animalia,1,1,Haemonchus contortus
+Halcyon,Animalia,1,100,Halcyon senegalensis
+Halicephalobus,Animalia,1,10,Halicephalobus mephisto
+Haliotis,Animalia,1,350,Haliotis rubra
+Halyomorpha,Animalia,1,432,Halyomorpha halys
+Haplorrhini,Animalia,1,53,Haplorrhini
+Harmothoe,Animalia,1,259,Harmothoe impar
+Heliconiini,Animalia,1,71,Heliconiini
+Heliornis,Animalia,1,66,Heliornis fulica
+Heloderma,Animalia,1,175,Heloderma charlesbogerti
+Helogale,Animalia,1,22,Helogale parvula
+Helostoma,Animalia,1,140,Helostoma temminkii
+Hemiprocne,Animalia,1,146,Hemiprocne comata
+Hemitragus,Animalia,1,38,Hemitragus hylocrius
+Heterobilharzia,Animalia,1,271,Heterobilharzia americana
+Heterocephalus,Animalia,1,321,Heterocephalus glaber
+Heterohyrax,Animalia,1,18,Heterohyrax brucei
+Himantopus,Animalia,1,49,Himantopus himantopus leucocephalus
+Hippoglossus,Animalia,1,95,Hippoglossus hippoglossus
+Hippopotamus,Animalia,1,55,Hippopotamus amphibius
+Holothuria,Animalia,1,331,Holothuria scabra
+Hominidae,Animalia,1,59,Hominidae
+Homininae,Animalia,1,1173,Homininae
+Hominoidea,Animalia,1,59,Hominoidea
+Homo,Animalia,1,11,Homo sapiens
+Hyaena,Animalia,1,26,Hyaena hyaena
+Hydractinia,Animalia,1,222,Hydractinia symbiolongicarpus
+Hydrochoerus,Animalia,1,31,Hydrochoerus hydrochaeris
+Hypocryptadius,Animalia,1,91,Hypocryptadius cinnamomeus
+Hystrix,Animalia,1,29,Hystrix cristata
+Ictalurus,Animalia,1,108,Ictalurus punctatus
+Ictidomys,Animalia,1,44,Ictidomys tridecemlineatus
+Indri,Animalia,1,25,Indri indri
+Inia,Animalia,1,29,Inia geoffrensis
+Ischnura,Animalia,1,345,Ischnura elegans
+Istiophorus,Animalia,1,67,Istiophorus platypterus
+Jaculus,Animalia,1,32,Jaculus jaculus
+Kogia,Animalia,1,27,Kogia breviceps
+Labrus,Animalia,1,54,Labrus bergylta
+Lama,Animalia,1,272,Lama guanicoe
+Lasiurus,Animalia,1,121,Lasiurus borealis
+Lateolabrax,Animalia,1,39,Lateolabrax maculatus
+Lates,Animalia,1,33,Lates calcarifer
+Lemur,Animalia,1,18,Lemur catta
+Lepidostoma,Animalia,1,210,Lepidostoma basale
+Lepidurus,Animalia,1,90,Lepidurus packardi
+Lepisosteus,Animalia,1,54,Lepisosteus oculatus
+Lepomis,Animalia,1,346,Lepomis macrochirus
+Leptonychotes,Animalia,1,13,Leptonychotes weddellii
+Leptopilina,Animalia,1,101,Leptopilina boulardi
+Leptosomus,Animalia,1,71,Leptosomus discolor
+Lepus,Animalia,1,33,Lepus americanus
+Lerema,Animalia,1,3,Lerema accius
+Limnoperna,Animalia,1,10,Limnoperna fortunei
+Limulus,Animalia,1,1,Limulus polyphemus
+Lipotes,Animalia,1,23,Lipotes vexillifer
+Locustella,Animalia,1,81,Locustella ochotensis
+Lophius,Animalia,1,125,Lophius piscatorius
+Loxodonta,Animalia,1,566,Loxodonta africana
+Lycaon,Animalia,1,21,Lycaon pictus
+Lytechinus,Animalia,1,385,Lytechinus pictus
+Macroglossus,Animalia,1,37,Macroglossus sobrinus
+Mammalia,Animalia,1,54,Mammalia
+Mandrillus,Animalia,1,14,Mandrillus leucophaeus
+Manduca,Animalia,1,2,Manduca sexta
+Marmota,Animalia,1,711,Marmota marmota
+Megaderma,Animalia,1,98,Megaderma lyra
+Megaleporinus,Animalia,1,207,Megaleporinus macrocephalus
+Megalonaias,Animalia,1,68,Megalonaias nervosa
+Megalops,Animalia,1,156,Megalops atlanticus
+Mellivora,Animalia,1,31,Mellivora capensis
+Meloidogyne,Animalia,1,42,Meloidogyne luci
+Mercenaria,Animalia,1,64,Mercenaria mercenaria
+Meriones,Animalia,1,18,Meriones unguiculatus
+Mesaphorura,Animalia,1,1,Mesaphorura yosii
+Mesembrinibis,Animalia,1,64,Mesembrinibis cayennensis
+Mesitornis,Animalia,1,35,Mesitornis unicolor
+Mesocricetus,Animalia,1,74,Mesocricetus auratus
+Mesoplodon,Animalia,1,20,Mesoplodon bidens
+Metaphire,Animalia,1,434,Metaphire vulgaris
+Metatheria,Animalia,1,43,Metatheria
+Metazoa,Animalia,1,1,Metazoa
+Microcebus,Animalia,1,38,Microcebus murinus
+Micronycteris,Animalia,1,46,Micronycteris hirsuta
+Microtus,Animalia,1,55,Microtus ochrogaster
+Mirounga,Animalia,1,17,Mirounga angustirostris
+Mirza,Animalia,1,35,Mirza coquereli
+Mizuhopecten,Animalia,1,33,Mizuhopecten yessoensis
+Mnemiopsis,Animalia,1,1,Mnemiopsis leidyi
+Modiolus,Animalia,1,38,Modiolus philippinarum
+Molossus,Animalia,1,41,Molossus molossus
+Monodelphis,Animalia,1,155,Monodelphis domestica
+Monodon,Animalia,1,12,Monodon monoceros
+Monopterus,Animalia,1,93,Monopterus albus
+Monotremata,Animalia,1,125,Monotremata
+Morbakka,Animalia,1,2,Morbakka virulenta
+Mormoops,Animalia,1,40,Mormoops blainvillei
+Moschus,Animalia,1,25,Moschus moschiferus
+Mugil,Animalia,1,103,Mugil cephalus
+Mugilogobius,Animalia,1,304,Mugilogobius chulae
+Mungos,Animalia,1,18,Mungos mungo
+Muridae,Animalia,1,44,Muridae
+Murina,Animalia,1,193,Murina aurata feae
+Murinae,Animalia,1,44,Murinae
+Muroidea,Animalia,1,44,Muroidea
+Muscardinus,Animalia,1,43,Muscardinus avellanarius
+Mustela,Animalia,1,46,Mustela putorius
+Myocastor,Animalia,1,36,Myocastor coypus
+Myomorpha,Animalia,1,682,Myomorpha
+Myripristis,Animalia,1,307,Myripristis murdjan
+Myrmecophaga,Animalia,1,35,Myrmecophaga tridactyla
+Nannospalax,Animalia,1,49,Nannospalax galili
+Nasalis,Animalia,1,10,Nasalis larvatus
+Neomonachus,Animalia,1,13,Neomonachus schauinslandi
+Neophocaena,Animalia,1,21,Neophocaena asiaeorientalis
+Nesogale,Animalia,1,79,Nesogale talazaci
+Nippostrongylus,Animalia,1,3,Nippostrongylus brasiliensis
+Noctilio,Animalia,1,31,Noctilio leporinus
+Nomascus,Animalia,1,18,Nomascus leucogenys
+Nothocercus,Animalia,1,36,Nothocercus julius
+Nycticebus,Animalia,1,35,Nycticebus coucang
+Ochotona,Animalia,1,33,Ochotona princeps
+Octodon,Animalia,1,43,Octodon degus
+Odobenus,Animalia,1,8,Odobenus rosmarus
+Odocoileus,Animalia,1,28,Odocoileus virginianus
+Okapia,Animalia,1,39,Okapia johnstoni
+Ondatra,Animalia,1,55,Ondatra zibethicus
+Onychomys,Animalia,1,83,Onychomys torridus
+Operophtera,Animalia,1,1,Operophtera brumata
+Opisthocomus,Animalia,1,29,Opisthocomus hoazin
+Oplegnathus,Animalia,1,57,Oplegnathus fasciatus
+Orcinus,Animalia,1,18,Orcinus orca
+Orientallactaga,Animalia,1,56,Orientallactaga bullata
+Ornithorhynchus,Animalia,1,115,Ornithorhynchus anatinus
+Oryctolagus,Animalia,1,143,Oryctolagus cuniculus
+Oryzias,Animalia,1,171,Oryzias latipes
+Ostrea,Animalia,1,1,Ostrea lurida
+Otolemur,Animalia,1,46,Otolemur garnettii
+Pantholops,Animalia,1,34,Pantholops hodgsonii
+Papio,Animalia,1,17,Papio anubis
+Paradoxurus,Animalia,1,19,Paradoxurus hermaphroditus
+Paralithodes,Animalia,1,1,Paralithodes platypus
+Parasteatoda,Animalia,1,1,Parasteatoda tepidariorum
+Paroedura,Animalia,1,155,Paroedura picta
+Pecten,Animalia,1,61,Pecten maximus
+Pelusios,Animalia,1,441,Pelusios castaneus
+Penelope,Animalia,1,66,Penelope pileata
+Perissodactyla,Animalia,1,46,Perissodactyla
+Perognathus,Animalia,1,47,Perognathus longimembris pacificus
+Petromus,Animalia,1,11,Petromus typicus
+Petromyzon,Animalia,1,147,Petromyzon marinus
+Phaethon,Animalia,1,23,Phaethon lepturus
+Phalacrocorax,Animalia,1,94,Phalacrocorax carbo
+Phataginus,Animalia,1,230,Phataginus tricuspis
+Phocoena,Animalia,1,15,Phocoena phocoena
+Phoenicopterus,Animalia,1,37,Phoenicopterus ruber ruber
+Phyllostomus,Animalia,1,30,Phyllostomus discolor
+Piliocolobus,Animalia,1,16,Piliocolobus tephrosceles
+Pithecia,Animalia,1,7,Pithecia pithecia
+Platanista,Animalia,1,20,Platanista minor
+Platyrrhini,Animalia,1,59,Platyrrhini
+Plecturocebus,Animalia,1,14,Plecturocebus donacophilus
+Plutella,Animalia,1,5,Plutella xylostella
+Pluvianellus,Animalia,1,63,Pluvianellus socialis
+Podargus,Animalia,1,57,Podargus strigoides
+Podilymbus,Animalia,1,76,Podilymbus podiceps
+Polyodon,Animalia,1,214,Polyodon spathula
+Pomphorhynchus,Animalia,1,1,Pomphorhynchus laevis
+Pongo,Animalia,1,6,Pongo abelii
+Pontoporia,Animalia,1,17,Pontoporia blainvillei
+Potamilus,Animalia,1,19,Potamilus streckersoni
+Primates,Animalia,1,51,Primates
+Pristis,Animalia,1,281,Pristis pectinata
+Procavia,Animalia,1,18,Procavia capensis capensis
+Prolemur,Animalia,1,155,Prolemur simus
+Propithecus,Animalia,1,31,Propithecus coquereli
+Protostomia,Animalia,1,1,Protostomia
+Psammomys,Animalia,1,29,Psammomys obesus
+Pterocles,Animalia,1,57,Pterocles orientalis
+Pteronotus,Animalia,1,24,Pteronotus parnellii
+Pteronura,Animalia,1,16,Pteronura brasiliensis
+Ptychodera,Animalia,1,2,Ptychodera flava
+Puffinus,Animalia,1,64,Puffinus mauretanicus
+Puma,Animalia,1,21,Puma concolor
+Pygathrix,Animalia,1,15,Pygathrix nemaeus
+Rangifer,Animalia,1,46,Rangifer tarandus
+Rhizomys,Animalia,1,95,Rhizomys pruinosus
+Ricordea,Animalia,1,358,Ricordea florida
+Rodentia,Animalia,1,44,Rodentia
+Rousettus,Animalia,1,23,Rousettus aegyptiacus
+Ruditapes,Animalia,1,62,Ruditapes philippinarum
+Saccoglossus,Animalia,1,2,Saccoglossus kowalevskii
+Saccostrea,Animalia,1,48,Saccostrea glomerata
+Sacculina,Animalia,1,503,Sacculina carcini
+Sagittarius,Animalia,1,60,Sagittarius serpentarius
+Saguinus,Animalia,1,12,Saguinus imperator
+Saiga,Animalia,1,23,Saiga tatarica tatarica
+Saimiri,Animalia,1,59,Saimiri boliviensis
+Salarias,Animalia,1,450,Salarias fasciatus
+Samia,Animalia,1,246,Samia ricini
+Sarcoptes,Animalia,1,13,Sarcoptes scabiei
+Sauropsida,Animalia,1,56,Sauropsida
+Scalopus,Animalia,1,30,Scalopus aquaticus
+Scandentia,Animalia,1,46,Scandentia
+Schistocephalus,Animalia,1,240,Schistocephalus solidus
+Sciuromorpha,Animalia,1,44,Sciuromorpha
+Scleropages,Animalia,1,114,Scleropages formosus
+Scophthalmus,Animalia,1,45,Scophthalmus maximus
+Scortum,Animalia,1,154,Scortum barcoo
+Scyliorhinus,Animalia,1,560,Scyliorhinus canicula
+Scytalopus,Animalia,1,53,Scytalopus superciliaris
+Sebastes,Animalia,1,253,Sebastes umbrosus
+Semnopithecus,Animalia,1,11,Semnopithecus entellus
+Sigmodon,Animalia,1,52,Sigmodon hispidus
+Simiiformes,Animalia,1,59,Simiiformes
+Sinonovacula,Animalia,1,75,Sinonovacula constricta
+Sitophilus,Animalia,1,1103,Sitophilus oryzae
+Sitta,Animalia,1,75,Sitta europaea
+Sminthurides,Animalia,1,24,Sminthurides aquaticus
+Solen,Animalia,1,89,Solen grandis
+Solenodon,Animalia,1,46,Solenodon paradoxus
+Sorex,Animalia,1,61,Sorex araneus
+Sparus,Animalia,1,63,Sparus aurata
+Spea,Animalia,1,485,Spea multiplicata
+Spelaeornis,Animalia,1,93,Spelaeornis formosus
+Spermophilus,Animalia,1,95,Spermophilus dauricus
+Sphaeramia,Animalia,1,320,Sphaeramia orbicularis
+Sphaerodactylus,Animalia,1,312,Sphaerodactylus townsendi
+Sphenodon,Animalia,1,207,Sphenodon punctatus
+Spilogale,Animalia,1,26,Spilogale gracilis
+Steatornis,Animalia,1,39,Steatornis caripensis
+Stenopsyche,Animalia,1,172,Stenopsyche tienmushanensis
+Stercorarius,Animalia,1,75,Stercorarius parasiticus
+Stratiolaelaps,Animalia,1,115,Stratiolaelaps scimitus
+Strepsirrhini,Animalia,1,49,Strepsirrhini
+Strongyloides,Animalia,1,12,Strongyloides papillosus
+Struthidea,Animalia,1,66,Struthidea cinerea
+Struthio,Animalia,1,13,Struthio camelus australis
+Styela,Animalia,1,124,Styela clava
+Suillia,Animalia,1,283,Suillia variegata
+Sula,Animalia,1,70,Sula dactylatra
+Suricata,Animalia,1,20,Suricata suricatta
+Sycophila,Animalia,1,134,Sycophila sp sp 5
+Synanceia,Animalia,1,153,Synanceia verrucosa
+Tadarida,Animalia,1,49,Tadarida brasiliensis
+Talpa,Animalia,1,113,Talpa occidentalis
+Tamandua,Animalia,1,17,Tamandua tetradactyla
+Tauraco,Animalia,1,22,Tauraco erythrolophus
+Tegillarca,Animalia,1,41,Tegillarca granosa
+Telenomus,Animalia,1,14,Telenomus remus
+Teleostei,Animalia,1,3,Teleostei
+Terebella,Animalia,1,274,Terebella lapidaria
+Testudines,Animalia,1,56,Testudines
+Testudinoidea,Animalia,1,56,Testudinoidea
+Tetranychus,Animalia,1,7,Tetranychus urticae
+Tetrapoda,Animalia,1,12,Tetrapoda
+Thalassophryne,Animalia,1,1,Thalassophryne amazonica
+Thaleichthys,Animalia,1,51,Thaleichthys pacificus
+Thinocorus,Animalia,1,55,Thinocorus orbignyianus
+Thomomys,Animalia,1,65,Thomomys bottae
+Thrips,Animalia,1,25,Thrips palmi
+Thryonomys,Animalia,1,16,Thryonomys swinderianus
+Thunnus,Animalia,1,65,Thunnus albacares
+Tigriopus,Animalia,1,196,Tigriopus kingsejongensis
+Tinamus,Animalia,1,12,Tinamus guttatus
+Tolypeutes,Animalia,1,53,Tolypeutes matacus
+Tonatia,Animalia,1,32,Tonatia saurophila
+Toxotes,Animalia,1,176,Toxotes jaculatrix
+Tragulus,Animalia,1,34,Tragulus javanicus
+Trichinella,Animalia,1,7,Trichinella nelsoni
+Triplophysa,Animalia,1,351,Triplophysa siluroides
+Trogon,Animalia,1,65,Trogon melanurus
+Turnix,Animalia,1,32,Turnix velox
+Tursiops,Animalia,1,31,Tursiops truncatus
+Tyrophagus,Animalia,1,10,Tyrophagus putrescentiae
+Tyto,Animalia,1,28,Tyto alba
+Upupa,Animalia,1,70,Upupa epops
+Uraeginthus,Animalia,1,62,Uraeginthus cyanocephalus
+Uropsilus,Animalia,1,34,Uropsilus gracilis
+Ursus,Animalia,1,11,Ursus maritimus
+Varanus,Animalia,1,206,Varanus salvator macromaculatus
+Vicugna,Animalia,1,13,Vicugna pacos
+Vireo,Animalia,1,69,Vireo altiloquus
+Vombatus,Animalia,1,79,Vombatus ursinus
+Vulpes,Animalia,1,23,Vulpes lagopus
+Whitmania,Animalia,1,155,Whitmania pigra
+Xenarthra,Animalia,1,46,Xenarthra
+Xenentodon,Animalia,1,290,Xenentodon cancila
+Xerus,Animalia,1,35,Xerus inauris
+Yoshiicerus,Animalia,1,85,Yoshiicerus persimilis
+Zalophus,Animalia,1,19,Zalophus californianus
+Zapus,Animalia,1,52,Zapus hudsonius
+Zeuzera,Animalia,1,740,Zeuzera pyrina
+Ziphius,Animalia,1,47,Ziphius cavirostris
+Zygaena,Animalia,1,333,Zygaena filipendulae
+Aspergillus,Fungi,192,1268,Aspergillus affinis; Aspergillus alabamensis; Aspergillus alliaceus; Aspergillus amoenus; Aspergillus amylovorus; Aspergillus appendiculatus; Aspergillus arachidicola; Aspergillus arxii; Aspergillus assulatus; Aspergillus aurantiobrunneus; Aspergillus aurantiopurpureus; Aspergillus aureolatus; Aspergillus aureoluteus; Aspergillus aureoterreus; Aspergillus auricomus; Aspergillus austroafricanus; Aspergillus avenaceus; Aspergillus awamori; Aspergillus bertholletiae; Aspergillus biplanus; Aspergillus bisporus; Aspergillus bombycis; Aspergillus botucatensis; Aspergillus brasiliensis; Aspergillus brevijanus; Aspergillus brevipes; Aspergillus brevistipitatus; Aspergillus caelatus; Aspergillus caespitosus; Aspergillus calidoustus; Aspergillus caperatus; Aspergillus carbonarius; Aspergillus carlsbadensis; Aspergillus cejpii; Aspergillus cervinus; Aspergillus chevalieri; Aspergillus christenseniae; Aspergillus chrysellus; Aspergillus cibarius; Aspergillus clavatus; Aspergillus cleistominutus; Aspergillus conjunctus; Aspergillus coreanus; Aspergillus corrugatus; Aspergillus costiformis; Aspergillus cretensis; Aspergillus cristatus; Aspergillus croceus; Aspergillus crustosus; Aspergillus cumulatus; Aspergillus deflectus; Aspergillus desertorum; Aspergillus dimorphicus; Aspergillus dromiae; Aspergillus duricaulis; Aspergillus elegans; Aspergillus ellipticus; Aspergillus endophyticus; Aspergillus eucalypticola; Aspergillus falconensis; Aspergillus ferenczii; Aspergillus filifer; Aspergillus fischeri; Aspergillus flavipes; Aspergillus flavus; Aspergillus floridensis; Aspergillus foveolatus; Aspergillus frequens; Aspergillus fruticulosus; Aspergillus fumigatiaffinis; Aspergillus fumigatus; Aspergillus fumisynnematus; Aspergillus funiculosus; Aspergillus galapagensis; Aspergillus germanicus; Aspergillus giganteus; Aspergillus glaucus; Aspergillus granulosus; Aspergillus heteromorphus; Aspergillus hiratsukae; Aspergillus hortae; Aspergillus ibericus; Aspergillus igneus; Aspergillus iizukae; Aspergillus implicatus; Aspergillus insolitus; Aspergillus insuetus; Aspergillus israelensis; Aspergillus karnatakaensis; Aspergillus keveii; Aspergillus laciniosus; Aspergillus latus; Aspergillus lentulus; Aspergillus leporis; Aspergillus longivesica; Aspergillus luchuensis; Aspergillus luppiae; Aspergillus megasporus; Aspergillus melleus; Aspergillus microcysticus; Aspergillus minisclerotigenes; Aspergillus miraensis; Aspergillus mottae; Aspergillus multicolor; Aspergillus multiplicatus; Aspergillus mulundensis; Aspergillus navahoensis; Aspergillus neoglaber; Aspergillus neoindicus; Aspergillus neoniger; Aspergillus nidulans; Aspergillus niger; Aspergillus novofumigatus; Aspergillus novoparasiticus; Aspergillus nutans; Aspergillus ochraceus; Aspergillus oerlinghausenensis; Aspergillus oleicola; Aspergillus oryzae; Aspergillus ostianus; Aspergillus pachycristatus; Aspergillus paleaceus; Aspergillus papuensis; Aspergillus parafelis; Aspergillus parasiticus; Aspergillus parvulus; Aspergillus pernambucoensis; Aspergillus persii; Aspergillus petrakii; Aspergillus phoenicis; Aspergillus primulinus; Aspergillus pseudocaelatus; Aspergillus pseudodeflectus; Aspergillus pseudofelis; Aspergillus pseudotamarii; Aspergillus pseudoterreus; Aspergillus pseudoustus; Aspergillus pseudoviridinutans; Aspergillus pulvericola; Aspergillus puulaauensis; Aspergillus quadrilineatus; Aspergillus recurvatus; Aspergillus robustus; Aspergillus roseoglobulosus; Aspergillus ruber; Aspergillus saccharolyticus; Aspergillus sclerotialis; Aspergillus sclerotioniger; Aspergillus sclerotiorum; Aspergillus sepultus; Aspergillus sergii; Aspergillus sesamicola; Aspergillus shendaweii; Aspergillus siamensis; Aspergillus silvaticus; Aspergillus similis; Aspergillus spathulatus; Aspergillus spectabilis; Aspergillus spinosus; Aspergillus stellatus; Aspergillus stercorarius; Aspergillus steynii; Aspergillus sublatus; Aspergillus subramanianii; Aspergillus subversicolor; Aspergillus sulphureus; Aspergillus tamarii; Aspergillus tanneri; Aspergillus templicola; Aspergillus teporis; Aspergillus terreus; Aspergillus terricola; Aspergillus tetrazonus; Aspergillus thermomutatus; Aspergillus thesauricus; Aspergillus transmontanensis; Aspergillus triticus; Aspergillus tsurutae; Aspergillus tubingensis; Aspergillus turcosus; Aspergillus udagawae; Aspergillus undulatus; Aspergillus unilateralis; Aspergillus ustus; Aspergillus vadensis; Aspergillus varians; Aspergillus violaceofuscus; Aspergillus viridinutans; Aspergillus waksmanii; Aspergillus welwitschiae; Aspergillus westlandensis; Aspergillus xerophilus
+Penicillium,Fungi,61,257,Penicillium alfredii; Penicillium angulare; Penicillium antarcticum; Penicillium argentinense; Penicillium arizonense; Penicillium atramentosum; Penicillium atrosanguineum; Penicillium biforme; Penicillium bilaiae; Penicillium bovifimosum; Penicillium brasilianum; Penicillium brevicompactum; Penicillium camemberti; Penicillium canariense; Penicillium canescens; Penicillium cataractarum; Penicillium chermesinum; Penicillium chrysogenum; Penicillium citreonigrum; Penicillium citrinum; Penicillium concentricum; Penicillium cosmopolitanum; Penicillium crustosum; Penicillium daleae; Penicillium diatomitis; Penicillium digitatum; Penicillium expansum; Penicillium flavigenum; Penicillium freii; Penicillium griseofulvum; Penicillium hispanicum; Penicillium hordei; Penicillium italicum; Penicillium janthinellum; Penicillium longicatenatum; Penicillium maclennaniae; Penicillium macrosclerotiorum; Penicillium malachiteum; Penicillium malodoratum; Penicillium manginii; Penicillium mononematosum; Penicillium nucicola; Penicillium odoratum; Penicillium oxalicum; Penicillium paradoxum; Penicillium polonicum; Penicillium psychrosexuale; Penicillium pulvis; Penicillium riverlandense; Penicillium robsamsonii; Penicillium roqueforti; Penicillium rubens; Penicillium samsonianum; Penicillium soppii; Penicillium subrubescens; Penicillium swiecickii; Penicillium taxi; Penicillium thymicola; Penicillium verhagenii; Penicillium verrucosum; Penicillium waksmanii
+Colletotrichum,Fungi,39,205,Colletotrichum abscissum; Colletotrichum aenigma; Colletotrichum asianum; Colletotrichum cereale; Colletotrichum chlorophyti; Colletotrichum costaricense; Colletotrichum cuscutae; Colletotrichum destructivum; Colletotrichum eremochloae; Colletotrichum falcatum; Colletotrichum filicis; Colletotrichum fructicola; Colletotrichum godetiae; Colletotrichum graminicola; Colletotrichum higginsianum; Colletotrichum incanum; Colletotrichum limetticola; Colletotrichum lupini; Colletotrichum navitas; Colletotrichum nymphaeae; Colletotrichum orbiculare; Colletotrichum orchidophilum; Colletotrichum plurivorum; Colletotrichum scovillei; Colletotrichum shisoi; Colletotrichum siamense; Colletotrichum sidae; Colletotrichum sojae; Colletotrichum somersetense; Colletotrichum spaethianum; Colletotrichum spinosum; Colletotrichum sublineola; Colletotrichum tamarilloi; Colletotrichum tanaceti; Colletotrichum tofieldiae; Colletotrichum trifolii; Colletotrichum tropicale; Colletotrichum truncatum; Colletotrichum zoysiae
+Morchella,Fungi,35,351,Morchella americana; Morchella anatolica; Morchella angusticeps; Morchella arbutiphila; Morchella brunnea; Morchella conica; Morchella conifericola; Morchella deliciosa; Morchella diminutiva; Morchella disparilis; Morchella dunalii; Morchella eohespera; Morchella esculenta; Morchella eximia; Morchella fluvialis; Morchella galilaea; Morchella importuna; Morchella kakiicolor; Morchella norvegiensis; Morchella palazonii; Morchella peruviana; Morchella populiphila; Morchella prava; Morchella pulchella; Morchella punctipes; Morchella rufobrunnea; Morchella semilibera; Morchella septentrionalis; Morchella sextelata; Morchella snyderi; Morchella sp 2018w30; Morchella steppicola; Morchella tridentina; Morchella ulmaria; Morchella vulgaris
+Suillus,Fungi,31,373,Suillus americanus; Suillus ampliporus; Suillus bovinus; Suillus brevipes; Suillus clintonianus; Suillus collinitus; Suillus cothurnatus; Suillus decipiens; Suillus discolor; Suillus elbensis; Suillus fuscotomentosus; Suillus grisellus; Suillus hirtellus; Suillus kaibabensis; Suillus lakei; Suillus luteus; Suillus occidentalis; Suillus ochraceoroseus; Suillus paluster; Suillus placidus; Suillus plorans; Suillus punctipes; Suillus pungens; Suillus quiescens; Suillus spraguei; Suillus subalutaceus; Suillus subaureus; Suillus tomentosus; Suillus variegatus; Suillus viscidus; Suillus weaverae
+Fusarium,Fungi,28,172,Fusarium avenaceum; Fusarium bataticola; Fusarium circinatum; Fusarium coffeatum; Fusarium commune; Fusarium cucurbiticola; Fusarium culmorum; Fusarium euwallaceae; Fusarium falciforme; Fusarium flagelliforme; Fusarium floridanum; Fusarium fujikuroi; Fusarium keratoplasticum; Fusarium kuroshium; Fusarium langsethiae; Fusarium mangiferae; Fusarium mori; Fusarium musae; Fusarium nygamai; Fusarium oxysporum; Fusarium poae; Fusarium proliferatum; Fusarium redolens; Fusarium solani; Fusarium subglutinans; Fusarium tricinctum; Fusarium vanettenii; Fusarium venenatum
+Mycena,Fungi,24,676,Mycena albidolilacea; Mycena alexandri; Mycena amicta; Mycena belliarum; Mycena capillaripes; Mycena crocata; Mycena epipterygia; Mycena filopes; Mycena galericulata; Mycena galopus; Mycena haematopus; Mycena indigotica; Mycena latifolia; Mycena leptocephala; Mycena maculata; Mycena metata; Mycena olivaceomarginata; Mycena polygramma; Mycena pura; Mycena rebaudengoi; Mycena rosella; Mycena sanguinolenta; Mycena vitilis; Mycena vulgaris
+Trichoderma,Fungi,24,40,Trichoderma arundinaceum; Trichoderma asperellum; Trichoderma austrokoningii; Trichoderma barbatum; Trichoderma camerunense; Trichoderma capillare; Trichoderma cerinum; Trichoderma compactum; Trichoderma crassum; Trichoderma fertile; Trichoderma flagellatum; Trichoderma floccosum; Trichoderma gamsii; Trichoderma ghanense; Trichoderma helicum; Trichoderma inhamatum; Trichoderma intricatum; Trichoderma konilangbra; Trichoderma pleuroti; Trichoderma pleuroticola; Trichoderma reesei; Trichoderma sinense; Trichoderma velutinum; Trichoderma virens
+Alternaria,Fungi,22,84,Alternaria alternata; Alternaria arborescens; Alternaria atra; Alternaria brassicicola; Alternaria burnsii; Alternaria carthami; Alternaria citriarbusti; Alternaria conjuncta; Alternaria ethzedia; Alternaria gaisen; Alternaria hordeiaustralica; Alternaria incomplexa; Alternaria infectoria; Alternaria limoniasperae; Alternaria longipes; Alternaria metachromatica; Alternaria postmessia; Alternaria rosae; Alternaria tenuissima; Alternaria triticimaculans; Alternaria ventricosa; Alternaria viburni
+Xylaria,Fungi,13,30,Xylaria arbuscula; Xylaria bambusicola; Xylaria brunneovinosa; Xylaria castorea; Xylaria curta; Xylaria digitata; Xylaria intraflava; Xylaria multiplex; Xylaria nigripes; Xylaria palmicola; Xylaria scruposa; Xylaria telfairii; Xylaria venustula
+Lactarius,Fungi,12,305,Lactarius akahatsu; Lactarius controversus; Lactarius deliciosus; Lactarius hatsudake; Lactarius hengduanensis; Lactarius indigo; Lactarius psammicola; Lactarius pseudohatsudake; Lactarius quietus; Lactarius sanguifluus; Lactarius subdulcis; Lactarius vividus
+Botrytis,Fungi,11,82,Botrytis byssoidea; Botrytis cinerea; Botrytis deweyae; Botrytis elliptica; Botrytis fragariae; Botrytis hyacinthi; Botrytis paeoniae; Botrytis porri; Botrytis sinoallii; Botrytis squamosa; Botrytis tulipae
+Trametes,Fungi,11,51,Trametes cingulata; Trametes cinnabarina; Trametes coccinea; Trametes elegans; Trametes gibbosa; Trametes maxima; Trametes meyenii; Trametes polyzona; Trametes punicea; Trametes sanguinea; Trametes versicolor
+Armillaria,Fungi,10,80,Armillaria borealis; Armillaria cepistipes; Armillaria fumosa; Armillaria gallica; Armillaria luteobubalina; Armillaria mellea; Armillaria nabsnona; Armillaria ostoyae; Armillaria solidipes; Armillaria tabescens
+Mucor,Fungi,10,181,Mucor ambiguus; Mucor circinelloides; Mucor cordense; Mucor endophyticus; Mucor fuscus; Mucor heterogamus; Mucor lusitanicus; Mucor mucedo; Mucor racemosus; Mucor velutinosus
+Podospora,Fungi,10,25,Podospora anserina; Podospora appendiculata; Podospora australis; Podospora bulbillosa; Podospora comata; Podospora fimiseda; Podospora pseudoanserina; Podospora pseudocomata; Podospora pseudopauciseta; Podospora tetraspora
+Tuber,Fungi,10,398,Tuber aestivum; Tuber borchii; Tuber brumale; Tuber canaliculatum; Tuber gibbosum; Tuber indicum; Tuber magnatum; Tuber melanosporum; Tuber melosporum; Tuber mesentericum
+Russula,Fungi,9,95,Russula brevipes; Russula compacta; Russula dissimulans; Russula earlei; Russula emetica; Russula ochroleuca; Russula rugulosa; Russula seminuda; Russula vinacea
+Cryptococcus,Fungi,7,52,Cryptococcus bacillisporus; Cryptococcus decagattii; Cryptococcus deneoformans; Cryptococcus deuterogattii; Cryptococcus gattii; Cryptococcus neoformans; Cryptococcus tetragattii
+Exophiala,Fungi,7,19,Exophiala aquamarina; Exophiala dermatitidis; Exophiala oligosperma; Exophiala sideris; Exophiala sp hkrs030; Exophiala viscosa; Exophiala xenobiotica
+Metarhizium,Fungi,7,51,Metarhizium acridum; Metarhizium album; Metarhizium anisopliae; Metarhizium guizhouense; Metarhizium majus; Metarhizium rileyi; Metarhizium robertsii
+Pisolithus,Fungi,7,253,Pisolithus albus; Pisolithus croceorrhizus; Pisolithus marmoratus; Pisolithus microcarpus; Pisolithus orientalis; Pisolithus thermaeus; Pisolithus tinctorius
+Neurospora,Fungi,6,35,Neurospora crassa; Neurospora discreta; Neurospora hispaniola; Neurospora intermedia; Neurospora tetrasperma; Neurospora tetraspora
+Phytophthora,Fungi,6,529,Phytophthora capsici; Phytophthora cinnamomi; Phytophthora infestans; Phytophthora nicotianae; Phytophthora plurivora; Phytophthora sojae
+Puccinia,Fungi,6,886,Puccinia coronata; Puccinia coronata f sp avenae; Puccinia graminis; Puccinia sorghi; Puccinia striiformis; Puccinia triticina
+Saccharomyces,Fungi,6,25,Saccharomyces arboricola; Saccharomyces cerevisiae; Saccharomyces eubayanus; Saccharomyces kudriavzevii; Saccharomyces mikatae; Saccharomyces paradoxus
+Talaromyces,Fungi,6,37,Talaromyces aculeatus; Talaromyces islandicus; Talaromyces marneffei; Talaromyces proteolyticus; Talaromyces rugulosus; Talaromyces stipitatus
+Bipolaris,Fungi,5,16,Bipolaris maydis; Bipolaris oryzae; Bipolaris sorokiniana; Bipolaris victoriae; Bipolaris zeicola
+Blastomyces,Fungi,5,35,Blastomyces dermatitidis; Blastomyces gilchristii; Blastomyces parvus; Blastomyces percursus; Blastomyces silverae
+Candida,Fungi,5,20,Candida albicans; Candida arabinofermentans; Candida dubliniensis; Candida membranifaciens; Candida viswanathii
+Chaetomium,Fungi,5,23,Chaetomium fimeti; Chaetomium globosum; Chaetomium olivicolor; Chaetomium strumarium; Chaetomium tenue
+Fomitopsis,Fungi,5,38,Fomitopsis betulina; Fomitopsis pinicola; Fomitopsis quercina; Fomitopsis schrenkii; Fomitopsis serialis
+Hyaloscypha,Fungi,5,79,Hyaloscypha bicolor; Hyaloscypha bicolor e; Hyaloscypha finlandica; Hyaloscypha hepaticicola; Hyaloscypha variabilis
+Lachancea,Fungi,5,8,Lachancea fermentati; Lachancea meyersii; Lachancea mirantina; Lachancea quebecensis; Lachancea thermotolerans
+Lentinula,Fungi,5,95,Lentinula aciculospora; Lentinula boryana; Lentinula edodes; Lentinula lateritia; Lentinula raphanica
+Rhizopogon,Fungi,5,23,Rhizopogon salebrosus; Rhizopogon truncatus; Rhizopogon vesiculosus; Rhizopogon vinicolor; Rhizopogon vulgaris
+Rhizopus,Fungi,5,345,Rhizopus arrhizus; Rhizopus azygosporus; Rhizopus delemar; Rhizopus microsporus; Rhizopus stolonifer
+Thermothelomyces,Fungi,5,15,Thermothelomyces fergusii; Thermothelomyces heterothallicus; Thermothelomyces hinnuleus; Thermothelomyces myriococcoides; Thermothelomyces thermophilus
+Venturia,Fungi,5,22,Venturia effusa; Venturia inaequalis; Venturia nashicola; Venturia populina; Venturia pyrina
+Apiospora,Fungi,4,20,Apiospora aurea; Apiospora kogelbergensis; Apiospora marii; Apiospora phragmitis
+Diaporthe,Fungi,4,18,Diaporthe batatas; Diaporthe caulivora; Diaporthe helianthi; Diaporthe vochysiae
+Erysiphe,Fungi,4,962,Erysiphe necator; Erysiphe neolycopersici; Erysiphe pisi; Erysiphe pulchra
+Ganoderma,Fungi,4,23,Ganoderma boninense; Ganoderma leucocontextum; Ganoderma lucidum; Ganoderma sinense
+Lachnellula,Fungi,4,26,Lachnellula cervina; Lachnellula occidentalis; Lachnellula subtilissima; Lachnellula willkommii
+Linnemannia,Fungi,4,52,Linnemannia elongata; Linnemannia gamsii; Linnemannia schmuckeri; Linnemannia zychae
+Lipomyces,Fungi,4,15,Lipomyces japonicus; Lipomyces orientalis; Lipomyces starkeyi; Lipomyces tetrasporus
+Melampsora,Fungi,4,408,Melampsora americana; Melampsora lini; Melampsora medusae; Melampsora medusae x Melampsora occidentalis
+Metschnikowia,Fungi,4,11,Metschnikowia gruessii; Metschnikowia koreensis; Metschnikowia rancensis; Metschnikowia reukaufii
+Mortierella,Fungi,4,14,Mortierella alpina; Mortierella claussenii; Mortierella globulifera; Mortierella hygrophila
+Ogataea,Fungi,4,5,Ogataea angusta; Ogataea haglerorum; Ogataea parapolymorpha; Ogataea polymorpha
+Paxillus,Fungi,4,74,Paxillus adelphus; Paxillus ammoniavirescens; Paxillus involutus; Paxillus rubicundulus
+Phyllosticta,Fungi,4,23,Phyllosticta citriasiana; Phyllosticta citribraziliensis; Phyllosticta citricarpa; Phyllosticta citrichinensis
+Piloderma,Fungi,4,61,Piloderma byssinum; Piloderma croceum; Piloderma olivaceum; Piloderma sphaerosporum
+Podila,Fungi,4,24,Podila epicladia; Podila humilis; Podila minutissima; Podila verticillata
+Rhodotorula,Fungi,4,14,Rhodotorula glutinis; Rhodotorula graminis; Rhodotorula mucilaginosa; Rhodotorula toruloides
+Scheffersomyces,Fungi,4,6,Scheffersomyces amazonensis; Scheffersomyces insectosa; Scheffersomyces segobiensis; Scheffersomyces shehatae
+Schizophyllum,Fungi,4,27,Schizophyllum amplum; Schizophyllum commune; Schizophyllum fasciatum; Schizophyllum radiatum
+Ustilago,Fungi,4,18,Ustilago bromivora; Ustilago hordei; Ustilago maydis; Ustilago trichophora
+Verticillium,Fungi,4,34,Verticillium alfalfae; Verticillium dahliae; Verticillium longisporum; Verticillium nonalfalfae
+Absidia,Fungi,3,17,Absidia caerulea; Absidia glauca; Absidia repens
+Actinomortierella,Fungi,3,31,Actinomortierella ambigua; Actinomortierella capitata; Actinomortierella wolfii
+Agrocybe,Fungi,3,13,Agrocybe aegerita; Agrocybe pediades; Agrocybe praecox
+Amanita,Fungi,3,57,Amanita muscaria; Amanita rubescens; Amanita thiersii
+Boletus,Fungi,3,73,Boletus coccyginus; Boletus edulis; Boletus reticuloceps
+Botryotinia,Fungi,3,27,Botryotinia calthae; Botryotinia convoluta; Botryotinia narcissicola
+Coemansia,Fungi,3,13,Coemansia mojavensis; Coemansia reversa; Coemansia spiralis
+Coprinopsis,Fungi,3,20,Coprinopsis cinerea; Coprinopsis marcescibilis; Coprinopsis sclerotiger
+Corynascus,Fungi,3,9,Corynascus novoguineensis; Corynascus sepedonium; Corynascus similis
+Cyathus,Fungi,3,85,Cyathus pallidus; Cyathus stercoreus; Cyathus striatus
+Emericellopsis,Fungi,3,6,Emericellopsis atlantica; Emericellopsis cladophorae; Emericellopsis maritima
+Golovinomyces,Fungi,3,461,Golovinomyces cichoracearum; Golovinomyces magnicellulatus; Golovinomyces orontii
+Gymnopus,Fungi,3,42,Gymnopus androsaceus; Gymnopus earleae; Gymnopus luxurians
+Hanseniaspora,Fungi,3,6,Hanseniaspora nectarophila; Hanseniaspora osmophila; Hanseniaspora valbyensis
+Hypoxylon,Fungi,3,5,Hypoxylon fragiforme; Hypoxylon fuscum; Hypoxylon trugodes
+Irpex,Fungi,3,18,Irpex flavus; Irpex lacteus; Irpex rosettiformis
+Kluyveromyces,Fungi,3,7,Kluyveromyces dobzhanskii; Kluyveromyces lactis; Kluyveromyces marxianus
+Laccaria,Fungi,3,79,Laccaria amethystina; Laccaria bicolor; Laccaria trichodermophora
+Lasiosphaeria,Fungi,3,27,Lasiosphaeria hispida; Lasiosphaeria miniovina; Lasiosphaeria ovina
+Nakaseomyces,Fungi,3,4,Nakaseomyces delphensis; Nakaseomyces glabratus; Nakaseomyces nivariensis
+Pleurotus,Fungi,3,57,Pleurotus eryngii; Pleurotus eryngii var eryngii; Pleurotus ostreatus
+Pseudocercospora,Fungi,3,68,Pseudocercospora fijiensis; Pseudocercospora musae; Pseudocercospora ulei
+Psilocybe,Fungi,3,13,Psilocybe cubensis; Psilocybe cyanescens; Psilocybe serbica
+Pyricularia,Fungi,3,28,Pyricularia grisea; Pyricularia oryzae; Pyricularia pennisetigena
+Rhynchosporium,Fungi,3,22,Rhynchosporium agropyri; Rhynchosporium commune; Rhynchosporium secalis
+Stachybotrys,Fungi,3,5,Stachybotrys chartarum; Stachybotrys chlorohalonatus; Stachybotrys elegans
+Terfezia,Fungi,3,78,Terfezia boudieri; Terfezia boudieri atcc mya4762; Terfezia claveryi
+Thelebolus,Fungi,3,11,Thelebolus globosus; Thelebolus microsporus; Thelebolus stercoreus
+Trichophyton,Fungi,3,8,Trichophyton equinum; Trichophyton soudanense; Trichophyton tonsurans
+Vairimorpha,Fungi,3,42,Vairimorpha apis; Vairimorpha ceranae; Vairimorpha necatrix
+Albugo,Fungi,2,28,Albugo candida; Albugo laibachii
+Anomoloma,Fungi,2,17,Anomoloma albolutescens; Anomoloma myceliosum
+Anomoporia,Fungi,2,18,Anomoporia bombycina; Anomoporia kamtschatica
+Aphanomyces,Fungi,2,20,Aphanomyces astaci; Aphanomyces invadans
+Ascobolus,Fungi,2,35,Ascobolus immersus; Ascobolus immersus rn42
+Ascochyta,Fungi,2,60,Ascochyta koolunga; Ascochyta rabiei
+Athelia,Fungi,2,29,Athelia psychrophila; Athelia rolfsii
+Basidiobolus,Fungi,2,34,Basidiobolus meristosporus; Basidiobolus meristosporus cbs 93173
+Batrachochytrium,Fungi,2,53,Batrachochytrium dendrobatidis; Batrachochytrium salamandrivorans
+Beauveria,Fungi,2,5,Beauveria bassiana; Beauveria brongniartii
+Blumeria,Fungi,2,1328,Blumeria graminis f sp tritici; Blumeria hordei
+Cadophora,Fungi,2,7,Cadophora gregata; Cadophora malorum
+Calocera,Fungi,2,8,Calocera cornea; Calocera viscosa
+Canariomyces,Fungi,2,2,Canariomyces arenarius; Canariomyces notabilis
+Capronia,Fungi,2,4,Capronia epimyces; Capronia fungicola
+Ceratocystis,Fungi,2,13,Ceratocystis lukuohia; Ceratocystis platani
+Cercospora,Fungi,2,5,Cercospora kikuchii; Cercospora zeina
+Cerinomyces,Fungi,2,7,Cerinomyces crustulinus; Cerinomyces tortus
+Coccidioides,Fungi,2,21,Coccidioides immitis; Coccidioides posadasii
+Coleophoma,Fungi,2,3,Coleophoma crateriformis; Coleophoma cylindrospora
+Coniochaeta,Fungi,2,11,Coniochaeta ligniaria; Coniochaeta pulveracea
+Coprinellus,Fungi,2,12,Coprinellus micaceus; Coprinellus pellucidus
+Cordyceps,Fungi,2,4,Cordyceps fumosorosea; Cordyceps militaris
+Crepidotus,Fungi,2,9,Crepidotus cesatii; Crepidotus variabilis
+Cubamyces,Fungi,2,7,Cubamyces lactineus; Cubamyces menziesii
+Curvularia,Fungi,2,3,Curvularia clavata; Curvularia lunata
+Cytospora,Fungi,2,4,Cytospora chrysosperma; Cytospora leucostoma
+Dactylonectria,Fungi,2,106,Dactylonectria estremocensis; Dactylonectria macrodidyma
+Daldinia,Fungi,2,2,Daldinia caldariorum; Daldinia vernicosa
+Darksidea,Fungi,2,24,Darksidea alpha; Darksidea beta
+Dendrothele,Fungi,2,30,Dendrothele bispora; Dendrothele microspora
+Desarmillaria,Fungi,2,10,Desarmillaria ectypa; Desarmillaria tabescens
+Dichotomocladium,Fungi,2,50,Dichotomocladium elegans; Dichotomocladium robustum
+Didymella,Fungi,2,9,Didymella exigua; Didymella maydis
+Dioszegia,Fungi,2,4,Dioszegia cryoxerica; Dioszegia hungarica
+Dissophora,Fungi,2,16,Dissophora decumbens; Dissophora ornata
+Drepanopeziza,Fungi,2,12,Drepanopeziza brunnea; Drepanopeziza brunnea f sp monogermtubi
+Elsinoe,Fungi,2,6,Elsinoe ampelina; Elsinoe australis
+Emergomyces,Fungi,2,7,Emergomyces orientalis; Emergomyces pasteurianus
+Entomortierella,Fungi,2,5,Entomortierella chlamydospora; Entomortierella lignicola
+Entophlyctis,Fungi,2,17,Entophlyctis helioformis; Entophlyctis luteolus
+Epichloe,Fungi,2,68,Epichloe coenophiala; Epichloe festucae
+Filobasidium,Fungi,2,5,Filobasidium floriforme; Filobasidium wieringae
+Gaeumannomyces,Fungi,2,46,Gaeumannomyces sp js464; Gaeumannomyces tritici
+Gigaspora,Fungi,2,232,Gigaspora margarita; Gigaspora rosea
+Gymnopilus,Fungi,2,14,Gymnopilus chrysopellus; Gymnopilus junonius
+Hamiltosporidium,Fungi,2,11,Hamiltosporidium magnivora; Hamiltosporidium tvaerminnensis
+Hebeloma,Fungi,2,13,Hebeloma albidulum; Hebeloma cylindrosporum
+Hericium,Fungi,2,23,Hericium alpestre; Hericium coralloides
+Heterobasidion,Fungi,2,11,Heterobasidion annosum; Heterobasidion irregulare
+Hirsutella,Fungi,2,249,Hirsutella minnesotensis; Hirsutella rhossiliensis
+Hypomyces,Fungi,2,9,Hypomyces perniciosus; Hypomyces rosellus
+Ilyonectria,Fungi,2,58,Ilyonectria europaea; Ilyonectria robusta
+Jimgerdemannia,Fungi,2,40,Jimgerdemannia flammicorona; Jimgerdemannia lactiflua
+Kwoniella,Fungi,2,2,Kwoniella botswanensis; Kwoniella europaea
+Lentamyces,Fungi,2,30,Lentamyces parricida; Lentamyces zychae
+Leratiomyces,Fungi,2,19,Leratiomyces ceres; Leratiomyces erythrocephalus
+Lichtheimia,Fungi,2,5,Lichtheimia corymbifera; Lichtheimia ornata
+Loramyces,Fungi,2,19,Loramyces juncicola; Loramyces macrosporus
+Madurella,Fungi,2,7,Madurella fahalii; Madurella mycetomatis
+Marasmius,Fungi,2,12,Marasmius fiardii; Marasmius oreades
+Microdochium,Fungi,2,8,Microdochium bolleyi; Microdochium trichocladiopsis
+Mycotypha,Fungi,2,54,Mycotypha africana; Mycotypha indica
+Naganishia,Fungi,2,3,Naganishia albida; Naganishia friedmannii
+Naumovozyma,Fungi,2,3,Naumovozyma castellii; Naumovozyma dairenensis
+Nemania,Fungi,2,5,Nemania maritima; Nemania serpens
+Ophiocordyceps,Fungi,2,15,Ophiocordyceps australis; Ophiocordyceps sinensis
+Paecilomyces,Fungi,2,2,Paecilomyces niveus; Paecilomyces variotii
+Panaeolus,Fungi,2,11,Panaeolus cyanescens; Panaeolus papilionaceus
+Paracoccidioides,Fungi,2,10,Paracoccidioides brasiliensis; Paracoccidioides lutzii
+Parathielavia,Fungi,2,24,Parathielavia appendiculata; Parathielavia hyrcaniae
+Phellinidium,Fungi,2,8,Phellinidium ferrugineofuscum; Phellinidium pouzarii
+Phialemonium,Fungi,2,5,Phialemonium atrogriseum; Phialemonium thermophilum
+Phlebia,Fungi,2,12,Phlebia brevispora; Phlebia radiata
+Pholiota,Fungi,2,9,Pholiota conissans; Pholiota molesta
+Phycomyces,Fungi,2,33,Phycomyces blakesleeanus; Phycomyces nitens
+Piptocephalis,Fungi,2,2,Piptocephalis cylindrospora; Piptocephalis tieghemiana
+Plenodomus,Fungi,2,6,Plenodomus lingam; Plenodomus tracheiphilus
+Polyporus,Fungi,2,7,Polyporus arcularius; Polyporus brumalis
+Porodaedalea,Fungi,2,9,Porodaedalea chrysoloma; Porodaedalea niemelaei
+Pseudogymnoascus,Fungi,2,22,Pseudogymnoascus destructans; Pseudogymnoascus verrucosus
+Purpureocillium,Fungi,2,22,Purpureocillium lilacinum; Purpureocillium takamizusanense
+Pyronema,Fungi,2,64,Pyronema domesticum; Pyronema omphalodes
+Rhizophagus,Fungi,2,134,Rhizophagus clarus; Rhizophagus irregularis
+Saprolegnia,Fungi,2,6,Saprolegnia diclina; Saprolegnia parasitica
+Scleroderma,Fungi,2,15,Scleroderma citrinum; Scleroderma yunnanense
+Sclerotinia,Fungi,2,17,Sclerotinia borealis; Sclerotinia sclerotiorum
+Serpula,Fungi,2,75,Serpula himantioides; Serpula lacrymans
+Sistotrema,Fungi,2,21,Sistotrema raduloides; Sistotrema sernanderi
+Smittium,Fungi,2,52,Smittium culicis; Smittium mucronatum
+Sodiomyces,Fungi,2,16,Sodiomyces alcalophilus; Sodiomyces alkalinus
+Sordaria,Fungi,2,25,Sordaria brevicollis; Sordaria humana
+Sparassis,Fungi,2,18,Sparassis crispa; Sparassis latifolia
+Sphaerulina,Fungi,2,10,Sphaerulina musiva; Sphaerulina populicola
+Stipitochalara,Fungi,2,4,Stipitochalara longipes; Stipitochalara longipes bdj
+Syncephalis,Fungi,2,9,Syncephalis fuscata; Syncephalis plumigaleata
+Thelephora,Fungi,2,15,Thelephora ganbajun; Thelephora terrestris
+Thermoascus,Fungi,2,5,Thermoascus crustaceus; Thermoascus thermophilus
+Tilletia,Fungi,2,4,Tilletia indica; Tilletia walkeri
+Trichaptum,Fungi,2,15,Trichaptum abietinum; Trichaptum fuscoviolaceum
+Trichocladium,Fungi,2,8,Trichocladium antarcticum; Trichocladium griseum
+Tricholoma,Fungi,2,82,Tricholoma matsutake; Tricholoma populinum
+Trichomonascus,Fungi,2,3,Trichomonascus ciferrii; Trichomonascus petasosporus
+Valsa,Fungi,2,5,Valsa mali; Valsa malicola
+Wallemia,Fungi,2,3,Wallemia ichthyophaga; Wallemia mellicola
+Zopfia,Fungi,2,81,Zopfia rhizophila; Zopfia rhizophila cbs 20726
+Zygosaccharomyces,Fungi,2,2,Zygosaccharomyces parabailii; Zygosaccharomyces rouxii
+Abortiporus,Fungi,1,1,Abortiporus biennis
+Acephala,Fungi,1,3,Acephala macrosclerotiorum
+Achaetomium,Fungi,1,1,Achaetomium macrosporum
+Acidothrix,Fungi,1,1,Acidothrix acidophila
+Acrocalymma,Fungi,1,41,Acrocalymma vagum
+Agaricus,Fungi,1,12,Agaricus bisporus
+Akanthomyces,Fungi,1,4,Akanthomyces muscarius
+Albophoma,Fungi,1,2,Albophoma yamanashiensis
+Aliquandostipite,Fungi,1,6,Aliquandostipite khaoyaiensis
+Allomyces,Fungi,1,14,Allomyces macrogynus
+Amauroascus,Fungi,1,1,Amauroascus mutatus
+Amorphotheca,Fungi,1,1,Amorphotheca resinae
+Ampelomyces,Fungi,1,7,Ampelomyces quisqualis
+Amylocarpus,Fungi,1,5,Amylocarpus encephaloides
+Amylocorticium,Fungi,1,7,Amylocorticium subincarnatum
+Amylocystis,Fungi,1,12,Amylocystis lapponica
+Amylomyces,Fungi,1,72,Amylomyces rouxii
+Amylostereum,Fungi,1,27,Amylostereum areolatum
+Anaeromyces,Fungi,1,26,Anaeromyces robustus
+Annulohypoxylon,Fungi,1,1,Annulohypoxylon maeteangense
+Anthostoma,Fungi,1,2,Anthostoma avocetta
+Anthostomella,Fungi,1,1,Anthostomella tomicoides
+Anthostomelloides,Fungi,1,5,Anthostomelloides leucospermi
+Aphanobasidium,Fungi,1,3,Aphanobasidium pseudotsugae
+Apiosordaria,Fungi,1,2,Apiosordaria backusii
+Apiotrichum,Fungi,1,1,Apiotrichum porosum
+Aplosporella,Fungi,1,2,Aplosporella prunicola
+Apodospora,Fungi,1,7,Apodospora peruviana
+Apophysomyces,Fungi,1,26,Apophysomyces variabilis
+Aquanectria,Fungi,1,5,Aquanectria penicillioides
+Aquilomyces,Fungi,1,1,Aquilomyces patris
+Arthroderma,Fungi,1,3,Arthroderma uncinatum
+Artomyces,Fungi,1,1,Artomyces pyxidatus
+Arxiozyma,Fungi,1,2,Arxiozyma heterogenica
+Ascodesmis,Fungi,1,8,Ascodesmis nigricans
+Ascosphaera,Fungi,1,7,Ascosphaera apis
+Atractiella,Fungi,1,13,Atractiella rhizophila
+Aulographum,Fungi,1,7,Aulographum hederae
+Aureobasidium,Fungi,1,1,Aureobasidium melanogenum
+Auricularia,Fungi,1,62,Auricularia subglabra
+Auriscalpium,Fungi,1,2,Auriscalpium vulgare
+Austropuccinia,Fungi,1,109,Austropuccinia psidii
+Backusella,Fungi,1,1,Backusella circina
+Baudoinia,Fungi,1,1,Baudoinia panamericana
+Benjaminiella,Fungi,1,25,Benjaminiella poitrasii
+Biscogniauxia,Fungi,1,2,Biscogniauxia marginata
+Bjerkandera,Fungi,1,4,Bjerkandera adusta
+Blakeslea,Fungi,1,42,Blakeslea trispora
+Blastobotrys,Fungi,1,1,Blastobotrys indianensis
+Blyttiomyces,Fungi,1,1,Blyttiomyces helicus
+Boeremia,Fungi,1,5,Boeremia exigua
+Bolbitius,Fungi,1,4,Bolbitius vitellinus
+Bondarzewia,Fungi,1,5,Bondarzewia mesenterica
+Boreostereum,Fungi,1,6,Boreostereum radiatum
+Botryobasidium,Fungi,1,7,Botryobasidium botryosum
+Botryosphaeria,Fungi,1,27,Botryosphaeria dothidea
+Botryozyma,Fungi,1,9,Botryozyma mucatilis
+Bretziella,Fungi,1,5,Bretziella fagacearum
+Bulgaria,Fungi,1,3,Bulgaria inquinans
+Butyriboletus,Fungi,1,12,Butyriboletus roseoflavus
+Byssoonygena,Fungi,1,1,Byssoonygena ceratinophila
+Byssothecium,Fungi,1,9,Byssothecium circinans
+Cabalodontia,Fungi,1,13,Cabalodontia subcretacea
+Calcarisporiella,Fungi,1,13,Calcarisporiella thermophila
+Caloscypha,Fungi,1,8,Caloscypha fulgens
+Calosphaeria,Fungi,1,1,Calosphaeria pulchella
+Calycina,Fungi,1,32,Calycina marina
+Candidozyma,Fungi,1,1,Candidozyma auris
+Candolleomyces,Fungi,1,9,Candolleomyces aberdarensis
+Cantharellus,Fungi,1,171,Cantharellus anzutake
+Catenaria,Fungi,1,19,Catenaria anguillulae
+Cenococcum,Fungi,1,23,Cenococcum geophilum
+Cephaloascus,Fungi,1,5,Cephaloascus albidus
+Ceratobasidium,Fungi,1,3,Ceratobasidium theobromae
+Cercophora,Fungi,1,1,Cercophora samala
+Ceriporia,Fungi,1,13,Ceriporia viridans
+Cerrena,Fungi,1,2,Cerrena unicolor
+Chaetocladium,Fungi,1,49,Chaetocladium brefeldii
+Chaetomidium,Fungi,1,1,Chaetomidium leptoderma
+Chionosphaera,Fungi,1,3,Chionosphaera apobasidialis
+Chlamydoabsidia,Fungi,1,7,Chlamydoabsidia padenii
+Choanephora,Fungi,1,44,Choanephora cucurbitarum
+Choiromyces,Fungi,1,37,Choiromyces venosus
+Chytridium,Fungi,1,11,Chytridium lagenaria
+Chytriomyces,Fungi,1,4,Chytriomyces hyalinus
+Circinella,Fungi,1,84,Circinella umbellata
+Citeromyces,Fungi,1,1,Citeromyces matritensis
+Cladochytrium,Fungi,1,17,Cladochytrium replicatum
+Cladonia,Fungi,1,1,Cladonia grayi
+Cladophialophora,Fungi,1,1,Cladophialophora immunda
+Cladorrhinum,Fungi,1,2,Cladorrhinum samala
+Cladosporium,Fungi,1,5,Cladosporium sphaerospermum
+Classicula,Fungi,1,24,Classicula fluitans
+Clathrospora,Fungi,1,7,Clathrospora elynae
+Claviceps,Fungi,1,1,Claviceps purpurea
+Clavispora,Fungi,1,1,Clavispora lusitaniae
+Climacocystis,Fungi,1,10,Climacocystis borealis
+Clonostachys,Fungi,1,1,Clonostachys rosea
+Coccodinium,Fungi,1,5,Coccodinium bartschii
+Cokeromyces,Fungi,1,11,Cokeromyces recurvatus
+Collybia,Fungi,1,6,Collybia nuda
+Coniophora,Fungi,1,21,Coniophora puteana
+Coniosporium,Fungi,1,2,Coniosporium apollinis
+Conocybe,Fungi,1,3,Conocybe apala
+Cortinarius,Fungi,1,20,Cortinarius austrovenetus
+Corynespora,Fungi,1,2,Corynespora cassiicola
+Crassisporium,Fungi,1,7,Crassisporium funariophilum
+Cronartium,Fungi,1,23,Cronartium quercuum
+Crucibulum,Fungi,1,3,Crucibulum laeve
+Crustoderma,Fungi,1,8,Crustoderma dryinum
+Cryomyces,Fungi,1,9,Cryomyces minteri
+Cryphonectria,Fungi,1,1,Cryphonectria parasitica
+Cryptodiaporthe,Fungi,1,10,Cryptodiaporthe populea
+Cucurbitaria,Fungi,1,1,Cucurbitaria berberidis
+Cutaneotrichosporon,Fungi,1,1,Cutaneotrichosporon cavernicola
+Cystobasidium,Fungi,1,2,Cystobasidium minutum
+Cystostereum,Fungi,1,2,Cystostereum murrayi
+Cytidiella,Fungi,1,90,Cytidiella melzeri
+Dacrymyces,Fungi,1,1,Dacrymyces fennicus
+Dacryonaema,Fungi,1,5,Dacryonaema rufum
+Dacryopinax,Fungi,1,7,Dacryopinax primogenitus
+Daedaleopsis,Fungi,1,4,Daedaleopsis nitida
+Debaryomyces,Fungi,1,4,Debaryomyces hansenii
+Decorospora,Fungi,1,3,Decorospora gaudefroyi
+Delitschia,Fungi,1,5,Delitschia confertaspora
+Delphinella,Fungi,1,2,Delphinella strobiligena
+Dendryphion,Fungi,1,7,Dendryphion nanum
+Dentipellis,Fungi,1,1,Dentipellis fragilis
+Diatrype,Fungi,1,8,Diatrype disciformis
+Didymocrea,Fungi,1,4,Didymocrea sadasivanii
+Didymosphaeria,Fungi,1,2,Didymosphaeria variabile
+Digitatispora,Fungi,1,23,Digitatispora marina
+Dimargaris,Fungi,1,1,Dimargaris cristalligena
+Diplodia,Fungi,1,1,Diplodia seriata
+Diplogelasinospora,Fungi,1,9,Diplogelasinospora grovesii
+Disciotis,Fungi,1,16,Disciotis venosa
+Dissoconium,Fungi,1,1,Dissoconium aciculare
+Dothidotthia,Fungi,1,6,Dothidotthia symphoricarpi
+Dothistroma,Fungi,1,3,Dothistroma septosporum
+Drechmeria,Fungi,1,9,Drechmeria coniospora
+Durotheca,Fungi,1,2,Durotheca rogersii
+Earliella,Fungi,1,16,Earliella scabrosa
+Echinodontium,Fungi,1,1,Echinodontium tinctorium
+Ectophoma,Fungi,1,3,Ectophoma multirostrata
+Edhazardia,Fungi,1,5,Edhazardia aedis
+Elaphomyces,Fungi,1,18,Elaphomyces granulatus
+Ellisomyces,Fungi,1,44,Ellisomyces anomalus
+Elmerina,Fungi,1,3,Elmerina caryae
+Emmonsia,Fungi,1,3,Emmonsia crescens
+Entoleuca,Fungi,1,6,Entoleuca mammata
+Entomophaga,Fungi,1,34,Entomophaga maimaiga
+Epicoccum,Fungi,1,2,Epicoccum nigrum
+Epithele,Fungi,1,31,Epithele typhae
+Eremomyces,Fungi,1,15,Eremomyces bilateralis
+Eremothecium,Fungi,1,1,Eremothecium gossypii
+Erythrobasidium,Fungi,1,2,Erythrobasidium hasegawianum
+Eurotium,Fungi,1,6,Eurotium umbrosum
+Exidia,Fungi,1,10,Exidia glandulosa
+Exserohilum,Fungi,1,10,Exserohilum turcicum
+Favolaschia,Fungi,1,45,Favolaschia claudopus
+Fenestella,Fungi,1,3,Fenestella fenestrata
+Fennellomyces,Fungi,1,18,Fennellomyces linderi
+Fibroporia,Fungi,1,1,Fibroporia radiculosa
+Fibulobasidium,Fungi,1,1,Fibulobasidium inconspicuum
+Fimicolochytrium,Fungi,1,1,Fimicolochytrium jonesii
+Fistulina,Fungi,1,9,Fistulina hepatica
+Flammula,Fungi,1,13,Flammula alnicola
+Flavomyces,Fungi,1,7,Flavomyces fulophazii
+Fomes,Fungi,1,1,Fomes fomentarius
+Fomitiporia,Fungi,1,11,Fomitiporia mediterranea
+Fonsecaea,Fungi,1,1,Fonsecaea multimorphosa
+Friedmanniomyces,Fungi,1,1,Friedmanniomyces simplex
+Fulvia,Fungi,1,14,Fulvia fulva
+Fuscoporia,Fungi,1,5,Fuscoporia viticola
+Gaertneriomyces,Fungi,1,1,Gaertneriomyces semiglobifer
+Galerina,Fungi,1,6,Galerina marginata
+Gamsiella,Fungi,1,12,Gamsiella multidivaricata
+Gautieria,Fungi,1,228,Gautieria morchelliformis
+Geastrum,Fungi,1,5,Geastrum triplex
+Gelatoporia,Fungi,1,5,Gelatoporia subvermispora
+Geopyxis,Fungi,1,2,Geopyxis carbonaria
+Geosiphon,Fungi,1,43,Geosiphon pyriformis
+Geotrichum,Fungi,1,7,Geotrichum candidum
+Geranomyces,Fungi,1,1,Geranomyces variabilis
+Gilbertella,Fungi,1,35,Gilbertella persicaria
+Glarea,Fungi,1,1,Glarea lozoyensis
+Gloeopeniophorella,Fungi,1,8,Gloeopeniophorella convolvens
+Gloeophyllum,Fungi,1,3,Gloeophyllum trabeum
+Glomus,Fungi,1,27,Glomus cerebriforme
+Gnomoniopsis,Fungi,1,1,Gnomoniopsis castaneae
+Gongronella,Fungi,1,3,Gongronella butleri
+Gorgonomyces,Fungi,1,3,Gorgonomyces haynaldii
+Graphis,Fungi,1,1,Graphis scripta
+Gremmeniella,Fungi,1,6,Gremmeniella abietina
+Gryganskiella,Fungi,1,7,Gryganskiella cystojenkinii
+Guyanagaster,Fungi,1,9,Guyanagaster necrorhizus
+Gymnascella,Fungi,1,1,Gymnascella citrina
+Gyrodon,Fungi,1,9,Gyrodon lividus
+Gyromitra,Fungi,1,13,Gyromitra esculenta
+Halenospora,Fungi,1,4,Halenospora varia
+Halojulella,Fungi,1,5,Halojulella avicenniae
+Halteromyces,Fungi,1,2,Halteromyces radiatus
+Hapsidospora,Fungi,1,1,Hapsidospora chrysogena
+Harringtonia,Fungi,1,2,Harringtonia lauricola
+Helicostylum,Fungi,1,9,Helicostylum pulchrum
+Heliocybe,Fungi,1,3,Heliocybe sulcata
+Helotiales,Fungi,1,35,Helotiales sp f229
+Hemileia,Fungi,1,7,Hemileia vastatrix
+Henningerozyma,Fungi,1,1,Henningerozyma blattae
+Hepatospora,Fungi,1,1,Hepatospora eriocheir
+Hermanssonia,Fungi,1,1,Hermanssonia centrifuga
+Hesseltinella,Fungi,1,8,Hesseltinella vesiculosa
+Heterodoassansia,Fungi,1,1,Heterodoassansia hygrophilae
+Hortaea,Fungi,1,13,Hortaea werneckii
+Hyaloraphidium,Fungi,1,4,Hyaloraphidium curvatum
+Hydnomerulius,Fungi,1,1,Hydnomerulius pinastri
+Hydnum,Fungi,1,18,Hydnum rufescens
+Hygrophoropsis,Fungi,1,2,Hygrophoropsis aurantiaca
+Hymenopellis,Fungi,1,9,Hymenopellis radicata
+Hypholoma,Fungi,1,5,Hypholoma sublateritium
+Hypsizygus,Fungi,1,5,Hypsizygus marmoreus
+Hysterangium,Fungi,1,172,Hysterangium stoloniferum
+Imleria,Fungi,1,1,Imleria badia
+Immersiella,Fungi,1,1,Immersiella caudata
+Infundibulicybe,Fungi,1,55,Infundibulicybe gibba
+Intextomyces,Fungi,1,4,Intextomyces contiguus
+Jaapia,Fungi,1,3,Jaapia argillacea
+Jackrogersella,Fungi,1,2,Jackrogersella minutella
+Jahnula,Fungi,1,3,Jahnula aquatica
+Kalaharituber,Fungi,1,40,Kalaharituber pfeilii
+Kalapuya,Fungi,1,15,Kalapuya brunnea
+Karstenula,Fungi,1,3,Karstenula rhodostoma
+Kazachstania,Fungi,1,1,Kazachstania africana
+Kurtia,Fungi,1,2,Kurtia argillacea
+Lactifluus,Fungi,1,11,Lactifluus subvellereus
+Laetiporus,Fungi,1,9,Laetiporus sulphureus
+Lanmaoa,Fungi,1,13,Lanmaoa asiatica
+Lasallia,Fungi,1,14,Lasallia pustulata
+Lasiodiplodia,Fungi,1,2,Lasiodiplodia theobromae
+Lasiosphaeris,Fungi,1,1,Lasiosphaeris hirsuta
+Laxitextum,Fungi,1,14,Laxitextum bicolor
+Lentinellus,Fungi,1,2,Lentinellus vulpinus
+Lentinus,Fungi,1,2,Lentinus tigrinus
+Lentithecium,Fungi,1,9,Lentithecium fluviatile
+Lenzites,Fungi,1,6,Lenzites betulinus
+Lepidopterella,Fungi,1,1,Lepidopterella palustris
+Leptodontidium,Fungi,1,69,Leptodontidium sp mpisdfrat0119
+Leptographium,Fungi,1,3,Leptographium clavigerum
+Leptoporus,Fungi,1,6,Leptoporus mollis
+Leptosphaeria,Fungi,1,6,Leptosphaeria microscopica
+Letharia,Fungi,1,12,Letharia columbiana
+Leucangium,Fungi,1,12,Leucangium carthusianum
+Leucoagaricus,Fungi,1,10,Leucoagaricus gongylophorus
+Leucosporidium,Fungi,1,8,Leucosporidium creatinivorum
+Linderina,Fungi,1,2,Linderina pennispora
+Lindgomyces,Fungi,1,30,Lindgomyces ingoldianus
+Lindra,Fungi,1,1,Lindra thalassiae
+Lineolata,Fungi,1,2,Lineolata rhizophorae
+Lobaria,Fungi,1,5,Lobaria pulmonaria
+Lobosporangium,Fungi,1,18,Lobosporangium transversale
+Lodderomyces,Fungi,1,9,Lodderomyces elongisporus
+Lomentospora,Fungi,1,4,Lomentospora prolificans
+Lophiotrema,Fungi,1,1,Lophiotrema nucula
+Lophium,Fungi,1,7,Lophium mytilinum
+Lophodermium,Fungi,1,40,Lophodermium nitens
+Lunasporangiospora,Fungi,1,27,Lunasporangiospora selenospora
+Lycoperdon,Fungi,1,9,Lycoperdon perlatum
+Lyophyllum,Fungi,1,8,Lyophyllum atratum
+Macrolepiota,Fungi,1,6,Macrolepiota fuliginosa
+Macrophomina,Fungi,1,29,Macrophomina phaseolina
+Magnaporthiopsis,Fungi,1,2,Magnaporthiopsis poae
+Magnusiomyces,Fungi,1,4,Magnusiomyces paraingens
+Malbranchea,Fungi,1,11,Malbranchea cinnamomea
+Marquandomyces,Fungi,1,17,Marquandomyces marquandii
+Martensiomyces,Fungi,1,2,Martensiomyces pterosporus
+Massarina,Fungi,1,2,Massarina eburnea
+Massariosphaeria,Fungi,1,8,Massariosphaeria phaeospora
+Mattirolomyces,Fungi,1,6,Mattirolomyces terfezioides
+Melanogaster,Fungi,1,10,Melanogaster broomeanus
+Melanops,Fungi,1,2,Melanops tulasnei
+Melanospora,Fungi,1,2,Melanospora tiffanyae
+Melanotaenium,Fungi,1,4,Melanotaenium endogenum
+Meripilus,Fungi,1,1,Meripilus sumstinei
+Microascus,Fungi,1,1,Microascus trigonosporus
+Microbotryum,Fungi,1,10,Microbotryum intermedium
+Microsporum,Fungi,1,2,Microsporum canis
+Microthyrium,Fungi,1,6,Microthyrium microscopicum
+Millerozyma,Fungi,1,2,Millerozyma farinosa
+Mollisia,Fungi,1,4,Mollisia scopiformis
+Monascus,Fungi,1,3,Monascus ruber
+Monilinia,Fungi,1,18,Monilinia fructigena
+Moniliophthora,Fungi,1,4,Moniliophthora roreri
+Monosporascus,Fungi,1,9,Monosporascus cannonballus
+Mrakia,Fungi,1,1,Mrakia frigida
+Mucidula,Fungi,1,9,Mucidula mucida
+Multifurca,Fungi,1,15,Multifurca ochricompacta
+Mutinus,Fungi,1,18,Mutinus elegans
+Mycobernardia,Fungi,1,8,Mycobernardia incrustans
+Mycocalia,Fungi,1,7,Mycocalia denudata
+Mycosarcoma,Fungi,1,4,Mycosarcoma maydis
+Mycothermus,Fungi,1,2,Mycothermus thermophilus
+Mytilinidion,Fungi,1,4,Mytilinidion resinicola
+Myxozyma,Fungi,1,1,Myxozyma melibiosi
+Naohidea,Fungi,1,2,Naohidea sebacea
+Nectria,Fungi,1,9,Nectria sp b13
+Nectriopsis,Fungi,1,1,Nectriopsis sporangiicola
+Neoantrodia,Fungi,1,12,Neoantrodia serialis
+Neocosmospora,Fungi,1,19,Neocosmospora boninensis
+Neofusicoccum,Fungi,1,1,Neofusicoccum parvum
+Neolentinus,Fungi,1,11,Neolentinus lepideus
+Neonectria,Fungi,1,2,Neonectria ditissima
+Neopestalotiopsis,Fungi,1,1,Neopestalotiopsis rosae
+Neopyrenochaeta,Fungi,1,3,Neopyrenochaeta inflorescentiae
+Nia,Fungi,1,1,Nia vibrissa
+Niebla,Fungi,1,3,Niebla homalea
+Nigrospora,Fungi,1,9,Nigrospora oryzae
+Niveomyces,Fungi,1,4,Niveomyces insectorum
+Nosema,Fungi,1,12,Nosema bombycis
+Obba,Fungi,1,1,Obba rivulosa
+Obelidium,Fungi,1,16,Obelidium mucronatum
+Oculimacula,Fungi,1,5,Oculimacula yallundae
+Oehlia,Fungi,1,28,Oehlia diaphana
+Oidiodendron,Fungi,1,5,Oidiodendron maius
+Oliveonia,Fungi,1,4,Oliveonia pauxilla
+Onnia,Fungi,1,6,Onnia scaura
+Ophiobolus,Fungi,1,5,Ophiobolus disseminans
+Ophiognomonia,Fungi,1,11,Ophiognomonia clavigignentijuglandacearum
+Ophiosphaerella,Fungi,1,17,Ophiosphaerella korrae
+Ophiostoma,Fungi,1,1,Ophiostoma piliferum
+Orbilia,Fungi,1,1,Orbilia oligospora
+Panellus,Fungi,1,3,Panellus stipticus
+Panus,Fungi,1,5,Panus rudis
+Parachaetomium,Fungi,1,5,Parachaetomium inaequale
+Parafenestella,Fungi,1,6,Parafenestella ontariensis
+Paraglomus,Fungi,1,3,Paraglomus occultum
+Paragyromitra,Fungi,1,8,Paragyromitra infula
+Paraphaeosphaeria,Fungi,1,1,Paraphaeosphaeria sporulosa
+Paraphoma,Fungi,1,1,Paraphoma chrysanthemicola
+Parasitella,Fungi,1,19,Parasitella parasitica
+Parastagonospora,Fungi,1,3,Parastagonospora nodorum
+Parauncinula,Fungi,1,39,Parauncinula polyspora
+Patellaria,Fungi,1,2,Patellaria atrata
+Periconia,Fungi,1,9,Periconia macrospinosa
+Peronospora,Fungi,1,15,Peronospora effusa
+Pezicula,Fungi,1,8,Pezicula radicicola
+Peziza,Fungi,1,7,Peziza echinospora
+Phaeoacremonium,Fungi,1,3,Phaeoacremonium minimum
+Phaeosolenia,Fungi,1,4,Phaeosolenia platensis
+Phakopsora,Fungi,1,55,Phakopsora pachyrhizi
+Phanerochaete,Fungi,1,9,Phanerochaete carnosa
+Phanerodontia,Fungi,1,10,Phanerodontia chrysosporium
+Phascolomyces,Fungi,1,10,Phascolomyces articulosus
+Phellinus,Fungi,1,7,Phellinus igniarius
+Phellopilus,Fungi,1,26,Phellopilus nigrolimitatus
+Phialocephala,Fungi,1,4,Phialocephala subalpina
+Phialophora,Fungi,1,2,Phialophora americana
+Phlebiella,Fungi,1,13,Phlebiella tulasnelloidea
+Phlegmacium,Fungi,1,35,Phlegmacium glaucopus
+Phleogena,Fungi,1,20,Phleogena faginea
+Phlyctochytrium,Fungi,1,15,Phlyctochytrium arcticum
+Piedraia,Fungi,1,2,Piedraia hortae
+Pilaira,Fungi,1,14,Pilaira anomala
+Pilobolus,Fungi,1,28,Pilobolus umbonatus
+Pinnaticoemansia,Fungi,1,7,Pinnaticoemansia coronantispora
+Piromyces,Fungi,1,17,Piromyces finnis
+Plectania,Fungi,1,8,Plectania melastoma
+Plectosphaerella,Fungi,1,1,Plectosphaerella cucumerina
+Pleomassaria,Fungi,1,3,Pleomassaria siparia
+Plicaturopsis,Fungi,1,2,Plicaturopsis crispa
+Pluteus,Fungi,1,1,Pluteus cervinus
+Pochonia,Fungi,1,14,Pochonia chlamydosporia
+Podosordaria,Fungi,1,4,Podosordaria jugoyasan
+Podosphaera,Fungi,1,61,Podosphaera aphanis
+Polychaeton,Fungi,1,2,Polychaeton citri
+Polychytrium,Fungi,1,9,Polychytrium aggregatum
+Polyphilus,Fungi,1,20,Polyphilus sieberi
+Polyplosphaeria,Fungi,1,2,Polyplosphaeria fusca
+Polytolypa,Fungi,1,5,Polytolypa hystricis
+Porostereum,Fungi,1,7,Porostereum spadiceum
+Porpomyces,Fungi,1,13,Porpomyces mucidus
+Postia,Fungi,1,9,Postia stiptica
+Powellomyces,Fungi,1,1,Powellomyces hirtus
+Pseudoechria,Fungi,1,9,Pseudoechria curvicolla
+Pseudomassariella,Fungi,1,3,Pseudomassariella vexata
+Pseudoneurospora,Fungi,1,5,Pseudoneurospora amorphoporcata
+Pseudopyrenochaeta,Fungi,1,74,Pseudopyrenochaeta lycopersici
+Pseudovirgaria,Fungi,1,5,Pseudovirgaria hyperparasitica
+Pterulicium,Fungi,1,1,Pterulicium gracile
+Punctularia,Fungi,1,41,Punctularia strigosozonata
+Pyrenophora,Fungi,1,4,Pyrenophora seminiperda
+Pyrrhoderma,Fungi,1,2,Pyrrhoderma noxium
+Radiomyces,Fungi,1,16,Radiomyces spectabilis
+Radulomyces,Fungi,1,4,Radulomyces confluens
+Ramaria,Fungi,1,28,Ramaria rubella
+Ramicandelaber,Fungi,1,1,Ramicandelaber brevisporus
+Resinicium,Fungi,1,4,Resinicium bicolor
+Rhamphospora,Fungi,1,4,Rhamphospora nymphaeae
+Rhinocladiella,Fungi,1,4,Rhinocladiella mackenziei
+Rhizina,Fungi,1,3,Rhizina undulata
+Rhizoclosmatium,Fungi,1,14,Rhizoclosmatium globosum
+Rhizoctonia,Fungi,1,6,Rhizoctonia solani
+Rhizomucor,Fungi,1,1,Rhizomucor pusillus
+Rhodocollybia,Fungi,1,112,Rhodocollybia butyracea
+Rhodofomes,Fungi,1,8,Rhodofomes roseus
+Rhodonia,Fungi,1,13,Rhodonia placenta
+Rhypophila,Fungi,1,2,Rhypophila decipiens
+Rickenella,Fungi,1,4,Rickenella mellea
+Rigidoporus,Fungi,1,1,Rigidoporus microporus
+Roridomyces,Fungi,1,9,Roridomyces roridus
+Rozella,Fungi,1,2,Rozella allomycis
+Rutstroemia,Fungi,1,1,Rutstroemia firma
+Saccharata,Fungi,1,2,Saccharata proteae
+Saccharomycodes,Fungi,1,1,Saccharomycodes ludwigii
+Saccharomycopsis,Fungi,1,2,Saccharomycopsis crataegensis
+Saitozyma,Fungi,1,12,Saitozyma podzolica
+Saksenaea,Fungi,1,14,Saksenaea vasiformis
+Sarcoscypha,Fungi,1,3,Sarcoscypha coccinea
+Schizosaccharomyces,Fungi,1,2,Schizosaccharomyces pombe
+Schizothecium,Fungi,1,1,Schizothecium vesticola
+Sclerogaster,Fungi,1,40,Sclerogaster hysterangioides
+Scytalidium,Fungi,1,6,Scytalidium lignicola
+Septoria,Fungi,1,38,Septoria linicola
+Serendipita,Fungi,1,2,Serendipita vermifera
+Serpulomyces,Fungi,1,8,Serpulomyces borealis
+Sertulicium,Fungi,1,2,Sertulicium niveocremeum
+Setomelanomma,Fungi,1,10,Setomelanomma holmii
+Sidera,Fungi,1,9,Sidera vulgaris
+Sistotremastrum,Fungi,1,1,Sistotremastrum suecicum
+Skeletocutis,Fungi,1,8,Skeletocutis biguttulata
+Slooffia,Fungi,1,4,Slooffia pilatii
+Solicoccozyma,Fungi,1,1,Solicoccozyma terrea
+Spathaspora,Fungi,1,1,Spathaspora passalidarum
+Sphaerobolus,Fungi,1,37,Sphaerobolus stellatus
+Sphaerosporella,Fungi,1,23,Sphaerosporella brunnea
+Spinellus,Fungi,1,42,Spinellus fusiger
+Spizellomyces,Fungi,1,5,Spizellomyces punctatus
+Sporisorium,Fungi,1,1,Sporisorium scitamineum
+Sporodiniella,Fungi,1,4,Sporodiniella umbellata
+Sporothrix,Fungi,1,2,Sporothrix schenckii
+Stanjemonium,Fungi,1,9,Stanjemonium grisellum
+Stemphylium,Fungi,1,5,Stemphylium lycopersici
+Sterigmatosporidium,Fungi,1,2,Sterigmatosporidium polymorphum
+Stomiopeltis,Fungi,1,3,Stomiopeltis betulae
+Sugiyamaella,Fungi,1,2,Sugiyamaella lignohabitans
+Sungouiella,Fungi,1,1,Sungouiella intermedia
+Syncephalastrum,Fungi,1,7,Syncephalastrum racemosum
+Terana,Fungi,1,14,Terana coerulea
+Teratosphaeria,Fungi,1,1,Teratosphaeria nubilosa
+Tetrapisispora,Fungi,1,1,Tetrapisispora phaffii
+Tetrapyrgos,Fungi,1,97,Tetrapyrgos nigripes
+Thamnidium,Fungi,1,18,Thamnidium elegans
+Thamnocephalis,Fungi,1,2,Thamnocephalis sphaerospora
+Thanatephorus,Fungi,1,5,Thanatephorus cucumeris
+Thelonectria,Fungi,1,16,Thelonectria olida
+Thermocarpiscus,Fungi,1,1,Thermocarpiscus australiensis
+Thermochaetoides,Fungi,1,3,Thermochaetoides thermophila
+Thermomyces,Fungi,1,1,Thermomyces dupontii
+Thermothielavioides,Fungi,1,9,Thermothielavioides terrestris
+Tirmania,Fungi,1,19,Tirmania nivea
+Tolypocladium,Fungi,1,1,Tolypocladium inflatum
+Torrubiella,Fungi,1,5,Torrubiella hemipterigena
+Tothia,Fungi,1,2,Tothia fuscella
+Trachipleistophora,Fungi,1,1,Trachipleistophora hominis
+Trametopsis,Fungi,1,1,Trametopsis cervina
+Tremella,Fungi,1,17,Tremella mesenterica
+Triangularia,Fungi,1,2,Triangularia setosa
+Tricharina,Fungi,1,3,Tricharina praecox
+Trichodelitschia,Fungi,1,1,Trichodelitschia bisporula
+Trichophaea,Fungi,1,24,Trichophaea hybrida
+Tricladium,Fungi,1,6,Tricladium varicosporioides
+Truncatella,Fungi,1,4,Truncatella angustata
+Tulasnella,Fungi,1,2,Tulasnella calospora
+Tulosesus,Fungi,1,14,Tulosesus angulatus
+Umbelopsis,Fungi,1,1,Umbelopsis angularis
+Uncinocarpus,Fungi,1,5,Uncinocarpus reesii
+Usnea,Fungi,1,7,Usnea florida
+Ustanciosporium,Fungi,1,1,Ustanciosporium gigantosporum
+Ustilaginoidea,Fungi,1,3,Ustilaginoidea virens
+Ustulina,Fungi,1,1,Ustulina deusta
+Vanderwaltozyma,Fungi,1,3,Vanderwaltozyma polyspora
+Vanrija,Fungi,1,1,Vanrija pseudolonga
+Vararia,Fungi,1,6,Vararia minispora
+Varicosporina,Fungi,1,11,Varicosporina prolifera
+Vavraia,Fungi,1,3,Vavraia culicis
+Veluticeps,Fungi,1,13,Veluticeps abietina
+Venustampulla,Fungi,1,4,Venustampulla echinocandica
+Verpa,Fungi,1,9,Verpa conica
+Verruculina,Fungi,1,6,Verruculina enalia
+Volvariella,Fungi,1,3,Volvariella volvacea
+Vuilleminia,Fungi,1,14,Vuilleminia comedens
+Westerdykella,Fungi,1,2,Westerdykella ornata
+Whalleya,Fungi,1,4,Whalleya microplaca
+Wilcoxina,Fungi,1,10,Wilcoxina mikolae
+Wolfiporia,Fungi,1,36,Wolfiporia cocos
+Xanthoporus,Fungi,1,4,Xanthoporus peckianus
+Xanthoria,Fungi,1,3,Xanthoria parietina
+Xenasmatella,Fungi,1,14,Xenasmatella vaga
+Xylona,Fungi,1,1,Xylona heveae
+Yarrowia,Fungi,1,6,Yarrowia lipolytica
+Zancudomyces,Fungi,1,7,Zancudomyces culisetae
+Zoophthora,Fungi,1,26,Zoophthora radicans
+Zopfochytrium,Fungi,1,11,Zopfochytrium polystomum
+Zychaea,Fungi,1,42,Zychaea mexicana
+Zygotorulaspora,Fungi,1,1,Zygotorulaspora mrakii
+Zymoseptoria,Fungi,1,4,Zymoseptoria tritici
+Eucalyptus,Plantae,20,8998,Eucalyptus brandiana; Eucalyptus caleyi; Eucalyptus camaldulensis; Eucalyptus cladocalyx; Eucalyptus curtisii; Eucalyptus dawsonii; Eucalyptus decipiens; Eucalyptus erythrocorys; Eucalyptus globulus; Eucalyptus grandis; Eucalyptus guilfoylei; Eucalyptus marginata; Eucalyptus melliodora; Eucalyptus pauciflora; Eucalyptus pumila; Eucalyptus regnans; Eucalyptus sideroxylon; Eucalyptus tenuipes; Eucalyptus viminalis; Eucalyptus virginea
+Solanum,Plantae,16,7523,Solanum arcanum; Solanum chilense; Solanum chmielewskii; Solanum commersonii; Solanum dulcamara; Solanum galapagense; Solanum habrochaites; Solanum lycopersicoides; Solanum lycopersicum; Solanum neorickii; Solanum peruvianum; Solanum pimpinellifolium; Solanum rostratum; Solanum stenotomum; Solanum tuberosum; Solanum verrucosum
+Gossypium,Plantae,14,4384,Gossypium anomalum; Gossypium arboreum; Gossypium australe; Gossypium barbadense; Gossypium darwinii; Gossypium herbaceum; Gossypium hirsutum; Gossypium longicalyx; Gossypium mustelinum; Gossypium raimondii; Gossypium stocksii; Gossypium sturtianum; Gossypium tomentosum; Gossypium turneri
+Populus,Plantae,9,2581,Populus alba; Populus davidiana; Populus deltoides; Populus ilicifolia; Populus pruinosa; Populus simonii; Populus tomentosa; Populus trichocarpa; Populus x sibirica
+Prunus,Plantae,9,2354,Prunus armeniaca; Prunus avium; Prunus dulcis; Prunus kanzakura; Prunus mira; Prunus padus; Prunus persica; Prunus salicina; Prunus yedoensis
+Oryza,Plantae,7,4496,Oryza australiensis; Oryza barthii; Oryza coarctata; Oryza meyeriana var granulata; Oryza officinalis; Oryza rufipogon; Oryza sativa
+Salix,Plantae,6,1550,Salix arbutifolia; Salix dunnii; Salix koriyanagi; Salix purpurea; Salix suchowensis; Salix viminalis
+Aegilops,Plantae,5,1301,Aegilops bicornis; Aegilops longissima; Aegilops searsii; Aegilops speltoides; Aegilops tauschii
+Brassica,Plantae,5,2129,Brassica juncea; Brassica napus; Brassica nigra; Brassica oleracea; Brassica rapa
+Citrus,Plantae,5,977,Citrus clementina; Citrus inodora; Citrus maxima; Citrus sinensis; Citrus trifoliata
+Panax,Plantae,5,140,Panax ginseng; Panax japonicus; Panax notoginseng; Panax quinquefolius; Panax stipuleanatus
+Quercus,Plantae,5,1401,Quercus agrifolia; Quercus dentata; Quercus engelmannii; Quercus glauca; Quercus tomentella
+Bruguiera,Plantae,4,377,Bruguiera cylindrica; Bruguiera gymnorhiza; Bruguiera parviflora; Bruguiera sexangula
+Dendrobium,Plantae,4,922,Dendrobium chrysotoxum; Dendrobium huoshanense; Dendrobium nobile; Dendrobium officinale
+Dioscorea,Plantae,4,801,Dioscorea alata; Dioscorea dumetorum; Dioscorea rotundata; Dioscorea zingiberensis
+Musa,Plantae,4,378,Musa acuminata; Musa balbisiana; Musa schizocarpa; Musa troglodytarum
+Vitis,Plantae,4,2273,Vitis amurensis; Vitis riparia; Vitis rotundifolia; Vitis vinifera
+Actinidia,Plantae,3,643,Actinidia chinensis; Actinidia deliciosa; Actinidia eriantha
+Arabidopsis,Plantae,3,711,Arabidopsis arenosa; Arabidopsis suecica; Arabidopsis thaliana
+Arachis,Plantae,3,815,Arachis duranensis; Arachis hypogaea; Arachis monticola
+Aristolochia,Plantae,3,616,Aristolochia californica; Aristolochia contorta; Aristolochia fimbriata
+Carex,Plantae,3,675,Carex kokanica; Carex myosuroides; Carex scoparia
+Chlamydomonas,Plantae,3,180,Chlamydomonas incerta; Chlamydomonas reinhardtii; Chlamydomonas schloesseri
+Cicer,Plantae,3,607,Cicer arietinum; Cicer echinospermum; Cicer reticulatum
+Cucumis,Plantae,3,392,Cucumis hystrix; Cucumis melo; Cucumis sativus
+Eragrostis,Plantae,3,634,Eragrostis curvula; Eragrostis nindensis; Eragrostis tef
+Juglans,Plantae,3,1392,Juglans californica; Juglans mandshurica; Juglans nigra
+Panicum,Plantae,3,819,Panicum hallii; Panicum miliaceum; Panicum virgatum
+Papaver,Plantae,3,518,Papaver atlanticum; Papaver bracteatum; Papaver somniferum
+Pyrus,Plantae,3,1556,Pyrus betulifolia; Pyrus pyrifolia; Pyrus x bretschneideri
+Rhododendron,Plantae,3,1002,Rhododendron griersonianum; Rhododendron ovatum; Rhododendron simsii
+Rosa,Plantae,3,710,Rosa chinensis; Rosa lucieae; Rosa persica
+Vigna,Plantae,3,755,Vigna angularis; Vigna radiata; Vigna unguiculata
+Amaranthus,Plantae,2,450,Amaranthus cruentus; Amaranthus palmeri
+Amorphophallus,Plantae,2,94,Amorphophallus konjac; Amorphophallus titanum
+Aquilegia,Plantae,2,365,Aquilegia coerulea; Aquilegia eximia
+Beta,Plantae,2,675,Beta vulgaris; Beta vulgaris subsp vulgaris
+Boechera,Plantae,2,749,Boechera divaricarpa; Boechera stricta
+Castanea,Plantae,2,464,Castanea crenata; Castanea mollissima
+Cenchrus,Plantae,2,244,Cenchrus americanus; Cenchrus purpureus
+Coffea,Plantae,2,575,Coffea arabica; Coffea canephora
+Corylus,Plantae,2,462,Corylus avellana; Corylus heterophylla
+Corymbia,Plantae,2,488,Corymbia calophylla; Corymbia maculata
+Cuscuta,Plantae,2,542,Cuscuta australis; Cuscuta epithymum
+Diospyros,Plantae,2,1073,Diospyros kaki; Diospyros lotus
+Fragaria,Plantae,2,628,Fragaria iinumae; Fragaria nilgerrensis
+Glycine,Plantae,2,840,Glycine max; Glycine soja
+Hibiscus,Plantae,2,104,Hibiscus mutabilis; Hibiscus syriacus
+Juncus,Plantae,2,230,Juncus effusus; Juncus inflexus
+Linum,Plantae,2,825,Linum tenue; Linum usitatissimum
+Lupinus,Plantae,2,463,Lupinus albus; Lupinus angustifolius
+Malus,Plantae,2,2532,Malus domestica; Malus sieversii
+Marchantia,Plantae,2,57,Marchantia polymorpha; Marchantia polymorpha subsp montivagans
+Medicago,Plantae,2,519,Medicago arabica; Medicago truncatula
+Melastoma,Plantae,2,455,Melastoma candidum; Melastoma sanguineum
+Nelumbo,Plantae,2,1377,Nelumbo lutea; Nelumbo nucifera
+Raphanus,Plantae,2,734,Raphanus raphanistrum; Raphanus sativus
+Rhynchospora,Plantae,2,362,Rhynchospora breviuscula; Rhynchospora tenuis
+Saccharum,Plantae,2,577,Saccharum hybrid cultivar; Saccharum spontaneum
+Scutellaria,Plantae,2,448,Scutellaria baicalensis; Scutellaria galericulata
+Sesamum,Plantae,2,460,Sesamum indicum; Sesamum schinzianum
+Sphagnum,Plantae,2,140,Sphagnum fallax; Sphagnum magellanicum
+Syzygium,Plantae,2,706,Syzygium aromaticum; Syzygium oleosum
+Triticum,Plantae,2,528,Triticum aestivum; Triticum urartu
+Utricularia,Plantae,2,185,Utricularia gibba; Utricularia reniformis
+Vaccinium,Plantae,2,454,Vaccinium darrowii; Vaccinium macrocarpon
+Vicia,Plantae,2,142,Vicia sativa; Vicia villosa
+Zea,Plantae,2,928,Zea luxurians; Zea mays
+Acer,Plantae,1,235,Acer negundo
+Ailanthus,Plantae,1,216,Ailanthus altissimus
+Alliaria,Plantae,1,470,Alliaria petiolata
+Alopecurus,Plantae,1,113,Alopecurus myosuroides
+Amborella,Plantae,1,432,Amborella trichopoda
+Anacardium,Plantae,1,149,Anacardium occidentale
+Andrographis,Plantae,1,203,Andrographis paniculata
+Angophora,Plantae,1,251,Angophora floribunda
+Anisodus,Plantae,1,406,Anisodus acutangulus
+Anthoceros,Plantae,1,144,Anthoceros angustus
+Apocynum,Plantae,1,92,Apocynum venetum
+Aquilaria,Plantae,1,307,Aquilaria sinensis
+Arctium,Plantae,1,78,Arctium lappa
+Artemisia,Plantae,1,51,Artemisia argyi
+Asclepias,Plantae,1,229,Asclepias syriaca
+Asparagus,Plantae,1,140,Asparagus officinalis
+Avena,Plantae,1,94,Avena atlantica
+Avicennia,Plantae,1,109,Avicennia marina
+Azadirachta,Plantae,1,136,Azadirachta indica
+Ballota,Plantae,1,297,Ballota nigra
+Begonia,Plantae,1,283,Begonia loranthoides
+Berberis,Plantae,1,53,Berberis thunbergii
+Boehmeria,Plantae,1,166,Boehmeria nivea var tenacissima
+Bonia,Plantae,1,308,Bonia amplexicaulis
+Boswellia,Plantae,1,171,Boswellia sacra
+Brachypodium,Plantae,1,223,Brachypodium distachyon
+Buxus,Plantae,1,276,Buxus sempervirens
+Calamus,Plantae,1,61,Calamus simplicifolius
+Camelina,Plantae,1,257,Camelina hispida
+Camellia,Plantae,1,42,Camellia oleifera
+Campanula,Plantae,1,63,Campanula takesimana
+Cannabis,Plantae,1,355,Cannabis sativa
+Capsicum,Plantae,1,93,Capsicum annuum
+Carallia,Plantae,1,137,Carallia brachiata
+Carnegiea,Plantae,1,430,Carnegiea gigantea
+Carya,Plantae,1,451,Carya illinoinensis
+Caryopteris,Plantae,1,173,Caryopteris x clandonensis
+Castanospermum,Plantae,1,183,Castanospermum australe
+Casuarina,Plantae,1,236,Casuarina glauca
+Cephalotus,Plantae,1,61,Cephalotus follicularis
+Ceratodon,Plantae,1,51,Ceratodon purpureus
+Ceratopteris,Plantae,1,67,Ceratopteris richardii
+Chamaenerion,Plantae,1,374,Chamaenerion angustifolium
+Chenopodium,Plantae,1,56,Chenopodium formosanum
+Chimonanthus,Plantae,1,252,Chimonanthus praecox
+Chloranthus,Plantae,1,64,Chloranthus sessilifolius
+Chlorella,Plantae,1,1,Chlorella sorokiniana
+Chondrus,Plantae,1,453,Chondrus crispus
+Chrysopogon,Plantae,1,370,Chrysopogon serrulatus
+Cichorium,Plantae,1,120,Cichorium intybus
+Cinchona,Plantae,1,353,Cinchona pubescens
+Citrullus,Plantae,1,97,Citrullus lanatus
+Cocos,Plantae,1,39,Cocos nucifera
+Colocasia,Plantae,1,69,Colocasia esculenta
+Coptis,Plantae,1,315,Coptis chinensis
+Corchorus,Plantae,1,150,Corchorus capsularis
+Cordia,Plantae,1,261,Cordia subcordata
+Crucihimalaya,Plantae,1,300,Crucihimalaya himalaica
+Cyanidioschyzon,Plantae,1,1,Cyanidioschyzon merolae
+Cycas,Plantae,1,66,Cycas panzhihuaensis
+Cyclocarya,Plantae,1,401,Cyclocarya paliurus
+Cymbidium,Plantae,1,31,Cymbidium sinense
+Cynara,Plantae,1,92,Cynara cardunculus
+Dactylis,Plantae,1,138,Dactylis glomerata
+Datisca,Plantae,1,241,Datisca glomerata
+Daucus,Plantae,1,85,Daucus carota
+Dendrocalamus,Plantae,1,51,Dendrocalamus latiflorus
+Desmodesmus,Plantae,1,16,Desmodesmus armatus
+Dianthus,Plantae,1,285,Dianthus caryophyllus
+Digitaria,Plantae,1,271,Digitaria exilis
+Dimocarpus,Plantae,1,233,Dimocarpus longan
+Diphasiastrum,Plantae,1,90,Diphasiastrum complanatum
+Dunaliella,Plantae,1,88,Dunaliella primolecta
+Echinochloa,Plantae,1,369,Echinochloa crusgalli
+Echium,Plantae,1,110,Echium plantagineum
+Edaphochlamys,Plantae,1,33,Edaphochlamys debaryana
+Eleusine,Plantae,1,293,Eleusine coracana subsp coracana
+Erigeron,Plantae,1,191,Erigeron canadensis
+Eucommia,Plantae,1,310,Eucommia ulmoides
+Euphorbia,Plantae,1,128,Euphorbia peplus
+Fagopyrum,Plantae,1,226,Fagopyrum tataricum
+Fagus,Plantae,1,317,Fagus sylvatica
+Ficus,Plantae,1,115,Ficus carica
+Flaveria,Plantae,1,56,Flaveria linearis
+Forsythia,Plantae,1,515,Forsythia suspensa
+Fraxinus,Plantae,1,484,Fraxinus excelsior
+Gastrodia,Plantae,1,159,Gastrodia elata
+Geum,Plantae,1,363,Geum urbanum
+Glycyrrhiza,Plantae,1,187,Glycyrrhiza uralensis
+Gossypioides,Plantae,1,320,Gossypioides kirkii
+Gynostemma,Plantae,1,380,Gynostemma pentaphyllum
+Hedera,Plantae,1,195,Hedera helix
+Helianthus,Plantae,1,495,Helianthus annuus
+Hordeum,Plantae,1,391,Hordeum vulgare
+Humulus,Plantae,1,48,Humulus lupulus
+Hyparrhenia,Plantae,1,170,Hyparrhenia diplandra
+Impatiens,Plantae,1,323,Impatiens glandulifera
+Ipomoea,Plantae,1,141,Ipomoea triloba
+Isatis,Plantae,1,304,Isatis tinctoria
+Jacaranda,Plantae,1,279,Jacaranda mimosifolia
+Jatropha,Plantae,1,554,Jatropha curcas
+Kingdonia,Plantae,1,394,Kingdonia uniflora
+Lactuca,Plantae,1,212,Lactuca sativa
+Lagenaria,Plantae,1,250,Lagenaria siceraria
+Larix,Plantae,1,287,Larix kaempferi
+Lavandula,Plantae,1,201,Lavandula angustifolia
+Leersia,Plantae,1,77,Leersia perrieri
+Linaria,Plantae,1,422,Linaria vulgaris
+Liriodendron,Plantae,1,43,Liriodendron chinense
+Litchi,Plantae,1,183,Litchi chinensis
+Lithospermum,Plantae,1,84,Lithospermum erythrorhizon
+Litsea,Plantae,1,99,Litsea cubeba
+Lolium,Plantae,1,118,Lolium perenne
+Lumnitzera,Plantae,1,41,Lumnitzera littorea
+Lunularia,Plantae,1,103,Lunularia cruciata
+Macadamia,Plantae,1,379,Macadamia tetraphylla
+Macrotyloma,Plantae,1,122,Macrotyloma uniflorum
+Mangifera,Plantae,1,184,Mangifera indica
+Mesostigma,Plantae,1,71,Mesostigma viride
+Micractinium,Plantae,1,22,Micractinium conductrix
+Microthlaspi,Plantae,1,85,Microthlaspi erraticum
+Mikania,Plantae,1,47,Mikania micrantha
+Mimosa,Plantae,1,183,Mimosa pudica
+Miscanthus,Plantae,1,178,Miscanthus floridulus
+Misopates,Plantae,1,179,Misopates orontium
+Mitragyna,Plantae,1,253,Mitragyna speciosa
+Monoraphidium,Plantae,1,8,Monoraphidium minutum
+Morella,Plantae,1,139,Morella rubra
+Moricandia,Plantae,1,446,Moricandia moricandioides
+Mucuna,Plantae,1,127,Mucuna pruriens
+Nemophila,Plantae,1,377,Nemophila menziesii
+Nicotiana,Plantae,1,1159,Nicotiana attenuata
+Nymphaea,Plantae,1,285,Nymphaea colorata
+Olea,Plantae,1,298,Olea europaea
+Ormosia,Plantae,1,49,Ormosia semicastrata
+Osmanthus,Plantae,1,570,Osmanthus fragrans
+Oxyria,Plantae,1,428,Oxyria digyna
+Paspalum,Plantae,1,284,Paspalum vaginatum
+Persea,Plantae,1,275,Persea americana
+Pharus,Plantae,1,184,Pharus latifolius
+Phoenix,Plantae,1,265,Phoenix dactylifera
+Physcomitrium,Plantae,1,231,Physcomitrium patens
+Pistacia,Plantae,1,222,Pistacia vera
+Plantago,Plantae,1,110,Plantago ovata
+Platycodon,Plantae,1,497,Platycodon grandiflorus
+Pogostemon,Plantae,1,63,Pogostemon cablin
+Pohlia,Plantae,1,70,Pohlia nutans
+Portulaca,Plantae,1,542,Portulaca oleracea
+Primulina,Plantae,1,348,Primulina eburnea
+Psidium,Plantae,1,282,Psidium guajava
+Puccinellia,Plantae,1,406,Puccinellia tenuiflora
+Pugionium,Plantae,1,120,Pugionium dolabratum
+Pulicaria,Plantae,1,419,Pulicaria dysenterica
+Punica,Plantae,1,174,Punica granatum
+Puya,Plantae,1,175,Puya raimondii
+Rheum,Plantae,1,153,Rheum nobile
+Rhizophora,Plantae,1,90,Rhizophora apiculata
+Rhodamnia,Plantae,1,239,Rhodamnia argentea
+Rhodomyrtus,Plantae,1,342,Rhodomyrtus tomentosa
+Ricinus,Plantae,1,501,Ricinus communis
+Rubus,Plantae,1,107,Rubus parviflorus
+Salvia,Plantae,1,109,Salvia hispanica
+Sambucus,Plantae,1,60,Sambucus nigra
+Santalum,Plantae,1,77,Santalum album
+Secale,Plantae,1,176,Secale cereale
+Selaginella,Plantae,1,121,Selaginella tamariscina
+Senecio,Plantae,1,413,Senecio squalidus
+Setaria,Plantae,1,335,Setaria viridis
+Sherardia,Plantae,1,258,Sherardia arvensis
+Silene,Plantae,1,260,Silene conica
+Simmondsia,Plantae,1,635,Simmondsia chinensis
+Sonneratia,Plantae,1,57,Sonneratia alba
+Sorghum,Plantae,1,835,Sorghum bicolor
+Spirodela,Plantae,1,47,Spirodela polyrhiza
+Stellera,Plantae,1,328,Stellera chamaejasme
+Stipa,Plantae,1,265,Stipa capillata
+Talinum,Plantae,1,211,Talinum fruticosum
+Taxillus,Plantae,1,250,Taxillus chinensis
+Taxus,Plantae,1,78,Taxus chinensis
+Tetracentron,Plantae,1,396,Tetracentron sinense
+Tetradesmus,Plantae,1,30,Tetradesmus obliquus
+Tetrastigma,Plantae,1,106,Tetrastigma voinierianum
+Themeda,Plantae,1,509,Themeda triandra
+Theobroma,Plantae,1,294,Theobroma cacao
+Thlaspi,Plantae,1,211,Thlaspi arvense
+Thuidium,Plantae,1,20,Thuidium tamariscinum
+Trifolium,Plantae,1,75,Trifolium pratense
+Tripterygium,Plantae,1,178,Tripterygium wilfordii
+Typha,Plantae,1,69,Typha latifolia
+Ulva,Plantae,1,49,Ulva prolifera
+Umbellularia,Plantae,1,274,Umbellularia californica
+Urochloa,Plantae,1,300,Urochloa ruziziensis
+Vanilla,Plantae,1,39,Vanilla planifolia
+Vinca,Plantae,1,350,Vinca minor
+Voacanga,Plantae,1,297,Voacanga thouarsii
+Volvox,Plantae,1,59,Volvox reticuliferus
+Wolffia,Plantae,1,344,Wolffia australiana
+Wurfbainia,Plantae,1,220,Wurfbainia villosa
+Xanthoceras,Plantae,1,235,Xanthoceras sorbifolium
+Xerophyta,Plantae,1,119,Xerophyta viscosa
+Xylocarpus,Plantae,1,37,Xylocarpus granatum
+Yamagishiella,Plantae,1,17,Yamagishiella unicocca
+Zanthoxylum,Plantae,1,35,Zanthoxylum bungeanum
+Zingiber,Plantae,1,44,Zingiber officinale
+Zizania,Plantae,1,196,Zizania palustris
+Abrus,Plantae,1,178,Abrus pulchellus subsp cantoniensis
+Coccomyxa,Plantae,1,11,Coccomyxa sp obi

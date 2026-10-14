@@ -1,0 +1,32 @@
+{
+  "species": "aspergillus",
+  "out_file": "/home/cami/Desktop/ProyectoIntegrador/Inpactor3_segnt/results/rm_pilots/aspergillus/aspergillus.fasta.out",
+  "kept_elements": 2456,
+  "excluded_elements": 3700,
+  "total_bp_kept": 905183,
+  "by_order": {
+    "LTR": 1162,
+    "TIR": 658,
+    "LINE": 351,
+    "SINE": 149,
+    "HELITRON": 100,
+    "DIRS": 27,
+    "MITE": 9
+  },
+  "by_superfamily_top10": {
+    "COPIA": 448,
+    "GYPSY": 396,
+    "TC1MARINER": 270,
+    "HAT": 243,
+    "LTR": 191,
+    "TAD1": 146,
+    "TIR": 102,
+    "HELITRON": 100,
+    "I": 93,
+    "LARD": 81
+  },
+  "by_excluded_reason": {
+    "Simple_repeat": 3189,
+    "Low_complexity": 511
+  }
+}

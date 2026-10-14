@@ -1,0 +1,105 @@
+{
+  "species": "arabidopsis",
+  "true_source": "TAIR10_Transposable_Elements.txt",
+  "n_true": 31189,
+  "n_pred": 21409,
+  "iou_threshold": 0.5,
+  "tp": 6153,
+  "fp": 15301,
+  "fn": 25036,
+  "precision": 0.2867996643982474,
+  "recall": 0.19728109269293662,
+  "f1": 0.23376327336967875,
+  "by_superfamily": {
+    "RC/Helitron": {
+      "n_true": 12945,
+      "n_found": 1221,
+      "recall": 0.09432213209733488
+    },
+    "DNA/MuDR": {
+      "n_true": 5410,
+      "n_found": 595,
+      "recall": 0.1099815157116451
+    },
+    "LTR/Gypsy": {
+      "n_true": 4181,
+      "n_found": 1782,
+      "recall": 0.4262138244439129
+    },
+    "DNA": {
+      "n_true": 1829,
+      "n_found": 678,
+      "recall": 0.3706943685073811
+    },
+    "LTR/Copia": {
+      "n_true": 1781,
+      "n_found": 227,
+      "recall": 0.1274564851207187
+    },
+    "LINE/L1": {
+      "n_true": 1366,
+      "n_found": 714,
+      "recall": 0.5226939970717424
+    },
+    "DNA/HAT": {
+      "n_true": 1035,
+      "n_found": 275,
+      "recall": 0.26570048309178745
+    },
+    "DNA/En-Spm": {
+      "n_true": 941,
+      "n_found": 157,
+      "recall": 0.16684378320935175
+    },
+    "DNA/Harbinger": {
+      "n_true": 379,
+      "n_found": 100,
+      "recall": 0.2638522427440633
+    },
+    "DNA/Pogo": {
+      "n_true": 344,
+      "n_found": 64,
+      "recall": 0.18604651162790697
+    },
+    "RathE1_cons": {
+      "n_true": 213,
+      "n_found": 0,
+      "recall": 0.0
+    },
+    "DNA/Mariner": {
+      "n_true": 151,
+      "n_found": 127,
+      "recall": 0.8410596026490066
+    },
+    "SINE": {
+      "n_true": 131,
+      "n_found": 83,
+      "recall": 0.6335877862595419
+    },
+    "Unassigned": {
+      "n_true": 129,
+      "n_found": 12,
+      "recall": 0.09302325581395349
+    },
+    "RathE3_cons": {
+      "n_true": 104,
+      "n_found": 0,
+      "recall": 0.0
+    },
+    "DNA/Tc1": {
+      "n_true": 95,
+      "n_found": 64,
+      "recall": 0.6736842105263158
+    },
+    "LINE?": {
+      "n_true": 81,
+      "n_found": 0,
+      "recall": 0.0
+    },
+    "RathE2_cons": {
+      "n_true": 74,
+      "n_found": 54,
+      "recall": 0.7297297297297297
+    }
+  }
+}

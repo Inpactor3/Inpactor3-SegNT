@@ -1,0 +1,30 @@
+{
+  "species": "celegans",
+  "out_file": "/home/cami/Desktop/ProyectoIntegrador/Inpactor3_segnt/results/rm_pilots/celegans/celegans.fasta.out",
+  "kept_elements": 52356,
+  "excluded_elements": 28518,
+  "total_bp_kept": 11387724,
+  "by_order": {
+    "TIR": 43652,
+    "HELITRON": 4591,
+    "LTR": 2961,
+    "LINE": 624,
+    "SINE": 528
+  },
+  "by_superfamily_top10": {
+    "TIR": 17097,
+    "HAT": 9496,
+    "TC1MARINER": 9048,
+    "PIGGYBAC": 5667,
+    "HELITRON": 4591,
+    "BELPAO": 2759,
+    "MULE": 1815,
+    "CR1": 481,
+    "TRNA": 464,
+    "CMC": 403
+  },
+  "by_excluded_reason": {
+    "Simple_repeat": 22168,
+    "Low_complexity": 6350
+  }
+}

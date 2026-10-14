@@ -1,0 +1,31 @@
+{
+  "species": "neurospora",
+  "out_file": "/home/cami/Desktop/ProyectoIntegrador/Inpactor3_segnt/results/rm_pilots/neurospora/neurospora.fasta.out",
+  "kept_elements": 4466,
+  "excluded_elements": 22345,
+  "total_bp_kept": 2795663,
+  "by_order": {
+    "LTR": 2891,
+    "LINE": 864,
+    "TIR": 265,
+    "SINE": 209,
+    "HELITRON": 202,
+    "DIRS": 35
+  },
+  "by_superfamily_top10": {
+    "LARD": 1872,
+    "GYPSY": 692,
+    "TAD1": 584,
+    "COPIA": 223,
+    "HELITRON": 202,
+    "TRNA": 136,
+    "LINE": 124,
+    "TRIM": 80,
+    "TC1MARINER": 75,
+    "HAT": 59
+  },
+  "by_excluded_reason": {
+    "Simple_repeat": 19845,
+    "Low_complexity": 2500
+  }
+}

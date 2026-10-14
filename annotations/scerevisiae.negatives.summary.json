@@ -1,0 +1,19 @@
+{
+  "species": "scerevisiae",
+  "n_total": 92,
+  "target_total": 2000,
+  "by_category": {
+    "intergenic": 72,
+    "genic": 0,
+    "other_te": 0,
+    "heterochrom": 16,
+    "simple_rep": 4
+  },
+  "target_fractions": {
+    "intergenic": 0.3,
+    "genic": 0.2,
+    "other_te": 0.2,
+    "heterochrom": 0.15,
+    "simple_rep": 0.15
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "test_oro": {
+    "species_short": [
+      "arabidopsis",
+      "drosophila",
+      "scerevisiae"
+    ],
+    "species_full": [
+      "Arabidopsis thaliana",
+      "Drosophila melanogaster",
+      "Saccharomyces cerevisiae"
+    ],
+    "excluded_genera": [
+      "Arabidopsis",
+      "Drosophila",
+      "Saccharomyces"
+    ],
+    "related_species_excluded": [
+      "Arabidopsis arenosa",
+      "Arabidopsis suecica",
+      "Arabidopsis thaliana",
+      "Drosophila mauritiana",
+      "Drosophila melanogaster",
+      "Drosophila sechellia",
+      "Drosophila simulans",
+      "Saccharomyces arboricola",
+      "Saccharomyces cerevisiae",
+      "Saccharomyces eubayanus",
+      "Saccharomyces kudriavzevii",
+      "Saccharomyces mikatae",
+      "Saccharomyces paradoxus"
+    ]
+  },
+  "test_plata": {
+    "species_short": [
+      "aspergillus",
+      "spombe"
+    ],
+    "species_full": [
+      "Aspergillus nidulans",
+      "Schizosaccharomyces pombe"
+    ]
+  },
+  "validation": {
+    "species_short": [
+      "neurospora",
+      "celegans"
+    ],
+    "species_full": [
+      "Neurospora crassa",
+      "Caenorhabditis elegans"
+    ]
+  },
+  "train": {
+    "n_species": 2773,
+    "by_kingdom": {
+      "Animalia": 775,
+      "Fungi": 1550,
+      "Plantae": 448,
+      "Other": 0
+    },
+    "excluded_total": 17
+  }
+}

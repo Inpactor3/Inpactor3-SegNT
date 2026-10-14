@@ -1,0 +1,11 @@
+{
+  "species": "scerevisiae",
+  "ignore_elements": 3526,
+  "ignore_bp": 874769,
+  "source_counts": {
+    "buffer_pos": 541,
+    "excluded_rm": 3550,
+    "n_runs": 0
+  },
+  "buffer_bp": 1000
+}

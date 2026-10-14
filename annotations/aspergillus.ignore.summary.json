@@ -1,0 +1,11 @@
+{
+  "species": "aspergillus",
+  "ignore_elements": 4369,
+  "ignore_bp": 3772320,
+  "source_counts": {
+    "buffer_pos": 2456,
+    "excluded_rm": 3700,
+    "n_runs": 74
+  },
+  "buffer_bp": 1000
+}

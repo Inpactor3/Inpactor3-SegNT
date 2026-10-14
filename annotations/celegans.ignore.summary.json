@@ -1,0 +1,11 @@
+{
+  "species": "celegans",
+  "ignore_elements": 25464,
+  "ignore_bp": 52842081,
+  "source_counts": {
+    "buffer_pos": 52356,
+    "excluded_rm": 28518,
+    "n_runs": 0
+  },
+  "buffer_bp": 1000
+}

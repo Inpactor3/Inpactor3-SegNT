@@ -1,0 +1,11 @@
+{
+  "species": "arabidopsis",
+  "ignore_elements": 41868,
+  "ignore_bp": 28910399,
+  "source_counts": {
+    "buffer_pos": 21409,
+    "excluded_rm": 46118,
+    "n_runs": 38
+  },
+  "buffer_bp": 1000
+}

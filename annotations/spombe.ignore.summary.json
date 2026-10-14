@@ -1,0 +1,11 @@
+{
+  "species": "spombe",
+  "ignore_elements": 3060,
+  "ignore_bp": 1312299,
+  "source_counts": {
+    "buffer_pos": 677,
+    "excluded_rm": 2993,
+    "n_runs": 4
+  },
+  "buffer_bp": 1000
+}

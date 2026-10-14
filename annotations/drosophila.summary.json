@@ -1,0 +1,22 @@
+{
+  "species": "drosophila",
+  "out_file": "/home/cami/Desktop/ProyectoIntegrador/Inpactor3_segnt/results/rm_pilots/drosophila/drosophila.fasta.out",
+  "kept_elements": 7117,
+  "excluded_elements": 103698,
+  "total_bp_kept": 5220254,
+  "by_order": {
+    "LTR": 6714,
+    "TIR": 403
+  },
+  "by_superfamily_top10": {
+    "GYPSY": 6277,
+    "COPIA": 437,
+    "HAT": 207,
+    "CMC": 195,
+    "P": 1
+  },
+  "by_excluded_reason": {
+    "Simple_repeat": 91784,
+    "Low_complexity": 11914
+  }
+}
