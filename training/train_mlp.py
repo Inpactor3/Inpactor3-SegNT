@@ -68,6 +68,7 @@ def main():
     ap.add_argument("--patience", type=int, default=10)
     ap.add_argument("--dropout", type=float, default=0.2)
     ap.add_argument("--class_weight", action="store_true")
+    ap.add_argument("--standardize", action="store_true")
     args = ap.parse_args()
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -75,6 +76,14 @@ def main():
     xtr, ytr = load_split(args.emb_dir, "train")
     xva, yva = load_split(args.emb_dir, "val")
     print("train", xtr.shape, "val", xva.shape, "pos frac", ytr.mean().round(4))
+
+    mu = sd = None
+    if args.standardize:
+        mu = xtr.mean(axis=0, keepdims=True)
+        sd = xtr.std(axis=0, keepdims=True) + 1e-6
+        xtr = (xtr - mu) / sd
+        xva = (xva - mu) / sd
+        print("estandarizado: mu/sd calculados en train")
 
     model = Head(hidden=xtr.shape[1], dropout=args.dropout).to(device)
     pos_weight = None
@@ -132,6 +141,8 @@ def main():
 
     if (args.emb_dir / "test_emb.npy").exists():
         xte, yte = load_split(args.emb_dir, "test")
+        if args.standardize and mu is not None:
+            xte = (xte - mu) / sd
         with torch.no_grad():
             lg = model(torch.from_numpy(xte).to(device)).float().cpu().numpy()
         mt = metrics(lg, yte)
