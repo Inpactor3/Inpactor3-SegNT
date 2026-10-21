@@ -64,6 +64,13 @@ def main():
                     print(f"SKIP {split} {fp.stem}", flush=True); continue
                 z = np2.load(fp)
                 seqs = z["seq"]; labs = z["label"]; ids = z["window_id"]
+                if len(seqs) == 0:
+                    hid = backbone.config.hidden_size
+                    np2.save(out_emb, np2.zeros((0, hid), dtype=np.float16))
+                    np2.save(out_lab, np2.zeros((0,), dtype=np.int8))
+                    open(out_meta, "w").close()
+                    print(f"SKIP empty {split} {fp.stem}", flush=True)
+                    continue
                 if args.max_windows and len(seqs) > args.max_windows:
                     seqs = seqs[:args.max_windows]; labs = labs[:args.max_windows]; ids = ids[:args.max_windows]
                 embs, labels, meta = [], [], []
