@@ -42,9 +42,20 @@ def metrics(logits, labels, thr=0.5):
 
 
 def load_split(d, split):
-    emb = np.load(d / f"{split}_emb.npy").astype(np.float32)
-    lab = np.load(d / f"{split}_labels.npy").astype(np.float32)
-    return emb, lab
+    single = d / f"{split}_emb.npy"
+    if single.exists():
+        emb = np.load(single).astype(np.float32)
+        lab = np.load(d / f"{split}_labels.npy").astype(np.float32)
+        return emb, lab
+    files = sorted((d / split).glob("*_emb.npy"))
+    if not files:
+        raise FileNotFoundError(f"sin embeddings para {split} en {d}")
+    embs, labs = [], []
+    for f in files:
+        embs.append(np.load(f))
+        labs.append(np.load(f.with_name(f.name.replace("_emb.npy", "_labels.npy"))))
+    print(f"{split}: {len(files)} archivos por especie, {sum(len(x) for x in embs)} ventanas")
+    return np.concatenate(embs).astype(np.float32), np.concatenate(labs).astype(np.float32)
 
 
 def main():

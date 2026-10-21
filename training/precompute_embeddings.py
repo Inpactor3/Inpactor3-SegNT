@@ -32,6 +32,8 @@ def main():
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--seq_dir", type=Path, default=None)
     ap.add_argument("--splits", default="train,val,test")
+    ap.add_argument("--num_shards", type=int, default=1)
+    ap.add_argument("--shard_index", type=int, default=0)
     ap.add_argument("--nt_model", default="InstaDeepAI/nucleotide-transformer-500m-human-ref")
     args = ap.parse_args()
 
@@ -46,13 +48,22 @@ def main():
     for split in args.splits.split(","):
         if args.seq_dir is not None:
             import numpy as np2
+            sdir = args.out_dir / split
+            sdir.mkdir(parents=True, exist_ok=True)
             files = sorted((args.seq_dir / split).glob("*.npz"))
+            if args.num_shards > 1:
+                files = files[args.shard_index::args.num_shards]
             if not files:
                 print(f"{split}: sin npz, se omite"); continue
-            embs, labels, meta = [], [], []
             for fp in files:
+                out_emb = sdir / f"{fp.stem}_emb.npy"
+                out_lab = sdir / f"{fp.stem}_labels.npy"
+                out_meta = sdir / f"{fp.stem}_meta.jsonl"
+                if out_emb.exists() and out_lab.exists():
+                    print(f"SKIP {split} {fp.stem}", flush=True); continue
                 z = np2.load(fp)
                 seqs = z["seq"]; labs = z["label"]; ids = z["window_id"]
+                embs, labels, meta = [], [], []
                 for i in range(0, len(seqs), args.batch_size):
                     chunk = [x.tobytes().decode("ascii", "ignore") for x in seqs[i:i + args.batch_size]]
                     enc = tok(chunk, return_tensors="pt", truncation=True, padding="max_length", max_length=1000)
@@ -64,13 +75,11 @@ def main():
                     embs.append(pooled.half().cpu().numpy()); labels.append(labs[i:i + args.batch_size])
                     for j in range(i, min(i + args.batch_size, len(seqs))):
                         meta.append({"window_id": str(ids[j]), "species": fp.stem, "split": split, "negative_type": None})
-                print(f"{split} {fp.stem}: {len(seqs)}", flush=True)
-            emb = np.concatenate(embs, axis=0); lab = np.concatenate(labels, axis=0)
-            np.save(args.out_dir / f"{split}_emb.npy", emb)
-            np.save(args.out_dir / f"{split}_labels.npy", lab)
-            with open(args.out_dir / f"{split}_meta.jsonl", "w") as f:
-                for r in meta: f.write(json.dumps(r) + "\n")
-            print(f"{split}: {emb.shape} guardado", flush=True)
+                emb = np2.concatenate(embs, axis=0); lab = np2.concatenate(labels, axis=0)
+                np2.save(out_emb, emb); np2.save(out_lab, lab)
+                with open(out_meta, "w") as f:
+                    for r in meta: f.write(json.dumps(r) + "\n")
+                print(f"OK {split} {fp.stem}: {emb.shape}", flush=True)
             continue
         files = sorted((args.jsonl_dir / split).glob("*.jsonl"))
         if not files:
