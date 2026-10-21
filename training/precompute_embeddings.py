@@ -34,6 +34,7 @@ def main():
     ap.add_argument("--splits", default="train,val,test")
     ap.add_argument("--num_shards", type=int, default=1)
     ap.add_argument("--shard_index", type=int, default=0)
+    ap.add_argument("--max_windows", type=int, default=0)
     ap.add_argument("--nt_model", default="InstaDeepAI/nucleotide-transformer-500m-human-ref")
     args = ap.parse_args()
 
@@ -63,6 +64,8 @@ def main():
                     print(f"SKIP {split} {fp.stem}", flush=True); continue
                 z = np2.load(fp)
                 seqs = z["seq"]; labs = z["label"]; ids = z["window_id"]
+                if args.max_windows and len(seqs) > args.max_windows:
+                    seqs = seqs[:args.max_windows]; labs = labs[:args.max_windows]; ids = ids[:args.max_windows]
                 embs, labels, meta = [], [], []
                 for i in range(0, len(seqs), args.batch_size):
                     chunk = [x.tobytes().decode("ascii", "ignore") for x in seqs[i:i + args.batch_size]]
