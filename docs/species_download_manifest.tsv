@@ -1,0 +1,450 @@
+split	reino	especie	status	assembly_accession	assembly_level	refseq_category	genome_size_mb	url_fna
+train	Plantas	Melaleuca quinquenervia	found	GCA_030064385.1	Chromosome	reference genome	269.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/030/064/385/GCA_030064385.1_Mqui_v1_hapA/GCA_030064385.1_Mqui_v1_hapA_genomic.fna.gz
+train	Plantas	Capsicum baccatum	found	GCA_030864225.1	Chromosome	reference genome	3310.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/030/864/225/GCA_030864225.1_ASM3086422v1/GCA_030864225.1_ASM3086422v1_genomic.fna.gz
+train	Plantas	Triticum dicoccoides	found	GCF_002162155.2	Chromosome	reference genome	10677.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/162/155/GCF_002162155.2_WEW_v2.1/GCF_002162155.2_WEW_v2.1_genomic.fna.gz
+train	Plantas	Berberis thunbergii	found	GCA_056149445.1	Chromosome	reference genome	1229.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/056/149/445/GCA_056149445.1_Berberis_FinalAssembly_HiC_14CHR.fasta/GCA_056149445.1_Berberis_FinalAssembly_HiC_14CHR.fasta_genomic.fna.gz
+train	Plantas	Medicago ruthenica	found	GCA_018208015.1	Chromosome	reference genome	904.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/018/208/015/GCA_018208015.1_ASM1820801v1/GCA_018208015.1_ASM1820801v1_genomic.fna.gz
+train	Plantas	Chloranthus sessilifolius	found	GCA_021018995.1	Chromosome	reference genome	2168.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/021/018/995/GCA_021018995.1_ASM2101899v1/GCA_021018995.1_ASM2101899v1_genomic.fna.gz
+train	Plantas	Hibiscus syriacus	found	GCF_006381635.1	Scaffold	reference genome	1826.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/006/381/635/GCF_006381635.1_ASM638163v2/GCF_006381635.1_ASM638163v2_genomic.fna.gz
+train	Plantas	Chenopodium formosanum	found	GCA_024500155.1	Chromosome	reference genome	1629.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/024/500/155/GCA_024500155.1_ASM2450015v1/GCA_024500155.1_ASM2450015v1_genomic.fna.gz
+train	Plantas	Panax japonicus	found	GCA_020205505.1	Chromosome	reference genome	2028.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/020/205/505/GCA_020205505.1_ASM2020550v1/GCA_020205505.1_ASM2020550v1_genomic.fna.gz
+train	Plantas	Rhynchospora pubera	found	GCA_028095005.1	Chromosome	reference genome	1694.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/028/095/005/GCA_028095005.1_MPIPZ_rhyPub2m_2.0/GCA_028095005.1_MPIPZ_rhyPub2m_2.0_genomic.fna.gz
+train	Plantas	Senna tora	found	GCA_014851425.1	Chromosome	reference genome	526.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/851/425/GCA_014851425.1_ASM1485142v1/GCA_014851425.1_ASM1485142v1_genomic.fna.gz
+train	Plantas	Oryza meyeriana	found	GCA_047899645.1	Chromosome	reference genome	789.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/047/899/645/GCA_047899645.1_ASM4789964v1/GCA_047899645.1_ASM4789964v1_genomic.fna.gz
+train	Plantas	Poa annua	found	GCA_026929855.1	Chromosome	reference genome	1779.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/026/929/855/GCA_026929855.1_FRR_PoAnn_1.0/GCA_026929855.1_FRR_PoAnn_1.0_genomic.fna.gz
+train	Plantas	Triticum turgidum	found	GCA_057814425.1	Chromosome	reference genome	10353.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/057/814/425/GCA_057814425.1_Kronos_v1.1/GCA_057814425.1_Kronos_v1.1_genomic.fna.gz
+train	Plantas	Oryza glaberrima	found	GCF_000147395.1	Chromosome	reference genome	347.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/147/395/GCF_000147395.1_OglaRS2/GCF_000147395.1_OglaRS2_genomic.fna.gz
+train	Plantas	Picea glauca	found	GCA_000966675.3	Scaffold	reference genome	26572.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/966/675/GCA_000966675.3_WS77111_v2/GCA_000966675.3_WS77111_v2_genomic.fna.gz
+train	Plantas	Pinus elliottii	not_found					
+train	Plantas	Vaccinium corymbosum	found	GCA_014504835.1	Scaffold	reference genome	393.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/504/835/GCA_014504835.1_ASM1450483v1/GCA_014504835.1_ASM1450483v1_genomic.fna.gz
+train	Plantas	Agrostemma githago	found	GCA_958450325.1	Chromosome	reference genome	1735.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/958/450/325/GCA_958450325.1_dcAgrGith1.1/GCA_958450325.1_dcAgrGith1.1_genomic.fna.gz
+train	Plantas	Trifolium pallescens	not_found					
+train	Plantas	Glebionis coronaria	found	GCA_025667525.1	Chromosome	reference genome	6801.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/025/667/525/GCA_025667525.1_Gcor_v1/GCA_025667525.1_Gcor_v1_genomic.fna.gz
+train	Plantas	Equisetum arvense	not_found					
+train	Plantas	Monoraphidium minutum	found	GCA_025201885.1	Scaffold	reference genome	68.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/025/201/885/GCA_025201885.1_Monmin1/GCA_025201885.1_Monmin1_genomic.fna.gz
+train	Plantas	Actinidia	not_found					
+train	Plantas	Pisum sativum	not_found					
+train	Plantas	Chlorella vulgaris	found	GCA_023343905.1	Scaffold	reference genome	40.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/343/905/GCA_023343905.1_cvul/GCA_023343905.1_cvul_genomic.fna.gz
+train	Plantas	Vasconcellea monoica	not_found					
+train	Plantas	Dactylis glomerata	found	GCA_007115705.1	Scaffold	reference genome	1781.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/007/115/705/GCA_007115705.1_ASM711570v1/GCA_007115705.1_ASM711570v1_genomic.fna.gz
+train	Plantas	Daucus carota	found	GCF_001625215.2	Chromosome	reference genome	440.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/625/215/GCF_001625215.2_DH1_v3.0/GCF_001625215.2_DH1_v3.0_genomic.fna.gz
+train	Plantas	Marchantia polymorpha subsp. montivagans	found	GCA_037833965.1	Chromosome	reference genome	241.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/037/833/965/GCA_037833965.1_MpTak2_v7.1/GCA_037833965.1_MpTak2_v7.1_genomic.fna.gz
+train	Plantas	Alopecurus myosuroides	found	GCA_028641055.1	Chromosome	reference genome	3571.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/028/641/055/GCA_028641055.1_Alomy_genome_v1/GCA_028641055.1_Alomy_genome_v1_genomic.fna.gz
+train	Plantas	Salvia hispanica	found	GCF_029641045.1	Complete Genome	na	366	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/029/641/045/GCF_029641045.1_Shi_PSC_v1/GCF_029641045.1_Shi_PSC_v1_genomic.fna.gz
+train	Plantas	Bruguiera gymnorhiza	found	GCA_020883675.1	Scaffold	reference genome	308.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/020/883/675/GCA_020883675.1_ASM2088367v1/GCA_020883675.1_ASM2088367v1_genomic.fna.gz
+train	Plantas	Volvox carteri	found	GCF_000143455.1	Scaffold	reference genome	137.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/143/455/GCF_000143455.1_v1.0/GCF_000143455.1_v1.0_genomic.fna.gz
+train	Plantas	Ficus carica	found	GCA_042847195.1	Chromosome	reference genome	318.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/042/847/195/GCA_042847195.1_FCA_r2.3/GCA_042847195.1_FCA_r2.3_genomic.fna.gz
+train	Plantas	Juncus inflexus	found	GCA_965612345.2	Chromosome	reference genome	321.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/965/612/345/GCA_965612345.2_lpJunInfl1.hap1.2/GCA_965612345.2_lpJunInfl1.hap1.2_genomic.fna.gz
+train	Plantas	Diphasiastrum complanatum	found	GCA_029204225.1	Chromosome	reference genome	1745.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/029/204/225/GCA_029204225.1_Diphasiastrum_complanatum_v3.1/GCA_029204225.1_Diphasiastrum_complanatum_v3.1_genomic.fna.gz
+train	Plantas	Selaginella moellendorffii	found	GCF_000143415.4	Scaffold	reference genome	212.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/143/415/GCF_000143415.4_v1.0/GCF_000143415.4_v1.0_genomic.fna.gz
+train	Plantas	Spirodela polyrhiza	found	GCA_060665495.1	Chromosome	reference genome	138.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/060/665/495/GCA_060665495.1_ASM6066549v1/GCA_060665495.1_ASM6066549v1_genomic.fna.gz
+train	Plantas	Corylus avellana	found	GCF_965113065.1	Chromosome	reference genome	361.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/965/113/065/GCF_965113065.1_dhCorAvel1.hap1.2/GCF_965113065.1_dhCorAvel1.hap1.2_genomic.fna.gz
+train	Plantas	Musa balbisiana	found	GCA_004837865.1	Chromosome	reference genome	492.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/004/837/865/GCA_004837865.1_BananaB_V1/GCA_004837865.1_BananaB_V1_genomic.fna.gz
+train	Plantas	Musa schizocarpa	found	GCA_900464855.2	Chromosome	reference genome	525.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/464/855/GCA_900464855.2_mschizocarpa_assembly_v2/GCA_900464855.2_mschizocarpa_assembly_v2_genomic.fna.gz
+train	Plantas	Mesostigma viride	found	GCA_009746045.1	Scaffold	reference genome	441.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/746/045/GCA_009746045.1_ASM974604v1/GCA_009746045.1_ASM974604v1_genomic.fna.gz
+train	Plantas	Litsea cubeba	found	GCA_012931725.1	Chromosome	reference genome	1325.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/012/931/725/GCA_012931725.1_ASM1293172v1/GCA_012931725.1_ASM1293172v1_genomic.fna.gz
+train	Plantas	Bruguiera parviflora	found	GCA_019804595.1	Chromosome	reference genome	210.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/019/804/595/GCA_019804595.1_ASM1980459v1/GCA_019804595.1_ASM1980459v1_genomic.fna.gz
+train	Plantas	Taxus chinensis	found	GCA_019776745.2	Chromosome	reference genome	10238.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/019/776/745/GCA_019776745.2_Ta-2021/GCA_019776745.2_Ta-2021_genomic.fna.gz
+train	Plantas	Musa acuminata	found	GCF_036884655.1	Chromosome	reference genome	1533.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/884/655/GCF_036884655.1_Cavendish_Baxijiao_AAA/GCF_036884655.1_Cavendish_Baxijiao_AAA_genomic.fna.gz
+train	Plantas	Asparagus officinalis	found	GCF_001876935.1	Chromosome	reference genome	1187.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/876/935/GCF_001876935.1_Aspof.V1/GCF_001876935.1_Aspof.V1_genomic.fna.gz
+train	Plantas	Pohlia nutans	found	GCA_022496805.1	Chromosome	reference genome	698.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/496/805/GCA_022496805.1_ASM2249680v1/GCA_022496805.1_ASM2249680v1_genomic.fna.gz
+train	Plantas	Santalum album	found	GCA_043873815.1	Complete Genome	reference genome	218.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/043/873/815/GCA_043873815.1_ASM4387381v1/GCA_043873815.1_ASM4387381v1_genomic.fna.gz
+train	Plantas	Secale cereale	found	GCA_965641915.1	Chromosome	reference genome	6702.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/965/641/915/GCA_965641915.1_lpSecCere.Lo7.IPK.v3/GCA_965641915.1_lpSecCere.Lo7.IPK.v3_genomic.fna.gz
+train	Plantas	Gossypium mustelinum	found	GCA_007990455.1	Complete Genome	na	2297	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/007/990/455/GCA_007990455.1_Gossypium_mustelinum_v1.1/GCA_007990455.1_Gossypium_mustelinum_v1.1_genomic.fna.gz
+train	Plantas	Aquilegia coerulea	found	GCA_002738505.1	Scaffold	reference genome	302.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/738/505/GCA_002738505.1_Aquilegia_coerulea_v1/GCA_002738505.1_Aquilegia_coerulea_v1_genomic.fna.gz
+train	Plantas	Cucumis hystrix	found	GCA_025688845.1	Chromosome	reference genome	297.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/025/688/845/GCA_025688845.1_ASM2568884v1/GCA_025688845.1_ASM2568884v1_genomic.fna.gz
+train	Plantas	Mitragyna speciosa	found	GCA_024721245.1	Chromosome	reference genome	692.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/024/721/245/GCA_024721245.1_ASM2472124v1/GCA_024721245.1_ASM2472124v1_genomic.fna.gz
+train	Plantas	Populus tomentosa	found	GCA_018804465.1	Complete Genome	na	738	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/018/804/465/GCA_018804465.1_PTv2/GCA_018804465.1_PTv2_genomic.fna.gz
+train	Plantas	Echinochloa crusgalli	found	GCA_900205405.1	Complete Genome	na	1265	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/205/405/GCA_900205405.1_ASM90020540v1/GCA_900205405.1_ASM90020540v1_genomic.fna.gz
+train	Plantas	Chimonanthus praecox	found	GCA_051988765.1	Chromosome	reference genome	695.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/051/988/765/GCA_051988765.1_ASM5198876v1/GCA_051988765.1_ASM5198876v1_genomic.fna.gz
+train	Plantas	Rhododendron simsii	found	GCA_052814645.1	Chromosome	reference genome	479.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/052/814/645/GCA_052814645.1_ASM5281464v1/GCA_052814645.1_ASM5281464v1_genomic.fna.gz
+train	Plantas	Physcomitrium patens	found	GCF_000002425.5	Chromosome	reference genome	472.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/002/425/GCF_000002425.5_Phypa_V5/GCF_000002425.5_Phypa_V5_genomic.fna.gz
+train	Plantas	Quercus agrifolia	found	GCA_029955455.1	Scaffold	reference genome	740.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/029/955/455/GCA_029955455.1_dhQueAgri1.0.hap1/GCA_029955455.1_dhQueAgri1.0.hap1_genomic.fna.gz
+train	Plantas	Taxillus chinensis	found	GCA_023512835.1	Chromosome	reference genome	521.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/512/835/GCA_023512835.1_ASM2351283v1/GCA_023512835.1_ASM2351283v1_genomic.fna.gz
+train	Plantas	Rosa lucieae	found	GCA_061310445.1	Chromosome	reference genome	494.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/061/310/445/GCA_061310445.1_ASM6131044v1/GCA_061310445.1_ASM6131044v1_genomic.fna.gz
+train	Plantas	Eragrostis curvula	found	GCA_007726485.1	Complete Genome	na	601	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/007/726/485/GCA_007726485.1_CERZOS_EC1.0/GCA_007726485.1_CERZOS_EC1.0_genomic.fna.gz
+train	Plantas	Andrographis paniculata	found	GCF_009805555.1	Contig	reference genome	284.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/805/555/GCF_009805555.1_ASM980555v1/GCF_009805555.1_ASM980555v1_genomic.fna.gz
+train	Plantas	Cuscuta epithymum	found	GCA_965620575.2	Chromosome	reference genome	513.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/965/620/575/GCA_965620575.2_daCusEpit1.2/GCA_965620575.2_daCusEpit1.2_genomic.fna.gz
+train	Plantas	Salix koriyanagi	found	GCA_029228605.1	Chromosome	reference genome	339.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/029/228/605/GCA_029228605.1_ASM2922860v1/GCA_029228605.1_ASM2922860v1_genomic.fna.gz
+train	Plantas	Vaccinium macrocarpon	found	GCA_022606695.1	Chromosome	reference genome	484.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/606/695/GCA_022606695.1_ASM2260669v1/GCA_022606695.1_ASM2260669v1_genomic.fna.gz
+train	Plantas	Vaccinium darrowii	found	GCA_020921065.1	Chromosome	reference genome	582.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/020/921/065/GCA_020921065.1_USDA_Vadar_1.0_pri/GCA_020921065.1_USDA_Vadar_1.0_pri_genomic.fna.gz
+train	Plantas	Panicum miliaceum	found	GCA_038442765.1	Complete Genome	reference genome	834.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/038/442/765/GCA_038442765.1_ASM3844276v1/GCA_038442765.1_ASM3844276v1_genomic.fna.gz
+train	Plantas	Thlaspi arvense	found	GCA_056508005.1	Chromosome	reference genome	466.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/056/508/005/GCA_056508005.1_TarvensevarPI650286_v1.0/GCA_056508005.1_TarvensevarPI650286_v1.0_genomic.fna.gz
+train	Plantas	Asclepias syriaca	found	GCA_027405835.1	Complete Genome	na	316	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/027/405/835/GCA_027405835.1_Asclepias_syriaca_v1.0_chromosomes/GCA_027405835.1_Asclepias_syriaca_v1.0_chromosomes_genomic.fna.gz
+train	Plantas	Actinidia deliciosa	found	GCA_024454175.1	Chromosome	reference genome	622.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/024/454/175/GCA_024454175.1_ASM2445417v1/GCA_024454175.1_ASM2445417v1_genomic.fna.gz
+train	Plantas	Populus x sibirica	found	GCA_051991645.1	Chromosome	reference genome	784.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/051/991/645/GCA_051991645.1_ASM5199164v1/GCA_051991645.1_ASM5199164v1_genomic.fna.gz
+train	Plantas	Fragaria nilgerrensis	found	GCA_010134655.1	Chromosome	reference genome	270.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/010/134/655/GCA_010134655.1_ASM1013465v1/GCA_010134655.1_ASM1013465v1_genomic.fna.gz
+train	Plantas	Corymbia maculata	found	GCA_014182735.1	Chromosome	reference genome	403.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/182/735/GCA_014182735.1_ASM1418273v1/GCA_014182735.1_ASM1418273v1_genomic.fna.gz
+train	Plantas	Urochloa ruziziensis	found	GCA_015476505.1	Chromosome	reference genome	604.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/015/476/505/GCA_015476505.1_Embrapa_Uruz_1.0/GCA_015476505.1_Embrapa_Uruz_1.0_genomic.fna.gz
+train	Plantas	Lagenaria siceraria	found	GCA_049863445.1	Complete Genome	na	298	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/049/863/445/GCA_049863445.1_BVRC_Lsic_1.0/GCA_049863445.1_BVRC_Lsic_1.0_genomic.fna.gz
+train	Plantas	Datisca glomerata	found	GCA_003255025.1	Scaffold	reference genome	688.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/255/025/GCA_003255025.1_ASM325502v1/GCA_003255025.1_ASM325502v1_genomic.fna.gz
+train	Plantas	Dimocarpus longan	found	GCA_022984855.1	Chromosome	reference genome	454.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/984/855/GCA_022984855.1_ASM2298485v1/GCA_022984855.1_ASM2298485v1_genomic.fna.gz
+train	Plantas	Psidium guajava	found	GCA_016432845.1	Chromosome	reference genome	443.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/432/845/GCA_016432845.1_guava_v11.23/GCA_016432845.1_guava_v11.23_genomic.fna.gz
+train	Plantas	Solanum commersonii	found	GCA_018258275.1	Chromosome	na	731.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/018/258/275/GCA_018258275.1_ASM1825827v1/GCA_018258275.1_ASM1825827v1_genomic.fna.gz
+train	Plantas	Medicago truncatula	found	GCF_003473485.1	Chromosome	reference genome	429.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/473/485/GCF_003473485.1_MtrunA17r5.0-ANR/GCF_003473485.1_MtrunA17r5.0-ANR_genomic.fna.gz
+train	Plantas	Eucalyptus tenuipes	found	GCA_014182365.1	Chromosome	reference genome	397.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/182/365/GCA_014182365.1_ASM1418236v1/GCA_014182365.1_ASM1418236v1_genomic.fna.gz
+train	Plantas	Sorghum bicolor	found	GCF_000003195.3	Chromosome	reference genome	708.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/003/195/GCF_000003195.3_Sorghum_bicolor_NCBIv3/GCF_000003195.3_Sorghum_bicolor_NCBIv3_genomic.fna.gz
+train	Plantas	Gossypium anomalum	found	GCA_025698475.1	Chromosome	reference genome	1202.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/025/698/475/GCA_025698475.1_ASM2569847v1/GCA_025698475.1_ASM2569847v1_genomic.fna.gz
+train	Plantas	Populus trichocarpa	found	GCF_000002775.5	Chromosome	reference genome	392.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/002/775/GCF_000002775.5_P.trichocarpa_v4.1/GCF_000002775.5_P.trichocarpa_v4.1_genomic.fna.gz
+train	Plantas	Wolffia australiana	found	GCF_029677425.1	Chromosome	reference genome	358.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/029/677/425/GCF_029677425.1_ASM2967742v1/GCF_029677425.1_ASM2967742v1_genomic.fna.gz
+train	Plantas	Boechera stricta	found	GCA_018361395.1	Chromosome	reference genome	190.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/018/361/395/GCA_018361395.1_NTU_Bstr_SAD12_2.2/GCA_018361395.1_NTU_Bstr_SAD12_2.2_genomic.fna.gz
+train	Plantas	Vitis rotundifolia	found	GCA_044591495.1	Chromosome	reference genome	450.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/044/591/495/GCA_044591495.1_V024.hap1_v1.0/GCA_044591495.1_V024.hap1_v1.0_genomic.fna.gz
+train	Plantas	Linum usitatissimum	found	GCA_054134595.1	Complete Genome	reference genome	491.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/054/134/595/GCA_054134595.1_EIMB_LUsi_Atlant_2.0/GCA_054134595.1_EIMB_LUsi_Atlant_2.0_genomic.fna.gz
+train	Plantas	Fraxinus excelsior	found	GCA_061392115.1	Chromosome	reference genome	778.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/061/392/115/GCA_061392115.1_ASM6139211v1/GCA_061392115.1_ASM6139211v1_genomic.fna.gz
+train	Plantas	Triticum aestivum	found	GCF_018294505.1	Chromosome	reference genome	14566.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/018/294/505/GCF_018294505.1_IWGSC_CS_RefSeq_v2.1/GCF_018294505.1_IWGSC_CS_RefSeq_v2.1_genomic.fna.gz
+train	Plantas	Simmondsia chinensis	found	GCA_018398585.1	Scaffold	reference genome	831.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/018/398/585/GCA_018398585.1_QK_Jojo_M_Omni-C/GCA_018398585.1_QK_Jojo_M_Omni-C_genomic.fna.gz
+train	Plantas	Solanum arcanum	found	GCA_027789145.1	Chromosome	reference genome	861.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/027/789/145/GCA_027789145.1_ASM2778914v1/GCA_027789145.1_ASM2778914v1_genomic.fna.gz
+train	Plantas	Zea mays	found	GCA_049266015.1	Complete Genome	na	2378	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/049/266/015/GCA_049266015.1_ASM4926601v1/GCA_049266015.1_ASM4926601v1_genomic.fna.gz
+train	Plantas	Vitis vinifera	found	GCF_030704535.1	Complete Genome	reference genome	494.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/030/704/535/GCF_030704535.1_ASM3070453v1/GCF_030704535.1_ASM3070453v1_genomic.fna.gz
+train	Plantas	Eucalyptus camaldulensis	found	GCA_014182705.1	Chromosome	na	558.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/182/705/GCA_014182705.1_ASM1418270v1/GCA_014182705.1_ASM1418270v1_genomic.fna.gz
+train	Plantas	Eucalyptus cladocalyx	found	GCA_017140615.1	Chromosome	reference genome	544.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/017/140/615/GCA_017140615.1_ASM1714061v1/GCA_017140615.1_ASM1714061v1_genomic.fna.gz
+train	Plantas	Solanum peruvianum	found	GCA_057925505.1	Chromosome	reference genome	912.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/057/925/505/GCA_057925505.1_ASM5792550v1/GCA_057925505.1_ASM5792550v1_genomic.fna.gz
+train	Plantas	Carnegiea gigantea	found	GCA_029747015.1	Scaffold	reference genome	1140.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/029/747/015/GCA_029747015.1_UA_SGP5p_2/GCA_029747015.1_UA_SGP5p_2_genomic.fna.gz
+train	Plantas	Brassica rapa	found	GCF_000309985.3	Chromosome	reference genome	352.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/309/985/GCF_000309985.3_CAAS_Brap_v3.01/GCF_000309985.3_CAAS_Brap_v3.01_genomic.fna.gz
+train	Plantas	Jacaranda mimosifolia	found	GCA_018894105.1	Chromosome	reference genome	707.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/018/894/105/GCA_018894105.1_Jmimo_V1/GCA_018894105.1_Jmimo_V1_genomic.fna.gz
+train	Plantas	Eucalyptus virginea	found	GCA_014182375.1	Chromosome	reference genome	532.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/182/375/GCA_014182375.1_ASM1418237v1/GCA_014182375.1_ASM1418237v1_genomic.fna.gz
+train	Plantas	Diospyros lotus	found	GCF_014633365.1	Chromosome	reference genome	630.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/014/633/365/GCF_014633365.1_ASM1463336v1/GCF_014633365.1_ASM1463336v1_genomic.fna.gz
+train	Plantas	Quercus dentata	found	GCA_028216015.1	Chromosome	reference genome	893.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/028/216/015/GCA_028216015.1_ASM2821601v1/GCA_028216015.1_ASM2821601v1_genomic.fna.gz
+train	Plantas	Solanum rostratum	found	GCA_029948455.1	Chromosome	reference genome	898.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/029/948/455/GCA_029948455.1_IEDA_Sros_1.0/GCA_029948455.1_IEDA_Sros_1.0_genomic.fna.gz
+train	Animales	Musca domestica	found	GCF_000879935.1	Complete Genome	na	0.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/879/935/GCF_000879935.1_ViralProj29631/GCF_000879935.1_ViralProj29631_genomic.fna.gz
+train	Animales	Scaptodrosophila latifasciaeformis	found	GCA_037075145.1	Scaffold	reference genome	154.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/037/075/145/GCA_037075145.1_ASM3707514v1/GCA_037075145.1_ASM3707514v1_genomic.fna.gz
+train	Animales	Anurida maritima	not_found					
+train	Animales	Megastigmus dorsalis	found	GCA_900490025.1	Scaffold	reference genome	590.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/490/025/GCA_900490025.1_Mdor/GCA_900490025.1_Mdor_genomic.fna.gz
+train	Animales	Mandrillus sphinx	found	GCA_004802615.1	Scaffold	na	2860.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/004/802/615/GCA_004802615.1_BGI_mandrill_1.0/GCA_004802615.1_BGI_mandrill_1.0_genomic.fna.gz
+train	Animales	Actinemys marmorata	found	GCA_022086475.1	Scaffold	reference genome	2301.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/086/475/GCA_022086475.1_rActMar1.p/GCA_022086475.1_rActMar1.p_genomic.fna.gz
+train	Animales	Sinocyclocheilus anshuiensis	found	GCF_001515605.1	Scaffold	reference genome	1632.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/515/605/GCF_001515605.1_SAMN03320099.WGS_v1.1/GCF_001515605.1_SAMN03320099.WGS_v1.1_genomic.fna.gz
+train	Animales	Phlebotomus papatasi	found	GCF_024763615.1	Chromosome	reference genome	351.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/763/615/GCF_024763615.1_Ppap_2.1/GCF_024763615.1_Ppap_2.1_genomic.fna.gz
+train	Animales	Tiliqua rugosa	not_found					
+train	Animales	Adranes taylori	found	GCA_009867245.2	Scaffold	reference genome	887.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/867/245/GCA_009867245.2_ASM986724v2/GCA_009867245.2_ASM986724v2_genomic.fna.gz
+train	Animales	Catharus ustulatus	found	GCF_009819885.2	Chromosome	reference genome	1131.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/819/885/GCF_009819885.2_bCatUst1.pri.v2/GCF_009819885.2_bCatUst1.pri.v2_genomic.fna.gz
+train	Animales	Calvadosia cruxmelitensis	found	GCA_900245855.1	Scaffold	reference genome	209.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/245/855/GCA_900245855.1_ASM90024585v1/GCA_900245855.1_ASM90024585v1_genomic.fna.gz
+train	Animales	Halocynthia aurantium	found	GCA_013436065.1	Scaffold	reference genome	128.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/013/436/065/GCA_013436065.1_Haaura_MTP2014/GCA_013436065.1_Haaura_MTP2014_genomic.fna.gz
+train	Animales	Lipothrix lubbocki	found	GCA_009872335.1	Scaffold	na	244.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/872/335/GCA_009872335.1_ASM987233v1/GCA_009872335.1_ASM987233v1_genomic.fna.gz
+train	Animales	Gopherus agassizii	found	GCA_002896415.1	Scaffold	reference genome	2185.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/896/415/GCA_002896415.1_ASM289641v1/GCA_002896415.1_ASM289641v1_genomic.fna.gz
+train	Animales	Balaenoptera musculus	found	GCF_009873245.2	Chromosome	reference genome	2374.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/873/245/GCF_009873245.2_mBalMus1.pri.v3/GCF_009873245.2_mBalMus1.pri.v3_genomic.fna.gz
+train	Animales	Meleagris gallopavo	found	GCF_905368555.1	Chromosome	reference genome	1001.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/905/368/555/GCF_905368555.1_MGAL_WU_HG_1.1/GCF_905368555.1_MGAL_WU_HG_1.1_genomic.fna.gz
+train	Animales	Oreotrochilus melanogaster	found	GCA_013400995.1	Scaffold	reference genome	1107.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/013/400/995/GCA_013400995.1_ASM1340099v1/GCA_013400995.1_ASM1340099v1_genomic.fna.gz
+train	Animales	Antheraea pernyi	found	GCF_000867205.1	Complete Genome	na	0.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/867/205/GCF_000867205.1_ViralProj16793/GCF_000867205.1_ViralProj16793_genomic.fna.gz
+train	Animales	Oncorhynchus tshawytscha	found	GCF_018296145.1	Chromosome	reference genome	2294.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/018/296/145/GCF_018296145.1_Otsh_v2.0/GCF_018296145.1_Otsh_v2.0_genomic.fna.gz
+train	Animales	Haplochromis burtoni	found	GCF_018398535.1	Scaffold	reference genome	854.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/018/398/535/GCF_018398535.1_NCSU_Asbu1/GCF_018398535.1_NCSU_Asbu1_genomic.fna.gz
+train	Animales	Muscidifurax raptorellus	found	GCA_020010945.3	Chromosome	reference genome	317.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/020/010/945/GCA_020010945.3_AU_Mell_v2/GCA_020010945.3_AU_Mell_v2_genomic.fna.gz
+train	Animales	Dermatophagoides farinae	found	GCF_024713945.1	Chromosome	reference genome	62.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/713/945/GCF_024713945.1_ASM2471394v1/GCF_024713945.1_ASM2471394v1_genomic.fna.gz
+train	Animales	Rhipicephalus microplus	found	GCF_043290135.1	Chromosome	reference genome	3265.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/043/290/135/GCF_043290135.1_USDA_Rmic/GCF_043290135.1_USDA_Rmic_genomic.fna.gz
+train	Animales	Megaptera novaeangliae	found	GCA_041834305.1	Chromosome	reference genome	3146.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/041/834/305/GCA_041834305.1_ASM4183430v1/GCA_041834305.1_ASM4183430v1_genomic.fna.gz
+train	Animales	Reinhardtius hippoglossoides	found	GCA_006182925.3	Chromosome	reference genome	598.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/006/182/925/GCA_006182925.3_UL_REHI_2.0/GCA_006182925.3_UL_REHI_2.0_genomic.fna.gz
+train	Animales	Dugesia japonica	found	GCA_001938525.1	Scaffold	reference genome	854.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/938/525/GCA_001938525.1_Djap_assembly_v1/GCA_001938525.1_Djap_assembly_v1_genomic.fna.gz
+train	Animales	Pinctada margaritifera	found	GCA_977064395.2	Chromosome	reference genome	1129.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/977/064/395/GCA_977064395.2_xbPinMarg2.2_alternate_haplotype/GCA_977064395.2_xbPinMarg2.2_alternate_haplotype_genomic.fna.gz
+train	Animales	Haliotis cracherodii	found	GCF_022045235.1	Scaffold	reference genome	1182.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/045/235/GCF_022045235.1_xgHalCrac1.p/GCF_022045235.1_xgHalCrac1.p_genomic.fna.gz
+train	Animales	Cyphastrea salae	found	GCA_964194085.1	Chromosome	reference genome	536.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/964/194/085/GCA_964194085.1_jaCypSala7.1/GCA_964194085.1_jaCypSala7.1_genomic.fna.gz
+train	Animales	Reticulitermes lucifugus	found	GCA_026260175.1	Scaffold	reference genome	811.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/026/260/175/GCA_026260175.1_UNIBO_RLUCI_2021/GCA_026260175.1_UNIBO_RLUCI_2021_genomic.fna.gz
+train	Animales	Lipotes vexillifer	found	GCF_000442215.2	Scaffold	reference genome	2419.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/442/215/GCF_000442215.2_Lipotes_vexillifer_v1.1/GCF_000442215.2_Lipotes_vexillifer_v1.1_genomic.fna.gz
+train	Animales	Sinibrama wui	found	GCA_040182825.1	Chromosome	reference genome	1029.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/040/182/825/GCA_040182825.1_SW_HiC/GCA_040182825.1_SW_HiC_genomic.fna.gz
+train	Animales	Haliaeetus albicilla	found	GCF_947461875.1	Chromosome	reference genome	1320.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/947/461/875/GCF_947461875.1_bHalAlb1.1/GCF_947461875.1_bHalAlb1.1_genomic.fna.gz
+train	Animales	Capromys pilorides	found	GCA_004027915.1	Scaffold	reference genome	3023.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/004/027/915/GCA_004027915.1_CapPil_v1_BIUU/GCA_004027915.1_CapPil_v1_BIUU_genomic.fna.gz
+train	Animales	Trichinella nelsoni	found	GCA_056869425.1	Chromosome	reference genome	58.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/056/869/425/GCA_056869425.1_ASM5686942v1/GCA_056869425.1_ASM5686942v1_genomic.fna.gz
+train	Animales	Timema cristinae	found	GCA_050494535.1	Chromosome	reference genome	1227.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/050/494/535/GCA_050494535.1_ASM5049453v1/GCA_050494535.1_ASM5049453v1_genomic.fna.gz
+train	Animales	Amphilophus citrinellus	found	GCA_013435755.1	Chromosome	reference genome	961.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/013/435/755/GCA_013435755.1_ASM1343575v1/GCA_013435755.1_ASM1343575v1_genomic.fna.gz
+train	Animales	Cirrhinus mrigala	found	GCA_036247105.2	Chromosome	reference genome	1057.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/036/247/105/GCA_036247105.2_ASM3624710v2/GCA_036247105.2_ASM3624710v2_genomic.fna.gz
+train	Animales	Macomangulus tenuis	found	GCA_964059415.1	Chromosome	reference genome	1906.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/964/059/415/GCA_964059415.1_xbMacTenu1.hap1.1/GCA_964059415.1_xbMacTenu1.hap1.1_genomic.fna.gz
+train	Animales	Gehyra variegata	not_found					
+train	Animales	Poecilia formosa	found	GCF_000485575.1	Scaffold	reference genome	748.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/485/575/GCF_000485575.1_Poecilia_formosa-5.1.2/GCF_000485575.1_Poecilia_formosa-5.1.2_genomic.fna.gz
+train	Animales	Jaculus jaculus	found	GCF_020740685.1	Chromosome	reference genome	2863.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/020/740/685/GCF_020740685.1_mJacJac1.mat.Y.cur/GCF_020740685.1_mJacJac1.mat.Y.cur_genomic.fna.gz
+train	Animales	Acropora hyacinthus	found	GCA_964291705.1	Chromosome	reference genome	495.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/964/291/705/GCA_964291705.1_jaAcrHyac4.1/GCA_964291705.1_jaAcrHyac4.1_genomic.fna.gz
+train	Animales	Philodina roseola	not_found					
+train	Animales	Eptatretus burgeri	found	GCF_056783735.1	Chromosome	reference genome	1996.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/056/783/735/GCF_056783735.1_Ebu_testis_v1/GCF_056783735.1_Ebu_testis_v1_genomic.fna.gz
+train	Animales	Oxygymnocypris stewartii	found	GCA_003573665.1	Scaffold	na	1849.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/573/665/GCA_003573665.1_Novo_Ost_1.0/GCA_003573665.1_Novo_Ost_1.0_genomic.fna.gz
+train	Animales	Drosophila buzzatii	found	GCA_035045845.1	Contig	reference genome	177.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/035/045/845/GCA_035045845.1_ASM3504584v1/GCA_035045845.1_ASM3504584v1_genomic.fna.gz
+train	Animales	Leptasterias polaris	found	GCA_037783415.2	Scaffold	reference genome	629.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/037/783/415/GCA_037783415.2_eaLepPola1_p1.2/GCA_037783415.2_eaLepPola1_p1.2_genomic.fna.gz
+train	Animales	Ellobius talpinus	found	GCA_001685095.1	Scaffold	reference genome	2266.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/685/095/GCA_001685095.1_ETalpinus_0.1/GCA_001685095.1_ETalpinus_0.1_genomic.fna.gz
+train	Animales	Paragonimus westermani	found	GCA_008508345.1	Scaffold	reference genome	922.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/008/508/345/GCA_008508345.1_ASM850834v1/GCA_008508345.1_ASM850834v1_genomic.fna.gz
+train	Animales	Helicoverpa zea	found	GCF_000841925.1	Complete Genome	na	0.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/841/925/GCF_000841925.1_ViralProj14215/GCF_000841925.1_ViralProj14215_genomic.fna.gz
+train	Animales	Chelonoidis abingdonii	found	GCF_003597395.2	Chromosome	reference genome	2256.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/597/395/GCF_003597395.2_CheloAbing_2.0/GCF_003597395.2_CheloAbing_2.0_genomic.fna.gz
+train	Animales	Cariama cristata	found	GCF_000690535.1	Scaffold	reference genome	1132.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/690/535/GCF_000690535.1_ASM69053v1/GCF_000690535.1_ASM69053v1_genomic.fna.gz
+train	Animales	Chrysoperla carnea	found	GCF_905475395.1	Chromosome	reference genome	560.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/905/475/395/GCF_905475395.1_inChrCarn1.1/GCF_905475395.1_inChrCarn1.1_genomic.fna.gz
+train	Animales	Charadrius alexandrinus	found	GCA_053477275.1	Chromosome	reference genome	1205.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/053/477/275/GCA_053477275.1_ASM5347727v1/GCA_053477275.1_ASM5347727v1_genomic.fna.gz
+train	Animales	Phocoena phocoena	found	GCF_000898275.1	Complete Genome	na	0.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/898/275/GCF_000898275.1_ViralProj168667/GCF_000898275.1_ViralProj168667_genomic.fna.gz
+train	Animales	Hypocryptadius cinnamomeus	found	GCA_013400635.1	Scaffold	reference genome	854.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/013/400/635/GCA_013400635.1_ASM1340063v1/GCA_013400635.1_ASM1340063v1_genomic.fna.gz
+train	Animales	Sagittarius serpentarius	found	GCA_034782735.1	Scaffold	reference genome	1205.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/034/782/735/GCA_034782735.1_ASM3478273v1/GCA_034782735.1_ASM3478273v1_genomic.fna.gz
+train	Animales	Orientallactaga bullata	found	GCA_004027895.1	Scaffold	reference genome	3093.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/004/027/895/GCA_004027895.1_AllBul_v1_BIUU/GCA_004027895.1_AllBul_v1_BIUU_genomic.fna.gz
+train	Animales	Osmia lignaria	found	GCF_051020975.1	Chromosome	reference genome	498.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/051/020/975/GCF_051020975.1_iyOsmLign1/GCF_051020975.1_iyOsmLign1_genomic.fna.gz
+train	Animales	Rattus	not_found					
+train	Animales	Cyprinodon variegatus	found	GCF_000732505.1	Scaffold	reference genome	1035.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/732/505/GCF_000732505.1_C_variegatus-1.0/GCF_000732505.1_C_variegatus-1.0_genomic.fna.gz
+train	Animales	Monopterus albus	found	GCF_001952655.1	Scaffold	reference genome	684.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/952/655/GCF_001952655.1_M_albus_1.0/GCF_001952655.1_M_albus_1.0_genomic.fna.gz
+train	Animales	Ochotona princeps	found	GCF_030435755.1	Chromosome	reference genome	2555.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/030/435/755/GCF_030435755.1_mOchPri1.hap1/GCF_030435755.1_mOchPri1.hap1_genomic.fna.gz
+train	Animales	Eubucco bourcierii	found	GCA_013396675.1	Scaffold	reference genome	1237.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/013/396/675/GCA_013396675.1_ASM1339667v1/GCA_013396675.1_ASM1339667v1_genomic.fna.gz
+train	Animales	Acanthopagrus latus	found	GCF_904848185.1	Chromosome	reference genome	685.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/904/848/185/GCF_904848185.1_fAcaLat1.1/GCF_904848185.1_fAcaLat1.1_genomic.fna.gz
+train	Animales	Gigantopelta aegis	found	GCF_016097555.1	Chromosome	reference genome	1149.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/097/555/GCF_016097555.1_Gae_host_genome/GCF_016097555.1_Gae_host_genome_genomic.fna.gz
+train	Animales	Pipistrellus kuhlii	found	GCF_014108245.1	Scaffold	reference genome	1775.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/014/108/245/GCF_014108245.1_mPipKuh1.p/GCF_014108245.1_mPipKuh1.p_genomic.fna.gz
+train	Animales	Bison bison	found	GCF_000754665.1	Scaffold	reference genome	2828.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/754/665/GCF_000754665.1_Bison_UMD1.0/GCF_000754665.1_Bison_UMD1.0_genomic.fna.gz
+train	Animales	Bolinopsis microptera	found	GCF_026151205.1	Chromosome	reference genome	265.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/026/151/205/GCF_026151205.1_MBARI_Bmic_1.0/GCF_026151205.1_MBARI_Bmic_1.0_genomic.fna.gz
+train	Animales	Crocodylidae	not_found					
+train	Animales	Eulacestoma nigropectus	found	GCA_013397775.1	Scaffold	reference genome	1040.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/013/397/775/GCA_013397775.1_ASM1339777v1/GCA_013397775.1_ASM1339777v1_genomic.fna.gz
+train	Animales	Muroidea	not_found					
+train	Animales	Aethina tumida	found	GCF_024364675.1	Chromosome	reference genome	260.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/364/675/GCF_024364675.1_icAetTumi1.1/GCF_024364675.1_icAetTumi1.1_genomic.fna.gz
+train	Animales	Ostrea denselamellosa	found	GCA_024699665.1	Scaffold	reference genome	635.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/024/699/665/GCA_024699665.1_O._denselamellosa_genome_assembly_1.0/GCA_024699665.1_O._denselamellosa_genome_assembly_1.0_genomic.fna.gz
+train	Animales	Drosophila kikkawai	found	GCF_030179895.1	Chromosome	reference genome	188.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/030/179/895/GCF_030179895.1_DkikHiC1v2/GCF_030179895.1_DkikHiC1v2_genomic.fna.gz
+train	Animales	Hemitragus hylocrius	not_found					
+train	Animales	Cichlidae	not_found					
+train	Animales	Desoria tigrina	found	GCA_906901685.1	Scaffold	reference genome	211.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/906/901/685/GCA_906901685.1_SCDETI_UL_ASM1/GCA_906901685.1_SCDETI_UL_ASM1_genomic.fna.gz
+train	Animales	Ceratotherium simum	found	GCF_057802395.1	Chromosome	reference genome	2481.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/057/802/395/GCF_057802395.1_ASM5780239v1/GCF_057802395.1_ASM5780239v1_genomic.fna.gz
+train	Animales	Harmothoe impar	found	GCA_947462335.1	Chromosome	reference genome	1512.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/947/462/335/GCA_947462335.1_wpHarImpa5.1/GCA_947462335.1_wpHarImpa5.1_genomic.fna.gz
+train	Animales	Coregonus clupeaformis	found	GCF_020615455.1	Chromosome	reference genome	2753.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/020/615/455/GCF_020615455.1_ASM2061545v1/GCF_020615455.1_ASM2061545v1_genomic.fna.gz
+train	Animales	Lethenteron camtschaticum	found	GCA_018977245.1	Scaffold	reference genome	1074.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/018/977/245/GCA_018977245.1_IMCB_Ljap_1.0/GCA_018977245.1_IMCB_Ljap_1.0_genomic.fna.gz
+train	Animales	Pygocentrus nattereri	found	GCF_015220715.1	Chromosome	reference genome	1222.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/220/715/GCF_015220715.1_fPygNat1.pri/GCF_015220715.1_fPygNat1.pri_genomic.fna.gz
+train	Animales	Ypsolopha sequella	found	GCA_934047225.1	Chromosome	reference genome	866.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/934/047/225/GCA_934047225.1_ilYpsSequ2.1/GCA_934047225.1_ilYpsSequ2.1_genomic.fna.gz
+train	Animales	Notospermus geniculatus	found	GCA_002633025.1	Scaffold	reference genome	858.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/633/025/GCA_002633025.1_ASM263302v1/GCA_002633025.1_ASM263302v1_genomic.fna.gz
+train	Animales	Anopheles moucheti	found	GCF_943734755.1	Chromosome	reference genome	271.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/943/734/755/GCF_943734755.1_idAnoMoucSN_F20_07/GCF_943734755.1_idAnoMoucSN_F20_07_genomic.fna.gz
+train	Animales	Nasonia vitripennis	found	GCF_009193385.2	Chromosome	reference genome	297.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/193/385/GCF_009193385.2_Nvit_psr_1.1/GCF_009193385.2_Nvit_psr_1.1_genomic.fna.gz
+train	Animales	Branchinecta lindahli	found	GCA_023053555.1	Scaffold	reference genome	384.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/053/555/GCA_023053555.1_BRLI_1.1/GCA_023053555.1_BRLI_1.1_genomic.fna.gz
+train	Animales	Dreissena rostriformis	found	GCA_055670145.1	Chromosome	reference genome	1613.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/055/670/145/GCA_055670145.1_ASM5567014v1/GCA_055670145.1_ASM5567014v1_genomic.fna.gz
+train	Animales	Lineus longissimus	found	GCF_910592395.1	Chromosome	reference genome	391.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/910/592/395/GCF_910592395.1_tnLinLong1.2/GCF_910592395.1_tnLinLong1.2_genomic.fna.gz
+train	Animales	Halcyon senegalensis	found	GCA_013397595.1	Scaffold	reference genome	1137.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/013/397/595/GCA_013397595.1_ASM1339759v1/GCA_013397595.1_ASM1339759v1_genomic.fna.gz
+train	Animales	Matsumurasca onukii	found	GCA_018831715.1	Chromosome	reference genome	599.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/018/831/715/GCA_018831715.1_ASM1883171v1/GCA_018831715.1_ASM1883171v1_genomic.fna.gz
+train	Animales	Ornithorhynchus anatinus	found	GCF_004115215.2	Chromosome	reference genome	1859.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/115/215/GCF_004115215.2_mOrnAna1.pri.v4/GCF_004115215.2_mOrnAna1.pri.v4_genomic.fna.gz
+train	Animales	Astropecten irregularis	found	GCA_963971285.1	Chromosome	reference genome	475.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/963/971/285/GCA_963971285.1_eaAstIrre1.1/GCA_963971285.1_eaAstIrre1.1_genomic.fna.gz
+train	Animales	Photinus pyralis	found	GCF_008802855.1	Scaffold	reference genome	471.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/008/802/855/GCF_008802855.1_Ppyr1.3/GCF_008802855.1_Ppyr1.3_genomic.fna.gz
+train	Animales	Megalonaias nervosa	found	GCA_016617855.1	Scaffold	reference genome	2365.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/617/855/GCA_016617855.1_ASM1661785v1/GCA_016617855.1_ASM1661785v1_genomic.fna.gz
+train	Animales	Hydractinia symbiolongicarpus	found	GCF_029227915.1	Chromosome	reference genome	480.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/029/227/915/GCF_029227915.1_HSymV2.1/GCF_029227915.1_HSymV2.1_genomic.fna.gz
+train	Animales	Heliconius	not_found					
+train	Animales	Acipenser ruthenus	found	GCF_902713425.1	Chromosome	reference genome	1899.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/902/713/425/GCF_902713425.1_fAciRut3.2_maternal_haplotype/GCF_902713425.1_fAciRut3.2_maternal_haplotype_genomic.fna.gz
+train	Animales	Murina aurata feae	not_found					
+train	Animales	Eonycteris spelaea	found	GCA_062009626.1	Chromosome	reference genome	1894.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/062/009/626/GCA_062009626.1_ASM62009626v1/GCA_062009626.1_ASM62009626v1_genomic.fna.gz
+train	Animales	Acrocera orbiculus	found	GCA_947359355.1	Chromosome	reference genome	221.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/947/359/355/GCA_947359355.1_idAcrOrbc1.1/GCA_947359355.1_idAcrOrbc1.1_genomic.fna.gz
+train	Animales	Emydura subglobosa	found	GCA_054346155.1	Chromosome	reference genome	2002.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/054/346/155/GCA_054346155.1_ASM5434615v1/GCA_054346155.1_ASM5434615v1_genomic.fna.gz
+train	Hongos	Malassezia globosa	found	GCF_000181695.2	Contig	reference genome	9.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/181/695/GCF_000181695.2_ASM18169v2/GCF_000181695.2_ASM18169v2_genomic.fna.gz
+train	Hongos	Ogataea polymorpha	found	GCF_001664045.1	Contig	reference genome	9.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/664/045/GCF_001664045.1_Hanpo2/GCF_001664045.1_Hanpo2_genomic.fna.gz
+train	Hongos	Podila verticillata	found	GCA_000739165.1	Scaffold	reference genome	41.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/739/165/GCA_000739165.1_Mort_vert_NRRL_6337_V1/GCA_000739165.1_Mort_vert_NRRL_6337_V1_genomic.fna.gz
+train	Hongos	Exophiala xenobiotica	found	GCF_000835505.1	Scaffold	reference genome	31.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/835/505/GCF_000835505.1_Exop_xeno_CBS118157_V1/GCF_000835505.1_Exop_xeno_CBS118157_V1_genomic.fna.gz
+train	Hongos	Exophiala sideris	found	GCA_000835395.1	Scaffold	reference genome	29.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/835/395/GCA_000835395.1_Exop_side_CBS121828_V1/GCA_000835395.1_Exop_side_CBS121828_V1_genomic.fna.gz
+train	Hongos	Aspergillus arachidicola	found	GCA_009193545.1	Scaffold	reference genome	39.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/193/545/GCA_009193545.1_Aspara19utr/GCA_009193545.1_Aspara19utr_genomic.fna.gz
+train	Hongos	Sungouiella intermedia	found	GCA_900106115.1	Chromosome	reference genome	13.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/106/115/GCA_900106115.1_CBS_141442_assembly/GCA_900106115.1_CBS_141442_assembly_genomic.fna.gz
+train	Hongos	Penicillium thymicola	found	GCA_030142185.1	Scaffold	reference genome	33.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/030/142/185/GCA_030142185.1_ASM3014218v1/GCA_030142185.1_ASM3014218v1_genomic.fna.gz
+train	Hongos	Imleria badia	found	GCA_015039435.1	Scaffold	reference genome	38.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/015/039/435/GCA_015039435.1_Xerba1/GCA_015039435.1_Xerba1_genomic.fna.gz
+train	Hongos	Rhizoctonia solani	found	GCF_016906535.1	Complete Genome	reference genome	40.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/906/535/GCF_016906535.1_ASM1690653v1/GCF_016906535.1_ASM1690653v1_genomic.fna.gz
+train	Hongos	Aplosporella prunicola	found	GCF_010093885.1	Scaffold	reference genome	32.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/010/093/885/GCF_010093885.1_Aplpr1/GCF_010093885.1_Aplpr1_genomic.fna.gz
+train	Hongos	Aspergillus granulosus	found	GCA_044048675.1	Scaffold	reference genome	35.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/044/048/675/GCA_044048675.1_Aspgra1/GCA_044048675.1_Aspgra1_genomic.fna.gz
+train	Hongos	Trichoderma konilangbra	not_found					
+train	Hongos	Wallemia mellicola	found	GCF_000263375.1	Scaffold	reference genome	9.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/263/375/GCF_000263375.1_Wallemia_sebi_v1.0/GCF_000263375.1_Wallemia_sebi_v1.0_genomic.fna.gz
+train	Hongos	Aspergillus sclerotialis	found	GCA_003589665.1	Contig	reference genome	28.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/589/665/GCA_003589665.1_phiScl_1.0/GCA_003589665.1_phiScl_1.0_genomic.fna.gz
+train	Hongos	Colletotrichum sublineola	found	GCA_000696135.1	Scaffold	na	46.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/696/135/GCA_000696135.1_ASM69613v1/GCA_000696135.1_ASM69613v1_genomic.fna.gz
+train	Hongos	Fusarium kuroshium	found	GCA_057675985.1	Scaffold	reference genome	48.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/057/675/985/GCA_057675985.1_ASM5767598v1/GCA_057675985.1_ASM5767598v1_genomic.fna.gz
+train	Hongos	Aspergillus teporis	not_found					
+train	Hongos	Penicillium roqueforti	found	GCA_054123635.1	Complete Genome	na	0.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/054/123/635/GCA_054123635.1_ASM5412363v1/GCA_054123635.1_ASM5412363v1_genomic.fna.gz
+train	Hongos	Pholiota conissans	found	GCA_015484465.1	Scaffold	reference genome	44.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/015/484/465/GCA_015484465.1_Phocon1/GCA_015484465.1_Phocon1_genomic.fna.gz
+train	Hongos	Candidozyma auris	found	GCF_003013715.1	Complete Genome	reference genome	12.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/013/715/GCF_003013715.1_ASM301371v2/GCF_003013715.1_ASM301371v2_genomic.fna.gz
+train	Hongos	Jackrogersella minutella	found	GCA_022578535.1	Scaffold	reference genome	35.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/578/535/GCA_022578535.1_Annmin1/GCA_022578535.1_Annmin1_genomic.fna.gz
+train	Hongos	Lindra thalassiae	not_found					
+train	Hongos	Cronartium ribicola	found	GCA_000500245.1	Complete Genome	na	0.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/500/245/GCA_000500245.1_Cro_ribi_1.0/GCA_000500245.1_Cro_ribi_1.0_genomic.fna.gz
+train	Hongos	Pecoramyces ruminantium	found	GCA_000412615.1	Contig	reference genome	101.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/412/615/GCA_000412615.1_Orpinomyces_sp._Strain_C1A/GCA_000412615.1_Orpinomyces_sp._Strain_C1A_genomic.fna.gz
+train	Hongos	Echinodontium tinctorium	not_found					
+train	Hongos	Aspergillus clavatus	found	GCF_000002715.2	Scaffold	reference genome	27.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/002/715/GCF_000002715.2_ASM271v1/GCF_000002715.2_ASM271v1_genomic.fna.gz
+train	Hongos	Aspergillus campestris	found	GCF_002847485.1	Contig	reference genome	28.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/847/485/GCF_002847485.1_Aspcam1/GCF_002847485.1_Aspcam1_genomic.fna.gz
+train	Hongos	Aspergillus foveolatus	found	GCF_047715535.1	Scaffold	reference genome	31.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/047/715/535/GCF_047715535.1_Aspfove1/GCF_047715535.1_Aspfove1_genomic.fna.gz
+train	Hongos	Reticulascus tulasneorum	found	GCA_001557495.1	Scaffold	na	42.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/557/495/GCA_001557495.1_ASM155749v1/GCA_001557495.1_ASM155749v1_genomic.fna.gz
+train	Hongos	Xylaria arbuscula	found	GCA_022385695.1	Scaffold	reference genome	51.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/385/695/GCA_022385695.1_Xylarb124340_1/GCA_022385695.1_Xylarb124340_1_genomic.fna.gz
+train	Hongos	Psilocybe serbica	not_found					
+train	Hongos	Trichocladium griseum	not_found					
+train	Hongos	Hamiltosporidium tvaerminnensis	found	GCA_022605425.2	Chromosome	reference genome	21.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/605/425/GCA_022605425.2_FIOER33_v3/GCA_022605425.2_FIOER33_v3_genomic.fna.gz
+train	Hongos	Bolbitius vitellinus	not_found					
+train	Hongos	Massarina eburnea	found	GCA_010093635.1	Scaffold	reference genome	38.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/010/093/635/GCA_010093635.1_Maseb1/GCA_010093635.1_Maseb1_genomic.fna.gz
+train	Hongos	Exophiala oligosperma	found	GCF_000835515.1	Scaffold	reference genome	38.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/835/515/GCF_000835515.1_Exop_olig_CBS72588_V1/GCF_000835515.1_Exop_olig_CBS72588_V1_genomic.fna.gz
+train	Hongos	Aspergillus similis	found	GCA_047715515.1	Scaffold	reference genome	33.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/047/715/515/GCA_047715515.1_Aspsim1_1/GCA_047715515.1_Aspsim1_1_genomic.fna.gz
+train	Hongos	Saccharomyces cerevisiae	found	GCF_000146045.2	Complete Genome	reference genome	12.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/146/045/GCF_000146045.2_R64/GCF_000146045.2_R64_genomic.fna.gz
+train	Hongos	Morchella eohespera	not_found					
+train	Hongos	Puccinia sorghi	found	GCA_001263375.1	Scaffold	reference genome	99.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/263/375/GCA_001263375.1_ASM126337v1/GCA_001263375.1_ASM126337v1_genomic.fna.gz
+train	Hongos	Lentinus tigrinus	found	GCF_003813185.1	Scaffold	reference genome	39.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/813/185/GCF_003813185.1_Lenti7_1/GCF_003813185.1_Lenti7_1_genomic.fna.gz
+train	Hongos	Neopyrenochaeta inflorescentiae	not_found					
+train	Hongos	Rhamphospora nymphaeae	not_found					
+train	Hongos	Blastomyces parvus	found	GCA_002572885.1	Scaffold	reference genome	27.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/572/885/GCA_002572885.1_Emmon_parv_130/GCA_002572885.1_Emmon_parv_130_genomic.fna.gz
+train	Hongos	Hypoxylon trugodes	found	GCF_022578975.1	Scaffold	reference genome	39.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/578/975/GCF_022578975.1_Hyptru1/GCF_022578975.1_Hyptru1_genomic.fna.gz
+train	Hongos	Armillaria gallica	found	GCA_002307695.1	Scaffold	na	85.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/307/695/GCA_002307695.1_Armga1/GCA_002307695.1_Armga1_genomic.fna.gz
+train	Hongos	Penicillium bilaiae	not_found					
+train	Hongos	Aspergillus multiplicatus	not_found					
+train	Hongos	Podospora appendiculata	found	GCA_033675105.1	Contig	reference genome	40.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/033/675/105/GCA_033675105.1_Podap1/GCA_033675105.1_Podap1_genomic.fna.gz
+train	Hongos	Aspergillus cumulatus	not_found					
+train	Hongos	Talaromyces marneffei	found	GCF_009556855.1	Complete Genome	reference genome	28.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/556/855/GCF_009556855.1_ASM955685v1/GCF_009556855.1_ASM955685v1_genomic.fna.gz
+train	Hongos	Coleophoma crateriformis	found	GCA_003369635.1	Scaffold	reference genome	40.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/369/635/GCA_003369635.1_ASM336963v1/GCA_003369635.1_ASM336963v1_genomic.fna.gz
+train	Hongos	Penicillium manginii	found	GCF_028828005.1	Contig	reference genome	38.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/028/828/005/GCF_028828005.1_ASM2882800v1/GCF_028828005.1_ASM2882800v1_genomic.fna.gz
+train	Hongos	Thelonectria olida	found	GCA_020736575.1	Contig	reference genome	52.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/020/736/575/GCA_020736575.1_Cylol1/GCA_020736575.1_Cylol1_genomic.fna.gz
+train	Hongos	Penicillium crustosum	found	GCF_028827405.1	Contig	reference genome	33.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/028/827/405/GCF_028827405.1_ASM2882740v1/GCF_028827405.1_ASM2882740v1_genomic.fna.gz
+train	Hongos	Cadophora gregata	found	GCF_030347475.1	Contig	reference genome	47.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/030/347/475/GCF_030347475.1_UMN_CgA_1/GCF_030347475.1_UMN_CgA_1_genomic.fna.gz
+train	Hongos	Penicillium expansum	found	GCF_000769745.1	Contig	reference genome	32.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/769/745/GCF_000769745.1_ASM76974v1/GCF_000769745.1_ASM76974v1_genomic.fna.gz
+train	Hongos	Usnea florida	found	GCA_052784015.1	Scaffold	reference genome	44.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/052/784/015/GCA_052784015.1_Usnflo1/GCA_052784015.1_Usnflo1_genomic.fna.gz
+train	Hongos	Penicillium samsonianum	found	GCF_028829775.1	Contig	reference genome	38.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/028/829/775/GCF_028829775.1_ASM2882977v1/GCF_028829775.1_ASM2882977v1_genomic.fna.gz
+train	Hongos	Apiospora phragmitis	found	GCF_038363925.1	Contig	reference genome	52.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/038/363/925/GCF_038363925.1_ASM3836392v1/GCF_038363925.1_ASM3836392v1_genomic.fna.gz
+train	Hongos	Suillus subalutaceus	found	GCF_016647625.1	Contig	reference genome	65.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/647/625/GCF_016647625.1_Suisu1/GCF_016647625.1_Suisu1_genomic.fna.gz
+train	Hongos	Monascus purpureus	found	GCA_025999795.1	Chromosome	reference genome	24.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/025/999/795/GCA_025999795.1_ASM2599979v1/GCA_025999795.1_ASM2599979v1_genomic.fna.gz
+train	Hongos	Podospora anserina	found	GCF_000226545.1	Scaffold	reference genome	34.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/226/545/GCF_000226545.1_ASM22654v1/GCF_000226545.1_ASM22654v1_genomic.fna.gz
+train	Hongos	Ganoderma leucocontextum	found	GCA_022813035.1	Scaffold	na	60.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/813/035/GCA_022813035.1_Ganleu1/GCA_022813035.1_Ganleu1_genomic.fna.gz
+train	Hongos	Neurospora tetraspora	found	GCF_033439725.1	Contig	reference genome	43.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/033/439/725/GCF_033439725.1_Gelte1/GCF_033439725.1_Gelte1_genomic.fna.gz
+train	Hongos	Aspergillus steynii	found	GCF_002849105.1	Contig	reference genome	37.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/849/105/GCF_002849105.1_Aspste1/GCF_002849105.1_Aspste1_genomic.fna.gz
+train	Hongos	Fusarium redolens	found	GCA_017562085.1	Complete Genome	na	0.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/017/562/085/GCA_017562085.1_Fr_YP04/GCA_017562085.1_Fr_YP04_genomic.fna.gz
+train	Hongos	Cubamyces lactineus	found	GCA_022376465.1	Contig	reference genome	36.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/376/465/GCA_022376465.1_Tralac1/GCA_022376465.1_Tralac1_genomic.fna.gz
+train	Hongos	Jahnula aquatica	not_found					
+train	Hongos	Penicillium canariense	found	GCF_028826845.1	Contig	reference genome	31.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/028/826/845/GCF_028826845.1_ASM2882684v1/GCF_028826845.1_ASM2882684v1_genomic.fna.gz
+train	Hongos	Exophiala sp hkrs030	not_found					
+train	Hongos	Fomitopsis pinicola	found	GCA_001931775.1	Scaffold	reference genome	46.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/931/775/GCA_001931775.1_ASM193177v1/GCA_001931775.1_ASM193177v1_genomic.fna.gz
+train	Hongos	Entophlyctis helioformis	found	GCA_025526915.1	Contig	reference genome	30.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/025/526/915/GCA_025526915.1_Enthel1/GCA_025526915.1_Enthel1_genomic.fna.gz
+train	Hongos	Heterobasidion irregulare	found	GCF_000320585.1	Scaffold	reference genome	33.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/320/585/GCF_000320585.1_Heterobasidion_irregulare_v2.0/GCF_000320585.1_Heterobasidion_irregulare_v2.0_genomic.fna.gz
+train	Hongos	Thermothelomyces heterothallicus	found	GCF_042370625.1	Scaffold	reference genome	35.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/042/370/625/GCF_042370625.1_Mychet1/GCF_042370625.1_Mychet1_genomic.fna.gz
+train	Hongos	Grosmannia penicillata	found	GCA_001938055.1	Scaffold	na	26.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/938/055/GCA_001938055.1_ASM193805v1/GCA_001938055.1_ASM193805v1_genomic.fna.gz
+train	Hongos	Morchella vulgaris	not_found					
+train	Hongos	Aspergillus siamensis	not_found					
+train	Hongos	Lactarius pseudohatsudake	found	GCA_021525015.1	Contig	reference genome	99.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/021/525/015/GCA_021525015.1_Lacpse1/GCA_021525015.1_Lacpse1_genomic.fna.gz
+train	Hongos	Suillus collinitus	not_found					
+train	Hongos	Melampsora lini	not_found					
+train	Hongos	Ramaria rubella	found	GCA_015039355.1	Scaffold	reference genome	105.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/015/039/355/GCA_015039355.1_Ramac1/GCA_015039355.1_Ramac1_genomic.fna.gz
+train	Hongos	Entophlyctis luteolus	found	GCA_027604725.1	Scaffold	reference genome	27.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/027/604/725/GCA_027604725.1_ASM2760472v1/GCA_027604725.1_ASM2760472v1_genomic.fna.gz
+train	Hongos	Podila minutissima	found	GCA_016098005.1	Scaffold	reference genome	39.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/098/005/GCA_016098005.1_UCR_MminAD069_1.0/GCA_016098005.1_UCR_MminAD069_1.0_genomic.fna.gz
+train	Hongos	Erysiphe necator	found	GCA_024703715.1	Complete Genome	na	0.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/024/703/715/GCA_024703715.1_EnE101_chr_assembly_v3/GCA_024703715.1_EnE101_chr_assembly_v3_genomic.fna.gz
+train	Hongos	Obelidium mucronatum	found	GCA_025765595.1	Contig	reference genome	49.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/025/765/595/GCA_025765595.1_Obemuc1/GCA_025765595.1_Obemuc1_genomic.fna.gz
+train	Hongos	Lentinula boryana	found	GCA_027886635.1	Scaffold	reference genome	32.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/027/886/635/GCA_027886635.1_Lbo_TFB10827_1/GCA_027886635.1_Lbo_TFB10827_1_genomic.fna.gz
+train	Hongos	Mycena vulgaris	found	GCA_029204335.1	Contig	reference genome	193.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/029/204/335/GCA_029204335.1_Mycvul1/GCA_029204335.1_Mycvul1_genomic.fna.gz
+train	Hongos	Gigaspora rosea	found	GCA_003550325.1	Scaffold	reference genome	567.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/550/325/GCA_003550325.1_ASM355032v1/GCA_003550325.1_ASM355032v1_genomic.fna.gz
+train	Hongos	Allomyces macrogynus	found	GCA_000151295.1	Scaffold	reference genome	57.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/151/295/GCA_000151295.1_A_macrogynus_V3/GCA_000151295.1_A_macrogynus_V3_genomic.fna.gz
+train	Hongos	Lachnellula occidentalis	found	GCA_007821535.1	Contig	reference genome	48.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/007/821/535/GCA_007821535.1_CFIA_Locc_EG2017/GCA_007821535.1_CFIA_Locc_EG2017_genomic.fna.gz
+train	Hongos	Amanita rubescens	found	GCA_965266955.1	Chromosome	reference genome	34.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/965/266/955/GCA_965266955.1_gfAmaRube1.hap1.1/GCA_965266955.1_gfAmaRube1.hap1.1_genomic.fna.gz
+train	Hongos	Phellopilus nigrolimitatus	found	GCA_021029095.1	Contig	reference genome	56.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/021/029/095/GCA_021029095.1_Pheni1/GCA_021029095.1_Pheni1_genomic.fna.gz
+train	Hongos	Septoria linicola	found	GCA_024114885.1	Complete Genome	reference genome	39.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/024/114/885/GCA_024114885.1_ASM2411488v1/GCA_024114885.1_ASM2411488v1_genomic.fna.gz
+train	Hongos	Laxitextum bicolor	not_found					
+train	Hongos	Mycotypha indica	not_found					
+train	Hongos	Psilocybe cubensis	found	GCF_017499595.1	Chromosome	reference genome	46.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/017/499/595/GCF_017499595.1_MGC_Penvy_1/GCF_017499595.1_MGC_Penvy_1_genomic.fna.gz
+train	Hongos	Anomoloma myceliosum	not_found					
+train	Hongos	Botryotinia calthae	found	GCA_004379285.1	Scaffold	reference genome	47.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/004/379/285/GCA_004379285.1_ASM437928v1/GCA_004379285.1_ASM437928v1_genomic.fna.gz
+train	Hongos	Loramyces macrosporus	not_found					
+train	Hongos	Mycena alexandri	found	GCA_029233265.1	Contig	reference genome	132.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/029/233/265/GCA_029233265.1_Mycale1/GCA_029233265.1_Mycale1_genomic.fna.gz
+train	Hongos	Ascobolus immersus rn42	found	GCA_003788565.2	Scaffold	reference genome	59.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/788/565/GCA_003788565.2_Ascim1/GCA_003788565.2_Ascim1_genomic.fna.gz
+train	Hongos	Alternaria viburni	found	GCF_023758015.1	Scaffold	reference genome	36.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/023/758/015/GCF_023758015.1_ASM2375801v1/GCF_023758015.1_ASM2375801v1_genomic.fna.gz
+train	Hongos	Penicillium solitum	found	GCF_028829755.1	Contig	reference genome	33.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/028/829/755/GCF_028829755.1_ASM2882975v1/GCF_028829755.1_ASM2882975v1_genomic.fna.gz
+val	Plantas	Utricularia gibba	found	GCA_002189035.1	Chromosome	reference genome	100.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/189/035/GCA_002189035.1_U_gibba_v2/GCA_002189035.1_U_gibba_v2_genomic.fna.gz
+val	Plantas	Ziziphus jujuba	found	GCF_031755915.1	Complete Genome	reference genome	393.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/031/755/915/GCF_031755915.1_ASM3175591v1/GCF_031755915.1_ASM3175591v1_genomic.fna.gz
+val	Plantas	Nicotiana tabacum	found	GCF_000715075.1	Chromosome	reference genome	3995.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/715/075/GCF_000715075.1_ASM71507v2/GCF_000715075.1_ASM71507v2_genomic.fna.gz
+val	Plantas	Passiflora edulis	found	GCA_002156105.1	Complete Genome	na	165	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/156/105/GCA_002156105.1_ASM215610v1/GCA_002156105.1_ASM215610v1_genomic.fna.gz
+val	Plantas	Vanilla planifolia	found	GCA_023846275.1	Chromosome	reference genome	1416.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/846/275/GCA_023846275.1_ASM2384627v1/GCA_023846275.1_ASM2384627v1_genomic.fna.gz
+val	Plantas	Ipomoea purpurea	found	GCA_009835305.1	Scaffold	reference genome	194.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/835/305/GCA_009835305.1_UM_IpPur_1.0/GCA_009835305.1_UM_IpPur_1.0_genomic.fna.gz
+val	Plantas	Populus pruinosa	found	GCA_026413675.1	Chromosome	reference genome	518.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/026/413/675/GCA_026413675.1_ASM2641367v1/GCA_026413675.1_ASM2641367v1_genomic.fna.gz
+val	Plantas	Citrus clementina	found	GCA_037179405.1	Chromosome	reference genome	365.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/037/179/405/GCA_037179405.1_UCR_Fairchild_v1.0/GCA_037179405.1_UCR_Fairchild_v1.0_genomic.fna.gz
+val	Plantas	Rhizophora apiculata	found	GCA_037832385.1	Chromosome	reference genome	232.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/037/832/385/GCA_037832385.1_SYSU_Rhapic_HiC/GCA_037832385.1_SYSU_Rhapic_HiC_genomic.fna.gz
+val	Plantas	Aegilops bicornis	found	GCA_021605145.1	Chromosome	reference genome	5902.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/021/605/145/GCA_021605145.1_ASM2160514v1/GCA_021605145.1_ASM2160514v1_genomic.fna.gz
+val	Plantas	Cycas panzhihuaensis	found	GCA_023213395.1	Chromosome	na	10482.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/213/395/GCA_023213395.1_ASM2321339v1/GCA_023213395.1_ASM2321339v1_genomic.fna.gz
+val	Plantas	Dioscorea rotundata	not_found					
+val	Plantas	Salix arbutifolia	found	GCA_025169955.1	Chromosome	reference genome	338.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/025/169/955/GCA_025169955.1_ASM2516995v1/GCA_025169955.1_ASM2516995v1_genomic.fna.gz
+val	Plantas	Prunus dulcis	found	GCF_902201215.1	Chromosome	reference genome	227.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/902/201/215/GCF_902201215.1_ALMONDv2/GCF_902201215.1_ALMONDv2_genomic.fna.gz
+val	Plantas	Cicer echinospermum	found	GCA_037974855.1	Scaffold	reference genome	733.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/037/974/855/GCA_037974855.1_ASM3797485v1/GCA_037974855.1_ASM3797485v1_genomic.fna.gz
+val	Plantas	Rosa chinensis	found	GCF_002994745.2	Chromosome	reference genome	515.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/994/745/GCF_002994745.2_RchiOBHm-V2/GCF_002994745.2_RchiOBHm-V2_genomic.fna.gz
+val	Plantas	Dendrobium nobile	found	GCA_022539455.1	Chromosome	reference genome	1199.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/539/455/GCA_022539455.1_Dnobile/GCA_022539455.1_Dnobile_genomic.fna.gz
+val	Plantas	Saccharum hybrid cultivar	found	GCA_020102875.1	Chromosome	na	903.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/020/102/875/GCA_020102875.1_cc-01-1940_version_1.0/GCA_020102875.1_cc-01-1940_version_1.0_genomic.fna.gz
+val	Plantas	Tetracentron sinense	found	GCA_015143295.1	Chromosome	reference genome	1160.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/015/143/295/GCA_015143295.1_ASM1514329v1/GCA_015143295.1_ASM1514329v1_genomic.fna.gz
+val	Plantas	Solanum pimpinellifolium	found	GCA_057925255.1	Chromosome	reference genome	824.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/057/925/255/GCA_057925255.1_ASM5792525v1/GCA_057925255.1_ASM5792525v1_genomic.fna.gz
+val	Plantas	Arachis duranensis	found	GCF_000817695.3	Chromosome	reference genome	1081.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/817/695/GCF_000817695.3_aradu.V14167.gnm2.J7QH/GCF_000817695.3_aradu.V14167.gnm2.J7QH_genomic.fna.gz
+val	Plantas	Solanum lycopersicoides	found	GCA_057925785.1	Complete Genome	reference genome	1222.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/057/925/785/GCA_057925785.1_ASM5792578v1/GCA_057925785.1_ASM5792578v1_genomic.fna.gz
+val	Plantas	Solanum galapagense	found	GCA_057925305.1	Complete Genome	reference genome	818.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/057/925/305/GCA_057925305.1_ASM5792530v1/GCA_057925305.1_ASM5792530v1_genomic.fna.gz
+val	Plantas	Eucalyptus decipiens	found	GCA_014182575.1	Chromosome	reference genome	591.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/182/575/GCA_014182575.1_ASM1418257v1/GCA_014182575.1_ASM1418257v1_genomic.fna.gz
+val	Animales	Pteromalus puparum	found	GCF_002815135.1	Complete Genome	na	0.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/815/135/GCF_002815135.1_ASM281513v1/GCF_002815135.1_ASM281513v1_genomic.fna.gz
+val	Animales	Acropora acuminata	found	GCA_014633975.1	Scaffold	reference genome	394.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/633/975/GCA_014633975.1_Aacu_1.0/GCA_014633975.1_Aacu_1.0_genomic.fna.gz
+val	Animales	Brevimyrus niger	found	GCA_015164015.2	Scaffold	reference genome	746.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/015/164/015/GCA_015164015.2_ASM1516401v2/GCA_015164015.2_ASM1516401v2_genomic.fna.gz
+val	Animales	Sinocyclocheilus rhinocerous	found	GCF_001515625.1	Scaffold	reference genome	1655.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/515/625/GCF_001515625.1_SAMN03320098_v1.1/GCF_001515625.1_SAMN03320098_v1.1_genomic.fna.gz
+val	Animales	Athalia rosae	found	GCF_917208135.1	Chromosome	reference genome	172.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/917/208/135/GCF_917208135.1_iyAthRosa1.1/GCF_917208135.1_iyAthRosa1.1_genomic.fna.gz
+val	Animales	Ompok bimaculatus	found	GCA_009108245.1	Scaffold	na	718.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/108/245/GCA_009108245.1_ASM910824v1/GCA_009108245.1_ASM910824v1_genomic.fna.gz
+val	Animales	Thunnus orientalis	found	GCA_061617105.1	Complete Genome	reference genome	800.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/061/617/105/GCA_061617105.1_ASM61617105v1/GCA_061617105.1_ASM61617105v1_genomic.fna.gz
+val	Animales	Agkistrodon contortrix	not_found					
+val	Animales	Pelagia noctiluca	found	GCA_963924455.1	Chromosome	reference genome	357.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/963/924/455/GCA_963924455.1_jsPelNoct2.1/GCA_963924455.1_jsPelNoct2.1_genomic.fna.gz
+val	Animales	Onthophagus taurus	found	GCF_036711975.1	Chromosome	reference genome	290.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/036/711/975/GCF_036711975.1_IU_Otau_3.0/GCF_036711975.1_IU_Otau_3.0_genomic.fna.gz
+val	Animales	Spinibarbus caldwelli	found	GCA_039654775.1	Chromosome	reference genome	1773.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/039/654/775/GCA_039654775.1_ASM3965477v1/GCA_039654775.1_ASM3965477v1_genomic.fna.gz
+val	Animales	Theria mammals	not_found					
+val	Animales	Hyaena hyaena	found	GCF_003009895.1	Scaffold	reference genome	2374.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/009/895/GCF_003009895.1_ASM300989v1/GCF_003009895.1_ASM300989v1_genomic.fna.gz
+val	Animales	Odocoileus virginianus	found	GCF_051028165.1	Complete Genome	na	0.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/051/028/165/GCF_051028165.1_ASM5102816v1/GCF_051028165.1_ASM5102816v1_genomic.fna.gz
+val	Animales	Fasciola gigantica	found	GCA_018104335.1	Scaffold	reference genome	1347.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/018/104/335/GCA_018104335.1_GXU_FGig_PAC.1.0/GCA_018104335.1_GXU_FGig_PAC.1.0_genomic.fna.gz
+val	Animales	Acanthaster planci	found	GCF_054643075.1	Chromosome	reference genome	436.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/054/643/075/GCF_054643075.1_COTS_SCS/GCF_054643075.1_COTS_SCS_genomic.fna.gz
+val	Animales	Ovis aries	found	GCF_002826845.1	Complete Genome	na	0.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/826/845/GCF_002826845.1_ASM282684v1/GCF_002826845.1_ASM282684v1_genomic.fna.gz
+val	Animales	Limnoperna fortunei	found	GCA_944474755.1	Chromosome	reference genome	1335.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/944/474/755/GCA_944474755.1_xbLimFort5.1/GCA_944474755.1_xbLimFort5.1_genomic.fna.gz
+val	Animales	Synanceia verrucosa	found	GCA_029721515.1	Chromosome	reference genome	691.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/029/721/515/GCA_029721515.1_BGI_Synver_1.0/GCA_029721515.1_BGI_Synver_1.0_genomic.fna.gz
+val	Animales	Drosophila willistoni	found	GCF_018902025.1	Chromosome	reference genome	247.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/018/902/025/GCF_018902025.1_UCI_dwil_1.1/GCF_018902025.1_UCI_dwil_1.1_genomic.fna.gz
+val	Animales	Arctopsyche grandis	found	GCF_051622035.1	Chromosome	reference genome	475.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/051/622/035/GCF_051622035.1_ASM5162203v2/GCF_051622035.1_ASM5162203v2_genomic.fna.gz
+val	Animales	Aricia agestis	found	GCF_905147365.1	Chromosome	reference genome	435.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/905/147/365/GCF_905147365.1_ilAriAges1.1/GCF_905147365.1_ilAriAges1.1_genomic.fna.gz
+val	Animales	Gnatocerus cornutus	found	GCF_029298725.1	Chromosome	reference genome	342.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/029/298/725/GCF_029298725.1_icGnaCorn1.1/GCF_029298725.1_icGnaCorn1.1_genomic.fna.gz
+val	Animales	Blera fallax	found	GCA_946965025.1	Chromosome	reference genome	461.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/946/965/025/GCA_946965025.1_idBleFall4.1/GCA_946965025.1_idBleFall4.1_genomic.fna.gz
+val	Hongos	Sistotremastrum suecicum	found	GCA_001632355.1	Scaffold	reference genome	33.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/632/355/GCA_001632355.1_Sissu1/GCA_001632355.1_Sissu1_genomic.fna.gz
+val	Hongos	Naganishia albida	found	GCA_001599735.1	Scaffold	reference genome	20.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/599/735/GCA_001599735.1_JCM_2334_assembly_v001/GCA_001599735.1_JCM_2334_assembly_v001_genomic.fna.gz
+val	Hongos	Lachnellula subtilissima	found	GCA_007821545.1	Contig	reference genome	35.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/007/821/545/GCA_007821545.1_CFIA_Lsub_EG2017/GCA_007821545.1_CFIA_Lsub_EG2017_genomic.fna.gz
+val	Hongos	Trichaptum abietinum	found	GCA_910574555.1	Scaffold	reference genome	49.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/910/574/555/GCA_910574555.1_TA10106M1/GCA_910574555.1_TA10106M1_genomic.fna.gz
+val	Hongos	Magnusiomyces paraingens	found	GCF_902498895.1	Contig	reference genome	21.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/902/498/895/GCF_902498895.1_sapIngB/GCF_902498895.1_sapIngB_genomic.fna.gz
+val	Hongos	Aspergillus pseudoustus	found	GCA_044049465.1	Scaffold	reference genome	41.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/044/049/465/GCA_044049465.1_Asppust1/GCA_044049465.1_Asppust1_genomic.fna.gz
+val	Hongos	Metschnikowia rancensis	not_found					
+val	Hongos	Zancudomyces culisetae	found	GCA_001969505.1	Scaffold	na	28.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/969/505/GCA_001969505.1_ASM196950v1/GCA_001969505.1_ASM196950v1_genomic.fna.gz
+val	Hongos	Chlamydoabsidia padenii	found	GCA_025330725.1	Contig	reference genome	34.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/025/330/725/GCA_025330725.1_Chlpad1/GCA_025330725.1_Chlpad1_genomic.fna.gz
+val	Hongos	Diaporthe caulivora	found	GCA_055944425.1	Complete Genome	reference genome	56.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/055/944/425/GCA_055944425.1_NAU_DcSQ_1.1/GCA_055944425.1_NAU_DcSQ_1.1_genomic.fna.gz
+val	Hongos	Aspergillus tamarii	found	GCA_008973505.1	Scaffold	na	38.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/008/973/505/GCA_008973505.1_ASM897350v1/GCA_008973505.1_ASM897350v1_genomic.fna.gz
+val	Hongos	Mucor cordense	not_found					
+val	Hongos	Gymnopus androsaceus	found	GCA_009733575.1	Scaffold	reference genome	89.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/733/575/GCA_009733575.1_Gyman1/GCA_009733575.1_Gyman1_genomic.fna.gz
+val	Hongos	Thamnidium elegans	found	GCA_016758935.1	Scaffold	na	30.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/758/935/GCA_016758935.1_ASM1675893v1/GCA_016758935.1_ASM1675893v1_genomic.fna.gz
+val	Hongos	Aspergillus oerlinghausenensis	found	GCA_014250555.1	Scaffold	reference genome	32.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/250/555/GCA_014250555.1_ASM1425055v1/GCA_014250555.1_ASM1425055v1_genomic.fna.gz
+val	Hongos	Massariosphaeria phaeospora	found	GCA_011032825.1	Contig	reference genome	42.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/011/032/825/GCA_011032825.1_Masph1/GCA_011032825.1_Masph1_genomic.fna.gz
+val	Hongos	Armillaria borealis	found	GCA_030435635.1	Complete Genome	na	0.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/030/435/635/GCA_030435635.1_Armbor1/GCA_030435635.1_Armbor1_genomic.fna.gz
+val	Hongos	Xylaria brunneovinosa	not_found					
+val	Hongos	Zopfia rhizophila cbs 20726	found	GCA_010093925.1	Scaffold	reference genome	152.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/010/093/925/GCA_010093925.1_Zoprh1/GCA_010093925.1_Zoprh1_genomic.fna.gz
+val	Hongos	Suillus tomentosus	found	GCA_016647685.1	Contig	reference genome	53.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/647/685/GCA_016647685.1_Suitom1/GCA_016647685.1_Suitom1_genomic.fna.gz
+val	Hongos	Alternaria hordeiaustralica	found	GCF_023758085.1	Scaffold	reference genome	37.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/023/758/085/GCF_023758085.1_ASM2375808v1/GCF_023758085.1_ASM2375808v1_genomic.fna.gz
+val	Hongos	Cabalodontia subcretacea	not_found					
+val	Hongos	Terfezia boudieri atcc mya4762	found	GCA_003788615.2	Scaffold	reference genome	63.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/788/615/GCA_003788615.2_Terbo2/GCA_003788615.2_Terbo2_genomic.fna.gz
+val	Hongos	Tricholoma populinum	found	GCA_058411345.1	Contig	reference genome	137.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/058/411/345/GCA_058411345.1_ASM5841134v1/GCA_058411345.1_ASM5841134v1_genomic.fna.gz
+test	Plantas	Apium graveolens	found	GCF_009905375.1	Chromosome	reference genome	3332.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/905/375/GCF_009905375.1_ASM990537v1/GCF_009905375.1_ASM990537v1_genomic.fna.gz
+test	Plantas	Nyssa sinensis	found	GCA_008638375.1	Chromosome	reference genome	1001.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/008/638/375/GCA_008638375.1_ASM863837v1/GCA_008638375.1_ASM863837v1_genomic.fna.gz
+test	Plantas	Eleusine indica	found	GCA_030411765.1	Complete Genome	na	560	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/030/411/765/GCA_030411765.1_ASM3041176v1/GCA_030411765.1_ASM3041176v1_genomic.fna.gz
+test	Plantas	Orychophragmus violaceus	found	GCA_030180135.1	Chromosome	reference genome	1253.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/030/180/135/GCA_030180135.1_ASM3018013v1/GCA_030180135.1_ASM3018013v1_genomic.fna.gz
+test	Plantas	Lilium henryi	not_found					
+test	Plantas	Morella rubra	found	GCA_003952965.2	Chromosome	reference genome	313.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/952/965/GCA_003952965.2_Mru_ZJU_2/GCA_003952965.2_Mru_ZJU_2_genomic.fna.gz
+test	Plantas	Cichorium intybus	found	GCA_023525715.1	Chromosome	reference genome	1278.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/525/715/GCA_023525715.1_ASM2352571v1/GCA_023525715.1_ASM2352571v1_genomic.fna.gz
+test	Plantas	Sambucus nigra	found	GCA_949130495.1	Chromosome	reference genome	11813.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/949/130/495/GCA_949130495.1_daSamNigr1.1/GCA_949130495.1_daSamNigr1.1_genomic.fna.gz
+test	Plantas	Misopates orontium	found	GCA_946800315.1	Chromosome	reference genome	361.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/946/800/315/GCA_946800315.1_daMisOron1.1/GCA_946800315.1_daMisOron1.1_genomic.fna.gz
+test	Plantas	Actinidia chinensis	found	GCA_051903715.1	Chromosome	reference genome	607.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/051/903/715/GCA_051903715.1_ASM5190371v1/GCA_051903715.1_ASM5190371v1_genomic.fna.gz
+test	Plantas	Dianthus caryophyllus	found	GCA_023091065.1	Chromosome	reference genome	636.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/091/065/GCA_023091065.1_ASM2309106v1/GCA_023091065.1_ASM2309106v1_genomic.fna.gz
+test	Plantas	Angophora floribunda	found	GCA_014182895.1	Chromosome	reference genome	388.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/014/182/895/GCA_014182895.1_ASM1418289v1/GCA_014182895.1_ASM1418289v1_genomic.fna.gz
+test	Plantas	Gastrodia elata	found	GCA_016760335.1	Chromosome	reference genome	1046.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/760/335/GCA_016760335.1_NIFOS_GasEla_1.0/GCA_016760335.1_NIFOS_GasEla_1.0_genomic.fna.gz
+test	Plantas	Xanthoceras sorbifolium	found	GCA_049350635.1	Complete Genome	reference genome	467.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/049/350/635/GCA_049350635.1_PBN-43_hap1/GCA_049350635.1_PBN-43_hap1_genomic.fna.gz
+test	Plantas	Punica granatum	found	GCF_007655135.1	Chromosome	reference genome	320.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/007/655/135/GCF_007655135.1_ASM765513v2/GCF_007655135.1_ASM765513v2_genomic.fna.gz
+test	Plantas	Solanum stenotomum	found	GCF_019186545.1	Chromosome	reference genome	846.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/186/545/GCF_019186545.1_ASM1918654v1/GCF_019186545.1_ASM1918654v1_genomic.fna.gz
+test	Plantas	Ballota nigra	found	GCA_947034835.1	Chromosome	reference genome	1186.8	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/947/034/835/GCA_947034835.1_daBalNigr1.1/GCA_947034835.1_daBalNigr1.1_genomic.fna.gz
+test	Plantas	Stellera chamaejasme	found	GCA_024586325.1	Chromosome	reference genome	439.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/024/586/325/GCA_024586325.1_ASM2458632v1/GCA_024586325.1_ASM2458632v1_genomic.fna.gz
+test	Plantas	Macadamia tetraphylla	found	GCA_022985045.1	Chromosome	reference genome	750.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/985/045/GCA_022985045.1_ASM2298504v1/GCA_022985045.1_ASM2298504v1_genomic.fna.gz
+test	Plantas	Amborella trichopoda	found	GCF_054954075.1	Chromosome	reference genome	700.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/054/954/075/GCF_054954075.1_AtrichopodaSantaCruz75HAP2_v2.0/GCF_054954075.1_AtrichopodaSantaCruz75HAP2_v2.0_genomic.fna.gz
+test	Animales	Dicentrarchus labrax	found	GCF_905237075.1	Scaffold	reference genome	695.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/905/237/075/GCF_905237075.1_dlabrax2021/GCF_905237075.1_dlabrax2021_genomic.fna.gz
+test	Animales	Trachemys scripta	found	GCF_013100865.1	Chromosome	reference genome	2126.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/013/100/865/GCF_013100865.1_CAS_Tse_1.0/GCF_013100865.1_CAS_Tse_1.0_genomic.fna.gz
+test	Animales	Ophraella communa	found	GCA_035357415.1	Chromosome	reference genome	733.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/035/357/415/GCA_035357415.1_ASM3535741v1/GCA_035357415.1_ASM3535741v1_genomic.fna.gz
+test	Animales	Dryobates pubescens	found	GCF_014839835.1	Chromosome	reference genome	1187.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/014/839/835/GCF_014839835.1_bDryPub1.pri/GCF_014839835.1_bDryPub1.pri_genomic.fna.gz
+test	Animales	Hydroides elegans	found	GCA_001703475.1	Scaffold	reference genome	1026.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/703/475/GCA_001703475.1_H_elegans_v1.0/GCA_001703475.1_H_elegans_v1.0_genomic.fna.gz
+test	Animales	Porites divaricata	found	GCA_964035745.1	Chromosome	na	527.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/964/035/745/GCA_964035745.1_jaPorDiva4.1/GCA_964035745.1_jaPorDiva4.1_genomic.fna.gz
+test	Animales	Nasonia giraulti	found	GCA_016647725.1	Scaffold	reference genome	259.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/647/725/GCA_016647725.1_ASM1664772v1/GCA_016647725.1_ASM1664772v1_genomic.fna.gz
+test	Animales	Lucinisca nassula	found	GCA_963580285.1	Chromosome	reference genome	2926.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/963/580/285/GCA_963580285.1_xbLucNass1.1/GCA_963580285.1_xbLucNass1.1_genomic.fna.gz
+test	Animales	Gobio gobio	found	GCF_949357685.1	Chromosome	reference genome	1460.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/949/357/685/GCF_949357685.1_fGobGob1.1/GCF_949357685.1_fGobGob1.1_genomic.fna.gz
+test	Animales	Spodoptera litura	found	GCF_000839885.1	Complete Genome	na	0.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/839/885/GCF_000839885.1_ViralProj14138/GCF_000839885.1_ViralProj14138_genomic.fna.gz
+test	Animales	Zapus hudsonius	found	GCA_057945955.1	Chromosome	reference genome	2438.9	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/057/945/955/GCA_057945955.1_mZapHud2.hap2/GCA_057945955.1_mZapHud2.hap2_genomic.fna.gz
+test	Animales	Caenorhabditis remanei	found	GCF_010183535.1	Chromosome	reference genome	130.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/010/183/535/GCF_010183535.1_CRPX506/GCF_010183535.1_CRPX506_genomic.fna.gz
+test	Animales	Cheirogaleus medius	found	GCA_061140495.1	Chromosome	reference genome	2312.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/061/140/495/GCA_061140495.1_FatTail1_pri/GCA_061140495.1_FatTail1_pri_genomic.fna.gz
+test	Animales	Denticeps clupeoides	found	GCF_900700375.2	Chromosome	reference genome	567.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/700/375/GCF_900700375.2_fDenClu1.2/GCF_900700375.2_fDenClu1.2_genomic.fna.gz
+test	Animales	Xenos peckii	found	GCA_040167675.1	Contig	reference genome	72.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/040/167/675/GCA_040167675.1_UROC_Xpeckii_1.1/GCA_040167675.1_UROC_Xpeckii_1.1_genomic.fna.gz
+test	Animales	Silurus meridionalis	found	GCF_014805685.1	Chromosome	reference genome	742.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/014/805/685/GCF_014805685.1_ASM1480568v1/GCF_014805685.1_ASM1480568v1_genomic.fna.gz
+test	Animales	Crocodylus porosus	found	GCF_001723895.1	Scaffold	reference genome	2049.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/723/895/GCF_001723895.1_CroPor_comp1/GCF_001723895.1_CroPor_comp1_genomic.fna.gz
+test	Animales	Ammodramus caudacutus	not_found					
+test	Animales	Gibbula magus	found	GCA_936450465.1	Chromosome	reference genome	1470.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/936/450/465/GCA_936450465.1_xgGibMagu1.1/GCA_936450465.1_xgGibMagu1.1_genomic.fna.gz
+test	Animales	Branchiostoma lanceolatum	found	GCF_035083965.1	Chromosome	reference genome	458.3	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/035/083/965/GCF_035083965.1_klBraLanc5.hap2/GCF_035083965.1_klBraLanc5.hap2_genomic.fna.gz
+test	Hongos	Aspergillus stercorarius	not_found					
+test	Hongos	Blyttiomyces helicus	found	GCA_003614705.1	Scaffold	reference genome	46.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/614/705/GCA_003614705.1_Blyhe1/GCA_003614705.1_Blyhe1_genomic.fna.gz
+test	Hongos	Alternaria longipes	found	GCA_019059555.1	Complete Genome	na	0.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/019/059/555/GCA_019059555.1_ASM1905955v1/GCA_019059555.1_ASM1905955v1_genomic.fna.gz
+test	Hongos	Alternaria postmessia	found	GCF_024291825.1	Scaffold	reference genome	34.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/024/291/825/GCF_024291825.1_ASM2429182v1/GCF_024291825.1_ASM2429182v1_genomic.fna.gz
+test	Hongos	Lichtheimia corymbifera	found	GCA_000723665.1	Scaffold	na	33.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/723/665/GCA_000723665.1_454Minimus/GCA_000723665.1_454Minimus_genomic.fna.gz
+test	Hongos	Vairimorpha apis	found	GCA_000447185.1	Scaffold	reference genome	8.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/447/185/GCA_000447185.1_NapisBRLv01/GCA_000447185.1_NapisBRLv01_genomic.fna.gz
+test	Hongos	Aspergillus caperatus	not_found					
+test	Hongos	Phaeoacremonium minimum	found	GCF_000392275.1	Complete Genome	na	0.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/392/275/GCF_000392275.1_UCRPA7V03/GCF_000392275.1_UCRPA7V03_genomic.fna.gz
+test	Hongos	Xylaria scruposa	found	GCA_022385635.1	Scaffold	reference genome	46.6	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/385/635/GCA_022385635.1_Xylscr1/GCA_022385635.1_Xylscr1_genomic.fna.gz
+test	Hongos	Cubamyces menziesii	found	GCA_022606275.1	Contig	reference genome	35.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/022/606/275/GCA_022606275.1_Tramen1/GCA_022606275.1_Tramen1_genomic.fna.gz
+test	Hongos	Colletotrichum tofieldiae	found	GCA_001618705.1	Scaffold	na	53.0	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/618/705/GCA_001618705.1_Ct168.49v1/GCA_001618705.1_Ct168.49v1_genomic.fna.gz
+test	Hongos	Rhynchosporium secalis	found	GCA_900074895.1	Scaffold	reference genome	49.4	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/074/895/GCA_900074895.1_version_1/GCA_900074895.1_version_1_genomic.fna.gz
+test	Hongos	Aspergillus igneus	not_found					
+test	Hongos	Halojulella avicenniae	not_found					
+test	Hongos	Flavomyces fulophazii	found	GCA_060417845.1	Contig	reference genome	42.1	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/060/417/845/GCA_060417845.1_ASM6041784v1/GCA_060417845.1_ASM6041784v1_genomic.fna.gz
+test	Hongos	Rhizopus stolonifer	found	GCA_059058645.1	Chromosome	reference genome	48.2	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/059/058/645/GCA_059058645.1_ASM5905864v1/GCA_059058645.1_ASM5905864v1_genomic.fna.gz
+test	Hongos	Terfezia claveryi	found	GCA_015179025.1	Contig	reference genome	74.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/015/179/025/GCA_015179025.1_Tercla1/GCA_015179025.1_Tercla1_genomic.fna.gz
+test	Hongos	Blakeslea trispora	found	GCA_025331445.1	Contig	reference genome	37.5	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/025/331/445/GCA_025331445.1_Blatri1/GCA_025331445.1_Blatri1_genomic.fna.gz
+test	Hongos	Ascochyta lentis	found	GCA_016097375.2	Complete Genome	reference genome	41.7	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/016/097/375/GCA_016097375.2_AlKewell/GCA_016097375.2_AlKewell_genomic.fna.gz
+test	Hongos	Piloderma byssinum	not_found					

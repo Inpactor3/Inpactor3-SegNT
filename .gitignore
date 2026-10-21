@@ -156,3 +156,14 @@ data/raw/TAIR10_chr1.fasta
 data/raw/TAIR10_pseudo.fasta
 data/raw/*.fasta
 data/raw/*.csv
+
+# Resultados, presentaciones y artefactos pesados (no van al repo)
+results/
+ResultadosUltimoEntreno/
+bundles/
+seq_bundles/
+gold_pack/
+*.pptx
+*.bak
+data/external/
+data/ncbi_index/
