@@ -167,3 +167,5 @@ gold_pack/
 *.bak
 data/external/
 data/ncbi_index/
+
+*.bak_*
