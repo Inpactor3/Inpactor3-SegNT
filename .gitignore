@@ -169,3 +169,12 @@ data/external/
 data/ncbi_index/
 
 *.bak_*
+
+# Presentaciones y guiones de reuniones (solo se guardan fuera del repo)
+docs/guion_*.md
+docs/presentacion_*.md
+docs/slides_png/curva_*.png
+docs/slides_png/curvas_*.png
+docs/.~lock*
+scripts/build_pptx_26oct*.py
+scripts/build_anexo_tablas.py

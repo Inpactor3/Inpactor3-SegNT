@@ -1,0 +1,60 @@
+species,split,n_windows,n_pos,n_neg,pct_pos,region_bp,n_1a1,n_train_used,nombre_cientifico,phylum,clase,orden,familia,confianza_gbif,grupo
+Acanthaster_planci___GCF_054643075.1,val,8254,1012,7242,12.3,24000,8254,,Acanthaster planci,Echinodermata,Asteroidea,Valvatida,Acanthasteridae,99,Equinodermos
+Acanthopagrus_latus__GCF_904848185.1,train,13661,3267,10394,23.9,24000,13661,,Acanthopagrus latus,Chordata,,Perciformes,Sparidae,99,Peces
+Acipenser_ruthenus__GCF_902713425.1,train,36898,21720,15178,58.9,24000,30356,,Acipenser ruthenus,Chordata,,Acipenseriformes,Acipenseridae,99,Peces
+Acrocera_orbiculus__GCA_947359355.1,train,3762,1639,2123,43.6,24000,3762,,Acrocera orbiculus,Arthropoda,Insecta,Diptera,Acroceridae,96,Insectos
+Acropora_acuminata___GCA_014633975.1,val,7186,3160,4026,44.0,24000,7186,,Acropora acuminata,Cnidaria,Anthozoa,Scleractinia,Acroporidae,99,Corales y anémonas
+Acropora_hyacinthus__GCA_964291705.1,train,9803,4451,5352,45.4,24000,9803,,Acropora hyacinthus,Cnidaria,Anthozoa,Scleractinia,Acroporidae,99,Corales y anémonas
+Actinemys_marmorata__GCA_022086475.1,train,45998,42113,3885,91.6,24000,7770,,Actinemys marmorata,Chordata,Testudines,,Emydidae,99,Reptiles
+Adranes_taylori__GCA_009867245.2,train,126,23,103,18.3,24000,126,,Adranes taylori,Arthropoda,Insecta,Coleoptera,Staphylinidae,99,Insectos
+Aethina_tumida__GCF_024364675.1,train,4912,1666,3246,33.9,24000,4912,,Aethina tumida,Arthropoda,Insecta,Coleoptera,Nitidulidae,99,Insectos
+Amphilophus_citrinellus__GCA_013435755.1,train,18614,9011,9603,48.4,24000,18614,,Amphilophus citrinellus,Chordata,,Perciformes,Cichlidae,99,Peces
+Anopheles_moucheti__GCF_943734755.1,train,3800,1147,2653,30.2,24000,3800,,Anopheles moucheti,Arthropoda,Insecta,Diptera,Culicidae,99,Insectos
+Arctopsyche_grandis___GCF_051622035.1,val,9414,7641,1773,81.2,24000,3546,,Arctopsyche grandis,Arthropoda,Insecta,Trichoptera,Hydropsychidae,99,Insectos
+Aricia_agestis___GCF_905147365.1,val,8692,3558,5134,40.9,24000,8692,,Aricia agestis,Arthropoda,Insecta,Lepidoptera,Lycaenidae,99,Insectos
+Astropecten_irregularis__GCA_963971285.1,train,9069,1153,7916,12.7,24000,9069,,Astropecten irregularis,Echinodermata,Asteroidea,Paxillosida,Astropectinidae,99,Equinodermos
+Athalia_rosae___GCF_917208135.1,val,3264,376,2888,11.5,24000,3264,,Athalia rosae,Arthropoda,Insecta,Hymenoptera,Tenthredinidae,99,Insectos
+Balaenoptera_musculus__GCF_009873245.2,train,47411,40589,6822,85.6,24000,13644,,Balaenoptera musculus,Chordata,Mammalia,Cetacea,Balaenopteridae,99,Mamíferos
+Bison_bison__GCF_000754665.1,train,49232,40624,8608,82.5,24000,17216,,Bison bison,Chordata,Mammalia,Artiodactyla,Bovidae,99,Mamíferos
+Blera_fallax___GCA_946965025.1,val,9199,4526,4673,49.2,24000,9199,,Blera fallax,Arthropoda,Insecta,Diptera,Syrphidae,99,Insectos
+Bolinopsis_microptera__GCF_026151205.1,train,5123,345,4778,6.7,24000,5123,,Bolinopsis microptera,Ctenophora,Tentaculata,Lobata,Bolinopsidae,99,Ctenóforos
+Branchinecta_lindahli__GCA_023053555.1,train,7674,3906,3768,50.9,24000,7536,,Branchinecta lindahli,Arthropoda,Branchiopoda,Anostraca,Branchinectidae,99,Crustáceos
+Branchiostoma_lanceolatum___GCF_035083965.1,test,9135,4455,4680,48.8,24000,9135,,Branchiostoma lanceolatum,Chordata,Leptocardii,,Branchiostomatidae,99,Cordados no vertebrados
+Caenorhabditis_remanei___GCF_010183535.1,test,2437,268,2169,11.0,24000,2437,,Caenorhabditis remanei,Nematoda,Chromadorea,Rhabditida,Rhabditidae,99,Nematodos
+Calvadosia_cruxmelitensis__GCA_900245855.1,train,229,18,211,7.9,24000,229,,Calvadosia cruxmelitensis,Cnidaria,Staurozoa,Stauromedusae,Kishinouyeidae,99,Medusas y cnidarios
+Capromys_pilorides__GCA_004027915.1,train,1799,1728,71,96.1,24000,142,,Capromys pilorides,Chordata,Mammalia,Rodentia,Capromyidae,99,Mamíferos
+Cariama_cristata__GCF_000690535.1,train,9432,3306,6126,35.1,24000,9432,,Cariama cristata,Chordata,Aves,Cariamiformes,Cariamidae,99,Aves
+Catharus_ustulatus__GCF_009819885.2,train,22528,17492,5036,77.6,24000,10072,,Catharus ustulatus,Chordata,Aves,Passeriformes,Turdidae,99,Aves
+Ceratotherium_simum__GCF_057802395.1,train,49589,45240,4349,91.2,24000,8698,,Ceratotherium simum,Chordata,Mammalia,Perissodactyla,Rhinocerotidae,99,Mamíferos
+Charadrius_alexandrinus__GCA_053477275.1,train,17534,8346,9188,47.6,24000,17534,,Charadrius alexandrinus,Chordata,Aves,Charadriiformes,Charadriidae,99,Aves
+Chelonoidis_abingdonii__GCF_003597395.2,train,44754,41981,2773,93.8,24000,5546,,Chelonoidis abingdonii,Chordata,Testudines,,Testudinidae,99,Reptiles
+Chrysoperla_carnea__GCF_905475395.1,train,5963,2511,3452,42.1,24000,5963,,Chrysoperla carnea,Arthropoda,Insecta,Neuroptera,Chrysopidae,99,Insectos
+Cirrhinus_mrigala__GCA_036247105.2,train,20864,19030,1834,91.2,24000,3668,,Cirrhinus mrigala,Chordata,,Cypriniformes,Cyprinidae,99,Peces
+Coregonus_clupeaformis__GCF_020615455.1,train,51866,41418,10448,79.9,24000,20896,,Coregonus clupeaformis,Chordata,,Salmoniformes,Salmonidae,99,Peces
+Cyphastrea_salae__GCA_964194085.1,train,10378,4649,5729,44.8,24000,10378,,Cyphastrea salae,Cnidaria,Anthozoa,Scleractinia,Merulinidae,99,Corales y anémonas
+Cyprinodon_variegatus__GCF_000732505.1,train,18901,4919,13982,26.0,24000,18901,,Cyprinodon variegatus,Chordata,,Cyprinodontiformes,Cyprinodontidae,99,Peces
+Dermatophagoides_farinae__GCF_024713945.1,train,1073,62,1011,5.8,24000,1073,,Dermatophagoides farinae,Arthropoda,Arachnida,Sarcoptiformes,Pyroglyphidae,99,Arácnidos
+Desoria_tigrina__GCA_906901685.1,train,3980,758,3222,19.0,24000,3980,,Desoria tigrina,Arthropoda,Collembola,Entomobryomorpha,Isotomidae,97,Otros artrópodos
+Dreissena_rostriformis__GCA_055670145.1,train,19100,9184,9916,48.1,24000,19100,,Dreissena rostriformis,Mollusca,Bivalvia,Myida,Dreissenidae,99,Moluscos
+Drosophila_buzzatii__GCA_035045845.1,train,3169,1530,1639,48.3,24000,3169,,Drosophila buzzatii,Arthropoda,Insecta,Diptera,Drosophilidae,99,Insectos
+Drosophila_kikkawai__GCF_030179895.1,train,3500,2147,1353,61.3,24000,2706,,Drosophila kikkawai,Arthropoda,Insecta,Diptera,Drosophilidae,99,Insectos
+Drosophila_willistoni___GCF_018902025.1,val,4348,1909,2439,43.9,24000,4348,,Drosophila willistoni,Arthropoda,Insecta,Diptera,Drosophilidae,99,Insectos
+Dugesia_japonica__GCA_001938525.1,train,0,0,0,0.0,0,0,,Dugesia japonica,Platyhelminthes,,Tricladida,Dugesiidae,99,Gusanos planos
+Ellobius_talpinus__GCA_001685095.1,train,2045,2045,0,100.0,24000,2000,,Ellobius talpinus,Chordata,Mammalia,Rodentia,Cricetidae,99,Mamíferos
+Emydura_subglobosa__GCA_054346155.1,train,39784,34550,5234,86.8,24000,10468,,Emydura subglobosa,Chordata,Testudines,,Chelidae,99,Reptiles
+Eonycteris_spelaea__GCA_062009626.1,train,37551,32635,4916,86.9,24000,9832,,Eonycteris spelaea,Chordata,Mammalia,Chiroptera,Pteropodidae,99,Mamíferos
+Eptatretus_burgeri__GCF_056783735.1,train,24548,14867,9681,60.6,24000,19362,,Eptatretus burgeri,Chordata,Myxini,Myxiniformes,Myxinidae,99,Peces
+Eubucco_bourcierii__GCA_013396675.1,train,18021,2795,15226,15.5,24000,18021,,Eubucco bourcierii,Chordata,Aves,Piciformes,Capitonidae,99,Aves
+Eulacestoma_nigropectus__GCA_013397775.1,train,19278,10518,8760,54.6,24000,17520,,Eulacestoma nigropectus,Chordata,Aves,Passeriformes,Neosittidae,99,Aves
+Gigantopelta_aegis__GCF_016097555.1,train,15017,5192,9825,34.6,24000,15017,,Gigantopelta aegis,Mollusca,Gastropoda,Neomphalida,Peltospiridae,99,Moluscos
+Gnatocerus_cornutus___GCF_029298725.1,val,6423,4094,2329,63.7,24000,4658,,Gnatocerus cornutus,Arthropoda,Insecta,Coleoptera,Tenebrionidae,99,Insectos
+Gopherus_agassizii__GCA_002896415.1,train,34174,31615,2559,92.5,24000,5118,,Gopherus agassizii,Chordata,Testudines,,Testudinidae,99,Reptiles
+Halcyon_senegalensis__GCA_013397595.1,train,21725,8728,12997,40.2,24000,21725,,Halcyon senegalensis,Chordata,Aves,Coraciiformes,Alcedinidae,99,Aves
+Haliaeetus_albicilla__GCF_947461875.1,train,26042,16456,9586,63.2,24000,19172,,Haliaeetus albicilla,Chordata,Aves,Accipitriformes,Accipitridae,99,Aves
+Haliotis_cracherodii__GCF_022045235.1,train,23596,19612,3984,83.1,24000,7968,,Haliotis cracherodii,Mollusca,Gastropoda,Lepetellida,Haliotidae,99,Moluscos
+Halocynthia_aurantium__GCA_013436065.1,train,640,10,630,1.6,24000,640,,Halocynthia aurantium,Chordata,Ascidiacea,Stolidobranchia,Pyuridae,99,Cordados no vertebrados
+Nasonia_giraulti___GCA_016647725.1,test,4131,1174,2957,28.4,24000,4131,,Nasonia giraulti,Arthropoda,Insecta,Hymenoptera,Pteromalidae,99,Insectos
+Onthophagus_taurus___GCF_036711975.1,val,5714,1604,4110,28.1,24000,5714,,Onthophagus taurus,Arthropoda,Insecta,Coleoptera,Scarabaeidae,99,Insectos
+Pelagia_noctiluca___GCA_963924455.1,val,6641,1317,5324,19.8,24000,6641,,Pelagia noctiluca,Cnidaria,Scyphozoa,Semaeostomeae,Pelagiidae,99,Medusas y cnidarios
+Porites_divaricata__GCA_964035745.1,test,4011,4011,0,100.0,24000,2000,,Porites divaricata,Cnidaria,Anthozoa,Scleractinia,Poritidae,99,Corales y anémonas
+Xenos_peckii___GCA_040167675.1,test,1223,499,724,40.8,24000,1223,,Xenos peckii,Arthropoda,Insecta,Strepsiptera,Xenidae,98,Insectos

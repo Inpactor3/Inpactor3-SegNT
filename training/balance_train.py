@@ -1,4 +1,9 @@
-"""Balancea el split de entrenamiento: cap de positivas por especie.
+"""Balancea el split de entrenamiento a nivel de JSONL (opcional, pre-etapa).
+
+NOTA v2: el balance 1:1 y el class_weight ya los aplica `train_mlp.py`
+(`--balance global|species` + `--class_weight`) sobre los embeddings, sin rehacer
+embeddings ni bundles. Usa este script solo si necesitas materializar un
+consolidado balanceado en disco (auditoria/muestras).
 
 Mantiene val/test intactos. Para cada especie del split elegido:
   - lee sus JSONL de windows_ltr (positivas y negativas)
@@ -7,7 +12,7 @@ Mantiene val/test intactos. Para cada especie del split elegido:
   - si la especie no tiene negativas, conserva como maximo `--orphan_cap` positivas
 
 Uso:
-  python balance_train.py --reino Plantas --ratio 2 --splits train
+  python balance_train.py --reino Plantas --ratio 1 --splits train
 """
 import argparse, glob, json, os, random
 from pathlib import Path

@@ -1,22 +1,26 @@
-"""Orquestador de entrenamiento para Colab/GPU.
+"""Orquestador de entrenamiento para Colab/Kaggle/GPU.
 
-Crea en Drive:
+Crea en Drive (o /kaggle/working):
   Inpactor2_gpu/<reino>/
-    emb/      embeddings precalculados (se reutilizan)
-    ckpt/     best.pt, metrics.csv, test_metrics.json
+    emb/      embeddings (4 bloques x 6 kb, max pooling) por especie
+    ckpt/     best.pt (incluye umbral calibrado), metrics.csv,
+              calibration.json, test_metrics.json
     logs/     gpu_info.txt, precompute.log, train.log
+
+Flujo (por reino):
+  1. precalculo de embeddings con max pooling sobre bloques (reanudable por especie).
+  2. entrenamiento del MLP con `--balance 1` + `--class_weight` y calibracion
+     del umbral en validacion (`--calibrate`).
 
 Uso:
   python colab_run.py --reino Hongos --seq_dir /content/data/Hongos \
       --drive_root /content/drive/MyDrive/Inpactor2_gpu --epochs 100
-
-  # o con genomas:
-  python colab_run.py --reino Hongos --jsonl_dir consolidated/Hongos \
-      --genomes_dir /content/genomes/Hongos --drive_root ... 
-
-Si los embeddings ya existen, se salta el precalculo (reanudable).
+  python colab_run.py --reino Plantas --seq_dir ... --balance 1 --class_weight --calibrate
 """
-import argparse, os, subprocess, sys, time
+import argparse
+import subprocess
+import sys
+import time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -33,15 +37,14 @@ def sh(cmd, log_path):
 
 def gpu_info(out):
     import torch
-    lines = []
-    lines.append(f"fecha: {time.strftime('%Y-%m-%d %H:%M:%S')}")
-    lines.append(f"python: {sys.version.split()[0]}")
-    lines.append(f"torch: {torch.__version__}")
-    lines.append(f"cuda disponible: {torch.cuda.is_available()}")
+    lines = [f"fecha: {time.strftime('%Y-%m-%d %H:%M:%S')}",
+             f"python: {sys.version.split()[0]}",
+             f"torch: {torch.__version__}",
+             f"cuda disponible: {torch.cuda.is_available()}"]
     if torch.cuda.is_available():
         lines.append(f"gpu: {torch.cuda.get_device_name(0)}")
         props = torch.cuda.get_device_properties(0)
-        lines.append(f"vram: {props.total_memory/1e9:.1f} GB")
+        lines.append(f"vram: {props.total_memory / 1e9:.1f} GB")
         lines.append(f"capability: {props.major}.{props.minor}")
         lines.append(f"cuda version: {torch.version.cuda}")
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -59,28 +62,37 @@ def main():
     ap.add_argument("--epochs", type=int, default=100)
     ap.add_argument("--patience", type=int, default=10)
     ap.add_argument("--batch_size", type=int, default=4096)
+    ap.add_argument("--token_batch", type=int, default=64)
+    ap.add_argument("--chunks", type=int, default=4,
+                    help="bloques de 6 kb por ventana (4 por defecto)")
+    ap.add_argument("--balance", choices=("none", "global", "species"), default="none",
+                    help="1 por defecto para plantas/animales via --balance 1/global")
     ap.add_argument("--class_weight", action="store_true")
+    ap.add_argument("--calibrate", action="store_true")
+    ap.add_argument("--standardize", action="store_true")
     ap.add_argument("--splits", default="train,val,test")
     args = ap.parse_args()
 
     root = Path(args.drive_root) / args.reino
-    emb = root / "emb"; ckpt = root / "ckpt"; logs = root / "logs"
+    emb, ckpt, logs = root / "emb", root / "ckpt", root / "logs"
     for d in (emb, ckpt, logs):
         d.mkdir(parents=True, exist_ok=True)
 
     gpu_info(logs / "gpu_info.txt")
 
-    have_all = all((emb / f"{s}_emb.npy").exists() for s in args.splits.split(","))
+    have_all = all((emb / f"{s}_emb.npy").exists() or any((emb / s).glob("*_emb.npy"))
+                   for s in args.splits.split(","))
     if have_all:
         print("embeddings ya existen, se salta el precalculo")
     else:
         cmd = [sys.executable, str(HERE / "precompute_embeddings.py"),
-               "--out_dir", str(emb), "--splits", args.splits]
+               "--out_dir", str(emb), "--splits", args.splits,
+               "--chunks", str(args.chunks), "--token_batch", str(args.token_batch)]
         if args.seq_dir:
             cmd += ["--seq_dir", args.seq_dir]
         else:
             cmd += ["--jsonl_dir", args.jsonl_dir, "--genomes_dir", args.genomes_dir]
-        print("precalculando embeddings...")
+        print("precalculando embeddings (max pooling sobre bloques)...")
         rc = sh(cmd, logs / "precompute.log")
         if rc != 0:
             print("ERROR en precalculo; revisa", logs / "precompute.log")
@@ -91,8 +103,11 @@ def main():
            "--emb_dir", str(emb), "--out_dir", str(ckpt),
            "--epochs", str(args.epochs), "--patience", str(args.patience),
            "--batch_size", str(args.batch_size)]
-    if args.class_weight:
-        cmd.append("--class_weight")
+    if args.balance not in ("none",):
+        cmd += ["--balance", "global" if args.balance == "1" else args.balance]
+    for flag in ("class_weight", "calibrate", "standardize"):
+        if getattr(args, flag):
+            cmd.append(f"--{flag}")
     print("entrenando...")
     rc = sh(cmd, logs / "train.log")
     print("terminado con codigo", rc)
