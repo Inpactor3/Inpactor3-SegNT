@@ -62,6 +62,7 @@ def main():
 
     por_grupo = {}
     sin_grupo = []
+    no_evaluables = []
     total_probs, total_labs = [], []
 
     for f in files:
@@ -82,14 +83,19 @@ def main():
             lg = head(torch.from_numpy(x).to(device)).float().cpu().numpy()
         p = 1.0 / (1.0 + np.exp(-np.clip(lg, -60, 60)))
 
+        # una especie con una sola clase no permite medir balanced accuracy
+        if y.mean() in (0.0, 1.0):
+            no_evaluables.append((sp, float(y.mean()), int(len(y))))
+
         g = grupos.get(sp, "SIN GRUPO")
         if g == "SIN GRUPO":
             sin_grupo.append(sp)
         por_grupo.setdefault(g, {"p": [], "y": []})
         por_grupo[g]["p"].append(p)
         por_grupo[g]["y"].append(y)
-        total_probs.append(p)
-        total_labs.append(y)
+        if y.mean() not in (0.0, 1.0):
+            total_probs.append(p)
+            total_labs.append(y)
 
     filas = []
     for g, d in por_grupo.items():
@@ -111,19 +117,23 @@ def main():
             "pr_auc": round(m["pr_auc"], 3),
         })
 
+    if not total_probs:
+        raise SystemExit("no hay especies evaluables (todas con una sola clase)")
+
     P = np.concatenate(total_probs)
     Y = np.concatenate(total_labs)
     LG = np.log(np.clip(P, 1e-6, 1 - 1e-6) / np.clip(1 - P, 1e-6, 1))
     M = metrics(LG, Y, thr)
     filas.append({
-        "grupo": "== TOTAL ==", "especies": len(files), "ventanas": int(len(Y)),
+        "grupo": "== TOTAL evaluable ==", "especies": len(total_probs),
+        "ventanas": int(len(Y)),
         "prevalencia": round(float(Y.mean()), 3),
         "bal_acc": round(M["balanced_accuracy"], 3), "f1": round(M["f1"], 3),
         "precision": round(M["precision"], 3), "recall": round(M["recall"], 3),
         "specificity": round(M["specificity"], 3), "pr_auc": round(M["pr_auc"], 3),
     })
 
-    filas.sort(key=lambda r: (r["grupo"] != "== TOTAL ==", -r["ventanas"]))
+    filas.sort(key=lambda r: (not r["grupo"].startswith("== TOTAL"), -r["ventanas"]))
 
     print(f"Umbral usado: {thr}  |  split: {args.split}  |  {len(files)} especies\n")
     print(f"{'grupo':26s} {'esp':>4s} {'vent':>7s} {'prev':>5s} {'BA':>6s} "
@@ -133,6 +143,12 @@ def main():
               f"{r['prevalencia']:5.2f} {r['bal_acc']:6.3f} {r['f1']:6.3f} "
               f"{r['precision']:6.3f} {r['recall']:6.3f} {r['specificity']:6.3f} "
               f"{r['pr_auc']:7.3f}")
+
+    if no_evaluables:
+        print("\nExcluidas del total (una sola clase, balanced accuracy no aplica):")
+        for sp, prev, n in no_evaluables:
+            etiqueta = "100 % positiva" if prev == 1.0 else "100 % negativa"
+            print(f"   {sp[:48]:48s} {n:6d} ventanas · {etiqueta}")
 
     if sin_grupo:
         print(f"\nSin grupo asignado ({len(sin_grupo)}): {sin_grupo[:5]}")
