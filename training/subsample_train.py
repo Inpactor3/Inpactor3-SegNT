@@ -16,6 +16,7 @@ Uso:
 import argparse
 import glob
 import os
+import zlib
 
 import numpy as np
 
@@ -31,7 +32,6 @@ def main():
     ap.add_argument("--splits_to_link", default="val,test")
     args = ap.parse_args()
 
-    rng = np.random.default_rng(args.seed)
     dst = os.path.join(args.out_dir, "train")
     os.makedirs(dst, exist_ok=True)
 
@@ -49,6 +49,12 @@ def main():
             tot_n += int((y == 0).sum())
             print("SKIP", os.path.basename(f), flush=True)
             continue
+        # semilla por especie: el submuestreo de una especie no depende de que
+        # otras esten o no presentes. Asi el split se puede reorganizar sin
+        # recalcular embeddings de las especies que no se mueven.
+        tag = os.path.basename(f)[:-4]
+        rng = np.random.default_rng(
+            (args.seed * 1000003 + zlib.crc32(tag.encode())) % (2**32))
         z = np.load(f, allow_pickle=True)
         y = z["label"]
         neg = np.flatnonzero(y == 0)

@@ -12,6 +12,7 @@ Cambios v2 (entrada 24 kb con max pooling):
   * Guarda stats de estandarizacion en `best.pt` (necesario para evaluacion gond).
 """
 import argparse
+import csv
 import json
 from pathlib import Path
 
@@ -143,6 +144,10 @@ def main():
     ap.add_argument("--batch_size", type=int, default=4096)
     ap.add_argument("--lr", type=float, default=1e-3)
     ap.add_argument("--patience", type=int, default=10)
+    ap.add_argument("--group_csv", default=None,
+                    help="CSV con columnas species,grupo para limitar ventanas por grupo")
+    ap.add_argument("--group_cap", type=int, default=0,
+                    help="maximo de ventanas de train por grupo taxonomico (0 = sin tope)")
     ap.add_argument("--select", choices=("f1", "balanced_accuracy"), default="f1",
                     help="metrica de validacion para elegir la mejor epoca. Con "
                          "validacion muy desbalanceada usa balanced_accuracy: el F1 "
@@ -165,6 +170,39 @@ def main():
     xtr, ytr = load_split(args.emb_dir, "train")
     xva, yva = load_split(args.emb_dir, "val")
     print("train", xtr.shape, "val", xva.shape, "pos frac train", float(ytr.mean()))
+
+    if args.group_csv and args.group_cap > 0:
+        grupos = {}
+        with open(args.group_csv) as f:
+            for row in csv.DictReader(f):
+                grupos[row["species"]] = row.get("grupo", "sin_grupo")
+        files = sorted((args.emb_dir / "train").glob("*_emb.npy"))
+        esp_idx, off = [], 0
+        for f in files:
+            n = len(np.load(f, mmap_mode="r"))
+            esp_idx.append((f.name[:-8], np.arange(off, off + n)))
+            off += n
+        if off != len(ytr) or not files:
+            print("AVISO: no pude mapear especies a grupos; se omite el tope")
+        else:
+            by_group = {}
+            for sp, idx in esp_idx:
+                by_group.setdefault(grupos.get(sp, "sin_grupo"), []).append(idx)
+            rng_g = np.random.default_rng(args.seed)
+            keep, print_rows = [], []
+            for g, lst in sorted(by_group.items()):
+                idx = np.concatenate(lst)
+                antes = len(idx)
+                if antes > args.group_cap:
+                    idx = np.sort(rng_g.choice(idx, args.group_cap, replace=False))
+                keep.append(idx)
+                print_rows.append((g, antes, len(idx)))
+            keep = np.sort(np.concatenate(keep))
+            xtr, ytr = xtr[keep], ytr[keep]
+            print(f"tope por grupo = {args.group_cap}")
+            for g, antes, ahora in print_rows:
+                print(f"   {g:26s} {antes:7d} -> {ahora:7d}")
+            print(f"   {'TOTAL':26s} {off:7d} -> {len(ytr):7d}")
 
     if args.balance != "none":
         if args.balance == "global":
@@ -301,7 +339,9 @@ def main():
         torch.save(ck, args.out_dir / "best.pt")
 
     thr = float(ck.get("threshold", 0.5))
-    if (args.emb_dir / "test_emb.npy").exists() or (args.emb_dir / "test").is_dir():
+    hay_test = ((args.emb_dir / "test_emb.npy").exists()
+                or any((args.emb_dir / "test").glob("*_emb.npy")))
+    if hay_test:
         xte, yte = load_split(args.emb_dir, "test")
         if args.standardize and mu is not None:
             xte = ((xte - np.asarray(mu, dtype=np.float32)) /
