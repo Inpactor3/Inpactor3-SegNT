@@ -116,7 +116,8 @@ def evaluar(modelo, ids, labs, n_bloques, device, batch=8, max_tokens=1000):
     with torch.no_grad(), torch.autocast(device_type="cuda", dtype=torch.float16,
                                          enabled=(device == "cuda")):
         for i in range(0, len(labs), batch):
-            x = torch.from_numpy(ids[i:i + batch].astype(np.int64)).to(device)
+            x = torch.from_numpy(
+                ids[i:i + batch].reshape(-1, max_tokens).astype(np.int64)).to(device)
             m = torch.ones_like(x)
             lg = modelo(x, m, n_bloques).float()
             probs.append(torch.sigmoid(lg).cpu().numpy())
