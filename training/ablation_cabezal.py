@@ -13,6 +13,7 @@ import glob
 import json
 import os
 import sys
+from pathlib import Path
 
 import numpy as np
 import torch
@@ -49,7 +50,7 @@ def main():
     head.load_state_dict(ck["head"])
     head.eval()
 
-    x, y = load_split(args.emb_dir, args.split)
+    x, y = load_split(Path(args.emb_dir), args.split)
     if ck.get("mu") is not None:
         mu = np.asarray(ck["mu"], dtype=np.float32)
         sd = np.asarray(ck["sd"], dtype=np.float32)
