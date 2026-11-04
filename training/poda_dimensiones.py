@@ -59,6 +59,10 @@ def main():
     ap.add_argument("--emb_dir", required=True)
     ap.add_argument("--head", required=True)
     ap.add_argument("--k", default="5,10,20,40")
+    ap.add_argument("--select_split", default="val",
+                    help="conjunto donde se ELIGEN las dimensiones")
+    ap.add_argument("--eval_split", default="test",
+                    help="conjunto donde se MIDE")
     ap.add_argument("--out", default=None)
     args = ap.parse_args()
 
@@ -70,11 +74,13 @@ def main():
     W1 = head.pool_proj.weight.detach()
     print("device:", dev, flush=True)
 
-    xv, yv, pv = preparar("val", args.emb_dir, head, ck, dev)
-    xt, yt, pt = preparar("test", args.emb_dir, head, ck, dev)
+    xv, yv, pv = preparar(args.select_split, args.emb_dir, head, ck, dev)
+    xt, yt, pt = preparar(args.eval_split, args.emb_dir, head, ck, dev)
     ba_v0 = ba_con(xv, pv, W1, yv, head)
     ba_t0 = ba_con(xt, pt, W1, yt, head)
-    print(f"base: val BA {ba_v0:.4f} · test BA {ba_t0:.4f}", flush=True)
+    print(f"selecciona en {args.select_split} · mide en {args.eval_split}", flush=True)
+    print(f"base: {args.select_split} BA {ba_v0:.4f} · "
+          f"{args.eval_split} BA {ba_t0:.4f}", flush=True)
 
     # cuanto mejora la validacion al apagar cada dimension (se cachea)
     cache = (args.out or "poda") + ".mejora.npy"
@@ -94,7 +100,8 @@ def main():
     res = {"base_val": ba_v0, "base_test": ba_t0, "k": {}}
     mv0 = metricas_con(xv, pv, W1, yv, head)
     mt0 = metricas_con(xt, pt, W1, yt, head)
-    print(f"\nbase test: BA {mt0['balanced_accuracy']:.4f} · PR-AUC {mt0['pr_auc']:.4f}")
+    print(f"\nbase {args.eval_split}: BA {mt0['balanced_accuracy']:.4f} · "
+          f"PR-AUC {mt0['pr_auc']:.4f}")
     print(f"{'k':>4s} {'val BA':>8s} {'test BA':>8s} {'d BA':>8s} "
           f"{'test PR-AUC':>12s} {'d PR-AUC':>9s} {'R':>6s} {'Spec':>6s}")
     for k in [int(x) for x in args.k.split(",")]:

@@ -144,6 +144,10 @@ def main():
     ap.add_argument("--batch_size", type=int, default=4096)
     ap.add_argument("--lr", type=float, default=1e-3)
     ap.add_argument("--patience", type=int, default=10)
+    ap.add_argument("--zero_dims_from", default=None,
+                    help="JSON de poda_dimensiones (poda.json): apaga dimensiones del "
+                         "embedding en entrenamiento y evaluacion")
+    ap.add_argument("--zero_k", default="5", help="que clave k usar del JSON")
     ap.add_argument("--group_csv", default=None,
                     help="CSV con columnas species,grupo para limitar ventanas por grupo")
     ap.add_argument("--group_cap", type=int, default=0,
@@ -167,8 +171,22 @@ def main():
     np.random.seed(args.seed)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    dims_apagar = []
+    if args.zero_dims_from:
+        with open(args.zero_dims_from) as f:
+            poda = json.load(f)
+        dims_apagar = [int(d) for d in poda["k"][args.zero_k]["dims"]]
+        print(f"apagando {len(dims_apagar)} dimensiones del embedding")
+
+    def apagar(x):
+        if dims_apagar:
+            x = x.copy()
+            x[:, dims_apagar] = 0.0
+        return x
+
     xtr, ytr = load_split(args.emb_dir, "train")
     xva, yva = load_split(args.emb_dir, "val")
+    xtr, xva = apagar(xtr), apagar(xva)
     print("train", xtr.shape, "val", xva.shape, "pos frac train", float(ytr.mean()))
 
     if args.group_csv and args.group_cap > 0:
@@ -343,6 +361,7 @@ def main():
                 or any((args.emb_dir / "test").glob("*_emb.npy")))
     if hay_test:
         xte, yte = load_split(args.emb_dir, "test")
+        xte = apagar(xte)
         if args.standardize and mu is not None:
             xte = ((xte - np.asarray(mu, dtype=np.float32)) /
                    np.asarray(sd, dtype=np.float32)).astype(np.float32)
