@@ -29,11 +29,25 @@ from pathlib import Path
 import numpy as np
 import torch
 import torch.nn.functional as F
+from transformers import AutoModel, AutoTokenizer
 
 SRC = Path(__file__).resolve().parent.parent / "colab_bridge" / "src"
 sys.path.insert(0, str(SRC))
 
 from model import Inpactor2Detect, load_tokenizer  # noqa: E402
+
+
+def cargar_remoto(nombre, device):
+    """Carga un modelo v2 (codigo propio). No exponen AutoModel, solo EsmModel."""
+    tok = AutoTokenizer.from_pretrained(nombre, trust_remote_code=True)
+    try:
+        bb = AutoModel.from_pretrained(nombre, trust_remote_code=True)
+    except Exception as e:
+        print("AutoModel fallo (", type(e).__name__, "), se usa la clase remota", flush=True)
+        from transformers.dynamic_module_utils import get_class_from_dynamic_module
+        cls = get_class_from_dynamic_module("modeling_esm.EsmModel", nombre)
+        bb = cls.from_pretrained(nombre)
+    return tok, bb.to(device).eval()
 
 
 def block_offsets(n_blocks, window_size, chunk_bp):
@@ -229,14 +243,21 @@ def main():
     ap.add_argument("--shard_index", type=int, default=0)
     ap.add_argument("--nt_model",
                     default="InstaDeepAI/nucleotide-transformer-500m-human-ref")
+    ap.add_argument("--trust_remote_code", action="store_true",
+                    help="para modelos v2 (nucleotide-transformer-v2-*), que usan "
+                         "codigo propio y no exponen AutoModel")
     args = ap.parse_args()
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print("device:", device, flush=True)
-    tok = load_tokenizer(args.nt_model)
-    model = Inpactor2Detect(nt_model_name=args.nt_model, freeze_backbone=True).to(device).eval()
-    backbone = model.backbone
+    if args.trust_remote_code:
+        tok, backbone = cargar_remoto(args.nt_model, device)
+    else:
+        tok = load_tokenizer(args.nt_model)
+        model = Inpactor2Detect(nt_model_name=args.nt_model,
+                                freeze_backbone=True).to(device).eval()
+        backbone = model.backbone
     hidden = backbone.config.hidden_size
 
     if args.seq_dir is not None:
