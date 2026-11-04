@@ -30,8 +30,10 @@ def main():
     ap.add_argument("--top", type=int, default=20)
     args = ap.parse_args()
 
+    # cargar siempre en CPU: el checkpoint es diminuto y asi no falla si la GPU
+    # esta ocupada por otro proceso
+    ck = torch.load(args.head, map_location="cpu")
     dev = "cuda" if torch.cuda.is_available() else "cpu"
-    ck = torch.load(args.head, map_location=dev)
     hidden = int(ck.get("hidden", 1280))
     head = Head(hidden).to(dev)
     head.load_state_dict(ck["head"])
@@ -42,8 +44,15 @@ def main():
         mu = np.asarray(ck["mu"], dtype=np.float32)
         sd = np.asarray(ck["sd"], dtype=np.float32)
         x = ((x - mu) / sd).astype(np.float32)
-    xt = torch.from_numpy(x).to(dev)
-    yt = torch.from_numpy(y).to(dev)
+    try:
+        xt = torch.from_numpy(x).to(dev)
+        yt = torch.from_numpy(y).to(dev)
+    except RuntimeError as e:
+        print("GPU sin memoria, se usa CPU:", str(e)[:80], flush=True)
+        dev = "cpu"
+        head = head.cpu()
+        xt = torch.from_numpy(x)
+        yt = torch.from_numpy(y)
     print(f"{args.split}: {tuple(xt.shape)} · device {dev}", flush=True)
 
     with torch.no_grad():
