@@ -30,10 +30,20 @@ def main():
     ap.add_argument("--top", type=int, default=20)
     args = ap.parse_args()
 
-    # cargar siempre en CPU: el checkpoint es diminuto y asi no falla si la GPU
-    # esta ocupada por otro proceso
+    def elegir_device():
+        if not torch.cuda.is_available():
+            return "cpu", "sin CUDA"
+        try:
+            libre, total = torch.cuda.mem_get_info()
+            if libre < 1.5e9:
+                return "cpu", f"GPU con solo {libre/1e9:.1f} GB libres"
+            return "cuda", f"GPU con {libre/1e9:.1f} GB libres"
+        except Exception as e:
+            return "cpu", f"no se pudo consultar la GPU ({str(e)[:40]})"
+
     ck = torch.load(args.head, map_location="cpu")
-    dev = "cuda" if torch.cuda.is_available() else "cpu"
+    dev, motivo = elegir_device()
+    print("dispositivo:", dev, "·", motivo, flush=True)
     hidden = int(ck.get("hidden", 1280))
     head = Head(hidden).to(dev)
     head.load_state_dict(ck["head"])
@@ -45,10 +55,11 @@ def main():
         sd = np.asarray(ck["sd"], dtype=np.float32)
         x = ((x - mu) / sd).astype(np.float32)
     try:
+        head = head.to(dev)
         xt = torch.from_numpy(x).to(dev)
         yt = torch.from_numpy(y).to(dev)
-    except RuntimeError as e:
-        print("GPU sin memoria, se usa CPU:", str(e)[:80], flush=True)
+    except (RuntimeError, torch.AcceleratorError) as e:
+        print("fallo al mover a", dev, "-> CPU:", str(e)[:80], flush=True)
         dev = "cpu"
         head = head.cpu()
         xt = torch.from_numpy(x)
