@@ -42,12 +42,16 @@ def preparar(split, emb_dir, head, ck, dev):
     return xt, y, pre
 
 
-def ba_con(xt, pre, W1, y, head, dims=None):
+def metricas_con(xt, pre, W1, y, head, dims=None):
     h = pre if not dims else pre - sum(
         xt[:, d:d + 1] * W1[:, d] for d in dims)
     with torch.no_grad():
         lg = head.cls_head(torch.relu(h)).squeeze(-1)
-    return metrics(lg.float().cpu().numpy(), y, 0.5)["balanced_accuracy"]
+    return metrics(lg.float().cpu().numpy(), y, 0.5)
+
+
+def ba_con(xt, pre, W1, y, head, dims=None):
+    return metricas_con(xt, pre, W1, y, head, dims)["balanced_accuracy"]
 
 
 def main():
@@ -72,24 +76,43 @@ def main():
     ba_t0 = ba_con(xt, pt, W1, yt, head)
     print(f"base: val BA {ba_v0:.4f} · test BA {ba_t0:.4f}", flush=True)
 
-    # cuanto mejora la validacion al apagar cada dimension
-    mejora = np.zeros(W1.shape[1], dtype=np.float32)
-    with torch.no_grad():
-        for d in range(W1.shape[1]):
-            mejora[d] = ba_con(xv, pv, W1, yv, head, [d]) - ba_v0
-            if d % 200 == 0:
-                print(f"  {d}/{W1.shape[1]}", flush=True)
+    # cuanto mejora la validacion al apagar cada dimension (se cachea)
+    cache = (args.out or "poda") + ".mejora.npy"
+    if os.path.exists(cache):
+        mejora = np.load(cache)
+        print("mejoras cargadas de", cache, flush=True)
+    else:
+        mejora = np.zeros(W1.shape[1], dtype=np.float32)
+        with torch.no_grad():
+            for d in range(W1.shape[1]):
+                mejora[d] = ba_con(xv, pv, W1, yv, head, [d]) - ba_v0
+                if d % 200 == 0:
+                    print(f"  {d}/{W1.shape[1]}", flush=True)
+        np.save(cache, mejora)
     orden = np.argsort(-mejora)
 
     res = {"base_val": ba_v0, "base_test": ba_t0, "k": {}}
-    print(f"\n{'k':>4s} {'val BA':>8s} {'test BA':>8s} {'d val':>8s} {'d test':>8s}")
+    mv0 = metricas_con(xv, pv, W1, yv, head)
+    mt0 = metricas_con(xt, pt, W1, yt, head)
+    print(f"\nbase test: BA {mt0['balanced_accuracy']:.4f} · PR-AUC {mt0['pr_auc']:.4f}")
+    print(f"{'k':>4s} {'val BA':>8s} {'test BA':>8s} {'d BA':>8s} "
+          f"{'test PR-AUC':>12s} {'d PR-AUC':>9s} {'R':>6s} {'Spec':>6s}")
     for k in [int(x) for x in args.k.split(",")]:
         dims = orden[:k].tolist()
-        v = ba_con(xv, pv, W1, yv, head, dims)
-        t = ba_con(xt, pt, W1, yt, head, dims)
-        res["k"][str(k)] = {"dims": dims, "val": v, "test": t,
-                            "d_val": v - ba_v0, "d_test": t - ba_t0}
-        print(f"{k:4d} {v:8.4f} {t:8.4f} {v-ba_v0:+8.4f} {t-ba_t0:+8.4f}")
+        mv = metricas_con(xv, pv, W1, yv, head, dims)
+        mt = metricas_con(xt, pt, W1, yt, head, dims)
+        res["k"][str(k)] = {
+            "dims": dims,
+            "val": mv["balanced_accuracy"], "test": mt["balanced_accuracy"],
+            "d_ba": mt["balanced_accuracy"] - mt0["balanced_accuracy"],
+            "test_pr_auc": mt["pr_auc"],
+            "d_pr_auc": mt["pr_auc"] - mt0["pr_auc"],
+            "recall": mt["recall"], "specificity": mt["specificity"],
+        }
+        print(f"{k:4d} {mv['balanced_accuracy']:8.4f} {mt['balanced_accuracy']:8.4f} "
+              f"{mt['balanced_accuracy']-mt0['balanced_accuracy']:+8.4f} "
+              f"{mt['pr_auc']:12.4f} {mt['pr_auc']-mt0['pr_auc']:+9.4f} "
+              f"{mt['recall']:6.3f} {mt['specificity']:6.3f}")
 
     print(f"\nmejoran la validacion al apagarlas: "
           f"{int((mejora > 0).sum())} de {len(mejora)}")
