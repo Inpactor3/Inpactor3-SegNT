@@ -156,6 +156,8 @@ def main():
                     help="si se omite se usa best.pt['threshold'] o 0.5")
     ap.add_argument("--nt_model",
                     default="InstaDeepAI/nucleotide-transformer-500m-human-ref")
+    ap.add_argument("--trust_remote_code", action="store_true",
+                    help="modelos v2 (codigo propio, sin AutoModel)")
     args = ap.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
 
@@ -189,8 +191,18 @@ def main():
     print(f"ventanas: {len(windows)} · positivas: {npos} "
           f"({npos / max(len(windows), 1):.3f}) · bloques/ventana: {len(offs)}", flush=True)
 
-    tok = AutoTokenizer.from_pretrained(args.nt_model)
-    backbone = AutoModel.from_pretrained(args.nt_model).to(device).eval()
+    if args.trust_remote_code:
+        tok = AutoTokenizer.from_pretrained(args.nt_model, trust_remote_code=True)
+        try:
+            backbone = AutoModel.from_pretrained(args.nt_model,
+                                                 trust_remote_code=True).to(device).eval()
+        except Exception:
+            from transformers.dynamic_module_utils import get_class_from_dynamic_module
+            cls = get_class_from_dynamic_module("modeling_esm.EsmModel", args.nt_model)
+            backbone = cls.from_pretrained(args.nt_model).to(device).eval()
+    else:
+        tok = AutoTokenizer.from_pretrained(args.nt_model)
+        backbone = AutoModel.from_pretrained(args.nt_model).to(device).eval()
     hidden = backbone.config.hidden_size
     ck = torch.load(args.head, map_location=device)
     if ck.get("hidden") and int(ck["hidden"]) != hidden:
