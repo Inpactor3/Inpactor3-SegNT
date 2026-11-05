@@ -10,6 +10,7 @@ app = modal.App("inpactor-entrenar")
 SHA = "792f65e"
 IMAGE = (
     modal.Image.debian_slim(python_version="3.11")
+    .apt_install("curl")
     .pip_install("torch", "numpy")
     .run_commands(
         "mkdir -p /code",
