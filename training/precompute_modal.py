@@ -13,6 +13,8 @@ Requisitos:
 """
 import modal
 
+app = modal.App("inpactor-v2-emb")
+
 GH_SHA = "30f4947"
 GH = f"https://raw.githubusercontent.com/Inpactor3/Inpactor3-SegNT/{GH_SHA}"
 
