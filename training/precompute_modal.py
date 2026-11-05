@@ -30,7 +30,7 @@ image = (
     )
 )
 
-vol = modal.Volume.from_name("inpactor-emb", create=True)
+vol = modal.Volume.from_name("inpactor-emb", create_if_missing=True)
 
 NT = "InstaDeepAI/nucleotide-transformer-v2-100m-multi-species"
 
