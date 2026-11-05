@@ -21,7 +21,8 @@ vol = modal.Volume.from_name("inpactor-emb", create_if_missing=True)
 
 
 @app.function(image=IMAGE, gpu="A10G", volumes={"/emb": vol}, timeout=60 * 90)
-def entrenar(reino: str, salida: str, epochs: int = 100, patience: int = 10):
+def entrenar(reino: str, salida: str, epochs: int = 100, patience: int = 10,
+             standardize: bool = False):
     import json
     import subprocess
     import sys
@@ -32,7 +33,7 @@ def entrenar(reino: str, salida: str, epochs: int = 100, patience: int = 10):
         "--epochs", str(epochs), "--patience", str(patience),
         "--batch_size", "4096", "--balance", "global",
         "--class_weight", "--calibrate", "--select", "balanced_accuracy",
-    ], capture_output=True, text=True)
+    ] + (["--standardize"] if standardize else []), capture_output=True, text=True)
     print(r.stdout[-6000:], flush=True)
     if r.returncode != 0:
         print("STDERR:", r.stderr[-3000:], flush=True)
@@ -46,5 +47,6 @@ def entrenar(reino: str, salida: str, epochs: int = 100, patience: int = 10):
 
 
 @app.local_entrypoint()
-def main(reino: str = "Animales", salida: str = "Modelos/Animales_v2"):
-    print(entrenar.remote(reino, salida))
+def main(reino: str = "Animales", salida: str = "Modelos/Animales_v2",
+         standardize: bool = False):
+    print(entrenar.remote(reino, salida, 100, 10, standardize))
