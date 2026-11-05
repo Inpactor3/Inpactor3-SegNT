@@ -21,7 +21,7 @@ GH = f"https://raw.githubusercontent.com/Inpactor3/Inpactor3-SegNT/{GH_SHA}"
 image = (
     modal.Image.debian_slim(python_version="3.11")
     .apt_install("curl")
-    .pip_install("torch", "transformers==4.46.3", "numpy", "kaggle")
+    .pip_install("torch", "transformers==4.46.3", "numpy", "kaggle", "six")
     .run_commands(
         "mkdir -p /code",
         f"curl -sL {GH}/training/precompute_embeddings.py -o /code/precompute_embeddings.py",
@@ -74,7 +74,7 @@ def procesar(reino: str, split: str, archivo: str,
                         "-f", ruta_kaggle, "-p", f"{tmp}/dl", "--quiet"],
                        capture_output=True, text=True)
     if r.returncode != 0:
-        return f"FALLO descarga {tag}: {r.stderr.strip()[:150]}"
+        return f"FALLO descarga {tag}: {r.stderr.strip()[-700:]}"
     hallados = glob.glob(f"{tmp}/dl/**/*.npz", recursive=True)
     if not hallados:
         return f"FALLO sin npz {tag}"
@@ -106,7 +106,8 @@ def procesar(reino: str, split: str, archivo: str,
 
 
 @app.local_entrypoint()
-def main(reino: str = "Animales", batch: int = 16, token_batch: int = 64):
+def main(reino: str = "Animales", batch: int = 16, token_batch: int = 64,
+         limite: int = 0):
     import json
     import subprocess
 
@@ -122,8 +123,13 @@ def main(reino: str = "Animales", batch: int = 16, token_batch: int = 64):
         partes = nombre.split("/")
         if len(partes) != 4:
             continue
+        # solo el bundle de 4 bloques; el de 8 (bundle8_*) se usaria mal
+        if not partes[0].startswith("bundle4_"):
+            continue
         tareas.append((reino, partes[2], partes[3]))
 
+    if limite:
+        tareas = tareas[:limite]
     print(f"{reino}: {len(tareas)} tareas")
     ok = fallos = 0
     n = len(tareas)
