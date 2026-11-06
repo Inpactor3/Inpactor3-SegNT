@@ -194,7 +194,7 @@ def main():
                         "mode": "mil_max", "blocks": int(xtr_all.shape[1])},
                        args.out_dir / "best.pt")
 
-    ck = torch.load(args.out_dir / "best.pt", map_location=device)
+    ck = torch.load(args.out_dir / "best.pt", map_location=device, weights_only=False)
     model.load_state_dict(ck["head"])
     model.eval()
     lgv = predecir(xv)
