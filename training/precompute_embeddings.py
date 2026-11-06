@@ -57,7 +57,7 @@ def block_offsets(n_blocks, window_size, chunk_bp):
 
 
 def embed_blocks(tok, backbone, seqs, chunk_bp, max_tokens, device, batch_size):
-    """seqs: (B, C, chunk_bp) uint8 -> (embs (B,H) float32, n_frac (B,C) float32)."""
+    """seqs: (B, C, chunk_bp) uint8 -> (embs (B,H), per_block (B,C,H), n_frac (B,C))."""
     arr = np.asarray(seqs)
     if arr.ndim == 2:
         arr = arr[:, None, :]
@@ -86,7 +86,7 @@ def embed_blocks(tok, backbone, seqs, chunk_bp, max_tokens, device, batch_size):
 
     per_block = out.reshape(B, C, hidden)
     emb = per_block.max(dim=1).values
-    return emb.numpy(), n_frac
+    return emb.numpy(), per_block.numpy(), n_frac
 
 
 def run_npz_dir(args, tok, backbone, hidden, device):
@@ -117,7 +117,9 @@ def run_npz_dir(args, tok, backbone, hidden, device):
             offs = (z["offsets"] if "offsets" in z
                     else block_offsets(seqs.shape[1], args.window_size, chunk_bp))
             if len(seqs) == 0:
-                np.save(out_emb, np.zeros((0, hidden), dtype=np.float16))
+                vacio = ((0, seqs.shape[1], hidden) if args.per_block
+                         else (0, hidden))
+                np.save(out_emb, np.zeros(vacio, dtype=np.float16))
                 np.save(out_lab, np.zeros((0,), dtype=np.int8))
                 np.save(out_pool, np.zeros((0, seqs.shape[1]), dtype=np.float32))
                 np.save(out_off, offs)
@@ -129,15 +131,19 @@ def run_npz_dir(args, tok, backbone, hidden, device):
                 labs = labs[:args.max_windows]
                 ids = ids[:args.max_windows]
 
-            embs, pools = [], []
+            embs, pools, porbloque = [], [], []
             for i in range(0, len(seqs), args.batch_size):
-                e, p = embed_blocks(tok, backbone, seqs[i:i + args.batch_size], chunk_bp,
-                                    args.max_tokens, device, args.token_batch)
+                e, pb, p = embed_blocks(tok, backbone, seqs[i:i + args.batch_size], chunk_bp,
+                                        args.max_tokens, device, args.token_batch)
                 embs.append(e)
+                porbloque.append(pb)
                 pools.append(p)
                 if i % (args.batch_size * 20) == 0:
                     print(f"  {split} {fp.stem} {i}/{len(seqs)}", flush=True)
-            emb = np.concatenate(embs, axis=0).astype(np.float16)
+            if args.per_block:
+                emb = np.concatenate(porbloque, axis=0).astype(np.float16)
+            else:
+                emb = np.concatenate(embs, axis=0).astype(np.float16)
             pool = np.concatenate(pools, axis=0).astype(np.float16)
             np.save(out_emb, emb)
             np.save(out_lab, labs.astype(np.int8))
@@ -199,7 +205,7 @@ def run_jsonl_dir(args, tok, backbone, hidden, device):
                                 dtype=np.uint8)
                 del seq
             for i in range(0, len(rows), args.batch_size):
-                e, p = embed_blocks(tok, backbone, seqarr[i:i + args.batch_size], args.chunk_bp,
+                e, _pb, p = embed_blocks(tok, backbone, seqarr[i:i + args.batch_size], args.chunk_bp,
                                     args.max_tokens, device, args.token_batch)
                 embs.append(e)
                 pools.append(p)
@@ -240,6 +246,8 @@ def main():
     ap.add_argument("--max_windows", type=int, default=0)
     ap.add_argument("--splits", default="train,val,test")
     ap.add_argument("--num_shards", type=int, default=1)
+    ap.add_argument("--per_block", action="store_true",
+                    help="guardar un embedding por bloque (N,C,H) en vez del max-pooled")
     ap.add_argument("--shard_index", type=int, default=0)
     ap.add_argument("--nt_model",
                     default="InstaDeepAI/nucleotide-transformer-500m-human-ref")
