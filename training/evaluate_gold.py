@@ -145,6 +145,8 @@ def main():
     ap.add_argument("--chunks", type=int, default=4,
                     help="4 = entrada de entrenamiento (24 kb); 8 = 48 kb en A100")
     ap.add_argument("--mode", choices=("windowed", "eval_full"), default="windowed")
+    ap.add_argument("--revcomp", action="store_true",
+                    help="evaluar con la hebra complementaria inversa de cada bloque")
     ap.add_argument("--max_tokens", type=int, default=MAXLEN)
     ap.add_argument("--batch", type=int, default=8, help="ventanas por paso")
     ap.add_argument("--token_batch", type=int, default=64)
@@ -185,6 +187,8 @@ def main():
             blocks = []
             for off in offs:
                 piece = seq[st + int(off): st + int(off) + CHUNK].upper()
+                if args.revcomp:
+                    piece = piece.translate(str.maketrans("ACGTN", "TGCAN"))[::-1]
                 blocks.append(piece if len(piece) >= 100 else "N" * CHUNK)
             windows.append((chrom, st, en, lab, ov, blocks))
     npos = sum(w[3] for w in windows)
@@ -248,7 +252,7 @@ def main():
             print(f"{i}/{len(windows)}", flush=True)
 
     labels = np.array([w[3] for w in windows])
-    res = {"threshold": thr, "chunks": C, "mode": args.mode,
+    res = {"threshold": thr, "chunks": C, "mode": args.mode, "revcomp": args.revcomp,
            "bp_per_window": C * CHUNK, "overlap_mode": args.overlap_mode,
            "min_bp": args.min_bp, "min_frac": args.min_frac}
     res["at_calibrated_threshold"] = metrics(labels, probs, thr)
