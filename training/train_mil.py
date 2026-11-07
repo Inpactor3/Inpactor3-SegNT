@@ -76,8 +76,11 @@ def cargar(d, split):
 
 
 class MILHead(nn.Module):
-    def __init__(self, hidden=512, dropout=0.2):
+    """pool='logits' -> MIL por bloque; pool='embeddings' -> max antes del cabezal."""
+
+    def __init__(self, hidden=512, dropout=0.2, pool="logits"):
         super().__init__()
+        self.pool = pool
         self.pool_proj = nn.Linear(hidden, 512)
         self.dropout = nn.Dropout(dropout)
         self.cls = nn.Sequential(nn.Linear(512, 256), nn.GELU(),
@@ -85,6 +88,10 @@ class MILHead(nn.Module):
 
     def forward(self, x):
         B, C, H = x.shape
+        if self.pool == "embeddings":
+            e = x.max(dim=1).values
+            f = self.dropout(torch.relu(self.pool_proj(e)))
+            return self.cls(f).squeeze(-1)
         f = self.dropout(torch.relu(self.pool_proj(x.reshape(B * C, H))))
         lg = self.cls(f).view(B, C)
         return lg.max(dim=1).values
@@ -101,6 +108,8 @@ def main():
     ap.add_argument("--class_weight", action="store_true")
     ap.add_argument("--balance", choices=("none", "global"), default="global")
     ap.add_argument("--select", default="balanced_accuracy")
+    ap.add_argument("--pool", choices=("logits", "embeddings"), default="logits",
+                    help="logits = MIL por bloque; embeddings = max antes del cabezal")
     ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
     args.out_dir.mkdir(parents=True, exist_ok=True)
@@ -128,7 +137,7 @@ def main():
     mu = muestra.mean(axis=0).astype(np.float32)
     sd = muestra.std(axis=0).astype(np.float32) + SIGMA
 
-    model = MILHead(xtr_all.shape[-1], args.dropout).to(device)
+    model = MILHead(xtr_all.shape[-1], args.dropout, args.pool).to(device)
     pos_weight = None
     if args.class_weight:
         neg = int((ytr_all == 0).sum())
@@ -191,7 +200,7 @@ def main():
             torch.save({"head": model.state_dict(), "epoch": ep, "hidden": int(xtr_all.shape[-1]),
                         "mu": mu, "sd": sd, "val_f1": m["f1"],
                         "val_selected": mejor, "select": args.select,
-                        "mode": "mil_max", "blocks": int(xtr_all.shape[1])},
+                        "mode": f"{args.pool}_max", "blocks": int(xtr_all.shape[1])},
                        args.out_dir / "best.pt")
 
     ck = torch.load(args.out_dir / "best.pt", map_location=device, weights_only=False)
@@ -204,7 +213,7 @@ def main():
     torch.save(ck, args.out_dir / "best.pt")
 
     res = {"threshold": thr, "epoch": ck["epoch"], "blocks": ck["blocks"],
-           "mode": "mil_max", "balance": args.balance, "class_weight": args.class_weight,
+           "mode": f"{args.pool}_max", "balance": args.balance, "class_weight": args.class_weight,
            "at_calibrated_threshold": metrics(lgte, yte, thr),
            "at_050": metrics(lgte, yte, 0.5),
            "always_positive": metrics(np.full_like(lgte, 10.0), yte, 0.5),
