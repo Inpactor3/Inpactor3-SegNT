@@ -130,7 +130,7 @@ def main():
         xtr_all, ytr_all = xtr_all[idx], ytr_all[idx]
         print(f"balance 1:1 -> {len(idx)} ventanas", flush=True)
 
-    muestra = xtr_all.reshape(-1, xtr_all.shape[-1])
+    muestra = xtr_all.reshape(-1, xtr_all.shape[-1]).astype(np.float32)
     if len(muestra) > 200_000:
         sel = rng.choice(len(muestra), 200_000, replace=False)
         muestra = muestra[sel]
