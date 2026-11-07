@@ -207,7 +207,7 @@ def main():
            "mode": "mil_max", "balance": args.balance, "class_weight": args.class_weight,
            "at_calibrated_threshold": metrics(lgte, yte, thr),
            "at_050": metrics(lgte, yte, 0.5),
-           "always_positive": metrics(lgte, np.ones_like(lgte), 0.5),
+           "always_positive": metrics(np.full_like(lgte, 10.0), yte, 0.5),
            "best_f1_threshold": float(max(np.arange(0.05, 0.96, 0.05),
                                           key=lambda t: metrics(lgte, yte, t)["f1"]))}
     with open(args.out_dir / "test_metrics.json", "w") as f:
