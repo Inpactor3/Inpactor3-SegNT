@@ -1,0 +1,15 @@
+{
+  "threshold": 0.55, "epoch": 5, "blocks": 4, "mode": "mil_max",
+  "balance": "global", "class_weight": true,
+  "at_calibrated_threshold": {"precision": 0.8158893350394917, "recall": 0.5936431495304599,
+    "specificity": 0.8072258541430849, "f1": 0.6872450544038803,
+    "accuracy": 0.6812111683588422, "balanced_accuracy": 0.7004345018367724,
+    "tp": 36981, "fp": 8345, "fn": 25314, "tn": 34944, "n": 105584,
+    "prevalence": 0.5900041460990906, "pr_auc": 0.8543995766501584},
+  "at_050": {"precision": 0.7732675147142586, "recall": 0.653792439200578,
+    "specificity": 0.7241331516089538, "f1": 0.7085286826425434,
+    "accuracy": 0.6826318381572966, "balanced_accuracy": 0.6889627954047659,
+    "tp": 40728, "fp": 11942, "fn": 21567, "tn": 31347, "n": 105584,
+    "prevalence": 0.5900041460990906, "pr_auc": 0.8543995766501584},
+  "best_f1_threshold": 0.25
+}

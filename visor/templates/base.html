@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Visor Inpactor3{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <a class="marca" href="{{ url_for('index') }}">Inpactor3 · visor</a>
+    <nav>
+      <a href="{{ url_for('index') }}">Resumen</a>
+      <a href="{{ url_for('comparar') }}">Comparar lectores</a>
+      <a href="{{ url_for('salud') }}">Estado</a>
+    </nav>
+  </header>
+  <main>
+    {% block contenido %}{% endblock %}
+  </main>
+  <footer>
+    Solo lectura · no expone pesos ni datos confidenciales · Inpactor3, Universidad de Caldas
+  </footer>
+</body>
+</html>

@@ -28,6 +28,8 @@ def main():
     ap.add_argument("--out_dir", required=True)
     ap.add_argument("--ratio", type=float, default=1.0)
     ap.add_argument("--orphan_cap", type=int, default=2000)
+    ap.add_argument("--max_per_species", type=int, default=0,
+                    help="tope de ventanas conservadas por especie (0 = sin tope)")
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--splits_to_link", default="val,test")
     args = ap.parse_args()
@@ -64,6 +66,8 @@ def main():
         else:
             k = min(len(pos), int(round(args.ratio * len(neg))))
             keep = np.concatenate([neg, rng.choice(pos, k, replace=False)])
+        if args.max_per_species and len(keep) > args.max_per_species:
+            keep = rng.choice(keep, args.max_per_species, replace=False)
         keep.sort()
         np.savez_compressed(out, seq=z["seq"][keep], label=y[keep],
                             window_id=z["window_id"][keep],

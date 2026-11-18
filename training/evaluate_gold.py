@@ -208,16 +208,20 @@ def main():
         tok = AutoTokenizer.from_pretrained(args.nt_model)
         backbone = AutoModel.from_pretrained(args.nt_model).to(device).eval()
     hidden = backbone.config.hidden_size
-    ck = torch.load(args.head, map_location=device)
+    ck = torch.load(args.head, map_location=device, weights_only=False)
+    modo = str(ck.get("mode", "embeddings_max"))
     if ck.get("hidden") and int(ck["hidden"]) != hidden:
         raise SystemExit(f"best.pt espera hidden={ck['hidden']} pero {args.nt_model} da "
                          f"hidden={hidden}: usa el mismo --nt_model que en entrenamiento")
+    sd = dict(ck["head"])
+    if any(k.startswith("cls.") for k in sd):
+        sd = {("cls_head." + k[4:] if k.startswith("cls.") else k): v for k, v in sd.items()}
     head = Head(hidden).to(device)
-    head.load_state_dict(ck["head"])
+    head.load_state_dict(sd)
     head.eval()
     mu, sd = ck.get("mu"), ck.get("sd")
     thr = args.threshold if args.threshold is not None else float(ck.get("threshold", 0.5))
-    print(f"modelo cargado · head epoch {ck.get('epoch')} · umbral {thr}"
+    print(f"modelo cargado · modo {modo} · head epoch {ck.get('epoch')} · umbral {thr}"
           f"{' · estandarizado' if mu is not None else ''}", flush=True)
 
     C = len(offs)
@@ -240,19 +244,24 @@ def main():
                     mu, device=device, dtype=torch.float32)) / torch.as_tensor(
                     sd, device=device, dtype=torch.float32)
                 block_feats.append(feat.float())
-        # Igual que en entrenamiento: max pooling sobre los EMBEDDINGS de los
-        # bloques y despues una sola pasada del cabezal. Asi 4 y 8 bloques son
-        # comparables y la evaluacion coincide con lo que se entreno.
         per_window = torch.cat(block_feats).view(len(batch), C, -1)
-        pooled_emb = per_window.max(dim=1).values
-        with torch.no_grad():
-            logits = head(pooled_emb).float()
+        if modo.startswith("logits"):
+            # MIL: el cabezal puntua cada bloque y se toma el maximo de los logits
+            with torch.no_grad():
+                f = torch.relu(head.pool_proj(per_window.reshape(-1, hidden)))
+                logits = head.cls_head(f).view(len(batch), C).max(dim=1).values.float()
+        else:
+            # pooled: max de los embeddings y una sola pasada del cabezal
+            pooled_emb = per_window.max(dim=1).values
+            with torch.no_grad():
+                logits = head(pooled_emb).float()
         probs[i:i + len(batch)] = torch.sigmoid(logits).cpu().numpy()
         if i % (args.batch * 50) == 0:
             print(f"{i}/{len(windows)}", flush=True)
 
     labels = np.array([w[3] for w in windows])
-    res = {"threshold": thr, "chunks": C, "mode": args.mode, "revcomp": args.revcomp,
+    res = {"threshold": thr, "chunks": C, "mode": args.mode, "head_mode": modo,
+           "revcomp": args.revcomp,
            "bp_per_window": C * CHUNK, "overlap_mode": args.overlap_mode,
            "min_bp": args.min_bp, "min_frac": args.min_frac}
     res["at_calibrated_threshold"] = metrics(labels, probs, thr)

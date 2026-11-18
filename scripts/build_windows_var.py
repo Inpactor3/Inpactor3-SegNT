@@ -23,6 +23,9 @@ with open(bed_file) as f:
         s = line.rstrip("\n").split("\t")
         if len(s) < 4:
             continue
+        # el corpus etiqueta solo elementos LTR (ltr_only_scheme)
+        if "/LTR/" not in s[3] and not s[3].startswith("LTR/"):
+            continue
         hits[s[0]].append((int(s[1]), int(s[2]), s[3]))
 
 species = None
@@ -32,9 +35,18 @@ species = os.path.basename(bed_file)[:-4]  # tag sin .bed
 n_pos = n_neg = n_total = 0
 with open(out_file, "w") as fo:
     for chrom, L in sizes.items():
+        hs = sorted(hits.get(chrom, []))
+        j = 0
         for start in range(0, max(0, L - WINDOW + 1), WINDOW):
             end = start + WINDOW
-            te_in = [h for h in hits.get(chrom, []) if h[0] < end and h[1] > start]
+            while j < len(hs) and hs[j][1] <= start:
+                j += 1
+            te_in = []
+            k = j
+            while k < len(hs) and hs[k][0] < end:
+                if hs[k][1] > start:
+                    te_in.append(hs[k])
+                k += 1
             is_pos = False
             bp_total = 0
             orders = set()

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block titulo %}Comparar lectores{% endblock %}
+{% block contenido %}
+<h1>Lector v2 frente a NTv3</h1>
+<p class="sub">Solo se comparan corridas con el mismo reino, ventana y agregación. Aun así,
+el volumen de entrenamiento puede diferir; se indica en la tabla de detalle.</p>
+<table>
+  <thead><tr><th>Reino</th><th>Ventana</th><th>Bal acc v2</th><th>Bal acc NTv3</th>
+             <th>Δ bal acc</th><th>PR-AUC v2</th><th>PR-AUC NTv3</th><th>Δ PR-AUC</th></tr></thead>
+  <tbody>
+  {% for f in filas %}
+    <tr>
+      <td>{{ f.reino }}</td><td>{{ f.ventana }}</td>
+      <td>{{ f.v2.bal_acc|f4 }}</td><td>{{ f.ntv3.bal_acc|f4 }}</td>
+      <td class="{{ 'pos' if f.d_bal > 0 else 'neg' }}">{{ f.d_bal|f4 }}</td>
+      <td>{{ f.v2.pr_auc|f4 }}</td><td>{{ f.ntv3.pr_auc|f4 }}</td>
+      <td class="{{ 'pos' if f.d_pr > 0 else 'neg' }}">{{ f.d_pr|f4 }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<p class="nota">Δ positiva significa que NTv3 es mejor. Diferencias menores a 0,01 están
+dentro del ruido entre semillas.</p>
+{% endblock %}

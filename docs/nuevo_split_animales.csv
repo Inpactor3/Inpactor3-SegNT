@@ -1,0 +1,59 @@
+species,nombre_cientifico,grupo,split,split_nuevo,n_windows,pct_pos
+Cariama_cristata__GCF_000690535.1,Cariama cristata,Aves,train,test,9432,35.1
+Acropora_acuminata___GCA_014633975.1,Acropora acuminata,Corales y anémonas,val,test,7186,44.0
+Arctopsyche_grandis___GCF_051622035.1,Arctopsyche grandis,Insectos,val,test,9414,81.2
+Aricia_agestis___GCF_905147365.1,Aricia agestis,Insectos,val,test,8692,40.9
+Chrysoperla_carnea__GCF_905475395.1,Chrysoperla carnea,Insectos,train,test,5963,42.1
+Ellobius_talpinus__GCA_001685095.1,Ellobius talpinus,Mamíferos,train,test,2045,100.0
+Gigantopelta_aegis__GCF_016097555.1,Gigantopelta aegis,Moluscos,train,test,15017,34.6
+Acanthopagrus_latus__GCF_904848185.1,Acanthopagrus latus,Peces,train,test,13661,23.9
+Gopherus_agassizii__GCA_002896415.1,Gopherus agassizii,Reptiles,train,test,34174,92.5
+Dermatophagoides_farinae__GCF_024713945.1,Dermatophagoides farinae,Arácnidos,train,train,1073,5.8
+Catharus_ustulatus__GCF_009819885.2,Catharus ustulatus,Aves,train,train,22528,77.6
+Eubucco_bourcierii__GCA_013396675.1,Eubucco bourcierii,Aves,train,train,18021,15.5
+Eulacestoma_nigropectus__GCA_013397775.1,Eulacestoma nigropectus,Aves,train,train,19278,54.6
+Halcyon_senegalensis__GCA_013397595.1,Halcyon senegalensis,Aves,train,train,21725,40.2
+Haliaeetus_albicilla__GCF_947461875.1,Haliaeetus albicilla,Aves,train,train,26042,63.2
+Cyphastrea_salae__GCA_964194085.1,Cyphastrea salae,Corales y anémonas,train,train,10378,44.8
+Porites_divaricata__GCA_964035745.1,Porites divaricata,Corales y anémonas,test,train,4011,100.0
+Branchiostoma_lanceolatum___GCF_035083965.1,Branchiostoma lanceolatum,Cordados no vertebrados,test,train,9135,48.8
+Halocynthia_aurantium__GCA_013436065.1,Halocynthia aurantium,Cordados no vertebrados,train,train,640,1.6
+Branchinecta_lindahli__GCA_023053555.1,Branchinecta lindahli,Crustáceos,train,train,7674,50.9
+Bolinopsis_microptera__GCF_026151205.1,Bolinopsis microptera,Ctenóforos,train,train,5123,6.7
+Acanthaster_planci___GCF_054643075.1,Acanthaster planci,Equinodermos,val,train,8254,12.3
+Astropecten_irregularis__GCA_963971285.1,Astropecten irregularis,Equinodermos,train,train,9069,12.7
+Acrocera_orbiculus__GCA_947359355.1,Acrocera orbiculus,Insectos,train,train,3762,43.6
+Adranes_taylori__GCA_009867245.2,Adranes taylori,Insectos,train,train,126,18.3
+Aethina_tumida__GCF_024364675.1,Aethina tumida,Insectos,train,train,4912,33.9
+Anopheles_moucheti__GCF_943734755.1,Anopheles moucheti,Insectos,train,train,3800,30.2
+Athalia_rosae___GCF_917208135.1,Athalia rosae,Insectos,val,train,3264,11.5
+Drosophila_buzzatii__GCA_035045845.1,Drosophila buzzatii,Insectos,train,train,3169,48.3
+Drosophila_kikkawai__GCF_030179895.1,Drosophila kikkawai,Insectos,train,train,3500,61.3
+Drosophila_willistoni___GCF_018902025.1,Drosophila willistoni,Insectos,val,train,4348,43.9
+Nasonia_giraulti___GCA_016647725.1,Nasonia giraulti,Insectos,test,train,4131,28.4
+Xenos_peckii___GCA_040167675.1,Xenos peckii,Insectos,test,train,1223,40.8
+Balaenoptera_musculus__GCF_009873245.2,Balaenoptera musculus,Mamíferos,train,train,47411,85.6
+Bison_bison__GCF_000754665.1,Bison bison,Mamíferos,train,train,49232,82.5
+Ceratotherium_simum__GCF_057802395.1,Ceratotherium simum,Mamíferos,train,train,49589,91.2
+Eonycteris_spelaea__GCA_062009626.1,Eonycteris spelaea,Mamíferos,train,train,37551,86.9
+Calvadosia_cruxmelitensis__GCA_900245855.1,Calvadosia cruxmelitensis,Medusas y cnidarios,train,train,229,7.9
+Pelagia_noctiluca___GCA_963924455.1,Pelagia noctiluca,Medusas y cnidarios,val,train,6641,19.8
+Dreissena_rostriformis__GCA_055670145.1,Dreissena rostriformis,Moluscos,train,train,19100,48.1
+Haliotis_cracherodii__GCF_022045235.1,Haliotis cracherodii,Moluscos,train,train,23596,83.1
+Caenorhabditis_remanei___GCF_010183535.1,Caenorhabditis remanei,Nematodos,test,train,2437,11.0
+Desoria_tigrina__GCA_906901685.1,Desoria tigrina,Otros artrópodos,train,train,3980,19.0
+Acipenser_ruthenus__GCF_902713425.1,Acipenser ruthenus,Peces,train,train,36898,58.9
+Cirrhinus_mrigala__GCA_036247105.2,Cirrhinus mrigala,Peces,train,train,20864,91.2
+Coregonus_clupeaformis__GCF_020615455.1,Coregonus clupeaformis,Peces,train,train,51866,79.9
+Cyprinodon_variegatus__GCF_000732505.1,Cyprinodon variegatus,Peces,train,train,18901,26.0
+Eptatretus_burgeri__GCF_056783735.1,Eptatretus burgeri,Peces,train,train,24548,60.6
+Actinemys_marmorata__GCA_022086475.1,Actinemys marmorata,Reptiles,train,train,45998,91.6
+Chelonoidis_abingdonii__GCF_003597395.2,Chelonoidis abingdonii,Reptiles,train,train,44754,93.8
+Charadrius_alexandrinus__GCA_053477275.1,Charadrius alexandrinus,Aves,train,val,17534,47.6
+Acropora_hyacinthus__GCA_964291705.1,Acropora hyacinthus,Corales y anémonas,train,val,9803,45.4
+Blera_fallax___GCA_946965025.1,Blera fallax,Insectos,val,val,9199,49.2
+Gnatocerus_cornutus___GCF_029298725.1,Gnatocerus cornutus,Insectos,val,val,6423,63.7
+Onthophagus_taurus___GCF_036711975.1,Onthophagus taurus,Insectos,val,val,5714,28.1
+Capromys_pilorides__GCA_004027915.1,Capromys pilorides,Mamíferos,train,val,1799,96.1
+Amphilophus_citrinellus__GCA_013435755.1,Amphilophus citrinellus,Peces,train,val,18614,48.4
+Emydura_subglobosa__GCA_054346155.1,Emydura subglobosa,Reptiles,train,val,39784,86.8

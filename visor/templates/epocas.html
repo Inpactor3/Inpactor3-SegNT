@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titulo %}Épocas · {{ reino }}{% endblock %}
+{% block contenido %}
+<p><a href="{{ url_for('index') }}">← volver</a></p>
+<h1>{{ reino }} · métricas por época</h1>
+<p class="sub">Validación. La fila resaltada es la época que se guarda (mejor balanced accuracy).</p>
+<table>
+  <thead><tr><th>Época</th><th>Loss</th><th>Val loss</th><th>Precisión</th><th>Recall</th>
+             <th>F1</th><th>Accuracy</th><th>Bal acc</th></tr></thead>
+  <tbody>
+  {% for e in epocas %}
+    <tr class="{{ 'mejor' if mejor and e.epoch == mejor.epoch else '' }}">
+      <td>{{ e.epoch }}</td><td>{{ e.loss }}</td><td>{{ e.val_loss }}</td>
+      <td>{{ e.val_precision }}</td><td>{{ e.val_recall }}</td><td>{{ e.val_f1 }}</td>
+      <td>{{ e.val_acc }}</td><td class="destacado">{{ e.val_bal_acc }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

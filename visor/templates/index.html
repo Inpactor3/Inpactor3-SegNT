@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block titulo %}Resumen · Visor Inpactor3{% endblock %}
+{% block contenido %}
+<h1>Resultados del detector</h1>
+<p class="sub">{{ n }} corridas registradas. La comparación entre reinos no es directa:
+cada una tiene su propio test y su prevalencia.</p>
+
+{% if mejor %}
+<div class="tarjetas">
+  <div class="tarjeta"><span>Mejor PR-AUC</span><strong>{{ mejor.pr_auc|f4 }}</strong>
+    <em>{{ mejor.reino }} · {{ mejor.lector }} · {{ mejor.ventana }}</em></div>
+  <div class="tarjeta"><span>Test más grande</span><strong>{{ "{:,}".format(mejor.n) }}</strong>
+    <em>ventanas evaluadas</em></div>
+</div>
+{% endif %}
+
+{% for reino, lista in resumen.items() %}
+<h2>{{ reino }}</h2>
+<table>
+  <thead>
+    <tr><th>Lector</th><th>Ventana</th><th>Agregación</th><th>Bal acc</th><th>F1</th>
+        <th>Precisión</th><th>Recall</th><th>PR-AUC</th><th>Test</th><th>Prev.</th></tr>
+  </thead>
+  <tbody>
+  {% for r in lista|sort(attribute='pr_auc', reverse=true) %}
+    <tr>
+      <td><a href="{{ url_for('corrida', rid=r.id) }}">{{ r.lector }}</a></td>
+      <td>{{ r.ventana }}</td>
+      <td>{{ r.agregacion }}</td>
+      <td>{{ r.bal_acc|f4 }}</td>
+      <td>{{ r.f1|f4 }}</td>
+      <td>{{ r.precision|f4 }}</td>
+      <td>{{ r.recall|f4 }}</td>
+      <td class="destacado">{{ r.pr_auc|f4 }}</td>
+      <td>{{ "{:,}".format(r.n) }}</td>
+      <td>{{ r.prev|pct }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endfor %}
+{% endblock %}

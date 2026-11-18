@@ -86,14 +86,18 @@ class MILHead(nn.Module):
         self.cls = nn.Sequential(nn.Linear(512, 256), nn.GELU(),
                                  nn.Dropout(dropout), nn.Linear(256, 1))
 
-    def forward(self, x):
+    def forward(self, x, keep=None):
         B, C, H = x.shape
         if self.pool == "embeddings":
+            if keep is not None:
+                x = x.masked_fill(~keep.unsqueeze(-1), -1e9)
             e = x.max(dim=1).values
             f = self.dropout(torch.relu(self.pool_proj(e)))
             return self.cls(f).squeeze(-1)
         f = self.dropout(torch.relu(self.pool_proj(x.reshape(B * C, H))))
         lg = self.cls(f).view(B, C)
+        if keep is not None:
+            lg = lg.masked_fill(~keep, -1e9)
         return lg.max(dim=1).values
 
 
@@ -108,6 +112,9 @@ def main():
     ap.add_argument("--class_weight", action="store_true")
     ap.add_argument("--balance", choices=("none", "global"), default="global")
     ap.add_argument("--select", default="balanced_accuracy")
+    ap.add_argument("--blocks_min", type=int, default=0,
+                    help="si es menor que C, entrena con k bloques aleatorios en [k,C] "
+                         "(mezcla de tamanos de ventana). 0 = usar siempre C")
     ap.add_argument("--pool", choices=("logits", "embeddings"), default="logits",
                     help="logits = MIL por bloque; embeddings = max antes del cabezal")
     ap.add_argument("--seed", type=int, default=0)
@@ -164,6 +171,10 @@ def main():
                 salida.append(model(x[i:i + 8192]).float().cpu().numpy())
         return np.concatenate(salida)
 
+    C = int(xtr_all.shape[1])
+    bmin = args.blocks_min if 0 < args.blocks_min < C else 0
+    if bmin:
+        print(f"mezcla de ventanas: k aleatorio en [{bmin},{C}] bloques", flush=True)
     mejor, mejor_ep = -1.0, -1
     log = open(args.out_dir / "metrics.csv", "w")
     log.write("epoch,loss,val_loss,val_precision,val_recall,val_f1,val_acc,val_bal_acc\n")
@@ -176,8 +187,14 @@ def main():
             b = orden[i:i + args.batch_size]
             xb = a_device(xtr_all[b.numpy()])
             yb = yt[b]
+            keep = None
+            if bmin > 0:
+                bs = xb.shape[0]
+                ks = torch.randint(bmin, C + 1, (bs,), device=device)
+                perm = torch.rand(bs, C, device=device).argsort(dim=1)
+                keep = perm < ks.unsqueeze(1)
             opt.zero_grad()
-            loss = loss_fn(model(xb), yb)
+            loss = loss_fn(model(xb, keep), yb)
             loss.backward()
             opt.step()
             tot += loss.item() * len(b)
@@ -200,7 +217,8 @@ def main():
             torch.save({"head": model.state_dict(), "epoch": ep, "hidden": int(xtr_all.shape[-1]),
                         "mu": mu, "sd": sd, "val_f1": m["f1"],
                         "val_selected": mejor, "select": args.select,
-                        "mode": f"{args.pool}_max", "blocks": int(xtr_all.shape[1])},
+                        "mode": f"{args.pool}_max", "blocks": int(xtr_all.shape[1]),
+                        "blocks_min": bmin},
                        args.out_dir / "best.pt")
 
     ck = torch.load(args.out_dir / "best.pt", map_location=device, weights_only=False)
@@ -213,7 +231,7 @@ def main():
     torch.save(ck, args.out_dir / "best.pt")
 
     res = {"threshold": thr, "epoch": ck["epoch"], "blocks": ck["blocks"],
-           "mode": f"{args.pool}_max", "balance": args.balance, "class_weight": args.class_weight,
+           "mode": f"{args.pool}_max", "blocks_min": bmin, "balance": args.balance, "class_weight": args.class_weight,
            "at_calibrated_threshold": metrics(lgte, yte, thr),
            "at_050": metrics(lgte, yte, 0.5),
            "always_positive": metrics(np.full_like(lgte, 10.0), yte, 0.5),

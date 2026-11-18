@@ -2,7 +2,7 @@
 import modal
 
 app = modal.App("inpactor-gold-v2")
-SHA = "30f4947"
+SHA = "caf5c41"
 GH = f"https://raw.githubusercontent.com/Inpactor3/Inpactor3-SegNT/{SHA}"
 NT = "InstaDeepAI/nucleotide-transformer-v2-100m-multi-species"
 

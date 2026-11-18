@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block titulo %}{{ r.reino }} · {{ r.lector }}{% endblock %}
+{% block contenido %}
+<p><a href="{{ url_for('index') }}">← volver</a></p>
+<h1>{{ r.reino }} · {{ r.lector }} · {{ r.ventana }} · {{ r.agregacion }}</h1>
+<p class="sub">Test: {{ "{:,}".format(r.n) }} ventanas · prevalencia {{ r.prev|pct }}
+{% if r.threshold is not none %} · umbral {{ r.threshold|f4 }}{% endif %}
+{% if r.epoch is not none %} · época guardada {{ r.epoch }}{% endif %}</p>
+
+<div class="tarjetas">
+  <div class="tarjeta"><span>Balanced accuracy</span><strong>{{ r.bal_acc|f4 }}</strong></div>
+  <div class="tarjeta"><span>F1</span><strong>{{ r.f1|f4 }}</strong></div>
+  <div class="tarjeta"><span>Precisión</span><strong>{{ r.precision|f4 }}</strong></div>
+  <div class="tarjeta"><span>Recall</span><strong>{{ r.recall|f4 }}</strong></div>
+  <div class="tarjeta"><span>PR-AUC</span><strong>{{ r.pr_auc|f4 }}</strong></div>
+</div>
+
+{% if mejor %}
+<p class="nota">Mejor época en validación: {{ mejor.epoch }}
+ (bal acc {{ mejor.val_bal_acc|f4 }} · F1 {{ mejor.val_f1|f4 }} · val loss {{ mejor.val_loss|f4 }}).</p>
+<p><a class="boton" href="{{ url_for('ver_epocas', reino=r.reino) }}">Ver las 20 épocas</a></p>
+{% endif %}
+{% endblock %}

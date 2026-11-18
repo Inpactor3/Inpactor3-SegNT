@@ -18,6 +18,11 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 
 
+def norm(name):
+    import re
+    return re.sub(r"_+", "_", name)
+
+
 def sizes_de(genome):
     out = []
     cur, n = None, 0
@@ -78,6 +83,10 @@ def main():
 
     dirs = [Path(d) for d in (args.bed_dirs or args.bed_dir or "").split(":") if d]
 
+    idx_gen = {}
+    for _p in Path(args.genomes_dir).rglob("*.fna.gz"):
+        idx_gen[norm(_p.name[:-7])] = _p
+
     def buscar_bed(split, sp):
         for d in dirs:
             for cand in (d / split / f"{sp}.bed", d / split / f"{sp}.bed.gz"):
@@ -98,8 +107,10 @@ def main():
         for sp in sps:
             bed = buscar_bed(split, sp)
             genome = gdir / f"{sp}.fna.gz"
+            if not genome.exists():
+                genome = idx_gen.get(norm(sp))
             dst = jsonl / split / f"{sp}.jsonl"
-            if bed is None or not genome.exists():
+            if bed is None or genome is None or not Path(genome).exists():
                 faltan += 1
                 continue
             trabajos.append((str(bed), tmp / f"{sp}.sizes.tsv", str(dst),

@@ -1,0 +1,24 @@
+{
+  "threshold": 0.5,
+  "epoch": 4,
+  "blocks": 4,
+  "mode": "logits_max",
+  "balance": "global",
+  "class_weight": true,
+  "at_calibrated_threshold": {
+    "precision": 0.9669592580324611,
+    "recall": 0.8448329916797299,
+    "specificity": 0.6837516512549537,
+    "f1": 0.9017800831477739,
+    "accuracy": 0.8313591160220994,
+    "balanced_accuracy": 0.7642923214673418,
+    "tp": 35031,
+    "fp": 1197,
+    "fn": 6434,
+    "tn": 2588,
+    "n": 45250,
+    "prevalence": 0.9163535833358765,
+    "pr_auc": 0.9837544892185449
+  },
+  "best_f1_threshold": 0.05
+}
