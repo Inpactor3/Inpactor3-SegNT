@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Bloquea pesos, archivos grandes y secretos antes de commitear.
+set -uo pipefail
+MAX=$((5 * 1024 * 1024))
+mal=0
+for f in $(git diff --cached --name-only --diff-filter=ACM); do
+  case "$f" in
+    *.pt|*.npz|*.safetensors|*.h5|*.hdf5|*.onnx|*.ckpt)
+      echo "BLOQUEADO (peso/modelo): $f"; mal=1; continue;;
+  esac
+  size=$(git cat-file -s ":$f" 2>/dev/null || echo 0)
+  if [ "$size" -gt "$MAX" ]; then
+    echo "BLOQUEADO (>5 MB): $f"; mal=1; continue
+  fi
+  if git show ":$f" 2>/dev/null | grep -a -qE "hf_[A-Za-z0-9]{30,}|KGAT_[A-Za-z0-9]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----"; then
+    echo "BLOQUEADO (posible secreto): $f"; mal=1
+  fi
+done
+[ "$mal" -eq 0 ] || { echo "Commit rechazado. Corrige los archivos marcados."; exit 1; }
+exit 0

@@ -107,7 +107,26 @@ paquete_descargas/  guía de inicio y scripts para terceros
 _archivo/    presentaciones y material histórico (no forma parte del producto)
 ```
 
-## Licencias
+## Pruebas
 
-Los lectores (Nucleotide Transformer v2 y NTv3) son de InstaDeep, NVIDIA y TUM, con licencia
-**no comercial**. Este repositorio es material académico.
+```bash
+python -m unittest discover -s tests -q
+```
+
+Cubren el cálculo de offsets (contra `training/block_layout`), la limpieza de secuencia y el
+generador de ventanas. No requieren GPU ni descargar modelos.
+
+Hook de protección (bloquea pesos, archivos >5 MB y secretos):
+
+```bash
+git config core.hooksPath .githooks
+```
+
+## Licencia, créditos y datos
+
+- **Licencia:** GNU GPLv3 (`LICENSE`), heredada de Inpactor e Inpactor2.
+- **Créditos y componentes de terceros:** `NOTICE.md`.
+- **Procedencia y licencia de cada fuente de datos:** `docs/MANIFIESTO_DATOS.md`.
+- Los lectores (Nucleotide Transformer v2 y NTv3) son de InstaDeep, NVIDIA y TUM, con
+  licencia **no comercial**; los pesos no se redistribuyen.
+- El repositorio no contiene pesos, librerías de terceros ni archivos grandes.

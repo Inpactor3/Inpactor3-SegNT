@@ -32,11 +32,9 @@ data/tair10_full/inpactor2_out/Inpactor2_library.fasta
 data/common_dataset/genomes/*.fasta        # 2.2 GB, se regenera con download_backgrounds.sh
 data/common_dataset/inpactor2_format/*.fasta   # 460 MB, se regenera con export_inpactor2_format.py
 !data/common_dataset/manifest.jsonl        # SÍ versionar (3 MB, útil)
-!data/common_dataset/panteon_ltr_subset.fasta  # SÍ versionar (30 MB, subset usado)
 
 # El pseudo-FASTA (20 MB) y el .tab (1 KB) SÍ los versionamos para
 # que Colab clone y arranque directo, sin descargas adicionales.
-!data/raw/TAIR10_pseudo.fasta
 !data/raw/Inpactor2_predictions_pseudo.tab
 !data/raw/Inpactor2_predictions.tab
 
@@ -187,3 +185,9 @@ RequisitosCurso/
 *.pt
 *.safetensors
 *.npz
+
+# Acuerdo Inpactor3: no se versionan librerías de terceros ni archivos grandes
+annotations/
+data/common_dataset/panteon_ltr_subset.fasta
+data/raw/TAIR10_pseudo.fasta
+data/raw/*.fasta

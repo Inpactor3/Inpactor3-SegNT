@@ -1,0 +1,9 @@
+# Uso: pip install pre-commit && pre-commit install
+repos:
+  - repo: local
+    hooks:
+      - id: repo-guard
+        name: bloquea pesos, archivos grandes y secretos
+        entry: .githooks/pre-commit
+        language: system
+        pass_filenames: false
