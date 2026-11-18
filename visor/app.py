@@ -97,20 +97,26 @@ def cargar_ntv3():
     return runs
 
 
-def epocas(reino):
-    clave = f"epocas_{reino}"
+def _csv(path):
+    clave = str(path)
     if clave in CACHE:
         return CACHE[clave]
-    f = EPOCAS / f"{reino.lower()}.csv"
     rows = None
-    if f.exists():
+    if path.exists():
         try:
-            with open(f) as fh:
+            with open(path) as fh:
                 rows = list(csv.DictReader(fh))
         except Exception:
             rows = None
     CACHE[clave] = rows
     return rows
+
+
+def epocas_run(r):
+    """Cada corrida usa su propio metrics.csv; NTv3 tiene los suyos por reino."""
+    if r.get("grupo") == "ventanas":
+        return _csv(RES_VENTANAS / r["id"] / "metrics.csv")
+    return _csv(EPOCAS / f"{r['reino'].lower()}.csv")
 
 
 def mejor_epoca(rows):
@@ -153,7 +159,7 @@ def corrida(rid):
     if rid not in runs:
         abort(404)
     r = runs[rid]
-    rows = epocas(r["reino"]) if r["reino"] in ("Hongos", "Plantas", "Animales") else None
+    rows = epocas_run(r)
     return render_template("corrida.html", r=r, epocas=rows, mejor=mejor_epoca(rows))
 
 
@@ -161,7 +167,7 @@ def corrida(rid):
 def ver_epocas(reino):
     if reino not in ("Hongos", "Plantas", "Animales"):
         abort(404)
-    rows = epocas(reino)
+    rows = _csv(EPOCAS / f"{reino.lower()}.csv")
     if rows is None:
         abort(404)
     return render_template("epocas.html", reino=reino, epocas=rows, mejor=mejor_epoca(rows))
