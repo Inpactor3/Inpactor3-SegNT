@@ -191,3 +191,6 @@ annotations/
 data/common_dataset/panteon_ltr_subset.fasta
 data/raw/TAIR10_pseudo.fasta
 data/raw/*.fasta
+
+# Genoma sintetico de la demo (se genera solo)
+demo/genoma_demo.fa
