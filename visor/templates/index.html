@@ -7,10 +7,10 @@ cada una tiene su propio test y su prevalencia.</p>
 
 {% if mejor %}
 <div class="tarjetas">
-  <div class="tarjeta"><span>Mejor PR-AUC</span><strong>{{ mejor.pr_auc|f4 }}</strong>
+  <div class="tarjeta"><span>Mayor PR-AUC</span><strong>{{ mejor.pr_auc|f4 }}</strong>
     <em>{{ mejor.reino }} · {{ mejor.lector }} · {{ mejor.ventana }}</em></div>
-  <div class="tarjeta"><span>Test más grande</span><strong>{{ "{:,}".format(mejor.n) }}</strong>
-    <em>ventanas evaluadas</em></div>
+  <div class="tarjeta"><span>Test más grande</span><strong>{{ "{:,}".format(mayor.n) }}</strong>
+    <em>{{ mayor.reino }} · {{ mayor.lector }} · {{ mayor.ventana }}</em></div>
 </div>
 {% endif %}
 

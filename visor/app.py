@@ -129,11 +129,21 @@ def mejor_epoca(rows):
 def index():
     runs = cargar_ventanas() + cargar_ntv3()
     runs_ok = [r for r in runs if r.get("bal_acc") is not None and r.get("pr_auc") is not None]
+    vistos, unicos = set(), []
+    for r in runs_ok:
+        k = (r["reino"], r["lector"], r["ventana"], r["agregacion"],
+             round(r["bal_acc"], 4), round(r["pr_auc"], 4), r["n"])
+        if k in vistos:
+            continue
+        vistos.add(k)
+        unicos.append(r)
+    runs_ok = unicos
     mejor = max(runs_ok, key=lambda r: r["pr_auc"]) if runs_ok else None
+    mayor = max(runs_ok, key=lambda r: r["n"]) if runs_ok else None
     resumen = {}
     for r in runs_ok:
         resumen.setdefault(r["reino"], []).append(r)
-    return render_template("index.html", runs=runs_ok, mejor=mejor,
+    return render_template("index.html", runs=runs_ok, mejor=mejor, mayor=mayor,
                            resumen=resumen, n=len(runs_ok))
 
 
