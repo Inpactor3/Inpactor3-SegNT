@@ -165,11 +165,16 @@ def main():
         feat = (feat - mu) / sd
         return feat.view(xb.shape[0], xb.shape[1], -1)
 
-    # mu/sd con 512 bloques de entrenamiento, antes de tocar LoRA
+    # mu/sd por lotes: calcularlo de golpe agota la GPU
+    paso = max(args.batch, 1)
     with torch.no_grad():
-        idx = np.random.default_rng(0).choice(len(xtr), min(128, len(xtr)), replace=False)
-        f = forward(xtr[idx]).reshape(-1, hidden)
+        idx = np.random.default_rng(0).choice(len(xtr), min(256, len(xtr)), replace=False)
+        trozos = [forward(xtr[idx[i:i + paso]]).reshape(-1, hidden)
+                  for i in range(0, len(idx), paso)]
+        f = torch.cat(trozos, dim=0)
         mu = f.mean(0).clone(); sd = f.std(0).clamp(min=1e-4).clone()
+    if dev == "cuda":
+        torch.cuda.empty_cache()
 
     opt = torch.optim.AdamW([p for p in backbone.parameters() if p.requires_grad]
                             + list(head.parameters()), lr=args.lr)
