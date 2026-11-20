@@ -21,6 +21,38 @@ CHUNK = 6000
 MAX_TOKENS = 1024
 
 
+class LoRALinear(nn.Module):
+    """Capa lineal congelada + adaptadores de bajo rango (LoRA) entrenables."""
+
+    def __init__(self, base, r=8, alpha=16):
+        super().__init__()
+        self.base = base
+        for p in base.parameters():
+            p.requires_grad = False
+        self.lora_A = nn.Parameter(torch.zeros(r, base.in_features))
+        self.lora_B = nn.Parameter(torch.zeros(base.out_features, r))
+        nn.init.kaiming_uniform_(self.lora_A, a=5 ** 0.5)
+        nn.init.zeros_(self.lora_B)
+        self.scale = alpha / r
+
+    def forward(self, x):
+        return self.base(x) + (x @ self.lora_A.T @ self.lora_B.T) * self.scale
+
+
+def inyectar_lora(model, r=8, alpha=16, objetivos=("query", "key", "value")):
+    """Reemplaza las proyecciones de atencion por versiones con LoRA."""
+    for nombre, modulo in list(model.named_modules()):
+        if not isinstance(modulo, nn.Linear):
+            continue
+        if nombre.split(".")[-1] not in objetivos:
+            continue
+        partes = nombre.split(".")
+        padre = model
+        for p in partes[:-1]:
+            padre = getattr(padre, p)
+        setattr(padre, partes[-1], LoRALinear(modulo, r, alpha))
+
+
 class Head(nn.Module):
     def __init__(self, hidden=512, dropout=0.2):
         super().__init__()
@@ -102,10 +134,7 @@ def main():
     for p in backbone.parameters():
         p.requires_grad = False
 
-    from peft import LoraConfig, get_peft_model
-    cfg = LoraConfig(r=args.rank, lora_alpha=args.rank * 2, lora_dropout=0.05,
-                     target_modules=["query", "key", "value"], bias="none")
-    backbone = get_peft_model(backbone, cfg)
+    inyectar_lora(backbone, r=args.rank, alpha=args.rank * 2)
     entrenables = sum(p.numel() for p in backbone.parameters() if p.requires_grad)
     print(f"parámetros LoRA entrenables: {entrenables:,}", flush=True)
     if entrenables == 0:
