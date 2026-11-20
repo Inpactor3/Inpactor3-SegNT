@@ -92,7 +92,13 @@ def main():
     dev = "cuda" if torch.cuda.is_available() else "cpu"
 
     tok = AutoTokenizer.from_pretrained(args.repo, trust_remote_code=True)
-    backbone = AutoModel.from_pretrained(args.repo, trust_remote_code=True).to(dev)
+    try:
+        backbone = AutoModel.from_pretrained(args.repo, trust_remote_code=True)
+    except Exception:
+        from transformers.dynamic_module_utils import get_class_from_dynamic_module
+        cls = get_class_from_dynamic_module("modeling_esm.EsmModel", args.repo)
+        backbone = cls.from_pretrained(args.repo)
+    backbone = backbone.to(dev)
     for p in backbone.parameters():
         p.requires_grad = False
 
