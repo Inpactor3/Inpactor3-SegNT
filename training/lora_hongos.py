@@ -29,8 +29,10 @@ class LoRALinear(nn.Module):
         self.base = base
         for p in base.parameters():
             p.requires_grad = False
-        self.lora_A = nn.Parameter(torch.zeros(r, base.in_features))
-        self.lora_B = nn.Parameter(torch.zeros(base.out_features, r))
+        dev = base.weight.device
+        dt = base.weight.dtype
+        self.lora_A = nn.Parameter(torch.zeros(r, base.in_features, device=dev, dtype=dt))
+        self.lora_B = nn.Parameter(torch.zeros(base.out_features, r, device=dev, dtype=dt))
         nn.init.kaiming_uniform_(self.lora_A, a=5 ** 0.5)
         nn.init.zeros_(self.lora_B)
         self.scale = alpha / r
@@ -135,6 +137,7 @@ def main():
         p.requires_grad = False
 
     inyectar_lora(backbone, r=args.rank, alpha=args.rank * 2)
+    backbone = backbone.to(dev)
     entrenables = sum(p.numel() for p in backbone.parameters() if p.requires_grad)
     print(f"parámetros LoRA entrenables: {entrenables:,}", flush=True)
     if entrenables == 0:
