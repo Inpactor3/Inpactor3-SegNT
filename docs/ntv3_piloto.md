@@ -163,6 +163,29 @@ Mismo genoma, misma rejilla y misma entrada que la evaluación del v2.
 A umbral 0,50 los valores son casi idénticos (BA 0,7249 · F1 0,6261), así que el
 resultado no depende de la calibración.
 
+## Test oro (Drosophila · 2.674 ventanas · 4 bloques)
+
+| Modelo | Bal acc | F1 | Precisión | Recall | PR-AUC |
+|---|---|---|---|---|---|
+| v2 100M congelado (24 kb, MIL) | 0,7385 | 0,6549 | — | — | 0,8151 |
+| **NTv3 100M** | **0,7503** | **0,6739** | **0,9507** | **0,5220** | **0,8331** |
+| Diferencia | **+0,0118** | **+0,0190** | — | — | **+0,0180** |
+
+Se repite el patron: gana en las tres metricas, y el umbral calibrado (0,46) da valores
+casi iguales a 0,50 (BA 0,7482 · F1 0,6696).
+
+## Test de plata (S. pombe · 250 ventanas · 12 positivas)
+
+| Modelo | Bal acc | F1 | Precisión | Recall | PR-AUC |
+|---|---|---|---|---|---|
+| v2 24 kb MIL | **0,8729** | **0,8182** | **0,8333** | 0,4167 | **0,8048** |
+| NTv3 24 kb | 0,8666 | 0,7200 | 0,6923 | **0,7500** | 0,7917 |
+| Diferencia | −0,0063 | −0,0982 | −0,1410 | **+0,3333** | −0,0131 |
+
+**No es concluyente**: con 12 positivos cualquier diferencia es ruido. La unica lectura
+clara es el cambio de punto de operacion: NTv3 detecta mas (recall 0,75 frente a 0,42) y
+paga en precision.
+
 ## Conclusión
 
 NTv3 es el mejor lector que hemos probado, y lo es **en las tres evaluaciones**:
@@ -171,9 +194,13 @@ NTv3 es el mejor lector que hemos probado, y lo es **en las tres evaluaciones**:
 |---|---|---|---|
 | Hongos, test interno (PR-AUC) | 0,8094 | **0,8327** | +0,0233 |
 | Plantas, test interno (bal acc) | 0,7815 | **0,8271** | +0,0456 |
-| **Plantas, test oro (PR-AUC)** | 0,8243 | **0,8505** | **+0,0262** |
+| Animales, corpus completo (PR-AUC) | 0,5012 | **0,5101** | +0,0089 |
+| **Oro · Arabidopsis (PR-AUC)** | 0,8243 | **0,8505** | **+0,0262** |
+| **Oro · Drosophila (PR-AUC)** | 0,8151 | **0,8331** | **+0,0180** |
+| Plata · S. pombe (PR-AUC) | **0,8048** | 0,7917 | −0,0131 (n=12, ruido) |
 
-Animales queda pendiente de una comparación con el mismo volumen de datos.
+Animales se comparó con el mismo volumen de datos: gana por poco (+0,009). La plata no
+permite conclusión por el tamaño de la muestra.
 
 El cambio de lector no es gratis: reconstruir las cachés completas de los tres reinos
 con NTv3 son ~100 h de GPU (hongos ~7 h, plantas ~35 h, animales ~65 h).
