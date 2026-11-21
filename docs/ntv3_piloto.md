@@ -25,7 +25,8 @@ lector v2, con el mismo test y un volumen de entrenamiento equivalente.
 | Plantas | v2 congelado | 32.726 | 0,7815 | 0,8551 | 0,9288 | 0,7923 | 0,9633 |
 | Plantas | **NTv3** | ~28.800 | **0,8271** | **0,8810** | **0,9486** | **0,8224** | **0,9732** |
 | Animales | v2 congelado | 287.814 | 0,6319 | 0,4239 | 0,5267 | 0,3547 | 0,5012 |
-| Animales | NTv3 (umbral 0,50) | ~31.800 | 0,6263 | 0,4110 | — | — | 0,4868 |
+| Animales | NTv3, piloto | ~31.800 | 0,6263 | 0,4110 | — | — | 0,4868 |
+| Animales | **NTv3, corpus completo** | **287.814** | **0,6376** | **0,4344** | **0,5540** | **0,3572** | **0,5101** |
 
 Diferencias frente al v2:
 
@@ -33,15 +34,18 @@ Diferencias frente al v2:
 |---|---|---|---|---|
 | Hongos | **+0,0204** | −0,0243 | **+0,0233** | −0,9 % |
 | Plantas | **+0,0456** | **+0,0259** | **+0,0099** | −12 % |
-| Animales | −0,0056 | −0,0129 | −0,0144 | **−89 %** |
+| Animales (piloto) | −0,0056 | −0,0129 | −0,0144 | **−89 %** |
+| **Animales (completo)** | **+0,0057** | **+0,0105** | **+0,0089** | **0 %** |
 
 ## Lectura
 
 1. **Plantas y hongos: NTv3 gana con claridad**, y en plantas lo hace en todas las
    métricas a la vez (balanced accuracy, F1, precisión, recall y PR-AUC). Con menos datos
    de entrenamiento.
-2. **Animales: empate con una novena parte de los datos.** No es una derrota: el v2 usó
-   287.814 ventanas y NTv3 31.800. Con datos comparables probablemente gane.
+2. **Animales: con datos equivalentes, NTv3 también gana, aunque por poco.** Con 287.814
+   ventanas en los dos: BA 0,6376 frente a 0,6319, F1 0,4344 frente a 0,4239 y PR-AUC
+   0,5101 frente a 0,5012. La diferencia de PR-AUC (+0,009) está en el borde del ruido, así
+   que es una victoria leve, no un empate con datos distintos.
 3. **El umbral calibrado de animales salió degenerado** (0,07) porque la validación está
    recortada a 400 por especie y las probabilidades se desplazan. La cifra honesta es la de
    umbral 0,50.
@@ -50,9 +54,10 @@ Diferencias frente al v2:
 
 ## Siguiente paso
 
-- Repetir plantas y animales con más épocas (el precompute ya está hecho: solo entrena).
-- Control v2 con el mismo tope en animales, para comparar de verdad.
-- Evaluar plantas en el test oro (Arabidopsis).
+- Repetir plantas con más épocas (el precompute ya está hecho: solo entrena).
+- Evaluar plantas en el test oro (Arabidopsis) hecha la corrida completa.
+- Documentar LoRA: en hongos +0,022 de PR-AUC; en plantas empate; en animales colapsó con
+  lr 3e-4.
 
 ## Métricas época por época (validación)
 
@@ -172,3 +177,23 @@ Animales queda pendiente de una comparación con el mismo volumen de datos.
 
 El cambio de lector no es gratis: reconstruir las cachés completas de los tres reinos
 con NTv3 son ~100 h de GPU (hongos ~7 h, plantas ~35 h, animales ~65 h).
+
+## Animales con el corpus completo
+
+Se repitió el piloto sin tope (6.000 ventanas por especie: 287.814 en total, el mismo
+volumen que el v2), con validación de 20.000 ventanas para calibrar mejor el umbral.
+
+| Modelo | Train | Bal acc | F1 | Precisión | Recall | PR-AUC |
+|---|---|---|---|---|---|---|
+| v2 congelado | 287.814 | 0,6319 | 0,4239 | 0,5267 | 0,3547 | 0,5012 |
+| **NTv3 completo** | 287.814 | **0,6376** | **0,4344** | **0,5540** | **0,3572** | **0,5101** |
+| NTv3 piloto | 31.800 | 0,6263 | 0,4110 | — | — | 0,4868 |
+
+Lectura:
+
+- Con datos equivalentes, **NTv3 gana en las cinco métricas**, pero el PR-AUC sube solo
+  +0,009: dentro del ruido entre semillas (±0,01). Es una victoria leve.
+- El salto del piloto al completo (+0,023 de PR-AUC) confirma que la diferencia anterior
+  era de volumen de datos, no de lector.
+- La mejor época fue la 16 (BA de validación 0,6413), con la loss de validación mínima en
+  la 9. La curva seguía subiendo despacio: no había sobreajuste claro.
