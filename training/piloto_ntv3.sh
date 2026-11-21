@@ -9,6 +9,7 @@ REPO="${REPO:-InstaDeepAI/NTv3_100M_pre}"
 CAP_TRAIN="${CAP_TRAIN:-600}"
 CAP_VAL="${CAP_VAL:-400}"
 EPOCHS="${EPOCHS:-20}"
+BATCH="${BATCH:-4}"
 mkdir -p "$WORK"
 
 echo "[$(date +%H:%M:%S)] 1/4 submuestreo 1:1 (tope $CAP_TRAIN/especie)"
@@ -39,9 +40,9 @@ PY
 
 echo "[$(date +%H:%M:%S)] 3/4 embeddings NTv3"
 python "$HERE/precompute_ntv3.py" --seq_dir "$WORK/seq" --out_dir "$WORK/emb" \
-  --splits val,test --repo "$REPO"
+  --splits val,test --repo "$REPO" --batch "$BATCH"
 python "$HERE/precompute_ntv3.py" --seq_dir "$WORK/seq" --out_dir "$WORK/emb" \
-  --splits train --repo "$REPO"
+  --splits train --repo "$REPO" --batch "$BATCH"
 
 echo "[$(date +%H:%M:%S)] 4/4 entrenando el cabezal"
 python "$HERE/train_mil.py" --emb_dir "$WORK/emb" --out_dir "$WORK/modelo" \
@@ -51,4 +52,6 @@ echo
 echo "===== PILOTO NTv3 · HONGOS 24 kb ====="
 cat "$WORK/modelo/test_metrics.json"
 echo
-echo "Referencia (nuestro lector v2): BA 0,8261 · F1 0,7365 · PR-AUC 0,8094"
+echo "Referencias (mismo test):"
+echo "  v2 100M        BA 0,8261 · F1 0,7365 · PR-AUC 0,8094"
+echo "  NTv3 100M_pre  BA 0,8465 · F1 0,7122 · PR-AUC 0,8327"
