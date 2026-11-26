@@ -15,9 +15,15 @@
   <div class="tarjeta"><span>PR-AUC</span><strong>{{ r.pr_auc|f4 }}</strong></div>
 </div>
 
+{% if confusion %}
+<h2>Matriz de confusión estimada</h2>
+{{ confusion.tabla|safe }}
+<p class="nota">Calculada a partir de n, prevalencia, recall y precisión del umbral guardado.</p>
+{% endif %}
+
 {% if mejor %}
 <p class="nota">Mejor época en validación: {{ mejor.epoch }}
  (bal acc {{ mejor.val_bal_acc|f4 }} · F1 {{ mejor.val_f1|f4 }} · val loss {{ mejor.val_loss|f4 }}).</p>
-<p><a class="boton" href="{{ url_for('ver_epocas', reino=r.reino) }}">Ver las 20 épocas</a></p>
+<p><a class="boton" href="{{ url_for('ver_epocas', reino=r.reino) }}">Ver las épocas y sus gráficos</a></p>
 {% endif %}
 {% endblock %}

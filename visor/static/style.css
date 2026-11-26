@@ -33,3 +33,33 @@ a { color:var(--acento); }
 .boton { display:inline-block; background:var(--acento); color:#fff; padding:8px 14px;
          border-radius:8px; text-decoration:none; font-size:14px; }
 footer { text-align:center; color:var(--muted); font-size:12px; padding:24px 12px; }
+
+/* filtros y gráficos */
+.filtros { display:flex; gap:16px; align-items:center; flex-wrap:wrap; margin:10px 0 18px; }
+.filtros select { padding:5px 8px; border:1px solid var(--linea); border-radius:6px; background:#fff; }
+.barras { display:flex; flex-direction:column; gap:8px; margin:10px 0 18px; }
+.bar-row { display:grid; grid-template-columns: 260px 1fr 70px; gap:10px; align-items:center; }
+.bar-label { font-size:12px; color:var(--texto); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.bar-sub { display:block; color:var(--muted); font-size:10px; }
+.bar-track { background:#eef2f7; border-radius:6px; height:18px; overflow:hidden; }
+.bar-fill { height:100%; border-radius:6px; }
+.bar-val { font-size:12px; text-align:right; color:var(--tinta); font-variant-numeric:tabular-nums; }
+.hm-wrap { overflow-x:auto; margin:10px 0 18px; }
+.heatmap { font-size:12px; min-width:640px; }
+.heatmap th { background:#fff; color:var(--tinta); font-weight:600; padding:6px; border:0; }
+.heatmap thead th { background:#f1f5f9; color:var(--texto); font-size:11px; }
+.hm-fila { text-align:left; white-space:nowrap; background:#fff!important; color:var(--texto)!important; }
+.hm-celda { border:2px solid #fff; padding:8px 6px; text-align:center; font-variant-numeric:tabular-nums; }
+.hm-vacia { border:2px solid #fff; color:#cbd5e1; text-align:center; }
+.linea { background:#fff; border:1px solid var(--linea); border-radius:12px; padding:10px 12px; margin:12px 0; }
+.linea-titulo { font-size:13px; font-weight:700; color:var(--tinta); margin-bottom:4px; }
+.linea svg { width:100%; height:auto; }
+.linea svg text { font-size:9px; fill:#64748b; }
+.matriz { max-width:560px; }
+.matriz th { background:#f1f5f9; color:var(--texto); }
+.matriz td { font-size:18px; font-weight:700; }
+.matriz td em { display:block; font-size:11px; font-weight:400; color:var(--muted); font-style:normal; }
+.matriz .tp { background:#dcfce7; color:#14532d; }
+.matriz .tn { background:#dcfce7; color:#14532d; }
+.matriz .fp { background:#fee2e2; color:#7f1d1d; }
+.matriz .fn { background:#fef3c7; color:#78350f; }

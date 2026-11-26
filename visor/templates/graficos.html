@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block titulo %}Gráficos · Visor Inpactor3{% endblock %}
+{% block contenido %}
+<h1>Gráficos de resultados</h1>
+<p class="sub">Barras y mapa de calor de la métrica elegida. Pasa el ratón por las celdas para ver el valor.
+Las comparaciones entre reinos no son directas: cada test tiene su prevalencia.</p>
+
+<form class="filtros" method="get">
+  <label>Métrica
+    <select name="metrica" onchange="this.form.submit()">
+      {% for m, nombre in [('pr_auc','PR-AUC'), ('f1','F1'), ('bal_acc','Balanced accuracy'),
+                           ('precision','Precisión'), ('recall','Recall')] %}
+      <option value="{{ m }}" {{ 'selected' if metrica == m else '' }}>{{ nombre }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <span class="nota">{{ n }} corridas</span>
+</form>
+
+<h2>Ranking</h2>
+{{ barras|safe }}
+
+<h2>Mapa de calor por reino y configuración</h2>
+{{ hm|safe }}
+<p class="nota">Cada celda usa la mejor corrida de esa combinación reino · configuración para la métrica elegida.</p>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block titulo %}Especies · Visor Inpactor3{% endblock %}
+{% block contenido %}
+<h1>Especies · composición del dataset</h1>
+<p class="sub">Ventanas por especie en el diagnóstico de animales. La altura no es rendimiento del modelo:
+es cuántas ventanas aporta cada especie. Para plantas y hongos aún no hay un CSV por especie.</p>
+
+<form class="filtros" method="get">
+  <label>Grupo
+    <select name="grupo" onchange="this.form.submit()">
+      <option value="">Todos</option>
+      {% for g in grupos %}<option value="{{ g }}" {{ 'selected' if grupo == g else '' }}>{{ g }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>Split
+    <select name="split" onchange="this.form.submit()">
+      <option value="">Todos</option>
+      {% for s in ['train','val','test'] %}<option value="{{ s }}" {{ 'selected' if split == s else '' }}>{{ s }}</option>{% endfor %}
+    </select>
+  </label>
+  <span class="nota">{{ n }} especies · {{ "{:,}".format(total).replace(",", ".") }} ventanas</span>
+</form>
+
+<h2>Top 25 especies por ventanas</h2>
+{{ barras|safe }}
+
+<h2>Matriz grupo × split</h2>
+{{ hm|safe }}
+
+<h2>Detalle por especie</h2>
+<table>
+  <thead><tr><th>Especie</th><th>Grupo</th><th>Split</th><th>Ventanas</th>
+             <th>Positivas</th><th>Negativas</th><th>% positivas</th><th>Rota</th></tr></thead>
+  <tbody>
+  {% for r in rows %}
+    <tr>
+      <td style="text-align:left">{{ r.nombre }}</td>
+      <td>{{ r.grupo }}</td><td>{{ r.split }}</td>
+      <td>{{ "{:,}".format(r.ventanas).replace(",", ".") }}</td>
+      <td>{{ "{:,}".format(r.positivas).replace(",", ".") }}</td>
+      <td>{{ "{:,}".format(r.negativas).replace(",", ".") }}</td>
+      <td>{{ r.pct_pos }} %</td>
+      <td>{{ 'SÍ' if r.roto else 'NO' }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

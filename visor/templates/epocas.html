@@ -17,4 +17,7 @@
   {% endfor %}
   </tbody>
 </table>
+
+<h2>Curvas de validación</h2>
+{% for g in graficos_ep %}{{ g|safe }}{% endfor %}
 {% endblock %}

@@ -11,13 +11,16 @@ import csv
 import json
 from pathlib import Path
 
-from flask import Flask, abort, render_template
+from flask import Flask, abort, render_template, request
+
+from charts import bar_chart, heatmap, line_svg, confusion_table, color_grupo
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 RES_VENTANAS = DOCS / "ventanas"
 RES_NTV3 = DOCS / "ntv3_resultados.json"
 EPOCAS = DOCS / "ntv3_epocas"
+DIAG = ROOT / "diagnostico_animales.csv"
 
 app = Flask(__name__)
 CACHE = {}
@@ -131,6 +134,46 @@ def mejor_epoca(rows):
         return None
 
 
+def cargar_diagnostico():
+    if "diag" in CACHE:
+        return CACHE["diag"]
+    rows = []
+    if DIAG.exists():
+        with open(DIAG) as fh:
+            for r in csv.DictReader(fh):
+                try:
+                    rows.append({
+                        "especie": r["especie"],
+                        "nombre": r["especie"].split("__")[0].replace("_", " "),
+                        "grupo": r["grupo"],
+                        "split": r["split"],
+                        "ventanas": int(r["ventanas"]),
+                        "positivas": int(r["positivas"]),
+                        "negativas": int(r["negativas"]),
+                        "pct_pos": float(r["pct_pos"]),
+                        "roto": r.get("roto", "NO") == "SÍ",
+                    })
+                except Exception:
+                    continue
+    CACHE["diag"] = rows
+    return rows
+
+
+def config_label(r):
+    return f"{r['lector']} · {r['ventana']} · {r['agregacion']}"
+
+
+def valor_metrica(r, metrica):
+    v = r.get(metrica)
+    if v is None and metrica == "bal_acc":
+        v = r.get("balanced_accuracy")
+    return v
+
+
+def todos_los_runs():
+    return cargar_ventanas() + cargar_ntv3()
+
+
 @app.route("/")
 def index():
     runs = cargar_ventanas() + cargar_ntv3()
@@ -160,7 +203,23 @@ def corrida(rid):
         abort(404)
     r = runs[rid]
     rows = epocas_run(r)
-    return render_template("corrida.html", r=r, epocas=rows, mejor=mejor_epoca(rows))
+    conf = None
+    try:
+        n = float(r["n"]); prev = float(r["prev"])
+        rec = float(r["recall"]); prec = float(r["precision"])
+        pos = n * prev
+        tp = rec * pos
+        fn = pos - tp
+        fp = tp * (1 - prec) / prec if prec > 0 else None
+        if fp is not None:
+            tn = n - pos - fp
+            if tn >= 0:
+                conf = {"tp": tp, "fp": fp, "fn": fn, "tn": tn,
+                        "tabla": confusion_table(tp, fp, fn, tn)}
+    except Exception:
+        conf = None
+    return render_template("corrida.html", r=r, epocas=rows, mejor=mejor_epoca(rows),
+                           confusion=conf)
 
 
 @app.route("/epocas/<reino>")
@@ -170,7 +229,15 @@ def ver_epocas(reino):
     rows = _csv(EPOCAS / f"{reino.lower()}.csv")
     if rows is None:
         abort(404)
-    return render_template("epocas.html", reino=reino, epocas=rows, mejor=mejor_epoca(rows))
+    labels = [r["epoch"] for r in rows]
+    graficos_ep = [
+        line_svg("Val loss", labels, [float(r["val_loss"]) for r in rows], "#9f1239"),
+        line_svg("Val F1", labels, [float(r["val_f1"]) for r in rows], "#0f766e"),
+        line_svg("Val balanced accuracy", labels,
+                 [float(r["val_bal_acc"]) for r in rows], "#4c1d95"),
+    ]
+    return render_template("epocas.html", reino=reino, epocas=rows,
+                           mejor=mejor_epoca(rows), graficos_ep=graficos_ep)
 
 
 @app.route("/comparar")
@@ -190,6 +257,67 @@ def comparar():
             except Exception:
                 continue
     return render_template("comparar.html", filas=filas)
+
+
+@app.route("/graficos")
+def graficos():
+    metrica = request.args.get("metrica", "pr_auc")
+    if metrica not in ("pr_auc", "f1", "bal_acc", "precision", "recall"):
+        metrica = "pr_auc"
+    runs = [r for r in todos_los_runs() if valor_metrica(r, metrica) is not None]
+    vistos, unicos = set(), []
+    for r in runs:
+        k = (r.get("id"), r.get("reino"), config_label(r))
+        if k in vistos:
+            continue
+        vistos.add(k)
+        unicos.append(r)
+    ordenados = sorted(unicos, key=lambda r: valor_metrica(r, metrica), reverse=True)
+    reino_color = {r: color_grupo(r) for r in sorted({x["reino"] for x in ordenados})}
+    items = [{"label": f'{r["reino"]} · {r["lector"]} · {r["ventana"]} · {r["agregacion"]}',
+              "value": valor_metrica(r, metrica),
+              "color": reino_color.get(r["reino"])} for r in ordenados[:20]]
+    barras = bar_chart(items)
+    reinos = sorted({r["reino"] for r in unicos})
+    cols = sorted({config_label(r) for r in unicos})
+    valores = {}
+    for r in unicos:
+        k = (r["reino"], config_label(r))
+        v = valor_metrica(r, metrica)
+        if k not in valores or v > valores[k]:
+            valores[k] = v
+    hm = heatmap(reinos, cols, valores, fmt=".3f",
+                 cell_title=lambda a, b, v: f"{a} · {b}: {v:.4f}")
+    return render_template("graficos.html", barras=barras, hm=hm, metrica=metrica,
+                           n=len(unicos), reinos=reinos, cols=cols)
+
+
+@app.route("/especies")
+def especies():
+    grupo = request.args.get("grupo", "")
+    split = request.args.get("split", "")
+    rows = cargar_diagnostico()
+    grupos = sorted({r["grupo"] for r in rows})
+    if grupo:
+        rows = [r for r in rows if r["grupo"] == grupo]
+    if split:
+        rows = [r for r in rows if r["split"] == split]
+    rows_orden = sorted(rows, key=lambda r: r["ventanas"], reverse=True)
+    items = [{"label": r["nombre"], "sub": f'{r["grupo"]} · {r["split"]}',
+              "value": r["ventanas"], "color": color_grupo(r["grupo"], grupos)}
+             for r in rows_orden[:25]]
+    barras = bar_chart(items, value_fmt="{:,.0f}".replace(",", " "))
+    matrix = {}
+    for r in rows:
+        k = (r["grupo"], r["split"])
+        matrix[k] = matrix.get(k, 0) + r["ventanas"]
+    splits = ["train", "val", "test"]
+    hm = heatmap(grupos, splits, matrix, fmt=".0f",
+                 cell_title=lambda a, b, v: f"{a} · {b}: {int(v):,} ventanas".replace(",", "."))
+    total = sum(r["ventanas"] for r in rows)
+    return render_template("especies.html", barras=barras, hm=hm, rows=rows_orden,
+                           grupos=grupos, grupo=grupo, split=split,
+                           total=total, n=len(rows))
 
 
 @app.route("/salud")
