@@ -11,9 +11,12 @@ import csv
 import json
 from pathlib import Path
 
-from flask import Flask, abort, render_template, request
+from flask import (Flask, abort, render_template, request, redirect,
+                   url_for, send_file, jsonify, flash)
+from werkzeug.utils import secure_filename
 
 from charts import bar_chart, heatmap, line_svg, confusion_table, color_grupo
+import jobs as jobmod
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -23,7 +26,10 @@ EPOCAS = DOCS / "ntv3_epocas"
 DIAG = ROOT / "diagnostico_animales.csv"
 
 app = Flask(__name__)
+app.config["MAX_CONTENT_LENGTH"] = int(jobmod.MAX_GB * 1e9)
+app.secret_key = "visor-inpactor3"  # solo mensajes flash locales
 CACHE = {}
+jobmod.iniciar_worker()
 
 
 @app.template_filter("f4")
@@ -318,6 +324,85 @@ def especies():
     return render_template("especies.html", barras=barras, hm=hm, rows=rows_orden,
                            grupos=grupos, grupo=grupo, split=split,
                            total=total, n=len(rows))
+
+
+@app.route("/analizar", methods=["GET", "POST"])
+def analizar():
+    modelos = jobmod.modelos()
+    if request.method == "POST":
+        archivo = request.files.get("genome")
+        if not archivo or not archivo.filename:
+            flash("Selecciona un genoma en FASTA.")
+            return redirect(url_for("analizar"))
+        nombre = secure_filename(archivo.filename)
+        if not nombre.lower().endswith((".fa", ".fasta", ".fna", ".fa.gz", ".fasta.gz", ".fna.gz")):
+            flash("El genoma debe ser .fa, .fasta, .fna o .gz.")
+            return redirect(url_for("analizar"))
+        modelo = request.form.get("modelo", "")
+        if modelo not in {m["path"] for m in modelos}:
+            flash("Checkpoint no válido.")
+            return redirect(url_for("analizar"))
+        try:
+            ventana = int(request.form.get("ventana", 50000))
+            chunks = int(request.form.get("chunks", 4))
+            if not (1000 <= ventana <= 1_000_000) or not (1 <= chunks <= 16):
+                raise ValueError
+            thr = request.form.get("threshold", "").strip()
+            thr = float(thr) if thr else None
+            if thr is not None and not (0.0 < thr < 1.0):
+                raise ValueError
+        except ValueError:
+            flash("Revisa ventana, chunks o umbral.")
+            return redirect(url_for("analizar"))
+        backbone = request.form.get("backbone", "auto")
+        if backbone not in ("auto", "v2", "ntv3"):
+            backbone = "auto"
+        try:
+            job = jobmod.crear_job(archivo, nombre, modelo, ventana, chunks, thr, backbone)
+        except ValueError as e:
+            flash(str(e))
+            return redirect(url_for("analizar"))
+        return redirect(url_for("trabajo", job_id=job["id"]))
+    return render_template("analizar.html", modelos=modelos,
+                           jobs=jobmod.listar_jobs(), max_gb=jobmod.MAX_GB,
+                           deps_ok=jobmod.deps_ok(), python=jobmod.PYTHON)
+
+
+@app.route("/trabajo/<job_id>")
+def trabajo(job_id):
+    job = jobmod.leer_job(job_id)
+    if not job:
+        abort(404)
+    return render_template("trabajo.html", job=job)
+
+
+@app.route("/trabajo/<job_id>.json")
+def trabajo_json(job_id):
+    job = jobmod.leer_job(job_id)
+    if not job:
+        return jsonify({"error": "no existe"}), 404
+    return jsonify(job)
+
+
+@app.route("/trabajo/<job_id>/<nombre>")
+def descargar(job_id, nombre):
+    job = jobmod.leer_job(job_id)
+    if not job:
+        abort(404)
+    permitidos = set(job.get("archivos") or []) | {"log.txt"}
+    if nombre not in permitidos or nombre.startswith("."):
+        abort(404)
+    d = jobmod._dir(job_id)
+    p = d / nombre
+    if not p.exists():
+        abort(404)
+    return send_file(p, as_attachment=True, download_name=f"{job_id}_{nombre}")
+
+
+@app.errorhandler(413)
+def demasiado_grande(_):
+    return (f"El archivo supera el límite de {jobmod.MAX_GB:g} GB. "
+            "Sube el genoma comprimido o aumenta INPACTOR3_MAX_GB.", 413)
 
 
 @app.route("/salud")

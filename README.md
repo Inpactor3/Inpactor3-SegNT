@@ -64,16 +64,26 @@ python pkg/mil_code/training/train_mil.py \
   --epochs 20 --class_weight --balance global --pool logits
 ```
 
-## Visor de resultados (solo lectura)
+## Visor de resultados y análisis de genomas
 
 ```bash
-python3 visor/app.py --port 8000
+# El visor usa Flask; los trabajos de detección necesitan torch + transformers.
+INPACTOR3_PYTHON=/ruta/al/python/con/torch python3 visor/app.py --port 8000
 # abrir http://127.0.0.1:8000
 ```
 
-Lee los JSON de `docs/ventanas/`, `docs/ntv3_resultados.json` y los CSV de
-`docs/ntv3_epocas/`. No ejecuta modelos ni expone pesos. Rutas: `/`, `/comparar`,
-`/corrida/<id>`, `/epocas/<reino>`, `/salud`.
+- `/` resumen, `/graficos`, `/especies`, `/comparar`, `/epocas/<reino>`, `/corrida/<id>`.
+- `/analizar`: sube un genoma FASTA, elige un checkpoint de `docs/ventanas/*/best.pt`
+  y encola `inpactor3.detect`. Un solo trabajo a la vez; estado y progreso en vivo.
+- Salidas descargables: `out.bed`, `out.gff` y `log.txt` en `trabajo/visor_jobs/<id>/`
+  (ignorado por git). El BED/GFF contiene regiones/ventanas candidatas, no elementos
+  recortados; la librería FASTA completa se genera con el pipeline Inpactor2.
+- Límite de subida: `INPACTOR3_MAX_GB` (6 GB por defecto). El genoma debe ser un
+  ensamblado FASTA, no reads. Si el intérprete no tiene `torch`/`transformers`, el
+  visor lo avisa en `/analizar`.
+
+Las vistas de resultados leen `docs/ventanas/`, `docs/ntv3_resultados.json`,
+`docs/ntv3_epocas/` y `diagnostico_animales.csv`.
 
 ## Módulo integrable en Inpactor2
 

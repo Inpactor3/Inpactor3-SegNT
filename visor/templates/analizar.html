@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block titulo %}Analizar genoma · Visor Inpactor3{% endblock %}
+{% block contenido %}
+<h1>Analizar un genoma</h1>
+<p class="sub">Sube un ensamblado en FASTA y elige un checkpoint. El trabajo corre en segundo plano
+en este servidor, con un solo job a la vez. Puedes cerrar la pestaña: el job sigue.</p>
+
+{% with msgs = get_flashed_messages() %}
+  {% if msgs %}<div class="aviso">{{ msgs|join(' · ') }}</div>{% endif %}
+{% endwith %}
+
+{% if not deps_ok %}
+<div class="aviso">El servidor no tiene <code>torch</code> y <code>transformers</code> en
+<code>{{ python }}</code>. Define <code>INPACTOR3_PYTHON</code> con el intérprete correcto antes de lanzar trabajos.</div>
+{% endif %}
+
+{% if modelos %}
+<form class="form-job" method="post" enctype="multipart/form-data">
+  <label class="archivo">Genoma FASTA (.fa, .fasta, .fna o .gz)
+    <input type="file" name="genome" accept=".fa,.fasta,.fna,.gz" required>
+    <span class="nota">Máximo {{ max_gb|int }} GB. Mejor un ensamblado con buen N50, no reads.</span>
+  </label>
+
+  <label>Modelo
+    <select name="modelo" required>
+      {% for m in modelos %}
+      <option value="{{ m.path }}" {{ 'selected' if loop.first else '' }}>{{ m.label }}</option>
+      {% endfor %}
+    </select>
+  </label>
+
+  <details>
+    <summary>Opciones avanzadas</summary>
+    <div class="grid3">
+      <label>Ventana (pb)
+        <input type="number" name="ventana" value="50000" min="1000" max="1000000" step="1000">
+      </label>
+      <label>Bloques
+        <input type="number" name="chunks" value="4" min="1" max="16">
+      </label>
+      <label>Umbral (vacío = del checkpoint)
+        <input type="number" name="threshold" min="0.01" max="0.99" step="0.01" placeholder="0.50">
+      </label>
+      <label>Backbone
+        <select name="backbone">
+          <option value="auto">auto</option>
+          <option value="v2">v2 100M</option>
+          <option value="ntv3">NTv3 100M</option>
+        </select>
+      </label>
+    </div>
+  </details>
+
+  <button class="boton" type="submit">Encolar análisis</button>
+  <span class="nota">El resultado será BED y GFF descargables. La anotación de elementos
+  (librería FASTA) se hace con el pipeline Inpactor2 completo.</span>
+</form>
+{% else %}
+<div class="aviso">No hay checkpoints compatibles en <code>docs/ventanas/*/best.pt</code>.
+Un administrador debe colocar un checkpoint antes de usar esta página.</div>
+{% endif %}
+
+<h2>Trabajos recientes</h2>
+{% if jobs %}
+<table>
+  <thead><tr><th>Genoma</th><th>Modelo</th><th>Estado</th><th>Progreso</th><th>Creado</th><th></th></tr></thead>
+  <tbody>
+  {% for j in jobs %}
+    <tr>
+      <td style="text-align:left">{{ j.nombre }}</td>
+      <td>{{ j.modelo_label }}</td>
+      <td><span class="badge {{ j.estado }}">{{ j.estado }}</span></td>
+      <td style="min-width:120px"><div class="mini"><div style="width:{{ j.progreso }}%"></div></div></td>
+      <td>{{ j.creado.replace('T',' ') }}</td>
+      <td><a href="{{ url_for('trabajo', job_id=j.id) }}">ver</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p class="nota">Aún no hay trabajos.</p>
+{% endif %}
+{% endblock %}

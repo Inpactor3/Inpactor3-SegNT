@@ -63,3 +63,33 @@ footer { text-align:center; color:var(--muted); font-size:12px; padding:24px 12p
 .matriz .tn { background:#dcfce7; color:#14532d; }
 .matriz .fp { background:#fee2e2; color:#7f1d1d; }
 .matriz .fn { background:#fef3c7; color:#78350f; }
+
+/* trabajos */
+.form-job { background:#fff; border:1px solid var(--linea); border-radius:12px;
+            padding:18px; display:flex; flex-direction:column; gap:14px; max-width:820px; }
+.form-job label { display:flex; flex-direction:column; gap:4px; font-size:13px; font-weight:600; }
+.form-job select, .form-job input[type=number] { padding:7px 8px; border:1px solid var(--linea);
+            border-radius:7px; font-size:14px; background:#fff; max-width:340px; }
+.form-job input[type=file] { padding:8px; border:1px dashed #cbd5e1; border-radius:8px; background:#f8fafc; }
+.form-job details { border-top:1px solid var(--linea); padding-top:10px; }
+.form-job summary { cursor:pointer; color:var(--acento); font-size:13px; }
+.grid3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-top:10px; }
+.aviso { background:#fef3c7; border:1px solid #f59e0b; color:#78350f; padding:10px 12px;
+         border-radius:8px; margin:12px 0; font-size:14px; }
+.badge { display:inline-block; padding:3px 8px; border-radius:999px; font-size:11px;
+         font-weight:700; text-transform:uppercase; letter-spacing:.3px; }
+.badge.en_cola { background:#e2e8f0; color:#334155; }
+.badge.ejecutando { background:#dbeafe; color:#1e40af; }
+.badge.listo { background:#dcfce7; color:#14532d; }
+.badge.error, .badge.interrumpido { background:#fee2e2; color:#7f1d1d; }
+.mini { background:#eef2f7; height:8px; border-radius:4px; overflow:hidden; }
+.mini > div { background:var(--acento); height:100%; }
+.estado-caja { background:#fff; border:1px solid var(--linea); border-radius:12px;
+               padding:14px; margin:12px 0; max-width:820px; }
+.estado-linea { display:flex; gap:12px; align-items:center; margin-bottom:8px; }
+.progreso { height:12px; background:#eef2f7; border-radius:6px; overflow:hidden; }
+.progreso-fill { height:100%; width:0; background:var(--acento); transition:width .4s; }
+.oculto { display:none; }
+.descargas { display:flex; gap:10px; flex-wrap:wrap; }
+.log { background:#0f172a; color:#e2e8f0; padding:14px; border-radius:10px;
+       max-height:360px; overflow:auto; font-size:12px; line-height:1.45; }

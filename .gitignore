@@ -194,3 +194,6 @@ data/raw/*.fasta
 
 # Genoma sintetico de la demo (se genera solo)
 demo/genoma_demo.fa
+
+# Trabajos del visor (genomas subidos y salidas)
+trabajo/visor_jobs/

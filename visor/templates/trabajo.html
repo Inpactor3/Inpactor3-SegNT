@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block titulo %}Trabajo {{ job.id }} · Visor Inpactor3{% endblock %}
+{% block contenido %}
+<p><a href="{{ url_for('analizar') }}">← analizar otro genoma</a></p>
+<h1>{{ job.nombre }}</h1>
+<p class="sub">{{ job.modelo_label }} · ventana {{ job.ventana }} pb · {{ job.chunks }} bloques
+ · {{ job.tamano_mb }} MB{% if job.threshold %} · umbral {{ job.threshold }}{% endif %}</p>
+
+<div class="estado-caja">
+  <div class="estado-linea">
+    <span id="estado" class="badge {{ job.estado }}">{{ job.estado }}</span>
+    <span id="texto" class="nota"></span>
+  </div>
+  <div class="progreso"><div id="barra" class="progreso-fill" style="width:{{ job.progreso }}%"></div></div>
+</div>
+
+<div id="listo" class="{{ '' if job.estado == 'listo' else 'oculto' }}">
+  <h2>Resultados</h2>
+  <p id="resumen">{% if job.regiones is defined %}{{ job.regiones }} regiones candidatas.{% endif %}</p>
+  <p class="descargas">
+    <a class="boton" href="{{ url_for('descargar', job_id=job.id, nombre='out.bed') }}">BED</a>
+    <a class="boton" href="{{ url_for('descargar', job_id=job.id, nombre='out.gff') }}">GFF3</a>
+    <a class="boton" href="{{ url_for('descargar', job_id=job.id, nombre='log.txt') }}">Log</a>
+  </p>
+  <p class="nota">El BED contiene regiones/ventanas candidatas, no elementos recortados.
+  Para una librería FASTA de LTR-RTs completos hay que usar el pipeline Inpactor2.</p>
+</div>
+
+<div id="error" class="{{ '' if job.estado == 'error' else 'oculto' }}">
+  <h2>Error</h2><p id="error-txt">{{ job.error }}</p>
+</div>
+
+<h2>Log</h2>
+<pre id="log" class="log">Cargando…</pre>
+
+<script>
+const id = "{{ job.id }}";
+async function refrescar() {
+  const r = await fetch(`/trabajo/${id}.json`, {cache: "no-store"});
+  if (!r.ok) return;
+  const j = await r.json();
+  document.getElementById("barra").style.width = j.progreso + "%";
+  const est = document.getElementById("estado");
+  est.textContent = j.estado;
+  est.className = "badge " + j.estado;
+  let txt = "";
+  if (j.total) txt = `${j.hechas || 0} / ${j.total} ventanas`;
+  else if (j.estado === "en_cola") txt = "esperando turno";
+  else if (j.estado === "ejecutando") txt = "cargando modelo y genoma…";
+  document.getElementById("texto").textContent = txt;
+  if (j.estado === "listo") {
+    document.getElementById("listo").classList.remove("oculto");
+    if (j.regiones !== undefined)
+      document.getElementById("resumen").textContent = `${j.regiones} regiones candidatas.`;
+  }
+  if (j.estado === "error" || j.estado === "interrumpido") {
+    document.getElementById("error").classList.remove("oculto");
+    document.getElementById("error-txt").textContent = j.error || j.estado;
+  }
+  try {
+    const l = await fetch(`/trabajo/${id}/log.txt`, {cache: "no-store"});
+    if (l.ok) {
+      const t = await l.text();
+      const pre = document.getElementById("log");
+      pre.textContent = t.split("\n").slice(-200).join("\n");
+      pre.scrollTop = pre.scrollHeight;
+    }
+  } catch (e) {}
+  if (j.estado === "en_cola" || j.estado === "ejecutando") setTimeout(refrescar, 2000);
+}
+refrescar();
+</script>
+{% endblock %}
