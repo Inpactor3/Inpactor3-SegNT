@@ -142,6 +142,9 @@ Mejor época por balanced accuracy: **20** (0.8152). Mínimo de val loss: época
 
 Mejor época por balanced accuracy: **7** (0.5674). Mínimo de val loss: época 20 (0.6082).
 
+Esta tabla es la del piloto con tope de 600 ventanas por especie. La curva por época del
+corpus completo está en `ntv3_epocas/animales_full.csv`.
+
 ## Lo que muestran las curvas
 
 - **Hongos**: toca techo en la época 8-9 (0,869) y luego baja. Con 20 épocas va sobrada.
@@ -224,3 +227,6 @@ Lectura:
   era de volumen de datos, no de lector.
 - La mejor época fue la 16 (BA de validación 0,6413), con la loss de validación mínima en
   la 9. La curva seguía subiendo despacio: no había sobreajuste claro.
+
+Métricas época por época del corpus completo: `ntv3_epocas/animales_full.csv`
+(umbral calibrado 0,46; a 0,50: BA 0,6375 · F1 0,4336).

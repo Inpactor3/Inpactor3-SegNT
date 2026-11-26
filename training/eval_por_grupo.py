@@ -19,7 +19,7 @@ import numpy as np
 import torch
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from train_mlp import Head, metrics  # noqa: E402
+from train_mil import MILHead, metrics  # noqa: E402
 
 
 def cargar_grupos(path):
@@ -46,14 +46,19 @@ def main():
     args = ap.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    ck = torch.load(args.head, map_location=device)
-    hidden = int(ck.get("hidden", 1280))
+    ck = torch.load(args.head, map_location=device, weights_only=False)
+    hidden = int(ck.get("hidden", 512))
+    modo = str(ck.get("mode", "embeddings_max"))
     mu, sd = ck.get("mu"), ck.get("sd")
     thr = args.threshold if args.threshold is not None else float(ck.get("threshold", 0.5))
 
-    head = Head(hidden).to(device)
-    head.load_state_dict(ck["head"])
-    head.eval()
+    head = MILHead(hidden, pool="logits" if modo.startswith("logits") else "embeddings")
+    sd_ck = dict(ck["head"])
+    if any(k.startswith("cls_head.") for k in sd_ck):
+        sd_ck = {("cls." + k[9:] if k.startswith("cls_head.") else k): v
+                 for k, v in sd_ck.items()}
+    head.load_state_dict(sd_ck)
+    head = head.to(device).eval()
 
     grupos = cargar_grupos(args.group_csv)
     files = sorted(glob.glob(os.path.join(args.emb_dir, args.split, "*_emb.npy")))

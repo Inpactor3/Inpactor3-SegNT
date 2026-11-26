@@ -1,0 +1,8 @@
+kingdom,species,accession,status,seconds,hits,gff
+Hongos,Penicillium_roqueforti,GCA_054123635.1,ok,188,159,/kaggle/working/results/Hongos__Penicillium_roqueforti__GCA_054123635.1/Hongos__Penicillium_roqueforti__GCA_054123635.1.gff
+Hongos,Alternaria_longipes,GCF_000924055.1,sin_gff,2,0,/kaggle/working/results/Hongos__Alternaria_longipes__GCF_000924055.1/Hongos__Alternaria_longipes__GCF_000924055.1.gff
+Hongos,Cronartium_ribicola,GCF_001678275.1,sin_gff,2,0,/kaggle/working/results/Hongos__Cronartium_ribicola__GCF_001678275.1/Hongos__Cronartium_ribicola__GCF_001678275.1.gff
+Hongos,Erysiphe_necator,GCF_002937205.1,sin_gff,2,0,/kaggle/working/results/Hongos__Erysiphe_necator__GCF_002937205.1/Hongos__Erysiphe_necator__GCF_002937205.1.gff
+Hongos,Fusarium_redolens,GCF_013086115.1,sin_gff,2,0,/kaggle/working/results/Hongos__Fusarium_redolens__GCF_013086115.1/Hongos__Fusarium_redolens__GCF_013086115.1.gff
+Hongos,Phaeoacremonium_minimum,GCF_018585605.1,sin_gff,2,0,/kaggle/working/results/Hongos__Phaeoacremonium_minimum__GCF_018585605.1/Hongos__Phaeoacremonium_minimum__GCF_018585605.1.gff
+Hongos,Armillaria_borealis,GCF_050924335.1,sin_gff,2,0,/kaggle/working/results/Hongos__Armillaria_borealis__GCF_050924335.1/Hongos__Armillaria_borealis__GCF_050924335.1.gff
