@@ -365,7 +365,8 @@ def analizar():
         return redirect(url_for("trabajo", job_id=job["id"]))
     return render_template("analizar.html", modelos=modelos,
                            jobs=jobmod.listar_jobs(), max_gb=jobmod.MAX_GB,
-                           deps_ok=jobmod.deps_ok(), python=jobmod.PYTHON)
+                           deps_ok=jobmod.deps_ok(), python=jobmod.PYTHON,
+                           ntv3_disponible=any(m.get("reader") == "NTv3" for m in modelos))
 
 
 @app.route("/trabajo/<job_id>")

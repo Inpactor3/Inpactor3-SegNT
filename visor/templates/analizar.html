@@ -27,6 +27,10 @@ en este servidor, con un solo job a la vez. Puedes cerrar la pestaña: el job si
       <option value="{{ m.path }}" {{ 'selected' if loop.first else '' }}>{{ m.label }}</option>
       {% endfor %}
     </select>
+    {% if not ntv3_disponible %}
+    <span class="nota">NTv3 no está instalado en el servidor. Copia el checkpoint a
+    <code>models/ntv3/</code> (por ejemplo <code>models/ntv3/Animales_best.pt</code>) y recarga.</span>
+    {% endif %}
   </label>
 
   <details>

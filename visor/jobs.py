@@ -89,15 +89,28 @@ def listar_jobs():
 
 
 def modelos():
-    """Checkpoints compatibles con inpactor3.detect (docs/ventanas)."""
+    """Checkpoints compatibles con inpactor3.detect.
+
+    v2: docs/ventanas/<Reino>_w<ventana>_<agregacion>/best.pt
+    NTv3: models/ntv3/**/*.pt (se copian ahi; no se versionan)
+    """
     out = []
     for p in sorted((ROOT / "docs" / "ventanas").glob("*/best.pt")):
         nombre = p.parent.name
         m = re.match(r"(.+?)_w(\d+)_(.+)", nombre)
         if m:
             reino, ventana, agreg = m.group(1), m.group(2), m.group(3)
-            out.append({"path": str(p), "label": f"{reino} · {ventana} kb · {agreg}",
-                        "reino": reino, "ventana": ventana, "agregacion": agreg})
+            out.append({"path": str(p),
+                        "label": f"v2 · {reino} · {ventana} kb · {agreg}",
+                        "reino": reino, "ventana": ventana, "agregacion": agreg,
+                        "reader": "v2", "backbone": "v2"})
+    for p in sorted((ROOT / "models" / "ntv3").rglob("*.pt")):
+        partes = [x for x in p.relative_to(ROOT / "models" / "ntv3").parts if x != p.name]
+        reino = p.stem.replace("_best", "").replace("-best", "")
+        etiqueta = " · ".join(partes + [reino]) if partes else reino
+        out.append({"path": str(p), "label": f"NTv3 · {etiqueta}",
+                    "reino": reino, "ventana": None, "agregacion": "",
+                    "reader": "NTv3", "backbone": "ntv3"})
     return out
 
 
@@ -205,6 +218,9 @@ def crear_job(archivo, nombre_original, modelo, ventana, chunks, threshold,
         raise
     except Exception as e:
         raise ValueError(f"no pude leer el FASTA: {e}")
+    info = next((m for m in modelos() if m["path"] == modelo), {})
+    if backbone == "auto":
+        backbone = info.get("backbone", "v2")
     job = {
         "id": job_id,
         "nombre": nombre_original,
@@ -212,7 +228,8 @@ def crear_job(archivo, nombre_original, modelo, ventana, chunks, threshold,
         "progreso": 0,
         "creado": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "modelo": modelo,
-        "modelo_label": next((m["label"] for m in modelos() if m["path"] == modelo), modelo),
+        "modelo_label": info.get("label", modelo),
+        "reader": info.get("reader", ""),
         "ventana": int(ventana),
         "chunks": int(chunks),
         "threshold": threshold,

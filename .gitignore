@@ -197,3 +197,6 @@ demo/genoma_demo.fa
 
 # Trabajos del visor (genomas subidos y salidas)
 trabajo/visor_jobs/
+
+# Pesos NTv3 del visor
+models/**/*.pt
